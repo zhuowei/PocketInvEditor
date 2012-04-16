@@ -28,4 +28,9 @@ public class InventorySlot implements Serializable {
 	public void setContents(ItemStack contents) {
 		this.contents = contents;
 	}
+
+	public String toString() {
+		return "Slot " + getSlot() + ": Type: " + contents.getTypeId() +
+			"; Damage: " + contents.getDurability() + "; Amount: "  + contents.getAmount();
+	}
 }

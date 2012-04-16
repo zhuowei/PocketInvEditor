@@ -43,6 +43,8 @@ public final class PocketInvEditorActivity extends ListActivity
 			}
 		});
 
+		loadWorlds();
+
 	}
 
 	private void loadWorlds() {
@@ -57,7 +59,7 @@ public final class PocketInvEditorActivity extends ListActivity
 
 	private void openWorld(File worldFile) {
 		Intent intent = new Intent(this, EditorActivity.class);
-		intent.setData(Uri.fromFile(worldFile));
+		intent.putExtra("world", worldFile.getAbsolutePath());
 		startActivity(intent);
 	}
 
@@ -71,12 +73,14 @@ public final class PocketInvEditorActivity extends ListActivity
 
 		public void run() {
 			File worldsFolder = new File(Environment.getExternalStorageDirectory(), "games/com.mojang/minecraftWorlds");
+			System.err.println(worldsFolder);
 			if (!worldsFolder.exists()) {
 				System.err.println("no storage folder");
 				return;
 			}
 			final List<WorldListItem> worldFolders = new ArrayList<WorldListItem>();
 			for (File worldFolder : worldsFolder.listFiles()) {
+				System.out.println(worldFolder.toString());
 				if (!worldFolder.isDirectory()) continue;
 				//check if it has level.dat and not player.dat
 				if (!new File(worldFolder, "level.dat").exists() || new File(worldFolder, "player.dat").exists()) 

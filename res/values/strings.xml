@@ -8,4 +8,11 @@
     <string name="item_damage">Item damage: </string>
     <string name="item_count">Amount: </string>
     <string name="item_id_browse">Browse...</string>
+    <string name="loading">Loading...</string>
+    <string name="edit_inventory">Edit Inventory</string>
+    <string name="edit_world_info">Edit World Info</string>
+    <string name="lastplayed">Last played</string>
+    <string name="seed">Seed</string>
+    <string name="saved">Saved</string>
+    <string name="savefailed">Save failed.</string>
 </resources>

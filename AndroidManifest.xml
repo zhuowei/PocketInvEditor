@@ -3,6 +3,8 @@
       package="net.zhuoweizhang.pocketinveditor"
       android:versionCode="1"
       android:versionName="1.0">
+    <uses-sdk android:minSdkVersion="9" 
+              android:targetSdkVersion="14"/>
     <application android:label="@string/app_name" >
         <activity android:name="PocketInvEditorActivity"
                   android:label="@string/app_name">
@@ -12,5 +14,7 @@
             </intent-filter>
         </activity>
         <activity android:name="EditorActivity" />
+        <activity android:name="InventorySlotsActivity"/>
+        <activity android:name="EditInventorySlotActivity"/>
     </application>
 </manifest> 

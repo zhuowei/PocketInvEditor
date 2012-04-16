@@ -40,4 +40,8 @@ public class ItemStack implements Serializable {
 		this.amount = amount;
 	}
 
+	public String toString() {
+		return "ItemStack: type=" + getTypeId() + ", durability=" + getDurability() + ", amount=" + getAmount();
+	}
+
 }

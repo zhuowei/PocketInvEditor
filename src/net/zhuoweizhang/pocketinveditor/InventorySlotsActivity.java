@@ -38,7 +38,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		ItemStack stack = slot.getContents();
 		intent.putExtra("TypeId", stack.getTypeId());
 		intent.putExtra("Damage", stack.getDurability());
-		intent.putExtra("Count", stack.getAmount());
+		intent.putExtra("Count", (byte) stack.getAmount());
 		intent.putExtra("Slot", slot.getSlot());
 		intent.putExtra("Index", position);
 		startActivityForResult(intent, EDIT_SLOT_REQUEST);
@@ -46,7 +46,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 		if (requestCode == EDIT_SLOT_REQUEST) {
-			/*if (resultCode == Activity.RESULT_OK) {
+			if (resultCode == Activity.RESULT_OK) {
 				int slotIndex = intent.getIntExtra("Index", -1);
 				if (slotIndex < 0) {
 					System.err.println("wrong slot index");
@@ -58,7 +58,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				stack.setDurability(intent.getShortExtra("Damage", (byte) 0));
 				stack.setTypeId(intent.getShortExtra("TypeId", (byte) 0));
 				EditorActivity.save(this);
-			}*/
+			}
 		}
 	}
 }

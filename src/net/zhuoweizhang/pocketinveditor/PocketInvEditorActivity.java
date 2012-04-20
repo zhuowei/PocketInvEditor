@@ -82,8 +82,8 @@ public final class PocketInvEditorActivity extends ListActivity
 			for (File worldFolder : worldsFolder.listFiles()) {
 				System.out.println(worldFolder.toString());
 				if (!worldFolder.isDirectory()) continue;
-				//check if it has level.dat and not player.dat
-				if (!new File(worldFolder, "level.dat").exists() || new File(worldFolder, "player.dat").exists()) 
+				//check if it has level.dat
+				if (!new File(worldFolder, "level.dat").exists())
 					continue;
 				worldFolders.add(new WorldListItem(worldFolder));
 			}
@@ -92,7 +92,7 @@ public final class PocketInvEditorActivity extends ListActivity
 					activity.receiveWorldFolders(worldFolders);
 				}
 			});
-		}				
+		}
 
 	}
 

@@ -48,21 +48,21 @@ public final class NBTConverter {
 	}
 
 	public static ListTag<CompoundTag> writeInventory(List<InventorySlot> slots, String name) {
-		List<CompoundTag> values = new ArrayList(slots.size());
+		List<CompoundTag> values = new ArrayList<CompoundTag>(slots.size());
 		for (InventorySlot slot: slots) {
 			values.add(writeInventorySlot(slot));
 		}
-		return new ListTag(name, CompoundTag.class, values);
+		return new ListTag<CompoundTag>(name, CompoundTag.class, values);
 	}
 
 	public static List<InventorySlot> readInventory(ListTag<CompoundTag> listTag) {
-		List<InventorySlot> slots = new ArrayList();
+		List<InventorySlot> slots = new ArrayList<InventorySlot>();
 		for (CompoundTag tag: listTag.getValue()) {
 			slots.add(readInventorySlot(tag));
 		}
 		return slots;
 	}
-		
+
 
 	public static Player readPlayer(CompoundTag compoundTag) {
 		/* todo: separate this out to another class like Glowstone's loading system */
@@ -70,9 +70,9 @@ public final class NBTConverter {
 		Player player = new Player();
 		for (Tag tag: tags) {
 			if (tag.getName().equals("Pos")) {
-				player.setLocation(readVector((ListTag) tag));
+				player.setLocation(readVector((ListTag<FloatTag>) tag));
 			} else if (tag.getName().equals("Motion")) {
-				player.setVelocity(readVector((ListTag) tag));
+				player.setVelocity(readVector((ListTag<FloatTag>) tag));
 			} else if (tag.getName().equals("Air")) {
 				player.setAirTicks(((ShortTag) tag).getValue());
 			} else if (tag.getName().equals("Fire")) {
@@ -105,17 +105,17 @@ public final class NBTConverter {
 	}
 
 	public static CompoundTag writePlayer(Player player, String name) {
-		List<Tag> tags = new ArrayList();
+		List<Tag> tags = new ArrayList<Tag>();
 		/* shared properties with all entities */
 		tags.add(new ShortTag("Air", player.getAirTicks()));
 		tags.add(new FloatTag("FallDistance", player.getFallDistance()));
 		tags.add(new ShortTag("Fire", player.getFireTicks()));
 		tags.add(writeVector(player.getVelocity(), "Motion"));
 		tags.add(writeVector(player.getLocation(), "Pos"));
-		List<FloatTag> rotationTags = new ArrayList(2);
+		List<FloatTag> rotationTags = new ArrayList<FloatTag>(2);
 		rotationTags.add(new FloatTag("", player.getYaw()));
 		rotationTags.add(new FloatTag("", player.getPitch()));
-		tags.add(new ListTag("Rotation", FloatTag.class, rotationTags));
+		tags.add(new ListTag<FloatTag>("Rotation", FloatTag.class, rotationTags));
 		tags.add(new ByteTag("OnGround", player.isOnGround() ? (byte) 1: (byte) 0));
 
 		/* mobs' tags */
@@ -150,7 +150,7 @@ public final class NBTConverter {
 	}
 
 	public static ListTag<FloatTag> writeVector(Vector vector, String tagName) {
-		List<FloatTag> tags = new ArrayList(3);
+		List<FloatTag> tags = new ArrayList<FloatTag>(3);
 		tags.add(new FloatTag("", vector.getX()));
 		tags.add(new FloatTag("", vector.getY()));
 		tags.add(new FloatTag("", vector.getZ()));
@@ -192,7 +192,7 @@ public final class NBTConverter {
 	}
 
 	public static CompoundTag writeLevel(Level level) {
-		List<Tag> tags = new ArrayList(11);
+		List<Tag> tags = new ArrayList<Tag>(11);
 		/* tags should be sorted alphabetically */
 		tags.add(new IntTag("GameType", level.getGameType()));
 		tags.add(new LongTag("LastPlayed", level.getLastPlayed()));

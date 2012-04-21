@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
+<data>
+    <blocks>
+        <item hex="0" dec="0" name="Air" />
+        <item hex="1" dec="1" name="Stone" />
+        <item hex="2" dec="2" name="Grass Block" />
+        <item hex="3" dec="3" name="Dirt" />
+        <item hex="4" dec="4" name="Cobblestone" />
+        <item hex="5" dec="5" name="Wooden Plank" />
+        <item hex="6" dec="6" id="0" name="Sapling" />
+        <item hex="6" dec="6" id="1" name="Sapling (Redwood)" />
+        <item hex="6" dec="6" id="2" name="Sapling (Birch)" />
+        <item hex="7" dec="7" name="Bedrock" />
+        <item hex="8" dec="8" name="Water" />
+        <item hex="9" dec="9" name="Stationary water" />
+        <item hex="A" dec="10" name="Lava" />
+        <item hex="B" dec="11" name="Stationary lava" />
+        <item hex="C" dec="12" name="Sand" />
+        <item hex="D" dec="13" name="Gravel" />
+        <item hex="E" dec="14" name="Gold Ore" />
+        <item hex="F" dec="15" name="Iron Ore" />
+        <item hex="10" dec="16" name="Coal Ore" />
+        <item hex="11" dec="17" id="0" name="Log" />
+        <item hex="11" dec="17" id="1" name="Redwood (Log)" />
+        <item hex="11" dec="17" id="2" name="Birch (Log)" />
+        <item hex="12" dec="18" id="0" name="Leaves" />
+        <item hex="12" dec="18" id="2" name="Redwood (Leaves)" />
+        <item hex="12" dec="18" id="3" name="Birch (Leaves)" />
+        <item hex="14" dec="20" name="Glass" />
+        <item hex="15" dec="21" name="Lapis Lazuli Ore" />
+        <item hex="16" dec="22" name="Lapis Lazuli Block" />
+        <item hex="18" dec="24" name="Sandstone" />
+        <item hex="23" dec="35" id="0" name="White Wool" />
+        <item hex="23" dec="35" id="1" name="Orange Wool" />
+        <item hex="23" dec="35" id="2" name="Magenta Wool" />
+        <item hex="23" dec="35" id="3" name="Light Blue Wool" />
+        <item hex="23" dec="35" id="4" name="Yellow Wool" />
+        <item hex="23" dec="35" id="5" name="Lime Green Wool" />
+        <item hex="23" dec="35" id="6" name="Pink Wool" />
+        <item hex="23" dec="35" id="7" name="Gray Wool" />
+        <item hex="23" dec="35" id="8" name="Light Gray Wool" />
+        <item hex="23" dec="35" id="9" name="Cyan Wool" />
+        <item hex="23" dec="35" id="10" name="Purple Wool" />
+        <item hex="23" dec="35" id="11" name="Blue Wool" />
+        <item hex="23" dec="35" id="12" name="Brown Wool" />
+        <item hex="23" dec="35" id="13" name="Green Wool" />
+        <item hex="23" dec="35" id="14" name="Red Wool" />
+        <item hex="23" dec="35" id="15" name="Black Wool" />
+        <item hex="25" dec="37" name="Yellow Flower" />
+        <item hex="26" dec="38" name="Cyan Flower" />
+        <item hex="27" dec="39" name="Brown Mushroom" />
+        <item hex="28" dec="40" name="Red Mushroom" />
+        <item hex="29" dec="41" name="Gold Block" />
+        <item hex="2A" dec="42" name="Iron Block" />
+        <item hex="2B" dec="43" id="0" name="Double Slab (Stone)" />
+        <item hex="2B" dec="43" id="1" name="Double Slab (Sandstone)" />
+        <item hex="2B" dec="43" id="2" name="Double Slab (Wood)" />
+        <item hex="2B" dec="43" id="3" name="Double Slab (Cobblestone)" />
+        <item hex="2B" dec="43" id="4" name="Double Slab (Brick)" />
+        <item hex="2B" dec="43" id="5" name="Double Slab (Stone brick)" />
+        <item hex="2B" dec="43" id="6" name="Double Slab (Stone)" />
+        <item hex="2C" dec="44" id="0" name="Slab (Stone)" />
+        <item hex="2C" dec="44" id="1" name="Slab (Sandstone)" />
+        <item hex="2C" dec="44" id="2" name="Slab (Wood)" />
+        <item hex="2C" dec="44" id="3" name="Slab (Cobblestone)" />
+        <item hex="2C" dec="44" id="4" name="Slab (Brick)" />
+        <item hex="2C" dec="44" id="5" name="Slab (Stone brick)" />
+        <item hex="2C" dec="44" id="6" name="Slab (Stone)" />
+        <item hex="2D" dec="45" name="Brick Block" />
+        <item hex="2E" dec="46" name="TNT" />
+        <item hex="2F" dec="47" name="Bookshelf" />
+        <item hex="30" dec="48" name="Moss Stone (Mossy Cobblestone)" />
+        <item hex="31" dec="49" name="Obsidian" />
+        <item hex="32" dec="50" name="Torch" />
+        <item hex="33" dec="51" name="Fire" />
+        <item hex="35" dec="53" name="Wooden Stairs" />
+        <item hex="38" dec="56" name="Diamond Ore" />
+        <item hex="39" dec="57" name="Diamond Block" />
+        <item hex="3C" dec="60" name="Farmland" />
+        <item hex="40" dec="64" name="Wooden Door" />
+        <item hex="41" dec="65" name="Ladder" />
+        <item hex="43" dec="67" name="Cobblestone Stairs" />
+        <item hex="47" dec="71" name="Iron Door" />
+        <item hex="49" dec="73" name="Redstone Ore" />
+        <item hex="4A" dec="74" name="Glowing Redstone Ore" />
+        <item hex="4E" dec="78" name="Snow" />
+        <item hex="4F" dec="79" name="Ice" />
+        <item hex="50" dec="80" name="Snow Block" />
+        <item hex="51" dec="81" name="Cactus" />
+        <item hex="52" dec="82" name="Clay Block" />
+        <item hex="53" dec="83" name="Sugar Cane" />
+        <item hex="55" dec="85" name="Fence" />
+    </blocks>
+    <items>
+        <item hex="100" dec="256" name="Iron Shovel" />
+        <item hex="101" dec="257" name="Iron Pickaxe" />
+        <item hex="102" dec="258" name="Iron Axe" />
+        <item hex="106" dec="262" name="Arrow" />
+        <item hex="107" dec="263" id="0" name="Coal" />
+        <item hex="107" dec="263" id="1" name="Charcoal" />
+        <item hex="108" dec="264" name="Diamond" />
+        <item hex="109" dec="265" name="Iron Ingot" />
+        <item hex="10A" dec="266" name="Gold Ingot" />
+        <item hex="10B" dec="267" name="Iron Sword" />
+        <item hex="10C" dec="268" name="Wooden Sword" />
+        <item hex="10D" dec="269" name="Wooden Shovel" />
+        <item hex="10E" dec="270" name="Wooden Pickaxe" />
+        <item hex="10F" dec="271" name="Wooden Axe" />
+        <item hex="110" dec="272" name="Stone Sword" />
+        <item hex="111" dec="273" name="Stone Shovel" />
+        <item hex="112" dec="274" name="Stone Pickaxe" />
+        <item hex="113" dec="275" name="Stone Axe" />
+        <item hex="114" dec="276" name="Diamond Sword" />
+        <item hex="115" dec="277" name="Diamond Shovel" />
+        <item hex="116" dec="278" name="Diamond Pickaxe" />
+        <item hex="117" dec="279" name="Diamond Axe" />
+        <item hex="118" dec="280" name="Stick" />
+        <item hex="119" dec="281" name="Bowl" />
+        <item hex="11B" dec="283" name="Gold Sword" />
+        <item hex="11C" dec="284" name="Gold Shovel" />
+        <item hex="11D" dec="285" name="Gold Pickaxe" />
+        <item hex="11E" dec="286" name="Gold Axe" />
+        <item hex="11F" dec="287" name="String" />
+        <item hex="120" dec="288" name="Feather" />
+        <item hex="121" dec="289" name="Gunpowder" />
+        <item hex="128" dec="296" name="Wheat" />
+        <item hex="144" dec="324" name="Wooden Door" />
+        <item hex="14A" dec="330" name="Iron Door" />
+        <item hex="14C" dec="332" name="Snowball" />
+        <item hex="14E" dec="334" name="Leather" />
+        <item hex="150" dec="336" name="Clay Brick" />
+        <item hex="151" dec="337" name="Clay" />
+        <item hex="152" dec="338" name="Sugar Cane (Reed)" />
+        <item hex="153" dec="339" name="Paper" />
+        <item hex="154" dec="340" name="Book" />
+        <item hex="155" dec="341" name="Slime Ball" />
+        <item hex="159" dec="345" name="Compass" />
+        <item hex="15B" dec="347" name="Clock" />
+        <item hex="15C" dec="348" name="Glowstone Dust (Lightstone)" />
+        <item hex="160" dec="352" name="Bone" />
+        <item hex="161" dec="353" name="Sugar" />
+        <item hex="167" dec="359" name="Shears" />
+    </items>
+</data>

@@ -12,6 +12,11 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:numeric="signed"/>
+    <Button
+        android:id="@+id/slot_browseitemid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/item_id_browse"/>
     <TextView
         android:text="@string/item_damage"
         android:layout_width="fill_parent"

@@ -18,6 +18,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
+import net.zhuoweizhang.pocketinveditor.material.Material;
+
 public final class PocketInvEditorActivity extends ListActivity
 {
 	private FindWorldsThread findWorldsThread;
@@ -45,6 +48,10 @@ public final class PocketInvEditorActivity extends ListActivity
 
 		loadWorlds();
 
+		if (Material.materials == null) {
+			loadMaterials();
+		}
+
 	}
 
 	private void loadWorlds() {
@@ -61,6 +68,10 @@ public final class PocketInvEditorActivity extends ListActivity
 		Intent intent = new Intent(this, EditorActivity.class);
 		intent.putExtra("world", worldFile.getAbsolutePath());
 		startActivity(intent);
+	}
+
+	private void loadMaterials() {
+		new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
 	}
 
 	private final class FindWorldsThread implements Runnable {
@@ -106,4 +117,5 @@ public final class PocketInvEditorActivity extends ListActivity
 			return folder.getName();
 		}
 	}
+
 }

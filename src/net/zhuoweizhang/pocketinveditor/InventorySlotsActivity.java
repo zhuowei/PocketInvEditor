@@ -21,12 +21,23 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public static final int EDIT_SLOT_REQUEST = 534626;
 
-	public void onStart() {
-		super.onStart();
-		inventory = EditorActivity.level.getPlayer().getInventory();
+	public void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
+		List<InventorySlot> tempInventory = EditorActivity.level.getPlayer().getInventory();
+		inventory = new ArrayList<InventorySlot>(tempInventory.size() - 8);
+		for (InventorySlot slot: tempInventory) {
+			if (slot.getSlot() > 8) {
+				inventory.add(slot);
+			}
+		}
 		inventoryListAdapter = new ArrayAdapter<InventorySlot>(this, R.layout.slot_list_item, inventory);
 		setListAdapter(inventoryListAdapter);
 		getListView().setOnItemClickListener(this);
+	}
+
+	public void onStart() {
+		super.onStart();
+		inventoryListAdapter.notifyDataSetChanged();
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -52,7 +63,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 					System.err.println("wrong slot index");
 					return;
 				}
-				InventorySlot slot = EditorActivity.level.getPlayer().getInventory().get(slotIndex);
+				InventorySlot slot = inventory.get(slotIndex);
 				ItemStack stack = slot.getContents();
 				stack.setAmount(intent.getByteExtra("Count", (byte) 0));
 				stack.setDurability(intent.getShortExtra("Damage", (byte) 0));

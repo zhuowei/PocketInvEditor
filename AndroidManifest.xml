@@ -19,5 +19,6 @@
         <activity android:name=".InventorySlotsActivity"/>
         <activity android:name=".EditInventorySlotActivity"/>
         <activity android:name=".BrowseItemsActivity"/>
+        <activity android:name=".AboutAppActivity"/>
     </application>
 </manifest> 

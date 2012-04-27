@@ -11,6 +11,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import static android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
@@ -72,6 +75,27 @@ public final class PocketInvEditorActivity extends ListActivity
 
 	private void loadMaterials() {
 		new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
+	}
+
+	public boolean onCreateOptionsMenu(Menu menu) {
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.worldselect_menu, menu);
+		return true;
+	}
+
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+			case R.id.worldselect_about:
+				displayAboutActivity();
+				return true;
+			default:
+				return super.onOptionsItemSelected(item);
+		}
+	}
+
+	public void displayAboutActivity() {
+		Intent intent = new Intent(this, AboutAppActivity.class);
+		startActivity(intent);
 	}
 
 	private final class FindWorldsThread implements Runnable {

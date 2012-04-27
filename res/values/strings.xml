@@ -15,4 +15,7 @@
     <string name="seed">Seed</string>
     <string name="saved">Saved</string>
     <string name="savefailed">Save failed.</string>
+    <string name="backup">Create Backup</string>
+    <string name="backupcreated">Backup Created: </string>
+    <string name="backupfailed">Backup failed.</string>
 </resources>

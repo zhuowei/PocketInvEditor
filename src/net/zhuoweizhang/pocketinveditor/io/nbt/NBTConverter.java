@@ -63,7 +63,7 @@ public final class NBTConverter {
 		return slots;
 	}
 
-
+	@SuppressWarnings("unchecked")
 	public static Player readPlayer(CompoundTag compoundTag) {
 		/* todo: separate this out to another class like Glowstone's loading system */
 		List<Tag> tags = compoundTag.getValue();
@@ -157,6 +157,7 @@ public final class NBTConverter {
 		return new ListTag<FloatTag>(tagName, FloatTag.class, tags);
 	}
 
+	@SuppressWarnings("unchecked")
 	public static Level readLevel(CompoundTag compoundTag) {
 		Level level = new Level();
 		List<Tag> tags = compoundTag.getValue();

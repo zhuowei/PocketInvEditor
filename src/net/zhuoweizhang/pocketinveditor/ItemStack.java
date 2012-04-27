@@ -2,7 +2,7 @@ package net.zhuoweizhang.pocketinveditor;
 
 import java.io.Serializable;
 
-public class ItemStack implements Serializable {
+public class ItemStack {
 
 	private short id;
 

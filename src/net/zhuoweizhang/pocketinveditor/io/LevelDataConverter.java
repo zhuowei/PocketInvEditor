@@ -1,5 +1,7 @@
 package net.zhuoweizhang.pocketinveditor.io;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,7 +21,8 @@ public final class LevelDataConverter {
 	public static final byte[] header = {0x02, 0x00, 0x00, 0x00};
 
 	public static Level read(File file) throws IOException {
-		FileInputStream is = new FileInputStream(file);
+		FileInputStream fis = new FileInputStream(file);
+		BufferedInputStream is = new BufferedInputStream(fis);
 		is.skip(8);
 		Level level = NBTConverter.readLevel((CompoundTag) new NBTInputStream(is, false, true).readTag());
 		is.close();
@@ -28,7 +31,7 @@ public final class LevelDataConverter {
 
 	public static void write(Level level, File file) throws IOException {
 		FileOutputStream os = new FileOutputStream(file);
-		DataOutputStream dos = new DataOutputStream(os);
+		DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(os));
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeLevel(level));
 		int length = bos.size();

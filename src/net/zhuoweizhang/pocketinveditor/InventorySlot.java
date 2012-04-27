@@ -1,8 +1,6 @@
 package net.zhuoweizhang.pocketinveditor;
 
-import java.io.Serializable;
-
-public class InventorySlot implements Serializable {
+public class InventorySlot {
 
 	private byte slot;
 

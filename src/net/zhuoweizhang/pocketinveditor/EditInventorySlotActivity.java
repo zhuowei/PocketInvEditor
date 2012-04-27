@@ -85,7 +85,11 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			returnIntent.putExtra("TypeId", newId);
 			returnIntent.putExtra("Damage", newDamage);
 			returnIntent.putExtra("Count", newCount);
-			setResult(RESULT_OK, returnIntent);
+			if (newId != originalTypeId || newDamage != originalDamage || newCount != originalCount) {
+				setResult(RESULT_OK, returnIntent);
+			} else {
+				setResult(RESULT_CANCELED);
+			}
 		} else {
 			setResult(RESULT_CANCELED);
 		}

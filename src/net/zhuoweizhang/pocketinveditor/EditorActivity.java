@@ -3,18 +3,22 @@ package net.zhuoweizhang.pocketinveditor;
 import java.io.File;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
 import java.util.Date;
+import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.io.LevelDataConverter;
+import net.zhuoweizhang.pocketinveditor.io.zip.ZipFileWriter;
 
 public final class EditorActivity extends Activity {
 
@@ -32,6 +36,8 @@ public final class EditorActivity extends Activity {
 
 	private Button startInventoryEditorButton;
 
+	private Button startBackupButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -43,6 +49,13 @@ public final class EditorActivity extends Activity {
 		startInventoryEditorButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				startInventoryEditor();
+			}
+		});
+		startBackupButton = (Button) findViewById(R.id.main_backup);
+		startBackupButton.setEnabled(false);
+		startBackupButton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				startBackupWorld();
 			}
 		});
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
@@ -65,6 +78,7 @@ public final class EditorActivity extends Activity {
 			DateFormat.getInstance().format(new Date(level.getLastPlayed() * 1000)));
 		worldSeedView.setText(this.getResources().getText(R.string.seed) + ": " + level.getRandomSeed());
 		startInventoryEditorButton.setEnabled(true);
+		startBackupButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -79,7 +93,7 @@ public final class EditorActivity extends Activity {
 					if (context != null) {
 						context.runOnUiThread(new Runnable() {
 							public void run() {
-								Toast.makeText(context, R.string.saved, Toast.LENGTH_SHORT);
+								Toast.makeText(context, R.string.saved, Toast.LENGTH_SHORT).show();
 							}
 						});
 					}
@@ -88,13 +102,29 @@ public final class EditorActivity extends Activity {
 					if (context != null) {
 						context.runOnUiThread(new Runnable() {
 							public void run() {
-								Toast.makeText(context, R.string.savefailed, Toast.LENGTH_SHORT);
+								Toast.makeText(context, R.string.savefailed, Toast.LENGTH_SHORT).show();
 							}
 						});
 					}
 				}
 			}
 		}).start();
+	}
+
+	public void startBackupWorld() {
+		File backupsFolder = new File(Environment.getExternalStorageDirectory(), "games/com.mojang/minecraftWorlds_backup");
+		File backupFolder = new File(backupsFolder, worldFolder.getName());
+		backupFolder.mkdirs();
+
+		String currentTime = new SimpleDateFormat("yyyy-MM-dd-HH-mm", Locale.US).format(new Date());
+		File backupFile = new File(backupFolder, worldFolder.getName() + currentTime + ".zip");
+		int postFix = 1;
+		while (backupFile.exists()) {
+			postFix++;
+			backupFile = new File(backupFolder, worldFolder.getName() + currentTime + "_" + postFix + ".zip");
+		}
+
+		new Thread(new BackupTask(worldFolder, backupFile)).start();
 	}
 
 	private class LevelLoadTask implements Runnable {
@@ -111,6 +141,33 @@ public final class EditorActivity extends Activity {
 					public void run() {
 						System.err.println("Failed to load");
 						e.printStackTrace();
+					}
+				});
+			}
+		}
+	}
+
+	private class BackupTask implements Runnable {
+		private File worldFolder;
+		private File backupFile;
+		public BackupTask(File worldFolder, File backupFile) {
+			this.worldFolder = worldFolder;
+			this.backupFile = backupFile;
+		}
+		public void run() {
+			try {
+				ZipFileWriter.write(worldFolder.listFiles(), backupFile);
+				EditorActivity.this.runOnUiThread(new Runnable() {
+					public void run() {
+						Toast.makeText(EditorActivity.this, EditorActivity.this.getResources().getText(R.string.backupcreated) + 
+							backupFile.getAbsolutePath(), Toast.LENGTH_LONG).show();
+					}
+				});
+			} catch (Exception e) {
+				e.printStackTrace();
+				EditorActivity.this.runOnUiThread(new Runnable() {
+					public void run() {
+						Toast.makeText(EditorActivity.this, R.string.backupfailed, Toast.LENGTH_LONG).show();
 					}
 				});
 			}

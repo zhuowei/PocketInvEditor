@@ -27,4 +27,11 @@
         android:layout_height="wrap_content"
         android:enabled="false"/>
 
+    <Button
+        android:id="@+id/main_backup"
+        android:text="@string/backup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"/>
+
 </LinearLayout>

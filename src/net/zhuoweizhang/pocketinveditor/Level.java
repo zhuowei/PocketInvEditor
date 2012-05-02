@@ -9,6 +9,8 @@ public class Level {
 	private long lastPlayed;
 
 	private String levelName;
+	
+	private int gameMode;
 
 	private int platform;
 

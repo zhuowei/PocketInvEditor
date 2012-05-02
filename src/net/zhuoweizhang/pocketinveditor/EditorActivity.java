@@ -124,6 +124,8 @@ public final class EditorActivity extends Activity {
 			backupFile = new File(backupFolder, worldFolder.getName() + currentTime + "_" + postFix + ".zip");
 		}
 
+
+		Toast.makeText(this, R.string.backup_start, Toast.LENGTH_LONG).show();
 		new Thread(new BackupTask(worldFolder, backupFile)).start();
 	}
 

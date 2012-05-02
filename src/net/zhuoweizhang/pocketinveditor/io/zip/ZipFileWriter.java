@@ -7,21 +7,20 @@ public class ZipFileWriter {
 	public static void write(File file, ZipOutputStream outstream) throws IOException {
 		ZipEntry currentEntry = new ZipEntry(file.getName());
 		outstream.putNextEntry(currentEntry);
-		BufferedInputStream instream = null;
+		InputStream instream = null;
 		try {
-			instream = new BufferedInputStream(new FileInputStream(file));
-			while (true) {
-				int inval = instream.read();
-				if (inval == -1) {
-					break;
-				}
-				outstream.write(inval);
+			instream = new FileInputStream(file);
+			byte[] buffer = new byte[32768];
+			int n;
+			while ((n = instream.read(buffer)) != -1) {
+				outstream.write(buffer, 0, n);
 			}
 		} finally {
 			if (instream != null) {
 				instream.close();
 			}
 		}
+		outstream.closeEntry();
 	}
 
 	public static void write(File[] files, File outfile) throws IOException {
@@ -30,8 +29,10 @@ public class ZipFileWriter {
 		ZipOutputStream zipstream = null;
 		try {
 			fileOutputStream = new FileOutputStream(outfile);
-			outputStream = new BufferedOutputStream(fileOutputStream);
+			outputStream = new BufferedOutputStream(fileOutputStream, 32768);
 			zipstream = new ZipOutputStream(outputStream);
+			zipstream.setLevel(Deflater.DEFAULT_COMPRESSION);
+			zipstream.setMethod(Deflater.DEFLATED);
 			for (File file : files) {
 				write(file, zipstream);
 			}

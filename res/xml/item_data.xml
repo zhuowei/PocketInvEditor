@@ -55,14 +55,12 @@
         <item hex="2B" dec="43" id="2" name="Double Slab (Wood)" />
         <item hex="2B" dec="43" id="3" name="Double Slab (Cobblestone)" />
         <item hex="2B" dec="43" id="4" name="Double Slab (Brick)" />
-        <item hex="2B" dec="43" id="5" name="Double Slab (Stone brick)" />
         <item hex="2B" dec="43" id="6" name="Double Slab (Stone)" />
         <item hex="2C" dec="44" id="0" name="Slab (Stone)" />
         <item hex="2C" dec="44" id="1" name="Slab (Sandstone)" />
         <item hex="2C" dec="44" id="2" name="Slab (Wood)" />
         <item hex="2C" dec="44" id="3" name="Slab (Cobblestone)" />
         <item hex="2C" dec="44" id="4" name="Slab (Brick)" />
-        <item hex="2C" dec="44" id="5" name="Slab (Stone brick)" />
         <item hex="2C" dec="44" id="6" name="Slab (Stone)" />
         <item hex="2D" dec="45" name="Brick Block" />
         <item hex="2E" dec="46" name="TNT" />
@@ -89,10 +87,8 @@
         <item hex="52" dec="82" name="Clay Block" />
         <item hex="53" dec="83" name="Sugar Cane" />
         <item hex="55" dec="85" name="Fence" />
-        <item hex="62" dec="98" id="0" name="Stone Brick" />
-        <item hex="62" dec="98" id="1" name="Stone Brick (mossy)" />
-        <item hex="62" dec="98" id="2" name="Stone Brick (cracked)" />
-        <item hex="62" dec="98" id="3" name="Stone Brick (circle)" />
+        <item hex="6B" dec="107" name="Fence Gate"/>
+        <item hex="6C" dec="108" name="Brick Stairs" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
         <item hex="F9" dec="249" name="'Update Game' block 2" />
     </blocks>

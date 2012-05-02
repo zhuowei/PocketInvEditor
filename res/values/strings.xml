@@ -18,6 +18,7 @@
     <string name="backup">Create Backup</string>
     <string name="backupcreated">Backup Created: </string>
     <string name="backupfailed">Backup failed.</string>
+    <string name="backup_start">Starting backup. This may take a while.</string>
     <string name="about_about">About</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify

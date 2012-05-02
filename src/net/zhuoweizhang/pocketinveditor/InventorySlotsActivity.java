@@ -24,7 +24,8 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 		List<InventorySlot> tempInventory = EditorActivity.level.getPlayer().getInventory();
-		inventory = new ArrayList<InventorySlot>(tempInventory.size() - 8);
+		int slotsSize = tempInventory.size() - 8;
+		inventory = new ArrayList<InventorySlot>(slotsSize >= 0 ? slotsSize : 0);
 		for (InventorySlot slot: tempInventory) {
 			if (slot.getSlot() > 8) {
 				inventory.add(slot);

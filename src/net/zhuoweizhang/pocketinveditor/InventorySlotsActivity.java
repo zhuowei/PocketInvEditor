@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -72,5 +74,32 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				EditorActivity.save(this);
 			}
 		}
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		menu.add("Add Empty Slot");
+		return true;
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		if(item.getTitle().equals("Add Empty Slot")){
+			addEmptySlot();
+		}
+		return false;
+		
+	}
+	
+	private void addEmptySlot(){
+		//Check for 36 item cap, if we have a full inventory, just return
+		if(inventory.size() > 35){
+			return;
+		}
+		InventorySlot slot = new InventorySlot((byte)(inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		inventory.add(slot);
+		inventoryListAdapter.notifyDataSetChanged();
+		EditorActivity.level.getPlayer().setInventory(inventory);
+		EditorActivity.save(this);
 	}
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.pocketinveditor"
-      android:versionCode="2"
-      android:versionName="1.0.1">
+      android:versionCode="3"
+      android:versionName="1.1">
     <uses-sdk android:minSdkVersion="7" 
               android:targetSdkVersion="14"/>
     <uses-permission
@@ -19,6 +19,7 @@
         <activity android:name=".InventorySlotsActivity"/>
         <activity android:name=".EditInventorySlotActivity"/>
         <activity android:name=".BrowseItemsActivity"/>
+        <activity android:name=".WorldInfoActivity"/>
         <activity android:name=".AboutAppActivity"/>
     </application>
 </manifest> 

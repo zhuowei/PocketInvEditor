@@ -33,4 +33,5 @@
     </string>
     <string name="about_librarycredits">This app uses the SpoutNBT library developed by
     the SpoutDev team.</string>
+    <string name="add_empty_slot">Add Empty Slot</string>
 </resources>

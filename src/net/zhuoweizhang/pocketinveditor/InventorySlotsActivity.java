@@ -104,11 +104,20 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				outInventory.add(tempInventory.get(i));
 			}
 		}
-		InventorySlot slot = new InventorySlot((byte)(inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		
+		
+		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		alignSlots();
 		inventory.add(slot);
 		inventoryListAdapter.notifyDataSetChanged();
 		outInventory.addAll(inventory);
 		EditorActivity.level.getPlayer().setInventory(outInventory);
 		EditorActivity.save(this);
+	}
+	
+	private void alignSlots(){
+		for(int i = 0; i < inventory.size(); i++){
+			inventory.get(i).setSlot((byte) (i + 9));
+		}
 	}
 }

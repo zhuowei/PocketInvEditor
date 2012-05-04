@@ -38,6 +38,8 @@ public final class EditorActivity extends Activity {
 
 	private Button startBackupButton;
 
+	private Button startWorldInfoButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -58,6 +60,13 @@ public final class EditorActivity extends Activity {
 				startBackupWorld();
 			}
 		});
+                startWorldInfoButton = (Button) findViewById(R.id.main_world_info);
+                startWorldInfoButton.setEnabled(false);
+                startWorldInfoButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                startWorldInfo();
+                        }
+                });
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
 	}
@@ -79,6 +88,7 @@ public final class EditorActivity extends Activity {
 		worldSeedView.setText(this.getResources().getText(R.string.seed) + ": " + level.getRandomSeed());
 		startInventoryEditorButton.setEnabled(true);
 		startBackupButton.setEnabled(true);
+		startWorldInfoButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -127,6 +137,11 @@ public final class EditorActivity extends Activity {
 
 		Toast.makeText(this, R.string.backup_start, Toast.LENGTH_LONG).show();
 		new Thread(new BackupTask(worldFolder, backupFile)).start();
+	}
+
+	public void startWorldInfo() {
+		Intent intent = new Intent(this, WorldInfoActivity.class);
+		startActivity(intent);
 	}
 
 	private class LevelLoadTask implements Runnable {

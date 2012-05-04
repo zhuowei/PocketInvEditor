@@ -20,6 +20,11 @@
     <string name="backupfailed">Backup failed.</string>
     <string name="backup_start">Starting backup. This may take a while.</string>
     <string name="about_about">About</string>
+    <string name="change">Change</string>
+    <string name="gamemode">Gamemode: </string>
+    <string name="gamemode_survival">Survival</string>
+    <string name="gamemode_creative">Creative</string>
+    <string name="main_edit_world_info">Edit World Info</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

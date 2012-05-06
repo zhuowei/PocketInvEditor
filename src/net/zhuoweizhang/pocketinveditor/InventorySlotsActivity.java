@@ -18,6 +18,8 @@ import java.util.List;
 public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener {
 
 	private List<InventorySlot> inventory;
+	
+	private List<InventorySlot> tempInventory;
 
 	private ArrayAdapter<InventorySlot> inventoryListAdapter;
 
@@ -25,7 +27,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-		List<InventorySlot> tempInventory = EditorActivity.level.getPlayer().getInventory();
+		tempInventory = EditorActivity.level.getPlayer().getInventory();
 		int slotsSize = tempInventory.size() - 8;
 		inventory = new ArrayList<InventorySlot>(slotsSize >= 0 ? slotsSize : 0);
 		for (InventorySlot slot: tempInventory) {
@@ -78,13 +80,13 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
-		menu.add("Add Empty Slot");
+		menu.add(getResources().getString(R.string.add_empty_slot));
 		return true;
 	}
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
-		if(item.getTitle().equals("Add Empty Slot")){
+		if(item.getTitle().equals(getResources().getString(R.string.add_empty_slot))){
 			addEmptySlot();
 		}
 		return false;
@@ -96,10 +98,26 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		if(inventory.size() > 35){
 			return;
 		}
-		InventorySlot slot = new InventorySlot((byte)(inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		List<InventorySlot> outInventory = new ArrayList<InventorySlot>();
+		for(int i = 0; i < tempInventory.size(); i++){
+			if(tempInventory.get(i).getSlot() < 9){
+				outInventory.add(tempInventory.get(i));
+			}
+		}
+		
+		
+		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		alignSlots();
 		inventory.add(slot);
 		inventoryListAdapter.notifyDataSetChanged();
-		EditorActivity.level.getPlayer().setInventory(inventory);
+		outInventory.addAll(inventory);
+		EditorActivity.level.getPlayer().setInventory(outInventory);
 		EditorActivity.save(this);
+	}
+	
+	private void alignSlots(){
+		for(int i = 0; i < inventory.size(); i++){
+			inventory.get(i).setSlot((byte) (i + 9));
+		}
 	}
 }

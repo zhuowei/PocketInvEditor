@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PocketInvEditor</string>
+    <string name="select_world">选择世界</string>
+    <string name="inventory">物品栏</string>
+    <string name="select_slot">选择物品栏方格</string>
+    <string name="item_id">物品数据值(ID):</string>
+    <string name="item_damage">物品特殊数据: </string>
+    <string name="item_count">数量: </string>
+    <string name="item_id_browse">浏览...</string>
+    <string name="loading">加载中...</string>
+    <string name="edit_inventory">编辑物品</string>
+    <string name="edit_world_info">编辑世界信息</string>
+    <string name="lastplayed">修改时间</string>
+    <string name="seed">种子</string>
+    <string name="saved">已存储</string>
+    <string name="savefailed">存储失败.</string>
+    <string name="backup">建立备份</string>
+    <string name="backupcreated">备份已建立: </string>
+    <string name="backupfailed">备份失败。</string>
+    <string name="backup_start">正在开始备份</string>
+    <string name="about_about">关于</string>
+    <string name="change">编辑</string>
+    <string name="gamemode">游戏模式: </string>
+    <string name="gamemode_survival">生存模式</string>
+    <string name="gamemode_creative">创造模式</string>
+    <string name="main_edit_world_info">编辑世界信息</string>
+    <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.\n
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.\n
+    </string>
+    <string name="about_librarycredits">This app uses the SpoutNBT library developed by
+    the SpoutDev team.</string>
+    <string name="add_empty_slot">添加空物品栏</string>
+</resources>

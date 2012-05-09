@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
+<!-- Item names taken from the official Mojang translations as of 12w18a. When there is no Mojang translation, the Wiki names are used. -->
+<data>
+    <blocks>
+        <item hex="0" dec="0" name="Luft" />
+        <item hex="1" dec="1" name="Stein" />
+        <item hex="2" dec="2" name="Grasblock" />
+        <item hex="3" dec="3" name="Erde" />
+        <item hex="4" dec="4" name="Pflasterstein" />
+        <item hex="5" dec="5" name="Bretter" />
+        <item hex="7" dec="7" name="Grundgestein" />
+        <item hex="8" dec="8" name="Wasser" />
+        <item hex="9" dec="9" name="Stehendes Wasser" />
+        <item hex="A" dec="10" name="Lava" />
+        <item hex="B" dec="11" name="Stehende Lava" />
+        <item hex="C" dec="12" name="Sand" />
+        <item hex="D" dec="13" name="Kies" />
+        <item hex="E" dec="14" name="Golderz" />
+        <item hex="F" dec="15" name="Eisenerz" />
+        <item hex="10" dec="16" name="Kohleflötz" />
+        <item hex="11" dec="17" id="0" name="Holz" />
+        <item hex="11" dec="17" id="1" name="Fichtenholz" />
+        <item hex="11" dec="17" id="2" name="Birkenholz" />
+        <item hex="12" dec="18" id="0" name="Blätter" />
+        <item hex="12" dec="18" id="2" name="Fichtenblätter" />
+        <item hex="12" dec="18" id="3" name="Birkenblätter" />
+        <item hex="14" dec="20" name="Glas" />
+        <item hex="15" dec="21" name="Lapislazuli-Erz" />
+        <item hex="16" dec="22" name="Lapislazuli-Block" />
+        <item hex="18" dec="24" name="Sandstein" />
+        <item hex="23" dec="35" id="0" name="Wolle" />
+        <item hex="23" dec="35" id="1" name="Orangefarbene Wolle" />
+        <item hex="23" dec="35" id="2" name="Magentafarbene Wolle" />
+        <item hex="23" dec="35" id="3" name="Hellblaue Wolle" />
+        <item hex="23" dec="35" id="4" name="Gelbe Wolle" />
+        <item hex="23" dec="35" id="5" name="Hellgrüne Wolle" />
+        <item hex="23" dec="35" id="6" name="Pinke Wolle" />
+        <item hex="23" dec="35" id="7" name="Graue Wolle" />
+        <item hex="23" dec="35" id="8" name="Hellgraue Wolle" />
+        <item hex="23" dec="35" id="9" name="Türkise Wolle" />
+        <item hex="23" dec="35" id="10" name="Violette Wolle" />
+        <item hex="23" dec="35" id="11" name="Blaue Wolle" />
+        <item hex="23" dec="35" id="12" name="Braune Wolle" />
+        <item hex="23" dec="35" id="13" name="Grüne Wolle" />
+        <item hex="23" dec="35" id="14" name="Rote Wolle" />
+        <item hex="23" dec="35" id="15" name="Schwarze Wolle" />
+        <item hex="25" dec="37" name="Löwenzahn" />
+        <item hex="26" dec="38" name="Cyan-Blume" />
+        <item hex="27" dec="39" name="Brauner Pilz" />
+        <item hex="28" dec="40" name="Fliegenpilz" />
+        <item hex="29" dec="41" name="Goldblock" />
+        <item hex="2A" dec="42" name="Eisenblock" />
+        <item hex="2B" dec="43" id="0" name="Doppelte Stufe (Stein)" />
+        <item hex="2B" dec="43" id="1" name="Doppelte Stufe (Sandstein)" />
+        <item hex="2B" dec="43" id="2" name="Doppelte Stufe (Holz)" />
+        <item hex="2B" dec="43" id="3" name="Doppelte Stufe (Pflasterstein)" />
+        <item hex="2B" dec="43" id="4" name="Doppelte Stufe (Ziegelstein)" />
+        <item hex="2B" dec="43" id="6" name="Doppelte Stufe (Stein)" />
+        <item hex="2C" dec="44" id="0" name="Stufe (Stein)" />
+        <item hex="2C" dec="44" id="1" name="Stufe (Sandstein)" />
+        <item hex="2C" dec="44" id="2" name="Stufe (Holz)" />
+        <item hex="2C" dec="44" id="3" name="Stufe (Pflasterstein)" />
+        <item hex="2C" dec="44" id="4" name="Stufe (Ziegelstein)" />
+        <item hex="2C" dec="44" id="6" name="Stufe (Stein)" />
+        <item hex="2D" dec="45" name="Ziegelstein" />
+        <item hex="2E" dec="46" name="TNT" />
+        <item hex="2F" dec="47" name="Bücherregal" />
+        <item hex="30" dec="48" name="Bemooster Stein" />
+        <item hex="31" dec="49" name="Obsidian" />
+        <item hex="32" dec="50" name="Fackel" />
+        <item hex="33" dec="51" name="Feuer" />
+        <item hex="35" dec="53" name="Holztreppe" />
+        <item hex="38" dec="56" name="Diamanterz" />
+        <item hex="39" dec="57" name="Diamantblock" />
+        <item hex="3A" dec="58" name="Werkbank" />
+        <item hex="3C" dec="60" name="Ackerboden" />
+        <item hex="40" dec="64" name="Holztür (block)" />
+        <item hex="41" dec="65" name="Leiter" />
+        <item hex="43" dec="67" name="Steintreppe" />
+        <item hex="47" dec="71" name="Eisentür (block)" />
+        <item hex="49" dec="73" name="Redstone-Erz" />
+        <item hex="4A" dec="74" name="Leuchtendes Redstoneerz" />
+        <item hex="4E" dec="78" name="Schnee" />
+        <item hex="4F" dec="79" name="Eis" />
+        <item hex="50" dec="80" name="Schneeblock" />
+        <item hex="51" dec="81" name="Kaktus" />
+        <item hex="52" dec="82" name="Lehm (block)" />
+        <item hex="53" dec="83" name="Zuckerrohr (block)" />
+        <item hex="55" dec="85" name="Zaun" />
+        <item hex="6B" dec="107" name="Zauntor"/>
+        <item hex="6C" dec="108" name="Ziegeltreppe" />
+        <item hex="F8" dec="248" name="'Update Game' block 1" />
+        <item hex="F9" dec="249" name="'Update Game' block 2" />
+    </blocks>
+    <items>
+        <item hex="100" dec="256" name="Eisenschaufel" />
+        <item hex="101" dec="257" name="Eisenspitzhacke" />
+        <item hex="102" dec="258" name="Eisenaxt" />
+        <item hex="106" dec="262" name="Pfeil" />
+        <item hex="107" dec="263" id="0" name="Kohle" />
+        <item hex="107" dec="263" id="1" name="Holzkohle" />
+        <item hex="108" dec="264" name="Diamant" />
+        <item hex="109" dec="265" name="Eisenbarren" />
+        <item hex="10A" dec="266" name="Goldbarren" />
+        <item hex="10B" dec="267" name="Eisenschwert" />
+        <item hex="10C" dec="268" name="Holzschwert" />
+        <item hex="10D" dec="269" name="Holzschaufel" />
+        <item hex="10E" dec="270" name="Holzspitzhacke" />
+        <item hex="10F" dec="271" name="Holzaxt" />
+        <item hex="110" dec="272" name="Steinschwert" />
+        <item hex="111" dec="273" name="Steinschaufel" />
+        <item hex="112" dec="274" name="Steinspitzhacke" />
+        <item hex="113" dec="275" name="Steinaxt" />
+        <item hex="114" dec="276" name="Diamantschwert" />
+        <item hex="115" dec="277" name="Diamantschaufel" />
+        <item hex="116" dec="278" name="Diamantspitzhacke" />
+        <item hex="117" dec="279" name="Diamantaxt" />
+        <item hex="118" dec="280" name="Stock" />
+        <item hex="119" dec="281" name="Schüssel" />
+        <item hex="11B" dec="283" name="Goldenes Schwert" />
+        <item hex="11C" dec="284" name="Goldene Schaufel" />
+        <item hex="11D" dec="285" name="Goldene Spitzhacke" />
+        <item hex="11E" dec="286" name="Goldaxt" />
+        <item hex="11F" dec="287" name="Faden" />
+        <item hex="120" dec="288" name="Feder" />
+        <item hex="121" dec="289" name="Schwarzpulver" />
+        <item hex="128" dec="296" name="Weizen" />
+        <item hex="144" dec="324" name="Holztür" />
+        <item hex="14A" dec="330" name="Eisentür" />
+        <item hex="14C" dec="332" name="Schneeball" />
+        <item hex="14E" dec="334" name="Leder" />
+        <item hex="150" dec="336" name="Ziegel" />
+        <item hex="151" dec="337" name="Lehm" />
+        <item hex="152" dec="338" name="Zuckerrohr" />
+        <item hex="153" dec="339" name="Papier" />
+        <item hex="154" dec="340" name="Buch" />
+        <item hex="155" dec="341" name="Schleimball" />
+        <item hex="159" dec="345" name="Kompass" />
+        <item hex="15B" dec="347" name="Uhr" />
+        <item hex="15C" dec="348" name="Leuchtsteinstaub" />
+        <item hex="15F" dec="351" id="0" name="Tintenbeutel" />
+        <item hex="15F" dec="351" id="1" name="Rosenrot" />
+        <item hex="15F" dec="351" id="2" name="Kaktusgrün" />
+        <item hex="15F" dec="351" id="3" name="Kakaobohnen" />
+        <item hex="15F" dec="351" id="4" name="Lapislazuli" />
+        <item hex="15F" dec="351" id="5" name="Violetter Farbstoff" />
+        <item hex="15F" dec="351" id="6" name="Türkisfarbener Farbstoff" />
+        <item hex="15F" dec="351" id="7" name="Hellgrauer Farbstoff" />
+        <item hex="15F" dec="351" id="8" name="Grauer Farbstoff" />
+        <item hex="15F" dec="351" id="9" name="Rosafarbener Farbstoff" />
+        <item hex="15F" dec="351" id="10" name="Hellgrüner Farbstoff" />
+        <item hex="15F" dec="351" id="11" name="Löwenzahngelb" />
+        <item hex="15F" dec="351" id="12" name="Hellblauer Farbstoff" />
+        <item hex="15F" dec="351" id="13" name="Magentafarbener Farbstoff" />
+        <item hex="15F" dec="351" id="14" name="Orangefarbener Farbstoff" />
+        <item hex="15F" dec="351" id="15" name="Knochenmehl" />
+        <item hex="160" dec="352" name="Knochen" />
+        <item hex="161" dec="353" name="Zucker" />
+        <item hex="167" dec="359" name="Schere" />
+    </items>
+</data>

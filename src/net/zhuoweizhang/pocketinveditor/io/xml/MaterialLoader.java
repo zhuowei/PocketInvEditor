@@ -58,7 +58,7 @@ public final class MaterialLoader implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println(materials.toString());
+
 		return materials;
 	}
 }

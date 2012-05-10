@@ -28,6 +28,9 @@
     <string name="item_filter_hint">Search...</string>
     <string name="world_info_time">Time: </string>
     <string name="world_info_spawn_to_player">Move spawn to player location</string>
+    <string name="invalid_number">Invalid value</string>
+    <string name="world_info_time_set_morning">Set to morning</string>
+    <string name="world_info_time_set_night">Set to night</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

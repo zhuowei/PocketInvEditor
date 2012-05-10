@@ -42,7 +42,7 @@ public final class BrowseItemsActivity extends ListActivity implements OnItemCli
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		Intent returnIntent = new Intent();
-		Material material = Material.materials.get(position);
+		Material material = (Material) parent.getItemAtPosition(position);
 		returnIntent.putExtra("TypeId", material.getId());
 		returnIntent.putExtra("HasSubtypes", material.hasSubtypes());
 		returnIntent.putExtra("Damage", material.getDamage());

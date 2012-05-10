@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public final class WorldInfoActivity extends Activity implements View.OnClickListener {
+public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener {
 
 	private static final int DIALOG_CHANGE_GAME_MODE = 1167366;
 
@@ -35,6 +35,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		gameModeText.setText(EditorActivity.level.getGameType() == 1 ? R.string.gamemode_creative : R.string.gamemode_survival);
 		worldTimeText = (EditText) findViewById(R.id.world_info_time_text);
 		updateTimeText();
+		worldTimeText.setOnFocusChangeListener(this);
 		spawnToPlayerButton = (Button) findViewById(R.id.world_info_spawn_to_player_button);
 		spawnToPlayerButton.setOnClickListener(this);
 
@@ -93,5 +94,32 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 						dialog.dismiss();
 					}
 			}).create();
+	}
+
+	public void onFocusChange(View v, boolean hasFocus) {
+		if (v == worldTimeText) {
+			if (!hasFocus) {
+				checkTimeInputAfterChange();
+			}
+		}
+	}
+
+	public void onPause() {
+		super.onPause();
+		checkTimeInputAfterChange();
+	}
+
+	public void checkTimeInputAfterChange() {
+		long newTime = 0;
+		try {
+			newTime = Long.parseLong(worldTimeText.getText().toString());
+			worldTimeText.setError(null);
+			if (newTime != EditorActivity.level.getTime()) {
+				EditorActivity.level.setTime(newTime);
+				EditorActivity.save(this);
+			}
+		} catch (NumberFormatException e) {
+			worldTimeText.setError(this.getResources().getText(R.string.invalid_number));
+		}
 	}
 }

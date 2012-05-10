@@ -12,7 +12,7 @@
         android:maxLines="1"
         android:hint="@string/item_filter_hint"
         android:drawableLeft="@android:drawable/ic_menu_search">
-        <requireFocus/>
+        <requestFocus/>
     </EditText>
     <ListView android:id="@android:id/list"
         android:layout_width="fill_parent"

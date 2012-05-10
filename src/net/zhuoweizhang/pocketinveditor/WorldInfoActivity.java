@@ -7,7 +7,10 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import net.zhuoweizhang.pocketinveditor.util.Vector;
 
 public final class WorldInfoActivity extends Activity implements View.OnClickListener {
 
@@ -19,6 +22,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private Button gameModeChangeButton;
 
+	private EditText worldTimeText;
+
+	private Button spawnToPlayerButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -26,11 +33,31 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		gameModeChangeButton = (Button) findViewById(R.id.world_info_gamemode_change);
 		gameModeChangeButton.setOnClickListener(this);
 		gameModeText.setText(EditorActivity.level.getGameType() == 1 ? R.string.gamemode_creative : R.string.gamemode_survival);
+		worldTimeText = (EditText) findViewById(R.id.world_info_time_text);
+		updateTimeText();
+		spawnToPlayerButton = (Button) findViewById(R.id.world_info_spawn_to_player_button);
+		spawnToPlayerButton.setOnClickListener(this);
+
+	}
+
+	public void updateTimeText() {
+		worldTimeText.setText(Long.toString(EditorActivity.level.getTime()));
+	}
+
+	private void setSpawnToPlayerPosition() {
+		Level level = EditorActivity.level;
+		Vector loc = level.getPlayer().getLocation();
+		level.setSpawnX((int) loc.getX());
+		level.setSpawnY((int) loc.getY());
+		level.setSpawnZ((int) loc.getZ());
 	}
 
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
 			showDialog(DIALOG_CHANGE_GAME_MODE);
+		} else if (v == spawnToPlayerButton) {
+			setSpawnToPlayerPosition();
+			EditorActivity.save(this);
 		}
 	}
 

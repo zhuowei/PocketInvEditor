@@ -10,15 +10,30 @@
         <TextView android:text="@string/gamemode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"/>
+            android:textSize="18sp"/>
         <TextView android:id="@+id/world_info_gamemode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16sp"/>
+            android:textSize="18sp"/>
         <Button android:id="@+id/world_info_gamemode_change"
             android:text="@string/change"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
+
+    <TextView android:text="@string/world_info_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <EditText android:id="@+id/world_info_time_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numeric="signed"/>
+
+    <Button android:id="@+id/world_info_spawn_to_player_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/world_info_spawn_to_player"/>
 
 </LinearLayout>

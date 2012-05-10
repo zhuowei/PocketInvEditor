@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- based on http://stackoverflow.com/questions/1737009/how-to-make-a-nice-looking-listview-filter-on-android -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+    <EditText android:id="@+id/item_id_browse_filter_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:inputType="textFilter"
+        android:maxLines="1"
+        android:hint="@string/item_filter_hint"
+        android:drawableLeft="@android:drawable/ic_menu_search">
+        <requireFocus/>
+    </EditText>
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+</LinearLayout>

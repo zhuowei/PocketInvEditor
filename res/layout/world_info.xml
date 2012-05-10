@@ -31,6 +31,19 @@
         android:layout_height="wrap_content"
         android:numeric="signed"/>
 
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <Button android:id="@+id/world_info_time_to_morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/world_info_time_set_morning"/>
+        <Button android:id="@+id/world_info_time_to_night"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/world_info_time_set_night"/>
+    </LinearLayout>
+
     <Button android:id="@+id/world_info_spawn_to_player_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

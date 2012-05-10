@@ -24,6 +24,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private EditText worldTimeText;
 
+	private Button timeToMorningButton;
+
+	private Button timeToNightButton;
+
 	private Button spawnToPlayerButton;
 
 	public void onCreate(Bundle savedInstanceState)	{
@@ -38,7 +42,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		worldTimeText.setOnFocusChangeListener(this);
 		spawnToPlayerButton = (Button) findViewById(R.id.world_info_spawn_to_player_button);
 		spawnToPlayerButton.setOnClickListener(this);
-
+		timeToMorningButton = (Button) findViewById(R.id.world_info_time_to_morning);
+		timeToMorningButton.setOnClickListener(this);
+		timeToNightButton = (Button) findViewById(R.id.world_info_time_to_night);
+		timeToNightButton.setOnClickListener(this);
 	}
 
 	public void updateTimeText() {
@@ -53,12 +60,28 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		level.setSpawnZ((int) loc.getZ());
 	}
 
+	private void setTimeToMorning() {
+		EditorActivity.level.setTime(0);
+		EditorActivity.save(this);
+	}
+
+	private void setTimeToNight() {
+		EditorActivity.level.setTime(7000);
+		EditorActivity.save(this);
+	}
+
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
 			showDialog(DIALOG_CHANGE_GAME_MODE);
 		} else if (v == spawnToPlayerButton) {
 			setSpawnToPlayerPosition();
 			EditorActivity.save(this);
+		} else if (v == timeToMorningButton) {
+			setTimeToMorning();
+			updateTimeText();
+		} else if (v == timeToNightButton) {
+			setTimeToNight();
+			updateTimeText();
 		}
 	}
 

@@ -44,6 +44,27 @@
             android:text="@string/world_info_time_set_night"/>
     </LinearLayout>
 
+    <TextView android:text="@string/world_info_player_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <TextView android:id="@+id/world_info_player_x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <TextView android:id="@+id/world_info_player_y"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+
+    <TextView android:id="@+id/world_info_player_z"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
     <Button android:id="@+id/world_info_spawn_to_player_button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

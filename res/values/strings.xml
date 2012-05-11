@@ -31,6 +31,7 @@
     <string name="invalid_number">Invalid value</string>
     <string name="world_info_time_set_morning">Set to morning</string>
     <string name="world_info_time_set_night">Set to night</string>
+    <string name="world_info_player_location">Player location:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

@@ -30,6 +30,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private Button spawnToPlayerButton;
 
+	private TextView playerXText, playerYText, playerZText;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -46,10 +48,21 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		timeToMorningButton.setOnClickListener(this);
 		timeToNightButton = (Button) findViewById(R.id.world_info_time_to_night);
 		timeToNightButton.setOnClickListener(this);
+		playerXText = (TextView) findViewById(R.id.world_info_player_x);
+		playerYText = (TextView) findViewById(R.id.world_info_player_y);
+		playerZText = (TextView) findViewById(R.id.world_info_player_z);
+		updatePlayerPositionText();
 	}
 
 	public void updateTimeText() {
 		worldTimeText.setText(Long.toString(EditorActivity.level.getTime()));
+	}
+
+	public void updatePlayerPositionText() {
+		Vector loc = EditorActivity.level.getPlayer().getLocation();
+		playerXText.setText("X: " + Float.toString(loc.getX()));
+		playerYText.setText("Y: " + Float.toString(loc.getY()));
+		playerZText.setText("Z: " + Float.toString(loc.getZ()));
 	}
 
 	private void setSpawnToPlayerPosition() {

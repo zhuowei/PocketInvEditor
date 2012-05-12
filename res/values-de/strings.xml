@@ -3,14 +3,14 @@
     <string name="app_name">PocketInvEditor</string>
     <string name="select_world">Wähle eine Welt</string>
     <string name="inventory">Inventar</string>
-    <string name="select_slot">Wähle ein Inventar Slot</string>
+    <string name="select_slot">Wähle einen Inventar slot</string>
     <string name="item_id">Block ID:</string>
     <string name="item_damage">Block Schaden: </string>
-    <string name="item_count">Stückzahl: </string>
+    <string name="item_count">Anzahl: </string>
     <string name="item_id_browse">Wähle...</string>
-    <string name="loading">Lade...</string>
-    <string name="edit_inventory">Verändere dein Inventar</string>
-    <string name="edit_world_info">Ändere Welt Einstellungen</string>
+    <string name="loading">Laden...</string>
+    <string name="edit_inventory">Ändere dein Inventar</string>
+    <string name="edit_world_info">Verschiedene Welt Einstellungen</string>
     <string name="lastplayed">Letztes mal gespielt</string>
     <string name="seed">Seed</string>
     <string name="saved">Gespeichert</string>
@@ -18,13 +18,20 @@
     <string name="backup">Erstelle ein Backup</string>
     <string name="backupcreated">Backup erstellt: </string>
     <string name="backupfailed">Backup fehlgeschlagen.</string>
-    <string name="backup_start">Backup gestartet... Das kann eine Weile dauern.</string>
+    <string name="backup_start">Backup gestartet. Das kann eine Weile dauern.</string>
     <string name="about_about">Über</string>
     <string name="change">Ändere</string>
     <string name="gamemode">Spielart: </string>
     <string name="gamemode_survival">Überleben</string>
     <string name="gamemode_creative">Kreativ</string>
-    <string name="main_edit_world_info">Ändere Welt Einstellungen</string>
+    <string name="main_edit_world_info">Verschiedenes</string>
+    <string name="item_filter_hint">Suche...</string>
+    <string name="world_info_time">Uhrzeit: </string>
+    <string name="world_info_spawn_to_player">Setze den Spawn Punkt auf deiner aktuellen Position</string>
+    <string name="invalid_number">Nicht zulässige nummer</string>
+    <string name="world_info_time_set_morning">6 Uhr früh</string>
+    <string name="world_info_time_set_night">24 Uhr</string>
+    <string name="world_info_player_location">Deine Position:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -38,4 +45,5 @@
     </string>
     <string name="about_librarycredits">This app uses the SpoutNBT library developed by
     the SpoutDev team.</string>
+    <string name="add_empty_slot">Füge einen leeren Slot hinzu</string>
 </resources>

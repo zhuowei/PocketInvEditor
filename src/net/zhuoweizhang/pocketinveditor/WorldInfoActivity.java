@@ -74,12 +74,12 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	}
 
 	private void setTimeToMorning() {
-		EditorActivity.level.setTime(0);
+		EditorActivity.level.setTime((EditorActivity.level.getTime() / 14400) * 14400);
 		EditorActivity.save(this);
 	}
 
 	private void setTimeToNight() {
-		EditorActivity.level.setTime(7000);
+		EditorActivity.level.setTime(((EditorActivity.level.getTime() / 14400) * 14400) + 7200);
 		EditorActivity.save(this);
 	}
 

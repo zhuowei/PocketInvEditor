@@ -12,7 +12,7 @@
     <string name="edit_inventory">Edit Inventory</string>
     <string name="edit_world_info">Edit World Info</string>
     <string name="lastplayed">Last played</string>
-    <string name="seed">Seed</string>
+    <string name="seed">Seed:</string>
     <string name="saved">Saved</string>
     <string name="savefailed">Save failed.</string>
     <string name="backup">Create Backup</string>

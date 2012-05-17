@@ -32,6 +32,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private TextView playerXText, playerYText, playerZText;
 
+	private EditText healthText;
+
+	private Button fullHealthButton, infiniteHealthButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -52,6 +56,13 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		playerYText = (TextView) findViewById(R.id.world_info_player_y);
 		playerZText = (TextView) findViewById(R.id.world_info_player_z);
 		updatePlayerPositionText();
+		healthText = (EditText) findViewById(R.id.world_info_health);
+		fullHealthButton = (Button) findViewById(R.id.world_info_full_health);
+		infiniteHealthButton = (Button) findViewById(R.id.world_info_infinite_health);
+		healthText.setOnFocusChangeListener(this);
+		fullHealthButton.setOnClickListener(this);
+		infiniteHealthButton.setOnClickListener(this);
+		updatePlayerHealthText();
 	}
 
 	public void updateTimeText() {
@@ -83,6 +94,22 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		EditorActivity.save(this);
 	}
 
+	public void updatePlayerHealthText() {
+		healthText.setText(Short.toString(EditorActivity.level.getPlayer().getHealth()));
+	}
+
+	private void setPlayerHealthToFull() {
+		EditorActivity.level.getPlayer().setHealth((short) 20);
+		EditorActivity.save(this);
+		updatePlayerHealthText();
+	}
+
+	private void setPlayerHealthToInfinite() {
+		EditorActivity.level.getPlayer().setHealth(Short.MAX_VALUE);
+		EditorActivity.save(this);
+		updatePlayerHealthText();
+	}
+
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
 			showDialog(DIALOG_CHANGE_GAME_MODE);
@@ -95,6 +122,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		} else if (v == timeToNightButton) {
 			setTimeToNight();
 			updateTimeText();
+		} else if (v == fullHealthButton) {
+			setPlayerHealthToFull();
+		} else if (v == infiniteHealthButton) {
+			setPlayerHealthToInfinite();
 		}
 	}
 
@@ -137,12 +168,17 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			if (!hasFocus) {
 				checkTimeInputAfterChange();
 			}
+		} else if (v == healthText) {
+			if (!hasFocus) {
+				checkHealthInputAfterChange();
+			}
 		}
 	}
 
 	public void onPause() {
 		super.onPause();
 		checkTimeInputAfterChange();
+		checkHealthInputAfterChange();
 	}
 
 	public void checkTimeInputAfterChange() {
@@ -156,6 +192,20 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			}
 		} catch (NumberFormatException e) {
 			worldTimeText.setError(this.getResources().getText(R.string.invalid_number));
+		}
+	}
+
+	public void checkHealthInputAfterChange() {
+		short newHealth = 0;
+		try {
+			newHealth = Short.parseShort(healthText.getText().toString());
+			healthText.setError(null);
+			if (newHealth != EditorActivity.level.getPlayer().getHealth()) {
+				EditorActivity.level.getPlayer().setHealth(newHealth);
+				EditorActivity.save(this);
+			}
+		} catch (NumberFormatException e) {
+			healthText.setError(this.getResources().getText(R.string.invalid_number));
 		}
 	}
 }

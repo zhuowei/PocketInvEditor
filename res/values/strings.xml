@@ -32,6 +32,9 @@
     <string name="world_info_time_set_morning">Set to morning</string>
     <string name="world_info_time_set_night">Set to night</string>
     <string name="world_info_player_location">Player location:</string>
+    <string name="world_info_half_hearts">Half-hearts:</string>
+    <string name="world_info_set_to_full_health">Set to full health</string>
+    <string name="world_info_set_to_infinite_health">Set to infinite health</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

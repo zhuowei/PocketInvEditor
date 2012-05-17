@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
+<!-- Item names taken from the official Mojang translations as of 12w18a. When there is no Mojang translation, the Wiki names are used. -->
+<data>
+    <blocks>
+        <item hex="0" dec="0" name="空气" />
+        <item hex="1" dec="1" name="石头" />
+        <item hex="2" dec="2" name="草方块" />
+        <item hex="3" dec="3" name="泥土" />
+        <item hex="4" dec="4" name="圆石" />
+        <item hex="5" dec="5" name="木板" />
+        <item hex="7" dec="7" name="基岩" />
+        <item hex="8" dec="8" name="水" />
+        <item hex="9" dec="9" name="静止的水" />
+        <item hex="A" dec="10" name="岩浆" />
+        <item hex="B" dec="11" name="静止的岩浆" />
+        <item hex="C" dec="12" name="沙子" />
+        <item hex="D" dec="13" name="沙砾" />
+        <item hex="E" dec="14" name="金矿石" />
+        <item hex="F" dec="15" name="铁矿石" />
+        <item hex="10" dec="16" name="煤矿石" />
+        <item hex="11" dec="17" id="0" name="木头" />
+        <item hex="11" dec="17" id="1" name="松木" />
+        <item hex="11" dec="17" id="2" name="桦木" />
+        <item hex="12" dec="18" id="0" name="树叶" />
+        <item hex="12" dec="18" id="1" name="松树叶" />
+        <item hex="12" dec="18" id="2" name="桦树叶 " />
+        <item hex="14" dec="20" name="玻璃" />
+        <item hex="15" dec="21" name="青金石矿石" />
+        <item hex="16" dec="22" name="青金石块" />
+        <item hex="18" dec="24" name="沙石" />
+        <item hex="23" dec="35" id="0" name="白色羊毛" />
+        <item hex="23" dec="35" id="1" name="橙色羊毛" />
+        <item hex="23" dec="35" id="2" name="品红色羊毛" />
+        <item hex="23" dec="35" id="3" name="淡蓝色羊毛" />
+        <item hex="23" dec="35" id="4" name="黄色羊毛" />
+        <item hex="23" dec="35" id="5" name="黄绿色羊毛" />
+        <item hex="23" dec="35" id="6" name="粉红色羊毛" />
+        <item hex="23" dec="35" id="7" name="灰色羊毛" />
+        <item hex="23" dec="35" id="8" name="淡灰色羊毛" />
+        <item hex="23" dec="35" id="9" name="青色羊毛" />
+        <item hex="23" dec="35" id="10" name="紫色羊毛" />
+        <item hex="23" dec="35" id="11" name="蓝色羊毛" />
+        <item hex="23" dec="35" id="12" name="棕色羊毛" />
+        <item hex="23" dec="35" id="13" name="绿色羊毛" />
+        <item hex="23" dec="35" id="14" name="红色羊毛" />
+        <item hex="23" dec="35" id="15" name="黑色羊毛" />
+        <item hex="25" dec="37" name="蒲公英" />
+        <item hex="26" dec="38" name="青色花" />
+        <item hex="27" dec="39" name="棕色蘑菇" />
+        <item hex="28" dec="40" name="红色蘑菇" />
+        <item hex="29" dec="41" name="金块" />
+        <item hex="2A" dec="42" name="铁块" />
+        <item hex="2B" dec="43" id="0" name="双石台阶" />
+        <item hex="2B" dec="43" id="1" name="双沙石台阶" />
+        <item hex="2B" dec="43" id="2" name="双木台阶" />
+        <item hex="2B" dec="43" id="3" name="双圆石台阶" />
+        <item hex="2B" dec="43" id="4" name="双砖台阶" />
+        <item hex="2B" dec="43" id="6" name="双石台阶" />
+        <item hex="2C" dec="44" id="0" name="石台阶" />
+        <item hex="2C" dec="44" id="1" name="沙石台阶" />
+        <item hex="2C" dec="44" id="2" name="木台阶" />
+        <item hex="2C" dec="44" id="3" name="圆石台阶" />
+        <item hex="2C" dec="44" id="4" name="砖台阶" />
+        <item hex="2C" dec="44" id="6" name="石台阶" />
+        <item hex="2D" dec="45" name="砖块" />
+        <item hex="2E" dec="46" name="TNT" />
+        <item hex="2F" dec="47" name="书架" />
+        <item hex="30" dec="48" name="苔石" />
+        <item hex="31" dec="49" name="黑曜石" />
+        <item hex="32" dec="50" name="火把" />
+        <item hex="33" dec="51" name="火" />
+        <item hex="35" dec="53" name="木楼梯" />
+        <item hex="38" dec="56" name="钻石矿石" />
+        <item hex="39" dec="57" name="钻石块" />
+        <item hex="3A" dec="58" name="工作台" />
+        <item hex="3C" dec="60" name="耕地" />
+        <item hex="40" dec="64" name="木门 (方块)" />
+        <item hex="41" dec="65" name="梯子" />
+        <item hex="43" dec="67" name="石楼梯" />
+        <item hex="47" dec="71" name="铁门 (方块)" />
+        <item hex="49" dec="73" name="红石矿石" />
+        <item hex="4A" dec="74" name="发光的红石矿石" />
+        <item hex="4E" dec="78" name="雪" />
+        <item hex="4F" dec="79" name="冰" />
+        <item hex="50" dec="80" name="雪块" />
+        <item hex="51" dec="81" name="仙人掌" />
+        <item hex="52" dec="82" name="粘土块" />
+        <item hex="53" dec="83" name="甘蔗" />
+        <item hex="55" dec="85" name="栅栏" />
+        <item hex="6B" dec="107" name="栅栏门"/>
+        <item hex="6C" dec="108" name="砖楼梯" />
+        <item hex="F8" dec="248" name="'更新游戏'方块1" />
+        <item hex="F9" dec="249" name="'更新游戏'方块2" />
+    </blocks>
+    <items>
+        <item hex="100" dec="256" name="铁锹" />
+        <item hex="101" dec="257" name="铁镐" />
+        <item hex="102" dec="258" name="铁斧" />
+        <item hex="106" dec="262" name="箭" />
+        <item hex="107" dec="263" id="0" name="煤炭" />
+        <item hex="107" dec="263" id="1" name="木炭" />
+        <item hex="108" dec="264" name="钻石" />
+        <item hex="109" dec="265" name="铁锭" />
+        <item hex="10A" dec="266" name="金锭" />
+        <item hex="10B" dec="267" name="铁剑" />
+        <item hex="10C" dec="268" name="木剑" />
+        <item hex="10D" dec="269" name="木锹" />
+        <item hex="10E" dec="270" name="木镐" />
+        <item hex="10F" dec="271" name="木斧" />
+        <item hex="110" dec="272" name="石剑" />
+        <item hex="111" dec="273" name="石锹" />
+        <item hex="112" dec="274" name="石镐" />
+        <item hex="113" dec="275" name="石斧" />
+        <item hex="114" dec="276" name="钻石剑" />
+        <item hex="115" dec="277" name="钻石锹" />
+        <item hex="116" dec="278" name="钻石镐" />
+        <item hex="117" dec="279" name="钻石斧" />
+        <item hex="118" dec="280" name="木棍" />
+        <item hex="119" dec="281" name="碗" />
+        <item hex="11B" dec="283" name="金剑" />
+        <item hex="11C" dec="284" name="金锹" />
+        <item hex="11D" dec="285" name="金镐" />
+        <item hex="11E" dec="286" name="金斧" />
+        <item hex="11F" dec="287" name="线" />
+        <item hex="120" dec="288" name="羽毛" />
+        <item hex="121" dec="289" name="火药" />
+        <item hex="128" dec="296" name="小麦" />
+        <item hex="144" dec="324" name="木门" />
+        <item hex="14A" dec="330" name="铁门" />
+        <item hex="14C" dec="332" name="雪球" />
+        <item hex="14E" dec="334" name="皮革" />
+        <item hex="150" dec="336" name="红砖" />
+        <item hex="151" dec="337" name="粘土" />
+        <item hex="152" dec="338" name="甘蔗" />
+        <item hex="153" dec="339" name="纸" />
+        <item hex="154" dec="340" name="书" />
+        <item hex="155" dec="341" name="粘液球" />
+        <item hex="159" dec="345" name="指南针" />
+        <item hex="15B" dec="347" name="钟" />
+        <item hex="15C" dec="348" name="荧石粉" />
+        <item hex="15F" dec="351" id="0" name="墨囊(染料)" />
+        <item hex="15F" dec="351" id="1" name="玫瑰红(染料)" />
+        <item hex="15F" dec="351" id="2" name="仙人掌绿(染料)" />
+        <item hex="15F" dec="351" id="3" name="可可豆(染料)" />
+        <item hex="15F" dec="351" id="4" name="金青石(染料)" />
+        <item hex="15F" dec="351" id="5" name="紫色染料" />
+        <item hex="15F" dec="351" id="6" name="青色染料" />
+        <item hex="15F" dec="351" id="7" name="淡灰色染料" />
+        <item hex="15F" dec="351" id="8" name="灰色染料" />
+        <item hex="15F" dec="351" id="9" name="粉红色染料" />
+        <item hex="15F" dec="351" id="10" name="黄绿色染料" />
+        <item hex="15F" dec="351" id="11" name="蒲公英黄(染料)" />
+        <item hex="15F" dec="351" id="12" name="淡蓝色染料" />
+        <item hex="15F" dec="351" id="13" name="品红色染料" />
+        <item hex="15F" dec="351" id="14" name="橙色染料" />
+        <item hex="15F" dec="351" id="15" name="骨粉" />
+        <item hex="160" dec="352" name="骨头" />
+        <item hex="161" dec="353" name="糖" />
+        <item hex="167" dec="359" name="剪刀" />
+    </items>
+</data>

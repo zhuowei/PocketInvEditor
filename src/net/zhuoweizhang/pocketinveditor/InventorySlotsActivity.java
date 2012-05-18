@@ -87,16 +87,19 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		if(item.getTitle().equals(getResources().getString(R.string.add_empty_slot))){
-			addEmptySlot();
+			InventorySlot newSlot = addEmptySlot();
+			if (newSlot != null) {
+				openInventoryEditScreen(inventoryListAdapter.getPosition(newSlot), newSlot);
+			}
 		}
 		return false;
 		
 	}
 	
-	private void addEmptySlot(){
+	private InventorySlot addEmptySlot(){
 		//Check for 36 item cap, if we have a full inventory, just return
 		if(inventory.size() > 35){
-			return;
+			return null;
 		}
 		List<InventorySlot> outInventory = new ArrayList<InventorySlot>();
 		for(int i = 0; i < tempInventory.size(); i++){
@@ -113,6 +116,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		outInventory.addAll(inventory);
 		EditorActivity.level.getPlayer().setInventory(outInventory);
 		EditorActivity.save(this);
+		return slot;
 	}
 	
 	private void alignSlots(){

@@ -158,5 +158,6 @@
         <item hex="160" dec="352" name="Knochen" />
         <item hex="161" dec="353" name="Zucker" />
         <item hex="167" dec="359" name="Schere" />
+        <item hex="1C8" dec="456" name="Kamera" />
     </items>
 </data>

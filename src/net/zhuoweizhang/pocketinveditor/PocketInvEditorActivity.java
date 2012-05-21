@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 import net.zhuoweizhang.pocketinveditor.material.Material;
 
 public final class PocketInvEditorActivity extends ListActivity
@@ -75,6 +76,7 @@ public final class PocketInvEditorActivity extends ListActivity
 
 	private void loadMaterials() {
 		new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
+		new Thread(new MaterialIconLoader(this)).start();
 	}
 
 	public boolean onCreateOptionsMenu(Menu menu) {

@@ -22,8 +22,8 @@
         <item hex="11" dec="17" id="1" name="Redwood (Log)" />
         <item hex="11" dec="17" id="2" name="Birch (Log)" />
         <item hex="12" dec="18" id="0" name="Leaves" />
-        <item hex="12" dec="18" id="2" name="Redwood (Leaves)" />
-        <item hex="12" dec="18" id="3" name="Birch (Leaves)" />
+        <item hex="12" dec="18" id="1" name="Redwood (Leaves)" />
+        <item hex="12" dec="18" id="2" name="Birch (Leaves)" />
         <item hex="14" dec="20" name="Glass" />
         <item hex="15" dec="21" name="Lapis Lazuli Ore" />
         <item hex="16" dec="22" name="Lapis Lazuli Block" />

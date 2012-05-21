@@ -42,9 +42,6 @@ public final class PocketInvEditorActivity extends ListActivity
 
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-				// When clicked, show a toast with the TextView text
-				/*Toast.makeText(getApplicationContext(), ((TextView) view).getText(),
-						Toast.LENGTH_SHORT).show();*/
 				File worldFile = worlds.get(position).folder;
 				openWorld(worldFile);
 			}
@@ -117,7 +114,6 @@ public final class PocketInvEditorActivity extends ListActivity
 			}
 			final List<WorldListItem> worldFolders = new ArrayList<WorldListItem>();
 			for (File worldFolder : worldsFolder.listFiles()) {
-				System.out.println(worldFolder.toString());
 				if (!worldFolder.isDirectory()) continue;
 				//check if it has level.dat
 				if (!new File(worldFolder, "level.dat").exists())

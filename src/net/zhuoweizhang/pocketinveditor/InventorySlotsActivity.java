@@ -109,7 +109,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		}
 		
 		
-		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)0));
+		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)1));
 		alignSlots();
 		inventory.add(slot);
 		inventoryListAdapter.notifyDataSetChanged();

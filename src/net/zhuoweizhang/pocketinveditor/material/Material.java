@@ -46,6 +46,6 @@ public class Material {
 	}
 
 	public String toString() {
-		return getName() + " : " + getId();
+		return getName() + " : " + getId() + (damage != 0 ? ":" + damage : "");
 	}
 }

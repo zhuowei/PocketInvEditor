@@ -11,6 +11,8 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 
 	public static final int BROWSE_ITEM_REQUEST = 500;
 
+	public static final int MAX_SLOT_SIZE = 64;
+
 	private EditText idEdit;
 
 	private EditText damageEdit;
@@ -18,6 +20,8 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 	private EditText countEdit;
 
 	private Button browseItemIdButton;
+
+	private Button fillSlotButton;
 
 	private short originalTypeId, originalDamage;
 	private byte originalCount;
@@ -32,6 +36,8 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 		countEdit = (EditText) findViewById(R.id.slot_countentry);
 		browseItemIdButton = (Button) findViewById(R.id.slot_browseitemid);
 		browseItemIdButton.setOnClickListener(this);
+		fillSlotButton = (Button) findViewById(R.id.slot_fillslot);
+		fillSlotButton.setOnClickListener(this);
 		Intent intent = getIntent();
 		originalTypeId = intent.getShortExtra("TypeId", (short) 0);
 		originalDamage = intent.getShortExtra("Damage", (short) 0);
@@ -116,6 +122,8 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 	public void onClick(View v) {
 		if (v == browseItemIdButton) {
 			showBrowseItemIdActivity();
+		} else if (v == fillSlotButton) {
+			fillSlotToMax();
 		}
 	}
 
@@ -133,5 +141,14 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 				checkInputAfterChange();
 			}
 		}
+	}
+
+	private void fillSlotToMax() {
+		byte newCount = MAX_SLOT_SIZE;
+		returnIntent.putExtra("Count", newCount);
+		if (newCount != originalCount) {
+			setResult(RESULT_OK, returnIntent);
+		}
+		countEdit.setText(Byte.toString(newCount));
 	}
 }

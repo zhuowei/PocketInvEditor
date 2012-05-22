@@ -3,17 +3,24 @@ package net.zhuoweizhang.pocketinveditor;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
+import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 
 public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener {
 
@@ -35,7 +42,31 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				inventory.add(slot);
 			}
 		}
-		inventoryListAdapter = new ArrayAdapter<InventorySlot>(this, R.layout.slot_list_item, inventory);
+
+		inventoryListAdapter = new ArrayAdapter<InventorySlot>(this, R.layout.slot_list_item, R.id.slot_list_main_text, inventory) {
+			public View getView(int position, View convertView, ViewGroup parent) {
+				View retval = super.getView(position, convertView, parent);
+				ImageView iconView = (ImageView) retval.findViewById(R.id.slot_list_icon);
+				InventorySlot slot = this.getItem(position);
+				ItemStack stack = slot.getContents();
+				MaterialIcon icon = MaterialIcon.icons.get(new MaterialKey(stack.getTypeId(), stack.getDurability()));
+				if (icon == null) {
+					icon = MaterialIcon.icons.get(new MaterialKey(stack.getTypeId(), (short) 0));
+				}
+				if (icon != null) {
+					BitmapDrawable myDrawable = new BitmapDrawable(icon.bitmap);
+					myDrawable.setDither(false);
+					myDrawable.setAntiAlias(false);
+					myDrawable.setFilterBitmap(false);
+					iconView.setImageDrawable(myDrawable);
+					iconView.setVisibility(View.VISIBLE);
+				} else {
+					iconView.setVisibility(View.INVISIBLE);
+				}
+				return retval;
+			}
+		};
+
 		setListAdapter(inventoryListAdapter);
 		getListView().setOnItemClickListener(this);
 	}

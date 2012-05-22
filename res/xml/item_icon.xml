@@ -1,4 +1,7 @@
 <items>
+
+    <!-- Blocks -->
+
     <item typeId="1" icon="guiblocks,1,8"/>
     <item typeId="2" icon="terrain,0,3"/>
     <item typeId="3" icon="guiblocks,1,5"/>
@@ -19,8 +22,8 @@
     <item typeId="17" damage="2" icon="guiblocks,1,2"/>
     <item typeId="18" icon="guiblocks,3,7"/>
     <item typeId="20" icon="guiblocks,3,6"/>
-    <item typeId="21" icon="terrain,9,0"/>
-    <item typeId="22" icon="terrain,10,0"/>
+    <item typeId="21" icon="terrain,10,0"/>
+    <item typeId="22" icon="terrain,9,0"/>
     <item typeId="24" icon="guiblocks,1,6"/>
     <item typeId="35" icon="guiblocks,5,5"/>
     <item typeId="35" damage="1" icon="guiblocks,7,1"/>
@@ -84,4 +87,71 @@
     <item typeId="108" icon="guiblocks,9,4"/>
     <item typeId="248" icon="terrain,15,12"/>
     <item typeId="249" icon="terrain,15,13"/>
+
+    <!-- Items -->
+
+    <item typeId="256" icon="items,5,2"/>
+    <item typeId="257" icon="items,6,2"/>
+    <item typeId="258" icon="items,7,2"/>
+    <item typeId="262" icon="items,2,5"/>
+    <item typeId="263" icon="items,0,7"/>
+    <item typeId="264" icon="items,3,7"/>
+    <item typeId="265" icon="items,1,7"/>
+    <item typeId="266" icon="items,2,7"/>
+    <item typeId="267" icon="items,4,2"/>
+    <item typeId="268" icon="items,4,0"/>
+    <item typeId="269" icon="items,5,0"/>
+    <item typeId="270" icon="items,6,0"/>
+    <item typeId="271" icon="items,7,0"/>
+    <item typeId="272" icon="items,4,1"/>
+    <item typeId="273" icon="items,5,1"/>
+    <item typeId="274" icon="items,6,1"/>
+    <item typeId="275" icon="items,7,1"/>
+    <item typeId="276" icon="items,4,3"/>
+    <item typeId="277" icon="items,5,3"/>
+    <item typeId="278" icon="items,6,3"/>
+    <item typeId="279" icon="items,7,3"/>
+    <item typeId="280" icon="items,3,5"/>
+    <item typeId="281" icon="items,4,7"/>
+    <item typeId="283" icon="items,4,4"/>
+    <item typeId="284" icon="items,5,4"/>
+    <item typeId="285" icon="items,6,4"/>
+    <item typeId="286" icon="items,7,4"/>
+    <item typeId="287" icon="items,0,8"/>
+    <item typeId="288" icon="items,1,8"/>
+    <item typeId="289" icon="items,2,8"/>
+    <item typeId="296" icon="items,1,9"/>
+    <item typeId="324" icon="items,2,11"/>
+    <item typeId="330" icon="items,2,12"/>
+    <item typeId="332" icon="items,0,14"/>
+    <item typeId="334" icon="items,6,7"/>
+    <item typeId="336" icon="items,1,6"/>
+    <item typeId="337" icon="items,3,9"/>
+    <item typeId="338" icon="items,1,11"/>
+    <item typeId="339" icon="items,3,10"/>
+    <item typeId="340" icon="items,3,11"/>
+    <item typeId="341" icon="items,1,14"/>
+    <item typeId="345" icon="items,3,6"/>
+    <item typeId="347" icon="items,4,6"/>
+    <item typeId="348" icon="items,4,9"/>
+    <item typeId="351" icon="items,4,14"/>
+    <item typeId="351" damage="1" icon="items,5,14"/>
+    <item typeId="351" damage="2" icon="items,6,14"/>
+    <item typeId="351" damage="3" icon="items,7,14"/>
+    <item typeId="351" damage="4" icon="items,8,14"/>
+    <item typeId="351" damage="5" icon="items,9,14"/>
+    <item typeId="351" damage="6" icon="items,10,14"/>
+    <item typeId="351" damage="7" icon="items,11,14"/>
+    <item typeId="351" damage="8" icon="items,4,15"/>
+    <item typeId="351" damage="9" icon="items,5,15"/>
+    <item typeId="351" damage="10" icon="items,6,15"/>
+    <item typeId="351" damage="11" icon="items,7,15"/>
+    <item typeId="351" damage="12" icon="items,8,15"/>
+    <item typeId="351" damage="13" icon="items,9,15"/>
+    <item typeId="351" damage="14" icon="items,10,15"/>
+    <item typeId="351" damage="15" icon="items,11,15"/>
+    <item typeId="352" icon="items,1,12"/>
+    <item typeId="353" icon="items,0,13"/>
+    <item typeId="359" icon="items,5,13"/>
+    <item typeId="456" icon="items,15,2"/>
 </items>

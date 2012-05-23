@@ -30,6 +30,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private Button spawnToPlayerButton;
 
+	private Button warpToSpawnButton;
+
 	private TextView playerXText, playerYText, playerZText;
 
 	private EditText healthText;
@@ -48,6 +50,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		worldTimeText.setOnFocusChangeListener(this);
 		spawnToPlayerButton = (Button) findViewById(R.id.world_info_spawn_to_player_button);
 		spawnToPlayerButton.setOnClickListener(this);
+		warpToSpawnButton = (Button) findViewById(R.id.world_info_warp_to_spawn_button);
+		warpToSpawnButton.setOnClickListener(this);
 		timeToMorningButton = (Button) findViewById(R.id.world_info_time_to_morning);
 		timeToMorningButton.setOnClickListener(this);
 		timeToNightButton = (Button) findViewById(R.id.world_info_time_to_night);
@@ -110,6 +114,15 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		updatePlayerHealthText();
 	}
 
+	private void warpPlayerToSpawn() {
+		Vector loc = EditorActivity.level.getPlayer().getLocation();
+		Level level = EditorActivity.level;
+		loc.setX(level.getSpawnX());
+		loc.setY(level.getSpawnY());
+		loc.setZ(level.getSpawnZ());
+		EditorActivity.save(this);
+	}
+
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
 			showDialog(DIALOG_CHANGE_GAME_MODE);
@@ -126,6 +139,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			setPlayerHealthToFull();
 		} else if (v == infiniteHealthButton) {
 			setPlayerHealthToInfinite();
+		} else if (v == warpToSpawnButton) {
+			warpPlayerToSpawn();
 		}
 	}
 

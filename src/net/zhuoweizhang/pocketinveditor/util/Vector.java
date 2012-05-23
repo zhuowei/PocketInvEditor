@@ -21,7 +21,7 @@ public class Vector {
 		return y;
 	}
 
-	public void setY() {
+	public void setY(float y) {
 		this.y = y;
 	}
 
@@ -29,7 +29,7 @@ public class Vector {
 		return z;
 	}
 
-	public void setZ() {
+	public void setZ(float z) {
 		this.z = z;
 	}
 }

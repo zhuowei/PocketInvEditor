@@ -25,7 +25,7 @@ import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener {
 
 	private List<InventorySlot> inventory;
-	
+
 	private List<InventorySlot> tempInventory;
 
 	private ArrayAdapter<InventorySlot> inventoryListAdapter;
@@ -85,7 +85,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		ItemStack stack = slot.getContents();
 		intent.putExtra("TypeId", stack.getTypeId());
 		intent.putExtra("Damage", stack.getDurability());
-		intent.putExtra("Count", (byte) stack.getAmount());
+		intent.putExtra("Count", stack.getAmount());
 		intent.putExtra("Slot", slot.getSlot());
 		intent.putExtra("Index", position);
 		startActivityForResult(intent, EDIT_SLOT_REQUEST);
@@ -101,20 +101,20 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				}
 				InventorySlot slot = inventory.get(slotIndex);
 				ItemStack stack = slot.getContents();
-				stack.setAmount(intent.getByteExtra("Count", (byte) 0));
+				stack.setAmount(intent.getIntExtra("Count", 0));
 				stack.setDurability(intent.getShortExtra("Damage", (byte) 0));
 				stack.setTypeId(intent.getShortExtra("TypeId", (byte) 0));
 				EditorActivity.save(this);
 			}
 		}
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
 		menu.add(getResources().getString(R.string.add_empty_slot));
 		return true;
 	}
-	
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		if(item.getTitle().equals(getResources().getString(R.string.add_empty_slot))){
@@ -124,9 +124,9 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 			}
 		}
 		return false;
-		
+
 	}
-	
+
 	private InventorySlot addEmptySlot(){
 		//Check for 36 item cap, if we have a full inventory, just return
 		if(inventory.size() > 35){
@@ -138,8 +138,8 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 				outInventory.add(tempInventory.get(i));
 			}
 		}
-		
-		
+
+
 		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)1));
 		alignSlots();
 		inventory.add(slot);
@@ -149,7 +149,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		EditorActivity.save(this);
 		return slot;
 	}
-	
+
 	private void alignSlots(){
 		for(int i = 0; i < inventory.size(); i++){
 			inventory.get(i).setSlot((byte) (i + 9));

@@ -22,7 +22,7 @@ public final class NBTConverter {
 		byte slot = 0;
 		short id = 0;
 		short damage = 0;
-		byte count = 0;
+		int count = 0;
 		for (Tag tag : tags) {
 			if (tag.getName().equals("Slot")) {
 				slot = ((ByteTag) tag).getValue();
@@ -32,6 +32,9 @@ public final class NBTConverter {
 				damage = ((ShortTag) tag).getValue();
 			} else if (tag.getName().equals("Count")) {
 				count = ((ByteTag) tag).getValue();
+				if (count < 0) {
+					count = 256 + count;
+				}
 			}
 		}
 		return new InventorySlot(slot, new ItemStack(id, damage, count));

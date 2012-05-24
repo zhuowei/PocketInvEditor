@@ -23,8 +23,10 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 
 	private Button fillSlotButton;
 
+	private Button maxCountToSlotButton;
+
 	private short originalTypeId, originalDamage;
-	private byte originalCount;
+	private int originalCount;
 	private Intent returnIntent = new Intent();
 
 	public void onCreate(Bundle savedInstanceState)	{
@@ -38,13 +40,15 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 		browseItemIdButton.setOnClickListener(this);
 		fillSlotButton = (Button) findViewById(R.id.slot_fillslot);
 		fillSlotButton.setOnClickListener(this);
+		maxCountToSlotButton = (Button) findViewById(R.id.slot_maxcount);
+		maxCountToSlotButton.setOnClickListener(this);
 		Intent intent = getIntent();
 		originalTypeId = intent.getShortExtra("TypeId", (short) 0);
 		originalDamage = intent.getShortExtra("Damage", (short) 0);
-		originalCount = intent.getByteExtra("Count", (byte) 0);
+		originalCount = intent.getIntExtra("Count", (byte) 0);
 		idEdit.setText(Short.toString(originalTypeId));
 		damageEdit.setText(Short.toString(originalDamage));
-		countEdit.setText(Byte.toString(originalCount));
+		countEdit.setText(Integer.toString(originalCount));
 		idEdit.setOnFocusChangeListener(this);
 		damageEdit.setOnFocusChangeListener(this);
 		countEdit.setOnFocusChangeListener(this);
@@ -62,7 +66,7 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 		boolean isCorrect = true;
 		short newId = originalTypeId;
 		short newDamage = originalDamage;
-		byte newCount = originalCount;;
+		int newCount = originalCount;
 		try {
 			newId = Short.parseShort(idEdit.getText().toString());
 			idEdit.setText(Short.toString(newId));
@@ -80,8 +84,11 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			isCorrect = false;
                 }
                 try {
-			newCount = Byte.parseByte(countEdit.getText().toString());
-			countEdit.setText(Byte.toString(newCount));
+			newCount = Integer.parseInt(countEdit.getText().toString());
+			if (newCount < 0 || newCount > 255) {
+				throw new NumberFormatException("derp");
+			}
+			countEdit.setText(Integer.toString(newCount));
                         countEdit.setError(null);
                 } catch (NumberFormatException e) {
                         countEdit.setError("Derp");
@@ -112,7 +119,7 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 		try {
 			Short.decode(idEdit.getText().toString());
 			Short.decode(damageEdit.getText().toString());
-			Byte.decode(countEdit.getText().toString());
+			Short.decode(countEdit.getText().toString());
 			return true;
 		} catch (NumberFormatException e) {
 			return false;
@@ -124,6 +131,8 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			showBrowseItemIdActivity();
 		} else if (v == fillSlotButton) {
 			fillSlotToMax();
+		} else if (v == maxCountToSlotButton) {
+			fillSlotToMaxByteValue();
 		}
 	}
 
@@ -144,11 +153,21 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 	}
 
 	private void fillSlotToMax() {
-		byte newCount = MAX_SLOT_SIZE;
+		int newCount = MAX_SLOT_SIZE;
 		returnIntent.putExtra("Count", newCount);
 		if (newCount != originalCount) {
 			setResult(RESULT_OK, returnIntent);
 		}
-		countEdit.setText(Byte.toString(newCount));
+		countEdit.setText(Integer.toString(newCount));
 	}
+
+        private void fillSlotToMaxByteValue() {
+                int newCount = 255;
+                returnIntent.putExtra("Count", newCount);
+                if (newCount != originalCount) {
+                        setResult(RESULT_OK, returnIntent);
+                }
+                countEdit.setText(Integer.toString(newCount));
+        }
+
 }

@@ -10,7 +10,7 @@ public class ItemStack {
 
 	private int amount;
 
-	public ItemStack(short id, short durability, short amount) {
+	public ItemStack(short id, short durability, int amount) {
 		this.id = id;
 		this.durability = durability;
 		this.amount = amount;

@@ -36,6 +36,7 @@
     <string name="world_info_set_to_full_health">Set to full health</string>
     <string name="world_info_set_to_infinite_health">Set to infinite health</string>
     <string name="slot_fillslot">Fill slot</string>
+    <string name="slot_maxcountslot">255 in slot</string>
     <string name="world_info_warp_to_spawn">Warp to spawn</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify

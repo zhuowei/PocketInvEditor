@@ -68,21 +68,15 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"/>
 
-    <LinearLayout android:layout_width="fill_parent"
+    <Button android:id="@+id/world_info_spawn_to_player_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:text="@string/world_info_spawn_to_player"/>
 
-        <Button android:id="@+id/world_info_spawn_to_player_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/world_info_spawn_to_player"/>
-
-        <Button android:id="@+id/world_info_warp_to_spawn_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/world_info_warp_to_spawn"/>
-
-    </LinearLayout>
+    <Button android:id="@+id/world_info_warp_to_spawn_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/world_info_warp_to_spawn"/>
 
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"

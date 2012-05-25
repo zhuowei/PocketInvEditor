@@ -72,7 +72,7 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			idEdit.setText(Short.toString(newId));
 			idEdit.setError(null);
 		} catch (NumberFormatException e) {
-			idEdit.setError("Derp");
+			idEdit.setError(this.getResources().getText(R.string.invalid_number));
 			isCorrect = false;
 		}
                 try {
@@ -80,7 +80,7 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			damageEdit.setText(Short.toString(newDamage));
                         damageEdit.setError(null);
                 } catch (NumberFormatException e) {
-                        damageEdit.setError("Derp");
+                        damageEdit.setError(this.getResources().getText(R.string.invalid_number));
 			isCorrect = false;
                 }
                 try {
@@ -91,7 +91,7 @@ public class EditInventorySlotActivity extends Activity implements View.OnFocusC
 			countEdit.setText(Integer.toString(newCount));
                         countEdit.setError(null);
                 } catch (NumberFormatException e) {
-                        countEdit.setError("Derp");
+                        countEdit.setError(this.getResources().getText(R.string.invalid_number));
 			isCorrect = false;
                 }
 		if (isCorrect) {

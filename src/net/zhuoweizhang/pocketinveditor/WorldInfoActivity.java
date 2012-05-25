@@ -121,6 +121,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		loc.setY(level.getSpawnY());
 		loc.setZ(level.getSpawnZ());
 		EditorActivity.save(this);
+		updatePlayerPositionText();
 	}
 
 	public void onClick(View v) {

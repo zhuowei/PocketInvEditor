@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PocketInvEditor</string>
+    <string name="select_world">월드 선택</string>
+    <string name="inventory">인벤토리</string>
+    <string name="select_slot">인벤토리 슬롯 선택</string>
+    <string name="item_id">아이템 ID:</string>
+    <string name="item_damage">아이템 데미지:</string>
+    <string name="item_count">개수:</string>
+    <string name="item_id_browse">찾아보기...</string>
+    <string name="loading">로딩 중...</string>
+    <string name="edit_inventory">인벤토리 수정</string>
+    <string name="edit_world_info">월드 정보 수정</string>
+    <string name="lastplayed">최근 플레이</string>
+    <string name="seed">시드:</string>
+    <string name="saved">저장됨</string>
+    <string name="savefailed">저장에 실패하였습니다.</string>
+    <string name="backup">백업 생성</string>
+    <string name="backupcreated">백업 생성됨:</string>
+    <string name="backupfailed">백업에 실패하였습니다.</string>
+    <string name="backup_start">백업을 생성합니다. 몇 분 정도 소요됩니다.</string>
+    <string name="about_about">정보</string>
+    <string name="change">변경</string>
+    <string name="gamemode">게임 모드:</string>
+    <string name="gamemode_survival">서바이벌</string>
+    <string name="gamemode_creative">크리에이티브</string>
+    <string name="main_edit_world_info">월드 정보 수정</string>
+    <string name="item_filter_hint">찾아보기...</string>
+    <string name="world_info_time">시간:</string>
+    <string name="world_info_spawn_to_player">플레이어 위치에 스폰합니다.</string>
+    <string name="invalid_number">알수없는 값</string>
+    <string name="world_info_time_set_morning">아침으로 설정</string>
+    <string name="world_info_time_set_night">밤으로 설정</string>
+    <string name="world_info_player_location">플레이어 위치:</string>
+    <string name="world_info_half_hearts">목숨:</string>
+    <string name="world_info_set_to_full_health">최대 목숨으로 채우기</string>
+    <string name="world_info_set_to_infinite_health">무적 모드</string>
+    <string name="slot_fillslot">Fill slot</string>
+    <string name="slot_maxcountslot">255 개로 맞추기</string>
+    <string name="world_info_warp_to_spawn">스폰 지점으로 워프</string>
+    <string name="about_copyright">"Copyright (C) 2012 Zhuowei Zhang
+
+ 이 프로그램은 프리웨어 입니다.: GNU 라이센스에 따라 수정 및 재배포를 할 수 있습니다.
+ 이 프로그램이 유용하게 사용되었으면 하고, 상업적으로 이용되서는 안됩니다. 더 많은 정보를 확인하시려면 GNU 라이센스를 확인해 주십시오.
+"</string>
+    <string name="about_librarycredits">This app uses the SpoutNBT library developed by the SpoutDev team.</string>
+    <string name="add_empty_slot">빈 슬롯 추가</string>
+</resources>

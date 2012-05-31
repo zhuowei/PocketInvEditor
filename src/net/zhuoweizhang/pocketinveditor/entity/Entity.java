@@ -20,6 +20,8 @@ public class Entity {
 
 	private boolean onGround = false;
 
+	private int typeId = 0;
+
 	public Vector getLocation() {
 		return location;
 	}
@@ -82,5 +84,13 @@ public class Entity {
 
 	public void setOnGround(boolean onGround) {
 		this.onGround = onGround;
+	}
+
+	public int getEntityTypeId() {
+		return typeId;
+	}
+
+	public void setEntityTypeId(int typeId) {
+		this.typeId = typeId;
 	}
 }

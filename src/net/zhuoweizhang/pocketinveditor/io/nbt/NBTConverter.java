@@ -11,7 +11,7 @@ import net.zhuoweizhang.pocketinveditor.InventorySlot;
 import net.zhuoweizhang.pocketinveditor.ItemStack;
 import net.zhuoweizhang.pocketinveditor.Level;
 
-import net.zhuoweizhang.pocketinveditor.entity.Player;
+import net.zhuoweizhang.pocketinveditor.entity.*;
 
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
@@ -211,6 +211,48 @@ public final class NBTConverter {
 		tags.add(new IntTag("StorageVersion", level.getStorageVersion()));
 		tags.add(new LongTag("Time", level.getTime()));
 		return new CompoundTag("", tags);
+	}
+
+	@SuppressWarnings("unchecked")
+	public static List<Entity> readEntities(CompoundTag tag) {
+		List<CompoundTag> tags = ((ListTag<CompoundTag>) tag.getValue().get(0)).getValue();
+		List<Entity> entities = new ArrayList<Entity>(tags.size());
+		for (CompoundTag entityTag: tags) {
+			for (Tag t: entityTag.getValue()) {
+				String name = t.getName();
+				if (name.equals("id")) {
+					Entity entity = readEntity(((IntTag) t).getValue(), entityTag);
+					entities.add(entity);
+					break;
+				}
+			}
+		}
+		return entities;
+	}
+
+	public static Entity readEntity(int id, CompoundTag tag) {
+		Entity entity = createEntityById(id);
+		entity.setEntityTypeId(id);
+		return entity;
+	}
+
+	public static Entity createEntityById(int id) {
+		switch (id) {
+			case 10:
+				return new Chicken();
+			case 11:
+				return new Cow();
+			case 12:
+				return new Pig();
+			case 13:
+				return new Sheep();
+			case 32:
+				return new Zombie();
+			case 64:
+				return new Item();
+			default:
+				return new Entity();
+		}
 	}
 
 }

@@ -106,5 +106,24 @@
 
     </LinearLayout>
 
+    <TextView android:text="@string/world_info_sideways_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button android:id="@+id/world_info_sideways_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/yes"/>
+        <Button android:id="@+id/world_info_sideways_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/no"/>
+
+    </LinearLayout>
+
 </LinearLayout>
 </ScrollView>

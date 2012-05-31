@@ -38,6 +38,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private Button fullHealthButton, infiniteHealthButton;
 
+	private Button sidewaysOnButton, sidewaysOffButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -67,6 +69,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		fullHealthButton.setOnClickListener(this);
 		infiniteHealthButton.setOnClickListener(this);
 		updatePlayerHealthText();
+		sidewaysOnButton = (Button) findViewById(R.id.world_info_sideways_on);
+		sidewaysOffButton = (Button) findViewById(R.id.world_info_sideways_off);
+		sidewaysOnButton.setOnClickListener(this);
+		sidewaysOffButton.setOnClickListener(this);
 	}
 
 	public void updateTimeText() {
@@ -124,6 +130,12 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		updatePlayerPositionText();
 	}
 
+        private void playerSideways(boolean doThis) {
+                EditorActivity.level.getPlayer().setDeathTime(doThis? Short.MAX_VALUE : 0); 
+                EditorActivity.save(this);
+        }
+
+
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
 			showDialog(DIALOG_CHANGE_GAME_MODE);
@@ -142,6 +154,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			setPlayerHealthToInfinite();
 		} else if (v == warpToSpawnButton) {
 			warpPlayerToSpawn();
+		} else if (v == sidewaysOnButton) {
+			playerSideways(true);
+		} else if (v == sidewaysOffButton) {
+			playerSideways(false);
 		}
 	}
 

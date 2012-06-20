@@ -93,4 +93,10 @@ public class Entity {
 	public void setEntityTypeId(int typeId) {
 		this.typeId = typeId;
 	}
+
+	public EntityType getEntityType() {
+		EntityType type = EntityType.getById(typeId);
+		if (type == null) type = EntityType.UNKNOWN;
+		return type;
+	}
 }

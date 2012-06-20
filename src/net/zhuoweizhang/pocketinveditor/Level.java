@@ -1,5 +1,8 @@
 package net.zhuoweizhang.pocketinveditor;
 
+import java.util.List;
+
+import net.zhuoweizhang.pocketinveditor.entity.Entity;
 import net.zhuoweizhang.pocketinveditor.entity.Player;
 
 public class Level {
@@ -23,6 +26,8 @@ public class Level {
 	private int storageVersion;
 
 	private long time;
+
+	private List<Entity> entities;
 
 	public int getGameType() {
 		return gameType;
@@ -118,5 +123,13 @@ public class Level {
 
 	public void setTime(long time) {
 		this.time = time;
+	}
+
+	public List<Entity> getEntities() {
+		return entities;
+	}
+
+	public void setEntities(List<Entity> entities) {
+		this.entities = entities;
 	}
 }

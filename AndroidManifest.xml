@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="net.zhuoweizhang.pocketinveditor"
-      android:versionCode="5"
+      android:versionCode="6"
       android:versionName="1.3">
     <uses-sdk android:minSdkVersion="7" 
               android:targetSdkVersion="14"/>
@@ -20,6 +20,7 @@
         <activity android:name=".EditInventorySlotActivity"/>
         <activity android:name=".BrowseItemsActivity"/>
         <activity android:name=".WorldInfoActivity"/>
+        <activity android:name=".EntitiesInfoActivity"/>
         <activity android:name=".AboutAppActivity"/>
     </application>
 </manifest> 

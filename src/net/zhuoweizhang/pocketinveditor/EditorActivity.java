@@ -40,6 +40,8 @@ public final class EditorActivity extends Activity {
 
 	private Button startWorldInfoButton;
 
+	private Button entitiesInfoButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -67,6 +69,13 @@ public final class EditorActivity extends Activity {
                                 startWorldInfo();
                         }
                 });
+                entitiesInfoButton = (Button) findViewById(R.id.main_entities_info);
+                entitiesInfoButton.setEnabled(false);
+                entitiesInfoButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                startEntitiesInfo();
+                        }
+                });
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
 	}
@@ -89,6 +98,7 @@ public final class EditorActivity extends Activity {
 		startInventoryEditorButton.setEnabled(true);
 		startBackupButton.setEnabled(true);
 		startWorldInfoButton.setEnabled(true);
+		entitiesInfoButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -141,6 +151,11 @@ public final class EditorActivity extends Activity {
 
 	public void startWorldInfo() {
 		Intent intent = new Intent(this, WorldInfoActivity.class);
+		startActivity(intent);
+	}
+
+	public void startEntitiesInfo() {
+		Intent intent = new Intent(this, EntitiesInfoActivity.class);
 		startActivity(intent);
 	}
 

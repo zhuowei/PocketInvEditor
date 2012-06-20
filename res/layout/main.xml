@@ -51,4 +51,12 @@
        android:layout_height="wrap_content"
        android:enabled="false"/>
 
+    <Button
+       android:id="@+id/main_entities_info"
+       android:text="@string/entities_info"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:enabled="false"/>
+
+
 </LinearLayout>

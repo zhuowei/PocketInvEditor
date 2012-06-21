@@ -55,7 +55,7 @@ public final class EntitiesInfoActivity extends Activity {
 	private String buildEntityCountString(Map<EntityType, Integer> countMap) {
 		StringBuilder builder = new StringBuilder();
 		for (Map.Entry<EntityType, Integer> entry: countMap.entrySet()) {
-			builder.append(entry.getKey().name());
+			builder.append(this.getResources().getText(EntityTypeLocalization.namesMap.get(entry.getKey())));
 			builder.append(':');
 			builder.append(entry.getValue());
 			builder.append('\n');

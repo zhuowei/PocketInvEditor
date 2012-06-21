@@ -1,92 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
 <data>
     <blocks>
         <item hex="0" dec="0" name="공기" />
         <item hex="1" dec="1" name="돌" />
-        <item hex="2" dec="2" name="풀" />
+        <item hex="2" dec="2" name="잔디" />
         <item hex="3" dec="3" name="흙" />
         <item hex="4" dec="4" name="조약돌" />
-        <item hex="5" dec="5" name="가공된 나무" />
-        <item hex="7" dec="7" name="맨틀" />
+        <item hex="5" dec="5" name="가공된나무" />
+        <item hex="7" dec="7" name="배드락" />
         <item hex="8" dec="8" name="물" />
-        <item hex="9" dec="9" name="고정된 물" />
-        <item hex="A" dec="10" name="옹암" />
-        <item hex="B" dec="11" name="고정된 용암" />
+        <item hex="9" dec="9" name="멈춘 물" />
+        <item hex="A" dec="10" name="용암" />
+        <item hex="B" dec="11" name="멈춘 용암" />
         <item hex="C" dec="12" name="모래" />
         <item hex="D" dec="13" name="자갈" />
         <item hex="E" dec="14" name="금 원석" />
-        <item hex="F" dec="15" name="철 원석" />
+        <item hex="F" dec="15" name="은 원석" />
         <item hex="10" dec="16" name="석탄 원석" />
-        <item hex="11" dec="17" id="0" name="Log" />
-        <item hex="11" dec="17" id="1" name="Redwood (Log)" />
-        <item hex="11" dec="17" id="2" name="Birch (Log)" />
-        <item hex="12" dec="18" id="0" name="Leaves" />
-        <item hex="12" dec="18" id="1" name="Redwood (Leaves)" />
-        <item hex="12" dec="18" id="2" name="Birch (Leaves)" />
+        <item hex="11" dec="17" id="0" name="참나무" />
+        <item hex="11" dec="17" id="1" name="전나무" />
+        <item hex="11" dec="17" id="2" name="자작나무" />
+        <item hex="12" dec="18" id="0" name="참나무 나뭇잎" />
+        <item hex="12" dec="18" id="1" name="전나무 나뭇잎" />
+        <item hex="12" dec="18" id="2" name="자작나무 나뭇잎" />
         <item hex="14" dec="20" name="유리" />
-        <item hex="15" dec="21" name="첨금석 원석" />
-        <item hex="16" dec="22" name="첨금석" />
-        <item hex="18" dec="24" name="샌드스톤" />
-        <item hex="23" dec="35" id="0" name="하얀 양털" />
-        <item hex="23" dec="35" id="1" name="오렌지색 양털" />
-        <item hex="23" dec="35" id="2" name="마젠타색 양털" />
-        <item hex="23" dec="35" id="3" name="밝은 파란색 양털" />
-        <item hex="23" dec="35" id="4" name="노란색 양털" />
-        <item hex="23" dec="35" id="5" name="라임색 양털" />
-        <item hex="23" dec="35" id="6" name="핑크색 양털" />
-        <item hex="23" dec="35" id="7" name="회색 양털" />
-        <item hex="23" dec="35" id="8" name="밝은 회색 양털" />
-        <item hex="23" dec="35" id="9" name="청록색 양털" />
-        <item hex="23" dec="35" id="10" name="보라색 양털" />
-        <item hex="23" dec="35" id="11" name="파란색 양털" />
-        <item hex="23" dec="35" id="12" name="갈색 양털" />
-        <item hex="23" dec="35" id="13" name="초록색 양털" />
-        <item hex="23" dec="35" id="14" name="뿕은색 양털" />
-        <item hex="23" dec="35" id="15" name="검정색 양털" />
+        <item hex="15" dec="21" name="청금석 원석" />
+        <item hex="16" dec="22" name="청금석 블럭" />
+        <item hex="18" dec="24" name="사암" />
+        <item hex="23" dec="35" id="0" name="양모" />
+        <item hex="23" dec="35" id="1" name="주황색 양모" />
+        <item hex="23" dec="35" id="2" name="자홍색 양모" />
+        <item hex="23" dec="35" id="3" name="하늘색 양모" />
+        <item hex="23" dec="35" id="4" name="노란색 양모" />
+        <item hex="23" dec="35" id="5" name="연두색 양모" />
+        <item hex="23" dec="35" id="6" name="분홍색 양모" />
+        <item hex="23" dec="35" id="7" name="회색 양모" />
+        <item hex="23" dec="35" id="8" name="밝은 회색 양모" />
+        <item hex="23" dec="35" id="9" name="청록색 양모" />
+        <item hex="23" dec="35" id="10" name="보라색 양모" />
+        <item hex="23" dec="35" id="11" name="파란색 양모" />
+        <item hex="23" dec="35" id="12" name="갈색 양모" />
+        <item hex="23" dec="35" id="13" name="초록색 양모" />
+        <item hex="23" dec="35" id="14" name="빨간색 양모" />
+        <item hex="23" dec="35" id="15" name="검은 양모" />
         <item hex="25" dec="37" name="노란 꽃" />
-        <item hex="26" dec="38" name="청록 꽃" />
+        <item hex="26" dec="38" name="파란 꽃" />
         <item hex="27" dec="39" name="갈색 버섯" />
-        <item hex="28" dec="40" name="붉은 버섯" />
+        <item hex="28" dec="40" name="빨간 버섯" />
         <item hex="29" dec="41" name="금 블럭" />
         <item hex="2A" dec="42" name="철 블럭" />
-        <item hex="2B" dec="43" id="0" name="걉쳐진 반블록 (돌)" />
-        <item hex="2B" dec="43" id="1" name="걉쳐진 반블록 (샌드스톤)" />
-        <item hex="2B" dec="43" id="2" name="겹쳐진 반블록 (나무)" />
-        <item hex="2B" dec="43" id="3" name="켭쳐진 반블록 (조약돌)" />
-        <item hex="2B" dec="43" id="4" name="겹쳐진 반블록 (벽돌)" />
-        <item hex="2B" dec="43" id="6" name="겹쳐진 반블록 (돌)" />
-        <item hex="2C" dec="44" id="0" name="반블록 (돌)" />
-        <item hex="2C" dec="44" id="1" name="반블록 (샌드스톤)" />
-        <item hex="2C" dec="44" id="2" name="반블록 (나무)" />
-        <item hex="2C" dec="44" id="3" name="반블록 (조약돌)" />
-        <item hex="2C" dec="44" id="4" name="반블록 (벽돌)" />
-        <item hex="2C" dec="44" id="6" name="반블록 (돌)" />
-        <item hex="2D" dec="45" name="벽돌 블럭" />
+        <item hex="2B" dec="43" id="0" name="발판 (돌)" />
+        <item hex="2B" dec="43" id="1" name="발판 (사암)" />
+        <item hex="2B" dec="43" id="2" name="발판 (나무)" />
+        <item hex="2B" dec="43" id="3" name="발판 (조약돌)" />
+        <item hex="2B" dec="43" id="4" name="발판 (벽돌)" />
+        <item hex="2B" dec="43" id="6" name="발판 (돌)" />
+        <item hex="2C" dec="44" id="0" name="반칸발판 (돌)" />
+        <item hex="2C" dec="44" id="1" name="반칸발판 (사암)" />
+        <item hex="2C" dec="44" id="2" name="반칸발판 (나무)" />
+        <item hex="2C" dec="44" id="3" name="반칸발판 (조약돌)" />
+        <item hex="2C" dec="44" id="4" name="반칸발판 (벽돌)" />
+        <item hex="2C" dec="44" id="6" name="반칸발판 (돌)" />
+        <item hex="2D" dec="45" name="벽돌" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="책장" />
-        <item hex="30" dec="48" name="이끼 낀 돌" />
-        <item hex="31" dec="49" name="흑요석" />
-        <item hex="32" dec="50" name="횃불" />
+        <item hex="30" dec="48" name="모스 스톤 (이끼 낀 조약돌)" />
+        <item hex="31" dec="49" name="옵시디언" />
+        <item hex="32" dec="50" name="토치" />
         <item hex="33" dec="51" name="불" />
         <item hex="35" dec="53" name="나무 계단" />
         <item hex="38" dec="56" name="다이아몬드 원석" />
         <item hex="39" dec="57" name="다이아몬드 블럭" />
-        <item hex="3A" dec="58" name="작업대" />
-        <item hex="3C" dec="60" name="밭" />
-        <item hex="40" dec="64" name="나무 문 (블럭)" />
+        <item hex="3A" dec="58" name="조합대" />
+        <item hex="3C" dec="60" name="농토" />
+        <item hex="40" dec="64" name="나무 문" />
         <item hex="41" dec="65" name="사다리" />
         <item hex="43" dec="67" name="조약돌 계단" />
-        <item hex="47" dec="71" name="철문 (블럭)" />
+        <item hex="47" dec="71" name="철 문" />
         <item hex="49" dec="73" name="레드스톤 원석" />
         <item hex="4A" dec="74" name="빛나는 레드스톤 원석" />
         <item hex="4E" dec="78" name="눈" />
         <item hex="4F" dec="79" name="얼음" />
-        <item hex="50" dec="80" name="눈 블럭" />
+        <item hex="50" dec="80" name="눈블럭" />
         <item hex="51" dec="81" name="선인장" />
-        <item hex="52" dec="82" name="점토 블럭" />
+        <item hex="52" dec="82" name="점토블럭" />
         <item hex="53" dec="83" name="사탕수수" />
         <item hex="55" dec="85" name="울타리" />
-        <item hex="6B" dec="107" name="울타리 문" />
+		<item hex="5F" dec="95" name="미지블럭" />
+		<item hex="6B" dec="107" name="울타리 문" />
         <item hex="6C" dec="108" name="벽돌 계단" />
         <item hex="F8" dec="248" name="'업데이트 게임' 블럭 1" />
         <item hex="F9" dec="249" name="'업데이트 게임' 블럭 2" />
@@ -95,12 +97,12 @@
         <item hex="100" dec="256" name="철 삽" />
         <item hex="101" dec="257" name="철 곡괭이" />
         <item hex="102" dec="258" name="철 도끼" />
-        <item hex="106" dec="262" name="화살" />
+        <item hex="106" dec="262" name="활" />
         <item hex="107" dec="263" id="0" name="석탄" />
-        <item hex="107" dec="263" id="1" name="숯" />
+        <item hex="107" dec="263" id="1" name="목탄" />
         <item hex="108" dec="264" name="다이아몬드" />
-        <item hex="109" dec="265" name="철괴" />
-        <item hex="10A" dec="266" name="금괴" />
+        <item hex="109" dec="265" name="철 주괴" />
+        <item hex="10A" dec="266" name="금 주괴" />
         <item hex="10B" dec="267" name="철 칼" />
         <item hex="10C" dec="268" name="나무 칼" />
         <item hex="10D" dec="269" name="나무 삽" />
@@ -114,48 +116,49 @@
         <item hex="115" dec="277" name="다이아몬드 삽" />
         <item hex="116" dec="278" name="다이아몬드 곡괭이" />
         <item hex="117" dec="279" name="다이아몬드 도끼" />
-        <item hex="118" dec="280" name="스틱" />
+        <item hex="118" dec="280" name="막대기" />
         <item hex="119" dec="281" name="그릇" />
         <item hex="11B" dec="283" name="금 칼" />
         <item hex="11C" dec="284" name="금 삽" />
         <item hex="11D" dec="285" name="금 곡괭이" />
         <item hex="11E" dec="286" name="금 도끼" />
-        <item hex="11F" dec="287" name="String" />
+        <item hex="11F" dec="287" name="거미줄" />
         <item hex="120" dec="288" name="깃털" />
         <item hex="121" dec="289" name="화약" />
         <item hex="128" dec="296" name="밀" />
         <item hex="144" dec="324" name="나무 문" />
-        <item hex="14A" dec="330" name="철 문" />
-        <item hex="14C" dec="332" name="스노우볼" />
-        <item hex="14E" dec="334" name="사다리" />
-        <item hex="150" dec="336" name="점토 블럭" />
+        <item hex="14A" dec="330" name="철문" />
+        <item hex="14C" dec="332" name="눈덩이" />
+        <item hex="14E" dec="334" name="가죽" />
+        <item hex="150" dec="336" name="점토벽돌" />
         <item hex="151" dec="337" name="점토" />
-        <item hex="152" dec="338" name="사탕수수 갈대" />
+        <item hex="152" dec="338" name="사탕수수 (갈대)" />
         <item hex="153" dec="339" name="종이" />
         <item hex="154" dec="340" name="책" />
-        <item hex="155" dec="341" name="진흙 덩어리" />
+        <item hex="155" dec="341" name="슬라임볼" />
         <item hex="159" dec="345" name="나침반" />
         <item hex="15B" dec="347" name="시계" />
-        <item hex="15C" dec="348" name="라이트 스톤" />
-        <item hex="15F" dec="351" id="0" name="먹물 주머니" />
-        <item hex="15F" dec="351" id="1" name="빨간색 염료" />
-        <item hex="15F" dec="351" id="2" name="초록 염료" />
-        <item hex="15F" dec="351" id="3" name="갈색 염료" />
-        <item hex="15F" dec="351" id="4" name="파랑 염료" />
-        <item hex="15F" dec="351" id="5" name="보라색 염료" />
-        <item hex="15F" dec="351" id="6" name="청록색 염료" />
-        <item hex="15F" dec="351" id="7" name="밝은 회색 염료" />
-        <item hex="15F" dec="351" id="8" name="회색 염료" />
-        <item hex="15F" dec="351" id="9" name="핑크색 염료" />
-        <item hex="15F" dec="351" id="10" name="라임색 염료" />
-        <item hex="15F" dec="351" id="11" name="노랑 염료" />
-        <item hex="15F" dec="351" id="12" name="하늘색 염료" />
-        <item hex="15F" dec="351" id="13" name="자홍색 염료" />
-        <item hex="15F" dec="351" id="14" name="오렌지색 염료" />
-        <item hex="15F" dec="351" id="15" name="하양 염료" />
+        <item hex="15C" dec="348" name="발광석 가루 (빛나는돌)" />
+        <item hex="15F" dec="351" id="0" name="잉크 색 (염료)" />
+        <item hex="15F" dec="351" id="1" name="빨간 장미 (염료)" />
+        <item hex="15F" dec="351" id="2" name="초록 선인장 (염료)" />
+        <item hex="15F" dec="351" id="3" name="코코아 빈 (염료)" />
+        <item hex="15F" dec="351" id="4" name="청금석 (염료)" />
+        <item hex="15F" dec="351" id="5" name="자주색 (염료)" />
+        <item hex="15F" dec="351" id="6" name="청록색 (염료)" />
+        <item hex="15F" dec="351" id="7" name="연한 회색 (염료)" />
+        <item hex="15F" dec="351" id="8" name="회색 (염료)" />
+        <item hex="15F" dec="351" id="9" name="분홍색 (염료)" />
+        <item hex="15F" dec="351" id="10" name="연두색 (염료)" />
+        <item hex="15F" dec="351" id="11" name="민들레 노랑 (염료)" />
+        <item hex="15F" dec="351" id="12" name="하늘색 (염료)" />
+        <item hex="15F" dec="351" id="13" name="자홍색 (염료)" />
+        <item hex="15F" dec="351" id="14" name="주황색 (염료)" />
+        <item hex="15F" dec="351" id="15" name="뼈 가루 (염료)" />
         <item hex="160" dec="352" name="뼈" />
         <item hex="161" dec="353" name="설탕" />
         <item hex="167" dec="359" name="가위" />
-        <item hex="1C8" dec="456" name="카메라" />
+		<item hex="1C8" dec="456" name="카메라" />
     </items>
 </data>
+

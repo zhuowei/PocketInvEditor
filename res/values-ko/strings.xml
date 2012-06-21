@@ -1,48 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">PocketInvEditor</string>
+    <string name="app_name">인벤에디터</string>
     <string name="select_world">월드 선택</string>
     <string name="inventory">인벤토리</string>
     <string name="select_slot">인벤토리 슬롯 선택</string>
     <string name="item_id">아이템 ID:</string>
     <string name="item_damage">아이템 데미지:</string>
-    <string name="item_count">개수:</string>
-    <string name="item_id_browse">찾아보기...</string>
-    <string name="loading">로딩 중...</string>
-    <string name="edit_inventory">인벤토리 수정</string>
+    <string name="item_count">수량:</string>
+    <string name="item_id_browse">아이템 ID 선택하기</string>
+    <string name="loading">로딩중...</string>
+    <string name="edit_inventory">인벤토리 수정하기!</string>
     <string name="edit_world_info">월드 정보 수정</string>
-    <string name="lastplayed">최근 플레이</string>
-    <string name="seed">시드:</string>
-    <string name="saved">저장됨</string>
-    <string name="savefailed">저장에 실패하였습니다.</string>
-    <string name="backup">백업 생성</string>
-    <string name="backupcreated">백업 생성됨:</string>
-    <string name="backupfailed">백업에 실패하였습니다.</string>
-    <string name="backup_start">백업을 생성합니다. 몇 분 정도 소요됩니다.</string>
-    <string name="about_about">정보</string>
+    <string name="lastplayed">마지막 플레이 시간</string>
+    <string name="seed">시드 : </string>
+    <string name="saved">저장</string>
+    <string name="savefailed">저장 실패.</string>
+    <string name="backup">백업 생성하기!</string>
+    <string name="backupcreated">백업 생성파일:</string>
+    <string name="backupfailed">백업 실패.</string>
+    <string name="backup_start">백업을 시작합니다. 이 작업은 오래 걸릴 수도 있습니다.</string>
+    <string name="about_about">이 앱에 대해서..</string>
     <string name="change">변경</string>
-    <string name="gamemode">게임 모드:</string>
+    <string name="gamemode">게임모드:</string>
     <string name="gamemode_survival">서바이벌</string>
     <string name="gamemode_creative">크리에이티브</string>
-    <string name="main_edit_world_info">월드 정보 수정</string>
-    <string name="item_filter_hint">찾아보기...</string>
+    <string name="main_edit_world_info">월드 정보 수정하기!</string>
+    <string name="item_filter_hint">블럭/아이템 이름이나 ID를 입력하세요.</string>
     <string name="world_info_time">시간:</string>
-    <string name="world_info_spawn_to_player">플레이어 위치에 스폰합니다.</string>
-    <string name="invalid_number">알수없는 값</string>
+    <string name="world_info_spawn_to_player">플레이어의 위치로 스폰지역 설정</string>
+    <string name="invalid_number">잘못된 값</string>
     <string name="world_info_time_set_morning">아침으로 설정</string>
     <string name="world_info_time_set_night">밤으로 설정</string>
-    <string name="world_info_player_location">플레이어 위치:</string>
-    <string name="world_info_half_hearts">목숨:</string>
-    <string name="world_info_set_to_full_health">최대 목숨으로 채우기</string>
-    <string name="world_info_set_to_infinite_health">무적 모드</string>
-    <string name="slot_fillslot">Fill slot</string>
-    <string name="slot_maxcountslot">255 개로 맞추기</string>
-    <string name="world_info_warp_to_spawn">스폰 지점으로 워프</string>
-    <string name="about_copyright">"Copyright (C) 2012 Zhuowei Zhang
+    <string name="world_info_player_location">플레이어의 위치:</string>
+    <string name="world_info_half_hearts">플레이어의 체력:</string>
+    <string name="world_info_set_to_full_health">체력 회복</string>
+    <string name="world_info_set_to_infinite_health">무한 체력 설정</string>
+    <string name="slot_fillslot">수량 64개 설정</string>
+    <string name="slot_maxcountslot">수량 255개 설정</string>
+    <string name="world_info_warp_to_spawn">스폰위치로 이동</string>
+    <string name="world_info_sideways_mode">플레이어 모델 가로로되는 오류 활성화: </string>
+    <string name="entity_item">드랍된 아이템</string>
+    <string name="entity_zombie">좀비</string>
+    <string name="entity_chicken">닭</string>
+    <string name="entity_cow">소</string>
+    <string name="entity_pig">돼지</string>
+    <string name="entity_sheep">양</string>
+    <string name="entities_info">엔디티 정보 보기!</string>
+    <string name="about_copyright">저작권자 (C) 2012 Zhuowei Zhang\n\n
+    이 프로그램은 프리웨어입니다: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.\n
 
- 이 프로그램은 프리웨어 입니다.: GNU 라이센스에 따라 수정 및 재배포를 할 수 있습니다.
- 이 프로그램이 유용하게 사용되었으면 하고, 상업적으로 이용되서는 안됩니다. 더 많은 정보를 확인하시려면 GNU 라이센스를 확인해 주십시오.
-"</string>
-    <string name="about_librarycredits">This app uses the SpoutNBT library developed by the SpoutDev team.</string>
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.\n
+    </string>
+    <string name="about_librarycredits">이 응용 프로그램은 SpoutDev 팀에 의해
+    개발 된 SpoutNBT 라이브러리를 사용합니다.\n
+    이 프로그램은 TexasGamer의 itemid 플러그인에서 item-data.xml의 수정된 버전이 포함되어 있습니다.\n
+    이 프로그램은 UniversalOfGaming의 \"Infinite Health mod\"를 사용합니다. \n
+    이 프로그램에 사용되는 아이템 아이콘은 Mojang에 의해 만들어집니다.</string>
     <string name="add_empty_slot">빈 슬롯 추가</string>
 </resources>

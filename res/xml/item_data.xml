@@ -87,6 +87,7 @@
         <item hex="52" dec="82" name="Clay Block" />
         <item hex="53" dec="83" name="Sugar Cane" />
         <item hex="55" dec="85" name="Fence" />
+        <item hex="5F" dec="95" name="Invisible bedrock" />
         <item hex="6B" dec="107" name="Fence Gate"/>
         <item hex="6C" dec="108" name="Brick Stairs" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />

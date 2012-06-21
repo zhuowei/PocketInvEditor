@@ -87,8 +87,8 @@
         <item hex="52" dec="82" name="점토블럭" />
         <item hex="53" dec="83" name="사탕수수" />
         <item hex="55" dec="85" name="울타리" />
-		<item hex="5F" dec="95" name="미지블럭" />
-		<item hex="6B" dec="107" name="울타리 문" />
+        <item hex="5F" dec="95" name="미지블럭" />
+        <item hex="6B" dec="107" name="울타리 문" />
         <item hex="6C" dec="108" name="벽돌 계단" />
         <item hex="F8" dec="248" name="'업데이트 게임' 블럭 1" />
         <item hex="F9" dec="249" name="'업데이트 게임' 블럭 2" />

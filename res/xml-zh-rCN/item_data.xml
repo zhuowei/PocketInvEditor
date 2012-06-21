@@ -88,6 +88,7 @@
         <item hex="52" dec="82" name="粘土块" />
         <item hex="53" dec="83" name="甘蔗" />
         <item hex="55" dec="85" name="栅栏" />
+        <item hex="5F" dec="95" name="隐形基岩"/>
         <item hex="6B" dec="107" name="栅栏门"/>
         <item hex="6C" dec="108" name="砖楼梯" />
         <item hex="F8" dec="248" name="'更新游戏'方块1" />

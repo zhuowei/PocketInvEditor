@@ -4,7 +4,7 @@ import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.InventorySlot;
 
-public class Player extends Mob {
+public class Player extends LivingEntity {
 	private List<InventorySlot> inventory;
 	private int score;
 	private int dimension;

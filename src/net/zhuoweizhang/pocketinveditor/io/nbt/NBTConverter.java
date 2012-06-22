@@ -13,6 +13,9 @@ import net.zhuoweizhang.pocketinveditor.Level;
 
 import net.zhuoweizhang.pocketinveditor.entity.*;
 
+import net.zhuoweizhang.pocketinveditor.io.nbt.entity.EntityStore;
+import net.zhuoweizhang.pocketinveditor.io.nbt.entity.EntityStoreLookupService;
+
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
 public final class NBTConverter {
@@ -233,6 +236,11 @@ public final class NBTConverter {
 	public static Entity readEntity(int id, CompoundTag tag) {
 		Entity entity = createEntityById(id);
 		entity.setEntityTypeId(id);
+		EntityStore store = EntityStoreLookupService.idMap.get(id);
+		if (store == null) {
+			store = EntityStoreLookupService.defaultStore;
+		}
+		store.load(entity, tag);
 		return entity;
 	}
 
@@ -255,4 +263,22 @@ public final class NBTConverter {
 		}
 	}
 
+	public static CompoundTag writeEntity(Entity entity) {
+		int typeId = entity.getEntityTypeId();
+		EntityStore store = EntityStoreLookupService.idMap.get(typeId);
+		if (store == null) {
+			store = EntityStoreLookupService.defaultStore;
+		}
+		List<Tag> tags = store.save(entity);
+		
+		Collections.sort(tags, new Comparator<Tag>() {
+			public int compare(Tag a, Tag b) {
+				return a.getName().compareTo(b.getName());
+			}
+			public boolean equals(Tag a, Tag b) {
+				return a.getName().equals(b.getName());
+			}
+		});
+		return new CompoundTag("", tags);
+	}
 }

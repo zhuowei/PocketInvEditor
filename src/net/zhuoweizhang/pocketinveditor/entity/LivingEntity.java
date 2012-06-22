@@ -1,6 +1,6 @@
 package net.zhuoweizhang.pocketinveditor.entity;
 
-public class Mob extends Entity {
+public class LivingEntity extends Entity {
 
 	private short attackTime, deathTime, hurtTime;
 

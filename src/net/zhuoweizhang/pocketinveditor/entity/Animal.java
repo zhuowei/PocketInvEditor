@@ -1,6 +1,6 @@
 package net.zhuoweizhang.pocketinveditor.entity;
 
-public class Animal extends Mob {
+public class Animal extends LivingEntity {
 
 	private int age = 0;
 

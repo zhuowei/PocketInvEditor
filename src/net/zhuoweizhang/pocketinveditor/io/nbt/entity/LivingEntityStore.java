@@ -7,7 +7,6 @@ import org.spout.nbt.*;
 
 import net.zhuoweizhang.pocketinveditor.entity.Entity;
 import net.zhuoweizhang.pocketinveditor.entity.LivingEntity;
-import net.zhuoweizhang.pocketinveditor.io.nbt.NBTConverter;
 
 public class LivingEntityStore<T extends LivingEntity> extends EntityStore<T> {
 
@@ -25,5 +24,15 @@ public class LivingEntityStore<T extends LivingEntity> extends EntityStore<T> {
 		} else {
 			super.loadTag(entity, tag);
 		}
+	}
+
+	@Override
+	public List<Tag> save(T entity) {
+		List<Tag> tags = super.save(entity);
+		tags.add(new ShortTag("AttackTime", entity.getAttackTime()));
+		tags.add(new ShortTag("DeathTime", entity.getDeathTime()));
+		tags.add(new ShortTag("Health", entity.getHealth()));
+		tags.add(new ShortTag("HurtTime", entity.getHurtTime()));
+		return tags;
 	}
 }

@@ -34,12 +34,18 @@ public final class EntityDataConverter {
 		FileOutputStream os = new FileOutputStream(file);
 		DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(os));
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		//new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeLevel(level));
+		new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeEntities(entitiesList));
 		int length = bos.size();
 		dos.write(header);
 		dos.writeInt(Integer.reverseBytes(length));
 		bos.writeTo(dos);
 		dos.close();
+	}
+
+	public static void main(String[] args) throws Exception {
+		List<Entity> entities = read(new File(args[0]));
+		System.out.println(entities);
+		write(entities, new File(args[1]));
 	}
 
 }

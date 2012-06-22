@@ -238,6 +238,7 @@ public final class NBTConverter {
 		entity.setEntityTypeId(id);
 		EntityStore store = EntityStoreLookupService.idMap.get(id);
 		if (store == null) {
+			System.err.println("Warning: unknown entity id " + id + "; using default entity store.");
 			store = EntityStoreLookupService.defaultStore;
 		}
 		store.load(entity, tag);
@@ -263,10 +264,23 @@ public final class NBTConverter {
 		}
 	}
 
+	public static CompoundTag writeEntities(List<Entity> entities) {
+		List<CompoundTag> entitiesTags = new ArrayList<CompoundTag>(entities.size());
+		for (Entity entity : entities) {
+			entitiesTags.add(writeEntity(entity));
+		}
+		ListTag<CompoundTag> entitiesListTag = new ListTag<CompoundTag>("Entities", CompoundTag.class, entitiesTags);
+		List<Tag> compoundTagList = new ArrayList<Tag>(1);
+		compoundTagList.add(entitiesListTag);
+		CompoundTag compoundTag = new CompoundTag("", compoundTagList);
+		return compoundTag;
+	}
+
 	public static CompoundTag writeEntity(Entity entity) {
 		int typeId = entity.getEntityTypeId();
 		EntityStore store = EntityStoreLookupService.idMap.get(typeId);
 		if (store == null) {
+			System.err.println("Warning: unknown entity id " + typeId + "; using default entity store.");
 			store = EntityStoreLookupService.defaultStore;
 		}
 		List<Tag> tags = store.save(entity);
@@ -281,4 +295,33 @@ public final class NBTConverter {
 		});
 		return new CompoundTag("", tags);
 	}
+
+	public static ItemStack readItemStack(CompoundTag compoundTag) {
+		List<Tag> tags = compoundTag.getValue();
+		short id = 0;
+		short damage = 0;
+		int count = 0;
+		for (Tag tag : tags) {
+			if (tag.getName().equals("id")) {
+				id = ((ShortTag) tag).getValue();
+			} else if (tag.getName().equals("Damage")) {
+				damage = ((ShortTag) tag).getValue();
+			} else if (tag.getName().equals("Count")) {
+				count = ((ByteTag) tag).getValue();
+				if (count < 0) {
+					count = 256 + count;
+				}
+			}
+		}
+		return new ItemStack(id, damage, count);
+	}
+
+	public static CompoundTag writeItemStack(ItemStack stack, String name) {
+		List<Tag> values = new ArrayList<Tag>(3);
+		values.add(new ByteTag("Count", (byte) stack.getAmount()));
+		values.add(new ShortTag("Damage", stack.getDurability()));
+		values.add(new ShortTag("id", stack.getTypeId()));
+		return new CompoundTag(name, values);
+	}
+
 }

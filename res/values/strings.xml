@@ -47,6 +47,7 @@
     <string name="entity_sheep">Sheep</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
+    <string name="apocowlypse">Nothing here</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

@@ -8,21 +8,31 @@ import java.util.Map;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.entity.*;
 import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
+import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public final class EntitiesInfoActivity extends Activity {
+public final class EntitiesInfoActivity extends Activity implements View.OnClickListener {
 
 	private TextView entityCountText;
 
 	private List<Entity> entitiesList;
 
+	private Button apoCowlypseButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.entities_info);
 		entityCountText = (TextView) findViewById(R.id.entities_main_count);
+		apoCowlypseButton = (Button) findViewById(R.id.entities_apocowlypse);
+		if (apoCowlypseButton != null) {
+			apoCowlypseButton.setOnClickListener(this);
+		}
 		loadEntities();
 	}
 
@@ -34,6 +44,12 @@ public final class EntitiesInfoActivity extends Activity {
 		EditorActivity.level.setEntities(entitiesList);
 		this.entitiesList = entitiesList;
 		countEntities();
+	}
+
+	public void onClick(View v) {
+		if (v == apoCowlypseButton) {
+			apoCowlypse();
+		}
 	}
 
 	protected void countEntities() {
@@ -63,6 +79,26 @@ public final class EntitiesInfoActivity extends Activity {
 		return builder.toString();
 	}
 
+	public void apoCowlypse() {
+		List<Entity> list = EditorActivity.level.getEntities();
+		Vector playerLoc = EditorActivity.level.getPlayer().getLocation();
+		int beginX = (int) playerLoc.getX() - 16;
+		int endX = (int) playerLoc.getX() + 16;
+		int beginZ = (int) playerLoc.getZ() - 16;
+		int endZ = (int) playerLoc.getZ() + 16;
+		for (int x = beginX; x < endX; x += 2) {
+			for (int z = beginZ; z < endZ; z += 2) {
+				Cow cow = new Cow();
+				cow.setLocation(new Vector(x, 128, z));
+				cow.setEntityTypeId(EntityType.COW.getId());
+				cow.setHealth((short) 128);
+				list.add(cow);
+			}
+		}
+		save(this);
+		countEntities();
+	}
+
 	private class LoadEntitiesTask implements Runnable {
 		public void run() {
 			File entitiesFile = new File(EditorActivity.worldFolder, "entities.dat");
@@ -77,5 +113,31 @@ public final class EntitiesInfoActivity extends Activity {
 				e.printStackTrace();
 			}
 		}
+	}
+
+	public static void save(final Activity context) {
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					EntityDataConverter.write(EditorActivity.level.getEntities(), new File(EditorActivity.worldFolder, "entities.dat"));
+					if (context != null) {
+						context.runOnUiThread(new Runnable() {
+							public void run() {
+								Toast.makeText(context, R.string.saved, Toast.LENGTH_SHORT).show();
+							}
+						});
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+					if (context != null) {
+						context.runOnUiThread(new Runnable() {
+							public void run() {
+								Toast.makeText(context, R.string.savefailed, Toast.LENGTH_SHORT).show();
+							}
+						});
+					}
+				}
+			}
+		}).start();
 	}
 }

@@ -7,5 +7,10 @@
         android:id="@+id/entities_main_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/loading"/>
+        android:text="@string/loading"
+        android:textSize="20sp"/>
+    <Button android:id="@+id/entities_apocowlypse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/apocowlypse"/>
 </LinearLayout>

@@ -1,6 +1,7 @@
 package net.zhuoweizhang.pocketinveditor;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.List;
@@ -111,6 +112,11 @@ public final class EntitiesInfoActivity extends Activity implements View.OnClick
 				});
 			} catch (Exception e) {
 				e.printStackTrace();
+				EntitiesInfoActivity.this.runOnUiThread(new Runnable() {
+					public void run() {
+						EntitiesInfoActivity.this.onEntitiesLoaded(new ArrayList<Entity>());
+					}
+				});
 			}
 		}
 	}

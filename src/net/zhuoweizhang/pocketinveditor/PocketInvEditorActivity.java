@@ -5,6 +5,8 @@ import java.io.File;
 import java.util.List;
 import java.util.ArrayList;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
@@ -27,6 +29,9 @@ import net.zhuoweizhang.pocketinveditor.material.Material;
 
 public final class PocketInvEditorActivity extends ListActivity
 {
+
+	private static final int DIALOG_NO_WORLDS_FOUND = 200;
+
 	private FindWorldsThread findWorldsThread;
 
 	private ListView worldsList;
@@ -63,6 +68,9 @@ public final class PocketInvEditorActivity extends ListActivity
 	private void receiveWorldFolders(List<WorldListItem> worlds) {
 		this.worlds = worlds;
 		setListAdapter(new ArrayAdapter<WorldListItem>(this, R.layout.world_list_item, worlds));
+		if (worlds.size() == 0) {
+			displayNoWorldsWarning();
+		}
 	}
 
 	private void openWorld(File worldFile) {
@@ -97,6 +105,24 @@ public final class PocketInvEditorActivity extends ListActivity
 		startActivity(intent);
 	}
 
+	private void displayNoWorldsWarning() {
+		this.showDialog(DIALOG_NO_WORLDS_FOUND);
+	}
+
+	public Dialog onCreateDialog(int dialogId) {
+		switch (dialogId) {
+			case DIALOG_NO_WORLDS_FOUND:
+				return createNoWorldsFoundDialog();
+			default:
+				return super.onCreateDialog(dialogId);
+		}
+	}
+
+	protected AlertDialog createNoWorldsFoundDialog() {
+		return new AlertDialog.Builder(this).setTitle(R.string.noworldsfound_title).
+			setMessage(R.string.noworldsfound_text).create();
+	}
+
 	private final class FindWorldsThread implements Runnable {
 
 		private final PocketInvEditorActivity activity;
@@ -108,17 +134,19 @@ public final class PocketInvEditorActivity extends ListActivity
 		public void run() {
 			File worldsFolder = new File(Environment.getExternalStorageDirectory(), "games/com.mojang/minecraftWorlds");
 			System.err.println(worldsFolder);
+
+			final List<WorldListItem> worldFolders = new ArrayList<WorldListItem>();
+
 			if (!worldsFolder.exists()) {
 				System.err.println("no storage folder");
-				return;
-			}
-			final List<WorldListItem> worldFolders = new ArrayList<WorldListItem>();
-			for (File worldFolder : worldsFolder.listFiles()) {
-				if (!worldFolder.isDirectory()) continue;
-				//check if it has level.dat
-				if (!new File(worldFolder, "level.dat").exists())
-					continue;
-				worldFolders.add(new WorldListItem(worldFolder));
+			} else {
+				for (File worldFolder : worldsFolder.listFiles()) {
+					if (!worldFolder.isDirectory()) continue;
+					//check if it has level.dat
+					if (!new File(worldFolder, "level.dat").exists())
+						continue;
+					worldFolders.add(new WorldListItem(worldFolder));
+				}
 			}
 			this.activity.runOnUiThread(new Runnable() {
 				public void run() {

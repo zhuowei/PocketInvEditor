@@ -91,12 +91,11 @@ public final class PocketInvEditorActivity extends ListActivity
 	}
 
 	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-			case R.id.worldselect_about:
-				displayAboutActivity();
-				return true;
-			default:
-				return super.onOptionsItemSelected(item);
+		if (item.getItemId() == R.id.worldselect_about) {
+			displayAboutActivity();
+			return true;
+		} else {
+			return super.onOptionsItemSelected(item);
 		}
 	}
 

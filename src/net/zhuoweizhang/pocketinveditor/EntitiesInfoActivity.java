@@ -18,22 +18,17 @@ import net.zhuoweizhang.pocketinveditor.entity.*;
 import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public final class EntitiesInfoActivity extends Activity implements View.OnClickListener {
+public class EntitiesInfoActivity extends Activity implements View.OnClickListener {
 
 	private TextView entityCountText;
 
 	private List<Entity> entitiesList;
 
-	private Button apoCowlypseButton;
-
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.entities_info);
 		entityCountText = (TextView) findViewById(R.id.entities_main_count);
-		apoCowlypseButton = (Button) findViewById(R.id.entities_apocowlypse);
-		if (apoCowlypseButton != null) {
-			apoCowlypseButton.setOnClickListener(this);
-		}
+
 		loadEntities();
 	}
 
@@ -48,9 +43,6 @@ public final class EntitiesInfoActivity extends Activity implements View.OnClick
 	}
 
 	public void onClick(View v) {
-		if (v == apoCowlypseButton) {
-			apoCowlypse();
-		}
 	}
 
 	protected void countEntities() {

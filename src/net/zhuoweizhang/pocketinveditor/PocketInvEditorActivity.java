@@ -27,7 +27,7 @@ import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 import net.zhuoweizhang.pocketinveditor.material.Material;
 
-public final class PocketInvEditorActivity extends ListActivity
+public class PocketInvEditorActivity extends ListActivity
 {
 
 	private static final int DIALOG_NO_WORLDS_FOUND = 200;

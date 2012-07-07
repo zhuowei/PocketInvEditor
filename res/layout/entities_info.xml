@@ -9,8 +9,8 @@
         android:layout_height="wrap_content"
         android:text="@string/loading"
         android:textSize="20sp"/>
-    <Button android:id="@+id/entities_apocowlypse"
+    <TextView android:text="@string/get_pro_to_spawn_mobs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/apocowlypse"/>
+        android:textSize="18sp"/>
 </LinearLayout>

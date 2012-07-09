@@ -58,6 +58,9 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		}
 
 		String entityCountString = buildEntityCountString(countMap);
+		if (entityCountString.length() == 0) {
+			entityCountString = this.getResources().getText(R.string.entities_none).toString();
+		}
 		entityCountText.setText(entityCountString);
 	}
 

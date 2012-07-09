@@ -47,6 +47,14 @@
     <string name="entity_sheep">Sheep</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
+    <string name="entities_none">No entities found.</string>
+    <string name="entities_spawn_mobs">Spawn mobs</string>
+    <string name="entities_spawn_drops">Spawn drops</string>
+    <string name="entities_remove_entities">Remove entities</string>
+    <string name="entities_cow_tipping">Cow tipping</string>
+    <string name="entities_mob_type">Mob: </string>
+    <string name="entities_entity_type">Type: </string>
+    <string name="entities_babyfy_mobs">Baby-fy animals</string>
     <string name="apocowlypse">Nothing here</string>
     <string name="noworldsfound_title">Y U NO WORLDS?!</string>
     <string name="noworldsfound_text">PocketInvEditor was unable to find any Minecraft PE worlds on this device.\n

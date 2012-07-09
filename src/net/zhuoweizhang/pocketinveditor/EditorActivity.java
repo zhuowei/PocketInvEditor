@@ -20,7 +20,7 @@ import android.widget.Toast;
 import net.zhuoweizhang.pocketinveditor.io.LevelDataConverter;
 import net.zhuoweizhang.pocketinveditor.io.zip.ZipFileWriter;
 
-public final class EditorActivity extends Activity {
+public class EditorActivity extends Activity {
 
 	public static Level level;
 
@@ -78,6 +78,12 @@ public final class EditorActivity extends Activity {
                 });
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		worldNameView.setText(level.getLevelName());
 	}
 
 	private void loadLevel() {

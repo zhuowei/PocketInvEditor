@@ -92,6 +92,51 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		countEntities();
 	}
 
+	public void cowTipping() {
+		List<Entity> list = EditorActivity.level.getEntities();
+		for (Entity entity: list) {
+			if (entity instanceof Cow) {
+				((Cow) entity).setDeathTime((short) 2048);
+			}
+		}
+		save(this);
+	}
+
+	public void spawnMobs(EntityType type, Vector loc, int count) throws Exception {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (int i = 0; i < count; i++) {
+			Entity e = type.getEntityClass().newInstance();
+			e.setEntityTypeId(type.getId());
+			e.setLocation(loc);
+			if (e instanceof LivingEntity) {
+				((LivingEntity) e).setHealth((short) ((LivingEntity) e).getMaxHealth());
+			}
+			entities.add(e);
+		}
+	}
+
+	public int removeEntities(EntityType type) {
+		int removedCount = 0;
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (int i = entities.size() - 1; i >= 0; --i) {
+			Entity e = entities.get(i);
+			if (e.getEntityType() == type) {
+				entities.remove(i);
+				removedCount++;
+			}
+		}
+		return removedCount;
+	}
+
+	public void babyfyMobs(EntityType type) {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (Entity e: entities) {
+			if (e.getEntityType() == type) {
+				((Animal) e).setAge(-24000);
+			}
+		}
+	}
+
 	private class LoadEntitiesTask implements Runnable {
 		public void run() {
 			File entitiesFile = new File(EditorActivity.worldFolder, "entities.dat");

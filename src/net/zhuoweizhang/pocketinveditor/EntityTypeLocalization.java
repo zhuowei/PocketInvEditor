@@ -3,6 +3,9 @@ package net.zhuoweizhang.pocketinveditor;
 import java.util.EnumMap;
 import java.util.Map;
 
+import android.content.Context;
+import android.content.res.Resources;
+
 import net.zhuoweizhang.pocketinveditor.entity.EntityType;
 
 public class EntityTypeLocalization {
@@ -19,5 +22,18 @@ public class EntityTypeLocalization {
 		namesMap.put(EntityType.ZOMBIE, R.string.entity_zombie);
 		namesMap.put(EntityType.ITEM, R.string.entity_item);
 		namesMap.put(EntityType.UNKNOWN, R.string.entity_unknown);
+	}
+
+	public static EntityType lookupFromString(CharSequence name, Context ctx) {
+		Resources res = ctx.getResources();
+		for (Map.Entry<EntityType, Integer> entry: namesMap.entrySet()) {
+			EntityType type = entry.getKey();
+			int stringId = entry.getValue();
+			CharSequence localizedName = res.getText(stringId);
+			if (localizedName.equals(name)) {
+				return type;
+			}
+		}
+		return EntityType.UNKNOWN;
 	}
 }

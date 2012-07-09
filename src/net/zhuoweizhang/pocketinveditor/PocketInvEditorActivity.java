@@ -73,7 +73,7 @@ public class PocketInvEditorActivity extends ListActivity
 		}
 	}
 
-	private void openWorld(File worldFile) {
+	protected void openWorld(File worldFile) {
 		Intent intent = new Intent(this, EditorActivity.class);
 		intent.putExtra("world", worldFile.getAbsolutePath());
 		startActivity(intent);

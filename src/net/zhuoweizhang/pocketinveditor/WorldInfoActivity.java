@@ -40,6 +40,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private Button sidewaysOnButton, sidewaysOffButton;
 
+	private TextView worldNameText;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -73,6 +75,9 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		sidewaysOffButton = (Button) findViewById(R.id.world_info_sideways_off);
 		sidewaysOnButton.setOnClickListener(this);
 		sidewaysOffButton.setOnClickListener(this);
+		worldNameText = (TextView) findViewById(R.id.world_info_name);
+		worldNameText.setText(EditorActivity.level.getLevelName());
+		worldNameText.setOnFocusChangeListener(this);
 	}
 
 	public void updateTimeText() {
@@ -204,6 +209,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			if (!hasFocus) {
 				checkHealthInputAfterChange();
 			}
+		} else if (v == worldNameText) {
+			if (!hasFocus) {
+				checkWorldNameAfterChange();
+			}
 		}
 	}
 
@@ -211,6 +220,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		super.onPause();
 		checkTimeInputAfterChange();
 		checkHealthInputAfterChange();
+		checkWorldNameAfterChange();
 	}
 
 	public void checkTimeInputAfterChange() {
@@ -238,6 +248,14 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			}
 		} catch (NumberFormatException e) {
 			healthText.setError(this.getResources().getText(R.string.invalid_number));
+		}
+	}
+
+	protected void checkWorldNameAfterChange() {
+		String newText = worldNameText.getText().toString();
+		if (!newText.equals(EditorActivity.level.getLevelName())) {
+			EditorActivity.level.setLevelName(newText);
+			EditorActivity.save(this);
 		}
 	}
 }

@@ -37,5 +37,9 @@ public class LivingEntity extends Entity {
 	public void setHealth(short health) {
 		this.health = health;
 	}
+
+	public int getMaxHealth() {
+		return 20;
+	}
 }
 

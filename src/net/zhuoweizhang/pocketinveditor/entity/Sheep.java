@@ -22,4 +22,9 @@ public class Sheep extends Animal {
 		this.color = color;
 	}
 
+	@Override
+	public int getMaxHealth() {
+		return 8;
+	}
+
 }

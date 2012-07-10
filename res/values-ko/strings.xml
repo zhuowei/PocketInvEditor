@@ -45,7 +45,12 @@
     <string name="entity_cow">소</string>
     <string name="entity_pig">돼지</string>
     <string name="entity_sheep">양</string>
-    <string name="entities_info">엔디티 정보 보기!</string>
+    <string name="entity_unknown">알려지지 않은 객체</string>
+    <string name="entities_info">객체 정보 보기</string>
+    <string name="apocowlypse">소 추가하기</string>
+    <string name="noworldsfound_title">아무 월드도 없어요!</string>
+    <string name="noworldsfound_text">인벤에디터가 이 기기에서 월드를 찾지 못하였습니다. 이 앱은 모장의 정식 마인크래프트 버젼의 맵만 에딧 할 수 있습니다.
+    </string>
     <string name="about_copyright">저작권자 (C) 2012 Zhuowei Zhang\n\n
     이 프로그램은 프리웨어입니다: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

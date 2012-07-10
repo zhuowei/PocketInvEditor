@@ -79,4 +79,8 @@
     This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
     The item icons used in this program are created by Mojang. </string>
     <string name="add_empty_slot">Add Empty Slot</string>
+    <string name="unlicensed_dialog_title">Arr! Yer be a pirate, matey!</string>
+    <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Google Play.</string>
+    <string name="buy_button">Buy app</string>
+    <string name="quit_button">Exit</string>
 </resources>

@@ -5,62 +5,78 @@
     <string name="inventory">Inventaris</string>
     <string name="select_slot">Selecteer inventaris slot</string>
     <string name="item_id">Item ID:</string>
-    <string name="item_damage">Item schade: </string>
+    <string name="item_damage">Item shade: </string>
     <string name="item_count">Hoeveelheid: </string>
     <string name="item_id_browse">Bladeren...</string>
     <string name="loading">Laden...</string>
-    <string name="edit_inventory">Verander inventaris</string>
-    <string name="edit_world_info">Verander wereld informatie</string>
+    <string name="edit_inventory">Verander Inventaris</string>
+    <string name="edit_world_info">Verander Wereld Informatie</string>
     <string name="lastplayed">Laatst gespeeld</string>
     <string name="seed">Seed:</string>
     <string name="saved">Opgeslagen</string>
     <string name="savefailed">Opslaan mislukt.</string>
-    <string name="backup">Maak backup</string>
+    <string name="backup">Maak Backup</string>
     <string name="backupcreated">Backup gemaakt: </string>
-    <string name="backupfailed">Backup maken mislukt.</string>
-    <string name="backup_start">Backup word gestart. Dit kan enige tijd duren.</string>
+    <string name="backupfailed">Backup mislukt.</string>
+    <string name="backup_start">Backup gestart. Dit kan even duren.</string>
     <string name="about_about">Over</string>
     <string name="change">Verander</string>
-    <string name="gamemode">Gamemode: </string>
+    <string name="gamemode">Spelmodus: </string>
     <string name="gamemode_survival">Survival</string>
     <string name="gamemode_creative">Creative</string>
-    <string name="main_edit_world_info">Verander wereld informatie</string>
+    <string name="main_edit_world_info">Verander wereld Informatie</string>
     <string name="item_filter_hint">Zoeken...</string>
     <string name="world_info_time">Tijd: </string>
-    <string name="world_info_spawn_to_player">Verander spawn naar spelers locatie</string>
-    <string name="invalid_number">Ongeldige waaarde</string>
+    <string name="world_info_spawn_to_player">Verplaats spawn naar speler locatie</string>
+    <string name="invalid_number">Ongeldige waarde</string>
     <string name="world_info_time_set_morning">Maak het ochtend</string>
     <string name="world_info_time_set_night">Maak het nacht</string>
     <string name="world_info_player_location">Spelers locatie:</string>
-    <string name="world_info_half_hearts">Half-hartjes:</string>
+    <string name="world_info_half_hearts">Halve hartjes:</string>
     <string name="world_info_set_to_full_health">Zet naar volledige gezondheid</string>
     <string name="world_info_set_to_infinite_health">Zet naar oneindige gezondheid</string>
     <string name="slot_fillslot">Vul slot</string>
     <string name="slot_maxcountslot">255 in slot</string>
     <string name="world_info_warp_to_spawn">Ga naar spawn</string>
     <string name="world_info_sideways_mode">Activeer liggende speler model glitch: </string>
-    <string name="entity_item">Gevalle item</string>
+    <string name="entity_item">Gevallen item</string>
     <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Kip</string>
     <string name="entity_cow">Koe</string>
     <string name="entity_pig">Varken</string>
     <string name="entity_sheep">Schaap</string>
-    <string name="entity_unknown">Onbekende entity type</string>
+    <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
-    <string name="apocowlypse">Niets hier</string>
-    <string name="about_copyright">Copyright © 2012 Zhuowei Zhang\n\n
-Dit programma is gratis: je kan het herverdelen en/of veranderen
-onder de termen van de GNU General Public License zoals gepubliceerd door
-het Free Software Foundation, of versie 3 van de licentie, of (op jou keuze) een latere versie. \n
+    <string name="entities_none">Geen entities gevonden.</string>
+    <string name="entities_spawn_mobs">Spawn mobs</string>
+    <string name="entities_spawn_drops">Spawn drops</string>
+    <string name="entities_remove_entities">Verwijder entities</string>
+    <string name="entities_cow_tipping">Koe tipping</string>
+    <string name="entities_mob_type">Mob: </string>
+    <string name="entities_entity_type">Type: </string>
+    <string name="entities_babyfy_mobs">Baby-fy dieren</string>
+    <string name="apocowlypse">Niks hier</string>
+    <string name="noworldsfound_title">Geen werelden gevonden!</string>
+    <string name="noworldsfound_text">PocketInvEditor kon geen Minecraft PE werelden vinden op dit toestel.\n
+    Dit programma is gemaakt om werelden te veranderen gemaakt door de volledige versie van Minecraft Pocket Edition gemaakt bij Mojang.</string>
+    <string name="get_pro">Neem PocketInvEditor Pro</string>
+    <string name="get_pro_to_spawn_mobs">Upgrade naar PocketInvEditor Pro om mobs te spawnen.</string>
+    <string name="nothingtoseehere_activate">* Ik ga weg bij mijn tablet en adem in *</string>
+    <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
+    Dit programma is gratis: je kan het herverdelen en/of veranderen
+    Onder de termen van het GNU General Public License zoals gepubliceert door
+    De Free Software Foundation, of versie 3 van de licentie, of
+    (op jouw keuze) een latere versie.\n
 
-Dit programma is uitgebracht in de hoop dat het nuttig is,
-maar ZONDER ENIGE GARANTIE; zonder zelfs de impliciete garantie van
-VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL. Zie het
-GNU General Public License voor meer informatie. \n
+    Dit programma is uitgebracht in de hoop dat het nuttig is,
+    maar ZONDER ENIGE GARANTIE; zonder zelfs de impliciete garantie van
+    VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.  Zie het
+    GNU General Public License voor meer informatie.\n
     </string>
-    <string name="about_librarycredits">Deze app gebruikt de SimpleNBT libary ontwikkeld door het SpoutDev team \n
-Dit programma bevat een aangepaste versie van iten-data.xml van TexasGamer\'s itemid plugin. \n
-Dit programma is uitgerust met een versie van UniversalGaming\'s Oneinidige gezondheid mod. \n
-De item iconen gebruikt in dit programma zijn gemaakt door Mojang.</string>
-    <string name="add_empty_slot">Voeg leeg slot toe.</string>
+    <string name="about_librarycredits">Deze app gebruikt de SimpleNBT library ontwikkeld door
+    het SpoutDev team.\n
+    Dit programma bevat een aangepaste versie van item-data.xml van TexasGamer\'s itemid plugin.\n
+    Dit programma is uitgerust met een versie van UniversalOfGaming\'s oneindige gezondheid mod. \n
+    De item iconen gebruikt in dit programma zijn gemaakt door Mojang. </string>
+    <string name="add_empty_slot">Voeg leeg slot toe</string>
 </resources>

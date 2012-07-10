@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">인벤에디터</string>
     <string name="select_world">월드 선택</string>
     <string name="inventory">인벤토리</string>
     <string name="select_slot">인벤토리 슬롯 선택</string>

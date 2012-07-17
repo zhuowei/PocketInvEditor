@@ -1,41 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">PocketInvEditor</string>
-    <string name="select_world">Seleccionar Mundo</string>
+    <string name="select_world">Seleccionar el Mundo</string>
     <string name="inventory">Inventario</string>
-    <string name="select_slot">Seleccionar Ranura de Inventario</string>
-    <string name="item_id">ID del Objeto:</string>
-    <string name="item_damage">Daño del Objeto: </string>
+    <string name="select_slot">SElegir la casilla de Inventario</string>
+    <string name="item_id">ID:</string>
+    <string name="item_damage">Daño: </string>
     <string name="item_count">Cantidad: </string>
     <string name="item_id_browse">Buscar...</string>
     <string name="loading">Cargando...</string>
     <string name="edit_inventory">Editar el Inventario</string>
-    <string name="edit_world_info">Información del mundo a editar</string>
-    <string name="lastplayed">Última ves jugado</string>
-    <string name="seed">Semilla</string>
-    <string name="saved">Guardado</string>
+    <string name="edit_world_info">Editar Mundo</string>
+    <string name="lastplayed">Último Cargado:</string>
+    <string name="seed">Semilla:</string>
+    <string name="saved">Guardado Finalizado</string>
     <string name="savefailed">Fallo al Guardar.</string>
-    <string name="backup">Crear respaldo</string>
+    <string name="backup">Crear Respaldo</string>
     <string name="backupcreated">Respaldo Creado: </string>
     <string name="backupfailed">Fallo al Respaldar.</string>
-    <string name="backup_start">Iniciando Respaldo. Esto puede tardar unos momentos.</string>
-    <string name="about_about">Información</string>
+    <string name="backup_start">Empezando el Respaldo. Puede tardar un momento.</string>
+    <string name="about_about">Creditos</string>
     <string name="change">Cambiar</string>
     <string name="gamemode">Modo de Juego: </string>
-    <string name="gamemode_survival">Sobrevivencia</string>
+    <string name="gamemode_survival">Supervivencia</string>
     <string name="gamemode_creative">Creativo</string>
-    <string name="main_edit_world_info">Información de Edición de Mundo</string>
-    <string name="about_copyright">Dereechos de Autór (C) 2012 Zhuowei Zhang\n\n
-    Este programa es software gratuito:puedes redistribuirlo y/o modificarlo
-    debajo de los términos de la GNU General Public License al ser publicado por
-    La Free Software Foundation, ya sea la versión 3 de la Licencia, o
-    (a su opción) cualquier versión más nueva.\n
+    <string name="main_edit_world_info">Editar Información</string>
+    <string name="item_filter_hint">Buscar...</string>
+    <string name="world_info_time">Tiempo: </string>
+    <string name="world_info_spawn_to_player">Mover el punto de reinicio a la localización del jugador</string>
+    <string name="invalid_number">Valor Inválido</string>
+    <string name="world_info_time_set_morning">Cambiar el tiempo a la mañana</string>
+    <string name="world_info_time_set_night">Cambiar el tiempo a la noche</string>
+    <string name="world_info_player_location">Localización del jugador:</string>
+    <string name="world_info_half_hearts">Medios Corazones:</string>
+    <string name="world_info_set_to_full_health">Rellenar la vida</string>
+    <string name="world_info_set_to_infinite_health">Vida Infinita</string>
+    <string name="slot_fillslot">Llenar Ranura</string>
+    <string name="slot_maxcountslot">Llenar al Máximo (255) </string>
+    <string name="world_info_warp_to_spawn">Trasladarse al Punto de Reinicio</string>
+    <string name="world_info_sideways_mode">Activar el error del jugador de lado: </string>
+    <string name="entity_item">Objeto que Suelta</string>
+    <string name="entity_zombie">Zombie</string>
+    <string name="entity_chicken">Chicken</string>
+    <string name="entity_cow">Cow</string>
+    <string name="entity_pig">Pig</string>
+    <string name="entity_sheep">Sheep</string>
+    <string name="entity_unknown">Entidad Desconocida</string>
+    <string name="entities_info">Ver Información de las Entidades</string>
+    <string name="entities_none">No se encontraron entidades.</string>
+    <string name="entities_spawn_mobs">Aparecer Mobs</string>
+    <string name="entities_spawn_drops">Aparecer Objetos que Sueltan</string>
+    <string name="entities_remove_entities">Remover Entidades</string>
+    <string name="entities_cow_tipping">Matar Vacas </string>
+    <string name="entities_mob_type">Mob: </string>
+    <string name="entities_entity_type">Tipo: </string>
+    <string name="entities_babyfy_mobs">Hacer a los animales Infantes</string>
+    <string name="apocowlypse">Nada Aqui</string>
+    <string name="noworldsfound_title">Y LOS MUNDOS?!</string>
+    <string name="noworldsfound_text">PocketInvEditor no encontró ningún mundo de Minecraft PE.\n
+    Este programa edita mundos de la varsión completa de Minecraft Pocket Edition por Mojang.</string>
+    <string name="get_pro">Obtén Ya PocketInvEditor Pro!</string>
+    <string name="get_pro_to_spawn_mobs">Actualiza a Pro para aparecer mobs.</string>
+    <string name="nothingtoseehere_activate">* I move away from the tablet to breathe in *</string>
+    <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.\n
 
-    Este programa es distribuido esperando que sea de utilidad,
-    Pero SIN NINGUNA GARANTÍA; ni siquiera con la garantía implicada de la
-    comercialización o su uso para algo en específico. Ver la
-    GNU General Public License para más detalles.\n
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.\n
     </string>
-    <string name="about_librarycredits">Esta app usa la SpoutNBT library creada por
-    the SpoutDev team.</string>
+    <string name="about_librarycredits">This app uses the SimpleNBT library developed by
+    the SpoutDev team.\n
+    This program contains a modified version of item-data.xml from TexasGamer\'s itemid plugin.\n
+    This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
+    The item icons used in this program are created by Mojang. </string>
+    <string name="add_empty_slot">Add Empty Slot</string>
+    <string name="unlicensed_dialog_title">Arr! Eres un pirata, grumete!!</string>
+    <string name="unlicensed_dialog_body">Esta aplicación es illegal. Comprala de Google Play.</string>
+    <string name="buy_button">Buy app</string>
+    <string name="quit_button">Salir</string>
 </resources>

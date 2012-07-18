@@ -8,7 +8,9 @@
         <item hex="3" dec="3" name="흙" />
         <item hex="4" dec="4" name="조약돌" />
         <item hex="5" dec="5" name="가공된나무" />
-        <item hex="6" dec="6" name="묘목" />
+        <item hex="6" dec="6" id="0" name="참나무 묘목" />
+        <item hex="6" dec="6" id="1" name="전나무 묘목" />
+        <item hex="6" dec="6" id="2" name="자작나무 묘목" />
         <item hex="7" dec="7" name="배드락" />
         <item hex="8" dec="8" name="물" />
         <item hex="9" dec="9" name="멈춘 물" />
@@ -71,7 +73,7 @@
         <item hex="32" dec="50" name="토치" />
         <item hex="33" dec="51" name="불" />
         <item hex="35" dec="53" name="나무 계단" />
-        <item hex="36" dec="54" name="상자" />
+        <item hex="36" dec="54" name="창고" />
         <item hex="38" dec="56" name="다이아몬드 원석" />
         <item hex="39" dec="57" name="다이아몬드 블럭" />
         <item hex="3A" dec="58" name="조합대" />
@@ -91,7 +93,8 @@
         <item hex="52" dec="82" name="점토블럭" />
         <item hex="53" dec="83" name="사탕수수" />
         <item hex="55" dec="85" name="울타리" />
-        <item hex="5F" dec="95" name="미지블럭" />
+        <item hex="5F" dec="95" name="보이지않는 배드락" />
+        <item hex="66" dec="102" name="유리판" />
         <item hex="6B" dec="107" name="울타리 문" />
         <item hex="6C" dec="108" name="벽돌 계단" />
         <item hex="F8" dec="248" name="'업데이트 게임' 블럭 1" />
@@ -101,7 +104,7 @@
         <item hex="100" dec="256" name="철 삽" />
         <item hex="101" dec="257" name="철 곡괭이" />
         <item hex="102" dec="258" name="철 도끼" />
-        <item hex="106" dec="262" name="활" />
+        <item hex="106" dec="262" name="화살" />
         <item hex="107" dec="263" id="0" name="석탄" />
         <item hex="107" dec="263" id="1" name="목탄" />
         <item hex="108" dec="264" name="다이아몬드" />
@@ -162,7 +165,6 @@
         <item hex="160" dec="352" name="뼈" />
         <item hex="161" dec="353" name="설탕" />
         <item hex="167" dec="359" name="가위" />
-		<item hex="1C8" dec="456" name="카메라" />
+        <item hex="1C8" dec="456" name="카메라" />
     </items>
 </data>
-

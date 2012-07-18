@@ -95,11 +95,11 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		countEntities();
 	}
 
-	public void cowTipping() {
+	public void cowTipping(EntityType type, short tipNess) {
 		List<Entity> list = EditorActivity.level.getEntities();
 		for (Entity entity: list) {
-			if (entity instanceof Cow) {
-				((Cow) entity).setDeathTime((short) 2048);
+			if (entity.getEntityType() == type) {
+				((LivingEntity) entity).setDeathTime(tipNess);
 			}
 		}
 		save(this);

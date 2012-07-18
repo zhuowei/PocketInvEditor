@@ -8,6 +8,7 @@
         <item hex="3" dec="3" name="흙" />
         <item hex="4" dec="4" name="조약돌" />
         <item hex="5" dec="5" name="가공된나무" />
+        <item hex="6" dec="6" name="묘목" />
         <item hex="7" dec="7" name="배드락" />
         <item hex="8" dec="8" name="물" />
         <item hex="9" dec="9" name="멈춘 물" />
@@ -70,10 +71,13 @@
         <item hex="32" dec="50" name="토치" />
         <item hex="33" dec="51" name="불" />
         <item hex="35" dec="53" name="나무 계단" />
+        <item hex="36" dec="54" name="상자" />
         <item hex="38" dec="56" name="다이아몬드 원석" />
         <item hex="39" dec="57" name="다이아몬드 블럭" />
         <item hex="3A" dec="58" name="조합대" />
         <item hex="3C" dec="60" name="농토" />
+        <item hex="3D" dec="61" name="화로" />
+        <item hex="3E" dec="62" name="Burning Furnace" />
         <item hex="40" dec="64" name="나무 문" />
         <item hex="41" dec="65" name="사다리" />
         <item hex="43" dec="67" name="조약돌 계단" />

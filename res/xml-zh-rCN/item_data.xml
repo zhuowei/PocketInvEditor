@@ -9,6 +9,9 @@
         <item hex="3" dec="3" name="泥土" />
         <item hex="4" dec="4" name="圆石" />
         <item hex="5" dec="5" name="木板" />
+        <item hex="6" dec="6" id="0" name="橡树树苗" />
+        <item hex="6" dec="6" id="1" name="云杉树苗" />
+        <item hex="6" dec="6" id="2" name="桦树树苗" />
         <item hex="7" dec="7" name="基岩" />
         <item hex="8" dec="8" name="水" />
         <item hex="9" dec="9" name="静止的水" />
@@ -71,10 +74,13 @@
         <item hex="32" dec="50" name="火把" />
         <item hex="33" dec="51" name="火" />
         <item hex="35" dec="53" name="木楼梯" />
+        <item hex="36" dec="54" name="箱子" />
         <item hex="38" dec="56" name="钻石矿石" />
         <item hex="39" dec="57" name="钻石块" />
         <item hex="3A" dec="58" name="工作台" />
         <item hex="3C" dec="60" name="耕地" />
+        <item hex="3D" dec="61" name="熔炉" />
+        <item hex="3E" dec="62" name="燃烧中的熔炉" />
         <item hex="40" dec="64" name="木门 (方块)" />
         <item hex="41" dec="65" name="梯子" />
         <item hex="43" dec="67" name="石楼梯" />

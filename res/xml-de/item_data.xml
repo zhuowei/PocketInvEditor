@@ -9,6 +9,9 @@
         <item hex="3" dec="3" name="Erde" />
         <item hex="4" dec="4" name="Pflasterstein" />
         <item hex="5" dec="5" name="Bretter" />
+        <item hex="6" dec="6" id="0" name="Eichensetzling" />
+        <item hex="6" dec="6" id="1" name="Fichtensetzling" />
+        <item hex="6" dec="6" id="2" name="Birkensetzling" />
         <item hex="7" dec="7" name="Grundgestein" />
         <item hex="8" dec="8" name="Wasser" />
         <item hex="9" dec="9" name="Stehendes Wasser" />
@@ -71,10 +74,13 @@
         <item hex="32" dec="50" name="Fackel" />
         <item hex="33" dec="51" name="Feuer" />
         <item hex="35" dec="53" name="Holztreppe" />
+        <item hex="36" dec="54" name="Truhe" />
         <item hex="38" dec="56" name="Diamanterz" />
         <item hex="39" dec="57" name="Diamantblock" />
         <item hex="3A" dec="58" name="Werkbank" />
         <item hex="3C" dec="60" name="Ackerboden" />
+        <item hex="3D" dec="61" name="Ofen" />
+        <item hex="3E" dec="62" name="Brennender Ofen" />
         <item hex="40" dec="64" name="Holztür (block)" />
         <item hex="41" dec="65" name="Leiter" />
         <item hex="43" dec="67" name="Steintreppe" />

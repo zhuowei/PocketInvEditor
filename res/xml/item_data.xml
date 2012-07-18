@@ -8,6 +8,9 @@
         <item hex="3" dec="3" name="Dirt" />
         <item hex="4" dec="4" name="Cobblestone" />
         <item hex="5" dec="5" name="Wooden Plank" />
+        <item hex="6" dec="6" id="0" name="Oak Sapling" />
+        <item hex="6" dec="6" id="1" name="Spruce Sapling" />
+        <item hex="6" dec="6" id="2" name="Birch Sapling" />
         <item hex="7" dec="7" name="Bedrock" />
         <item hex="8" dec="8" name="Water" />
         <item hex="9" dec="9" name="Stationary water" />
@@ -70,10 +73,13 @@
         <item hex="32" dec="50" name="Torch" />
         <item hex="33" dec="51" name="Fire" />
         <item hex="35" dec="53" name="Wooden Stairs" />
+        <item hex="36" dec="54" name="Chest" />
         <item hex="38" dec="56" name="Diamond Ore" />
         <item hex="39" dec="57" name="Diamond Block" />
         <item hex="3A" dec="58" name="Crafting Table" />
         <item hex="3C" dec="60" name="Farmland" />
+        <item hex="3D" dec="61" name="Furnace" />
+        <item hex="3E" dec="62" name="Burning Furnace" />
         <item hex="40" dec="64" name="Wooden Door (Block)" />
         <item hex="41" dec="65" name="Ladder" />
         <item hex="43" dec="67" name="Cobblestone Stairs" />

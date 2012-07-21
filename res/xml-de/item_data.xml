@@ -95,6 +95,7 @@
         <item hex="53" dec="83" name="Zuckerrohr (block)" />
         <item hex="55" dec="85" name="Zaun" />
         <item hex="5F" dec="95" name="Invisible bedrock"/>
+        <item hex="66" dec="102" name="Glasscheibe"/>
         <item hex="6B" dec="107" name="Zauntor"/>
         <item hex="6C" dec="108" name="Ziegeltreppe" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />

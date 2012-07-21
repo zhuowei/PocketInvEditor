@@ -89,6 +89,7 @@
     <item typeId="82" icon="guiblocks,8,0"/>
     <item typeId="83" icon="guiblocks,4,8"/>
     <item typeId="85" icon="guiblocks,0,8"/>
+    <item typeId="102" icon="terrain,3,1"/>
     <item typeId="107" icon="guiblocks,0,9"/>
     <item typeId="108" icon="guiblocks,9,4"/>
     <item typeId="248" icon="terrain,15,12"/>

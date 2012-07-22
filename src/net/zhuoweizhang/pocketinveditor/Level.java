@@ -4,6 +4,7 @@ import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.entity.Entity;
 import net.zhuoweizhang.pocketinveditor.entity.Player;
+import net.zhuoweizhang.pocketinveditor.tileentity.TileEntity;
 
 public class Level {
 
@@ -28,6 +29,8 @@ public class Level {
 	private long time;
 
 	private List<Entity> entities;
+
+	private List<TileEntity> tileEntities;
 
 	public int getGameType() {
 		return gameType;
@@ -131,5 +134,13 @@ public class Level {
 
 	public void setEntities(List<Entity> entities) {
 		this.entities = entities;
+	}
+
+	public List<TileEntity> getTileEntities() {
+		return tileEntities;
+	}
+
+	public void setTileEntities(List<TileEntity> tileEntities) {
+		this.tileEntities = tileEntities;
 	}
 }

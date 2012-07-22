@@ -17,24 +17,34 @@ import org.spout.nbt.stream.*;
 
 import net.zhuoweizhang.pocketinveditor.entity.Entity;
 import net.zhuoweizhang.pocketinveditor.io.nbt.NBTConverter;
+import net.zhuoweizhang.pocketinveditor.tileentity.TileEntity;
 
 public final class EntityDataConverter {
 	public static final byte[] header = {0x45, 0x4e, 0x54, 0x00, 0x01, 0x00, 0x00, 0x00};
 
-	public static List<Entity> read(File file) throws IOException {
+	public static class EntityData {
+		public List<Entity> entities;
+		public List<TileEntity> tileEntities;
+		public EntityData(List<Entity> entities, List<TileEntity> tileEntities) {
+			this.entities = entities;
+			this.tileEntities = tileEntities;
+		}
+	}
+
+	public static EntityData read(File file) throws IOException {
 		FileInputStream fis = new FileInputStream(file);
 		BufferedInputStream is = new BufferedInputStream(fis);
 		is.skip(12);
-		List<Entity> entitiesList = NBTConverter.readEntities((CompoundTag) new NBTInputStream(is, false, true).readTag());
+		EntityData eDat = NBTConverter.readEntities((CompoundTag) new NBTInputStream(is, false, true).readTag());
 		is.close();
-		return entitiesList;
+		return eDat;
 	}
 
-	public static void write(List<Entity> entitiesList, File file) throws IOException {
+	public static void write(List<Entity> entitiesList, List<TileEntity> tileEntitiesList, File file) throws IOException {
 		FileOutputStream os = new FileOutputStream(file);
 		DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(os));
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeEntities(entitiesList));
+		new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeEntities(entitiesList, tileEntitiesList));
 		int length = bos.size();
 		dos.write(header);
 		dos.writeInt(Integer.reverseBytes(length));
@@ -43,9 +53,9 @@ public final class EntityDataConverter {
 	}
 
 	public static void main(String[] args) throws Exception {
-		List<Entity> entities = read(new File(args[0]));
+		EntityData entities = read(new File(args[0]));
 		System.out.println(entities);
-		write(entities, new File(args[1]));
+		write(entities.entities, entities.tileEntities, new File(args[1]));
 	}
 
 }

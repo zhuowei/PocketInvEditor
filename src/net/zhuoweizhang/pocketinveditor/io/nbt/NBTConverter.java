@@ -13,8 +13,15 @@ import net.zhuoweizhang.pocketinveditor.Level;
 
 import net.zhuoweizhang.pocketinveditor.entity.*;
 
+import static net.zhuoweizhang.pocketinveditor.io.EntityDataConverter.EntityData;
+
 import net.zhuoweizhang.pocketinveditor.io.nbt.entity.EntityStore;
 import net.zhuoweizhang.pocketinveditor.io.nbt.entity.EntityStoreLookupService;
+
+import net.zhuoweizhang.pocketinveditor.io.nbt.tileentity.TileEntityStore;
+import net.zhuoweizhang.pocketinveditor.io.nbt.tileentity.TileEntityStoreLookupService;
+
+import net.zhuoweizhang.pocketinveditor.tileentity.*;
 
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
@@ -217,8 +224,23 @@ public final class NBTConverter {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static List<Entity> readEntities(CompoundTag tag) {
-		List<CompoundTag> tags = ((ListTag<CompoundTag>) tag.getValue().get(0)).getValue();
+	public static EntityData readEntities(CompoundTag tag) {
+		List<Entity> entities = null;
+		List<TileEntity> tileEntities = null;
+		for (Tag t: tag.getValue()) {
+			if (t.getName().equals("Entities")) {
+				entities = readEntitiesPart(((ListTag<CompoundTag>) t).getValue());
+			} else if (t.getName().equals("TileEntities")) {
+				tileEntities = readTileEntitiesPart(((ListTag<CompoundTag>) t).getValue());
+			}
+		}
+		if (tileEntities == null) {
+			tileEntities = new ArrayList<TileEntity>();
+		}
+		return new EntityData(entities, tileEntities);
+	}
+
+	public static List<Entity> readEntitiesPart(List<CompoundTag> tags) {
 		List<Entity> entities = new ArrayList<Entity>(tags.size());
 		for (CompoundTag entityTag: tags) {
 			for (Tag t: entityTag.getValue()) {
@@ -264,14 +286,22 @@ public final class NBTConverter {
 		}
 	}
 
-	public static CompoundTag writeEntities(List<Entity> entities) {
+	public static CompoundTag writeEntities(List<Entity> entities, List<TileEntity> tileEntities) {
 		List<CompoundTag> entitiesTags = new ArrayList<CompoundTag>(entities.size());
 		for (Entity entity : entities) {
 			entitiesTags.add(writeEntity(entity));
 		}
 		ListTag<CompoundTag> entitiesListTag = new ListTag<CompoundTag>("Entities", CompoundTag.class, entitiesTags);
-		List<Tag> compoundTagList = new ArrayList<Tag>(1);
+
+		List<CompoundTag> tileEntitiesTags = new ArrayList<CompoundTag>(tileEntities.size());
+		for (TileEntity entity : tileEntities) {
+			tileEntitiesTags.add(writeTileEntity(entity));
+		}
+		ListTag<CompoundTag> tileEntitiesListTag = new ListTag<CompoundTag>("TileEntities", CompoundTag.class, tileEntitiesTags);
+
+		List<Tag> compoundTagList = new ArrayList<Tag>(2);
 		compoundTagList.add(entitiesListTag);
+		compoundTagList.add(tileEntitiesListTag);
 		CompoundTag compoundTag = new CompoundTag("", compoundTagList);
 		return compoundTag;
 	}
@@ -322,6 +352,63 @@ public final class NBTConverter {
 		values.add(new ShortTag("Damage", stack.getDurability()));
 		values.add(new ShortTag("id", stack.getTypeId()));
 		return new CompoundTag(name, values);
+	}
+
+	public static List<TileEntity> readTileEntitiesPart(List<CompoundTag> tags) {
+		List<TileEntity> entities = new ArrayList<TileEntity>(tags.size());
+		for (CompoundTag entityTag: tags) {
+			for (Tag t: entityTag.getValue()) {
+				String name = t.getName();
+				if (name.equals("id")) {
+					TileEntity entity = readTileEntity(((StringTag) t).getValue(), entityTag);
+					entities.add(entity);
+					break;
+				}
+			}
+		}
+		return entities;
+	}
+
+	public static TileEntity readTileEntity(String id, CompoundTag tag) {
+		TileEntity entity = createTileEntityById(id);
+		entity.setId(id);
+		TileEntityStore store = TileEntityStoreLookupService.idMap.get(id);
+		if (store == null) {
+			System.err.println("Warning: unknown tile entity id " + id + "; using default tileentity store.");
+			store = TileEntityStoreLookupService.defaultStore;
+		}
+		store.load(entity, tag);
+		return entity;
+	}
+
+	public static TileEntity createTileEntityById(String id) {
+		if (id.equals("Furnace")) {
+			return new FurnaceTileEntity();
+		} else if (id.equals("Chest")) {
+			return new ContainerTileEntity();
+		} else {
+			return new TileEntity();
+		}
+	}
+
+	public static CompoundTag writeTileEntity(TileEntity entity) {
+		String typeId = entity.getId();
+		TileEntityStore store = TileEntityStoreLookupService.idMap.get(typeId);
+		if (store == null) {
+			System.err.println("Warning: unknown tileentity id " + typeId + "; using default tileentity store.");
+			store = TileEntityStoreLookupService.defaultStore;
+		}
+		List<Tag> tags = store.save(entity);
+		
+		Collections.sort(tags, new Comparator<Tag>() {
+			public int compare(Tag a, Tag b) {
+				return a.getName().compareTo(b.getName());
+			}
+			public boolean equals(Tag a, Tag b) {
+				return a.getName().equals(b.getName());
+			}
+		});
+		return new CompoundTag("", tags);
 	}
 
 }

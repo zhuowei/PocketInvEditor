@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.entity.*;
 import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
+import net.zhuoweizhang.pocketinveditor.tileentity.*;
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
 public class EntitiesInfoActivity extends Activity implements View.OnClickListener {
@@ -36,9 +37,10 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		new Thread(new LoadEntitiesTask()).start();
 	}
 
-	protected void onEntitiesLoaded(List<Entity> entitiesList) {
-		EditorActivity.level.setEntities(entitiesList);
-		this.entitiesList = entitiesList;
+	protected void onEntitiesLoaded(EntityDataConverter.EntityData entitiesDat) {
+		EditorActivity.level.setEntities(entitiesDat.entities);
+		EditorActivity.level.setTileEntities(entitiesDat.tileEntities);
+		this.entitiesList = entitiesDat.entities;
 		countEntities();
 	}
 
@@ -144,7 +146,7 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		public void run() {
 			File entitiesFile = new File(EditorActivity.worldFolder, "entities.dat");
 			try {
-				final List<Entity> entitiesList = EntityDataConverter.read(entitiesFile);
+				final EntityDataConverter.EntityData entitiesList = EntityDataConverter.read(entitiesFile);
 				EntitiesInfoActivity.this.runOnUiThread(new Runnable() {
 					public void run() {
 						EntitiesInfoActivity.this.onEntitiesLoaded(entitiesList);
@@ -154,7 +156,8 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 				e.printStackTrace();
 				EntitiesInfoActivity.this.runOnUiThread(new Runnable() {
 					public void run() {
-						EntitiesInfoActivity.this.onEntitiesLoaded(new ArrayList<Entity>());
+						EntitiesInfoActivity.this.onEntitiesLoaded(new EntityDataConverter.EntityData(
+							new ArrayList<Entity>(), new ArrayList<TileEntity>()));
 					}
 				});
 			}
@@ -165,7 +168,8 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		new Thread(new Runnable() {
 			public void run() {
 				try {
-					EntityDataConverter.write(EditorActivity.level.getEntities(), new File(EditorActivity.worldFolder, "entities.dat"));
+					EntityDataConverter.write(EditorActivity.level.getEntities(), EditorActivity.level.getTileEntities(), 
+						new File(EditorActivity.worldFolder, "entities.dat"));
 					if (context != null) {
 						context.runOnUiThread(new Runnable() {
 							public void run() {

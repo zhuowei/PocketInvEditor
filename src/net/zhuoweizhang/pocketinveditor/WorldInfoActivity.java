@@ -1,5 +1,7 @@
 package net.zhuoweizhang.pocketinveditor;
 
+import java.io.File;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
@@ -41,6 +44,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	private Button sidewaysOnButton, sidewaysOffButton;
 
 	private TextView worldNameText;
+
+	private TextView worldFolderNameText;
 
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
@@ -78,6 +83,9 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		worldNameText = (TextView) findViewById(R.id.world_info_name);
 		worldNameText.setText(EditorActivity.level.getLevelName());
 		worldNameText.setOnFocusChangeListener(this);
+		worldFolderNameText = (TextView) findViewById(R.id.world_info_folder_name);
+		worldFolderNameText.setText(EditorActivity.worldFolder.getName());
+		worldFolderNameText.setOnFocusChangeListener(this);
 	}
 
 	public void updateTimeText() {
@@ -213,6 +221,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			if (!hasFocus) {
 				checkWorldNameAfterChange();
 			}
+		} else if (v == worldFolderNameText) {
+			if (!hasFocus) {
+				checkWorldFolderNameAfterChange();
+			}
 		}
 	}
 
@@ -221,6 +233,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		checkTimeInputAfterChange();
 		checkHealthInputAfterChange();
 		checkWorldNameAfterChange();
+		checkWorldFolderNameAfterChange();
 	}
 
 	public void checkTimeInputAfterChange() {
@@ -256,6 +269,25 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		if (!newText.equals(EditorActivity.level.getLevelName())) {
 			EditorActivity.level.setLevelName(newText);
 			EditorActivity.save(this);
+		}
+	}
+
+	protected void checkWorldFolderNameAfterChange() {
+		String newText = worldFolderNameText.getText().toString();
+		if (!newText.equals(EditorActivity.worldFolder.getName())) {
+			File newLoc = new File(EditorActivity.worldFolder.getParentFile(), newText);
+			if (newLoc.exists()) {
+				worldFolderNameText.setError(this.getResources().getText(R.string.folder_exists));
+				return;
+			}
+			worldFolderNameText.setError(null);
+			boolean success = EditorActivity.worldFolder.renameTo(newLoc);
+			if (!success) {
+				worldFolderNameText.setError(this.getResources().getText(R.string.folder_rename_failed));
+			} else {
+				Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show();
+				EditorActivity.worldFolder = newLoc;
+			}
 		}
 	}
 }

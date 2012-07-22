@@ -35,6 +35,9 @@
     <string name="world_info_half_hearts">Half-hearts:</string>
     <string name="world_info_set_to_full_health">Set to full health</string>
     <string name="world_info_set_to_infinite_health">Set to infinite health</string>
+    <string name="world_info_folder">Folder: </string>
+    <string name="folder_exists">Folder already exists; choose a new name</string>
+    <string name="folder_rename_failed">Failed to rename folder</string>
     <string name="slot_fillslot">Fill slot</string>
     <string name="slot_maxcountslot">255 in slot</string>
     <string name="world_info_warp_to_spawn">Warp to spawn</string>

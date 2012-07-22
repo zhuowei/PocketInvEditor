@@ -52,12 +52,16 @@ public class PocketInvEditorActivity extends ListActivity
 			}
 		});
 
-		loadWorlds();
-
 		if (Material.materials == null) {
 			loadMaterials();
 		}
 
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		loadWorlds();
 	}
 
 	private void loadWorlds() {

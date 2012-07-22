@@ -5,7 +5,7 @@
     <string name="inventory">Inventaris</string>
     <string name="select_slot">Selecteer inventaris slot</string>
     <string name="item_id">Item ID:</string>
-    <string name="item_damage">Item shade: </string>
+    <string name="item_damage">Item schade: </string>
     <string name="item_count">Hoeveelheid: </string>
     <string name="item_id_browse">Bladeren...</string>
     <string name="loading">Laden...</string>
@@ -27,7 +27,7 @@
     <string name="main_edit_world_info">Verander wereld Informatie</string>
     <string name="item_filter_hint">Zoeken...</string>
     <string name="world_info_time">Tijd: </string>
-    <string name="world_info_spawn_to_player">Verplaats spawn naar speler locatie</string>
+    <string name="world_info_spawn_to_player">Verplaats spawn naar spelers locatie</string>
     <string name="invalid_number">Ongeldige waarde</string>
     <string name="world_info_time_set_morning">Maak het ochtend</string>
     <string name="world_info_time_set_night">Maak het nacht</string>
@@ -51,14 +51,15 @@
     <string name="entities_spawn_mobs">Spawn mobs</string>
     <string name="entities_spawn_drops">Spawn drops</string>
     <string name="entities_remove_entities">Verwijder entities</string>
-    <string name="entities_cow_tipping">Koe tipping</string>
+    <string name="entities_cow_tipping">Koe kantelen</string>
+    <string name="entities_mob_tipping">Mob kantelen</string>
     <string name="entities_mob_type">Mob: </string>
     <string name="entities_entity_type">Type: </string>
-    <string name="entities_babyfy_mobs">Baby-fy dieren</string>
+    <string name="entities_babyfy_mobs">Baby dieren</string>
     <string name="apocowlypse">Niks hier</string>
-    <string name="noworldsfound_title">Geen werelden gevonden!</string>
+    <string name="noworldsfound_title">Waarom heb je geen werelden?!</string>
     <string name="noworldsfound_text">PocketInvEditor kon geen Minecraft PE werelden vinden op dit toestel.\n
-    Dit programma is gemaakt om werelden te veranderen gemaakt door de volledige versie van Minecraft Pocket Edition gemaakt bij Mojang.</string>
+    Dit programma is gemaakt om werelden te veranderen gemaakt door de volledige versie van Minecraft Pocket Edition gemaakt door Mojang.</string>
     <string name="get_pro">Neem PocketInvEditor Pro</string>
     <string name="get_pro_to_spawn_mobs">Upgrade naar PocketInvEditor Pro om mobs te spawnen.</string>
     <string name="nothingtoseehere_activate">* Ik ga weg bij mijn tablet en adem in *</string>
@@ -79,4 +80,8 @@
     Dit programma is uitgerust met een versie van UniversalOfGaming\'s oneindige gezondheid mod. \n
     De item iconen gebruikt in dit programma zijn gemaakt door Mojang. </string>
     <string name="add_empty_slot">Voeg leeg slot toe</string>
+    <string name="unlicensed_dialog_title">Arr! Wees een piraat!</string>
+    <string name="unlicensed_dialog_body">Deze applicatie heeft geen licensie, koop hem op Google Play.</string>
+    <string name="buy_button">Koop deze app</string>
+    <string name="quit_button">Stop</string>
 </resources>

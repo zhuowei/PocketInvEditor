@@ -40,7 +40,7 @@ public class EditorActivity extends Activity {
 
 	private Button startWorldInfoButton;
 
-	private Button entitiesInfoButton;
+	protected Button entitiesInfoButton;
 
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);

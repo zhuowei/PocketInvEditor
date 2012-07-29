@@ -10,6 +10,13 @@
         android:text="@string/app_name"
         android:textSize="15pt"/>
 
+    <TextView android:id="@+id/rofl_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:typeface="monospace"
+        android:textSize="15pt"
+        android:visibility="gone"/>
+
     <TextView
         android:id="@+id/about_appversiontext"
         android:layout_width="wrap_content"

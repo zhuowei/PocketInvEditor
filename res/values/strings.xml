@@ -50,6 +50,7 @@
     <string name="entity_sheep">Sheep</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
+    <string name="entities_edit">Edit entities</string>
     <string name="entities_none">No entities found.</string>
     <string name="entities_spawn_mobs">Spawn mobs</string>
     <string name="entities_spawn_drops">Spawn drops</string>

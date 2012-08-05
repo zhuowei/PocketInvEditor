@@ -2,6 +2,8 @@ package net.zhuoweizhang.pocketinveditor;
 
 import java.io.File;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -71,7 +73,9 @@ public class PocketInvEditorActivity extends ListActivity
 
 	private void receiveWorldFolders(List<WorldListItem> worlds) {
 		this.worlds = worlds;
-		setListAdapter(new ArrayAdapter<WorldListItem>(this, R.layout.world_list_item, worlds));
+		ArrayAdapter<WorldListItem> adapter = new ArrayAdapter<WorldListItem>(this, R.layout.world_list_item, worlds);
+		adapter.sort(new WorldListDateComparator());
+		setListAdapter(adapter);
 		if (worlds.size() == 0) {
 			displayNoWorldsWarning();
 		}
@@ -162,12 +166,31 @@ public class PocketInvEditorActivity extends ListActivity
 
 	private final class WorldListItem {
 		public final File folder;
+		public final File levelDat;
 		public WorldListItem(File file) {
 			this.folder = file;
+			this.levelDat = new File(folder, "level.dat");
 		}
 
 		public String toString() {
 			return folder.getName();
+		}
+	}
+
+	private final class WorldListDateComparator implements Comparator<WorldListItem> {
+		public int compare(WorldListItem a, WorldListItem b) {
+			//System.out.println(a.toString() + ":" + b.toString() + (a.levelDat.lastModified() - b.levelDat.lastModified()));
+			long result = a.levelDat.lastModified() - b.levelDat.lastModified();
+			if (result < 0) {
+				return 1;
+			} else if (result > 0) {
+				return -1;
+			} else {
+				return 0;
+			}
+		}
+		public boolean equals(WorldListItem a, WorldListItem b) {
+			return a.levelDat.lastModified() == b.levelDat.lastModified();
 		}
 	}
 

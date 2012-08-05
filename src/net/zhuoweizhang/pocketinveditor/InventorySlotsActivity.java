@@ -22,7 +22,11 @@ import java.util.List;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 
-public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener {
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
+import net.zhuoweizhang.pocketinveditor.material.Material;
+
+public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener, LevelDataLoadListener {
 
 	private List<InventorySlot> inventory;
 
@@ -34,9 +38,42 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
+
+		getListView().setOnItemClickListener(this);
+
+		if (Material.materials == null) {
+			new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
+			new Thread(new MaterialIconLoader(this)).start();
+			new Thread(new Runnable() {
+				public void run() {
+					try {
+						Thread.sleep(500);
+					} catch (Exception e) {}
+					InventorySlotsActivity.this.runOnUiThread(new Runnable() {
+						public void run() {
+							onMaterialsLoad();
+						}
+					});
+				}
+			}).start();
+		} else {
+			onMaterialsLoad();
+		}
+	}
+
+	public void onMaterialsLoad() {
+		if (EditorActivity.level != null) {
+			onLevelDataLoad();
+		} else {
+			EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
+		}
+	}
+
+	public void onLevelDataLoad() {
 		tempInventory = EditorActivity.level.getPlayer().getInventory();
 		int slotsSize = tempInventory.size() - 8;
 		inventory = new ArrayList<InventorySlot>(slotsSize >= 0 ? slotsSize : 0);
+
 		for (InventorySlot slot: tempInventory) {
 			if (slot.getSlot() > 8) {
 				inventory.add(slot);
@@ -68,12 +105,14 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		};
 
 		setListAdapter(inventoryListAdapter);
-		getListView().setOnItemClickListener(this);
+		inventoryListAdapter.notifyDataSetChanged();
 	}
 
 	public void onStart() {
 		super.onStart();
-		inventoryListAdapter.notifyDataSetChanged();
+		if (EditorActivity.level != null && inventoryListAdapter != null) {
+			inventoryListAdapter.notifyDataSetChanged();
+		}
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

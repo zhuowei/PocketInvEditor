@@ -24,6 +24,7 @@ import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 
 public final class BrowseItemsActivity extends ListActivity implements OnItemClickListener, TextWatcher {
 
@@ -37,6 +38,8 @@ public final class BrowseItemsActivity extends ListActivity implements OnItemCli
 		if (Material.materials == null) {
 			//Load the materials on the main thread - may cause slowdowns
 			new MaterialLoader(getResources().getXml(R.xml.item_data)).run();
+			new MaterialIconLoader(this).run();
+
 		}
 		setContentView(R.layout.item_id_browse);
 		itemsListAdapter = new ArrayAdapter<Material>(this, R.layout.item_id_list_item, R.id.item_id_main_text, Material.materials) {

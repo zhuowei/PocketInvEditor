@@ -20,6 +20,10 @@ import android.widget.Toast;
 import net.zhuoweizhang.pocketinveditor.io.LevelDataConverter;
 import net.zhuoweizhang.pocketinveditor.io.zip.ZipFileWriter;
 
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
+import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
+import net.zhuoweizhang.pocketinveditor.material.Material;
+
 public class EditorActivity extends Activity {
 
 	public static Level level;
@@ -78,6 +82,14 @@ public class EditorActivity extends Activity {
                 });
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
+		if (Material.materials == null) {
+			loadMaterials();
+		}
+	}
+
+	private void loadMaterials() {
+		new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
+		new Thread(new MaterialIconLoader(this)).start();
 	}
 
 	@Override
@@ -108,7 +120,7 @@ public class EditorActivity extends Activity {
 	}
 
 	private void startInventoryEditor() {
-		startActivity(new Intent(this, InventorySlotsActivity.class));
+		startActivityWithExtras(new Intent(this, InventorySlotsActivity.class));
 	}
 
 	public static void save(final Activity context) {
@@ -157,11 +169,16 @@ public class EditorActivity extends Activity {
 
 	public void startWorldInfo() {
 		Intent intent = new Intent(this, WorldInfoActivity.class);
-		startActivity(intent);
+		startActivityWithExtras(intent);
 	}
 
 	public void startEntitiesInfo() {
 		Intent intent = new Intent(this, EntitiesInfoActivity.class);
+		startActivityWithExtras(intent);
+	}
+
+	public void startActivityWithExtras(Intent intent) {
+		intent.putExtras(this.getIntent());
 		startActivity(intent);
 	}
 
@@ -210,5 +227,25 @@ public class EditorActivity extends Activity {
 				});
 			}
 		}
+	}
+
+	public static void loadLevelData(final Activity activity, final LevelDataLoadListener listener, final String location) {
+		System.err.println("Loading level data:" + activity + ":" + listener + ":" + location);
+		worldFolder = new File(location);
+		new Thread(new Runnable() {
+			public void run() {
+				try {
+					final Level level = LevelDataConverter.read(new File(worldFolder, "level.dat"));
+					activity.runOnUiThread(new Runnable() {
+						public void run() {
+							EditorActivity.level = level;
+							listener.onLevelDataLoad();
+						}
+					});
+				} catch (final Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
 	}
 }

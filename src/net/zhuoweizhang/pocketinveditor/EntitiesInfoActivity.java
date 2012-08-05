@@ -19,7 +19,7 @@ import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public class EntitiesInfoActivity extends Activity implements View.OnClickListener {
+public class EntitiesInfoActivity extends Activity implements View.OnClickListener, LevelDataLoadListener {
 
 	private TextView entityCountText;
 
@@ -30,6 +30,14 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		setContentView(R.layout.entities_info);
 		entityCountText = (TextView) findViewById(R.id.entities_main_count);
 
+		if (EditorActivity.level != null) {
+			onLevelDataLoad();
+		} else {
+			EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
+		}
+	}
+
+	public void onLevelDataLoad() {
 		loadEntities();
 	}
 

@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener {
+public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener {
 
 	private static final int DIALOG_CHANGE_GAME_MODE = 1167366;
 
@@ -53,9 +53,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		gameModeText = (TextView) findViewById(R.id.world_info_gamemode);
 		gameModeChangeButton = (Button) findViewById(R.id.world_info_gamemode_change);
 		gameModeChangeButton.setOnClickListener(this);
-		gameModeText.setText(EditorActivity.level.getGameType() == 1 ? R.string.gamemode_creative : R.string.gamemode_survival);
 		worldTimeText = (EditText) findViewById(R.id.world_info_time_text);
-		updateTimeText();
 		worldTimeText.setOnFocusChangeListener(this);
 		spawnToPlayerButton = (Button) findViewById(R.id.world_info_spawn_to_player_button);
 		spawnToPlayerButton.setOnClickListener(this);
@@ -68,24 +66,36 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		playerXText = (TextView) findViewById(R.id.world_info_player_x);
 		playerYText = (TextView) findViewById(R.id.world_info_player_y);
 		playerZText = (TextView) findViewById(R.id.world_info_player_z);
-		updatePlayerPositionText();
 		healthText = (EditText) findViewById(R.id.world_info_health);
 		fullHealthButton = (Button) findViewById(R.id.world_info_full_health);
 		infiniteHealthButton = (Button) findViewById(R.id.world_info_infinite_health);
 		healthText.setOnFocusChangeListener(this);
 		fullHealthButton.setOnClickListener(this);
 		infiniteHealthButton.setOnClickListener(this);
-		updatePlayerHealthText();
 		sidewaysOnButton = (Button) findViewById(R.id.world_info_sideways_on);
 		sidewaysOffButton = (Button) findViewById(R.id.world_info_sideways_off);
 		sidewaysOnButton.setOnClickListener(this);
 		sidewaysOffButton.setOnClickListener(this);
 		worldNameText = (TextView) findViewById(R.id.world_info_name);
-		worldNameText.setText(EditorActivity.level.getLevelName());
 		worldNameText.setOnFocusChangeListener(this);
 		worldFolderNameText = (TextView) findViewById(R.id.world_info_folder_name);
-		worldFolderNameText.setText(EditorActivity.worldFolder.getName());
 		worldFolderNameText.setOnFocusChangeListener(this);
+
+		if (EditorActivity.level != null) {
+			onLevelDataLoad();
+		} else {
+			EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
+		}
+
+	}
+
+	public void onLevelDataLoad() {
+		gameModeText.setText(EditorActivity.level.getGameType() == 1 ? R.string.gamemode_creative : R.string.gamemode_survival);
+		updateTimeText();
+		updatePlayerPositionText();
+		updatePlayerHealthText();
+		worldNameText.setText(EditorActivity.level.getLevelName());
+		worldFolderNameText.setText(EditorActivity.worldFolder.getName());
 	}
 
 	public void updateTimeText() {

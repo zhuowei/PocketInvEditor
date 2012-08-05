@@ -35,6 +35,9 @@
     <string name="world_info_half_hearts">Halve hartjes:</string>
     <string name="world_info_set_to_full_health">Zet naar volledige gezondheid</string>
     <string name="world_info_set_to_infinite_health">Zet naar oneindige gezondheid</string>
+    <string name="world_info_folder">Map: </string>
+    <string name="folder_exists">Map bestaat al; kies een andere naam</string>
+    <string name="folder_rename_failed">Hernoemen map mislukt</string>
     <string name="slot_fillslot">Vul slot</string>
     <string name="slot_maxcountslot">255 in slot</string>
     <string name="world_info_warp_to_spawn">Ga naar spawn</string>
@@ -47,6 +50,7 @@
     <string name="entity_sheep">Schaap</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
+    <string name="entities_edit">Verander entities</string>
     <string name="entities_none">Geen entities gevonden.</string>
     <string name="entities_spawn_mobs">Spawn mobs</string>
     <string name="entities_spawn_drops">Spawn drops</string>
@@ -57,6 +61,7 @@
     <string name="entities_entity_type">Type: </string>
     <string name="entities_babyfy_mobs">Baby dieren</string>
     <string name="apocowlypse">Niks hier</string>
+    <string name="entities_angle">Hoek: </string>
     <string name="noworldsfound_title">Waarom heb je geen werelden?!</string>
     <string name="noworldsfound_text">PocketInvEditor kon geen Minecraft PE werelden vinden op dit toestel.\n
     Dit programma is gemaakt om werelden te veranderen gemaakt door de volledige versie van Minecraft Pocket Edition gemaakt door Mojang.</string>

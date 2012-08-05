@@ -40,6 +40,8 @@
     <string name="folder_rename_failed">Failed to rename folder</string>
     <string name="slot_fillslot">Fill slot</string>
     <string name="slot_maxcountslot">255 in slot</string>
+    <string name="slot_duplicate">Duplicate</string>
+    <string name="slot_delete">Delete</string>
     <string name="world_info_warp_to_spawn">Warp to spawn</string>
     <string name="world_info_sideways_mode">Activate sideways player model glitch: </string>
     <string name="entity_item">Dropped item</string>

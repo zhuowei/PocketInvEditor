@@ -16,6 +16,10 @@ public class ItemStack {
 		this.amount = amount;
 	}
 
+	public ItemStack(ItemStack other) {
+		this(other.getTypeId(), other.getDurability(), other.getAmount());
+	}
+
 	public short getTypeId() {
 		return id;
 	}

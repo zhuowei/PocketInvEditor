@@ -1,7 +1,10 @@
 package net.zhuoweizhang.pocketinveditor;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -12,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -26,7 +30,7 @@ import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 import net.zhuoweizhang.pocketinveditor.material.Material;
 
-public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener, LevelDataLoadListener {
+public final class InventorySlotsActivity extends ListActivity implements OnItemClickListener, OnItemLongClickListener, LevelDataLoadListener {
 
 	private List<InventorySlot> inventory;
 
@@ -36,10 +40,15 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public static final int EDIT_SLOT_REQUEST = 534626;
 
+	public static final int DIALOG_SLOT_OPTIONS = 805;
+
+	private int currentlySelectedSlot = -1;
+
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 
 		getListView().setOnItemClickListener(this);
+		getListView().setOnItemLongClickListener(this);
 
 		if (Material.materials == null) {
 			new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
@@ -119,6 +128,12 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		openInventoryEditScreen(position, inventory.get(position));
 	}
 
+	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+		currentlySelectedSlot = position;
+		showDialog(DIALOG_SLOT_OPTIONS);
+		return true;
+	}
+
 	private void openInventoryEditScreen(int position, InventorySlot slot) {
 		Intent intent = new Intent(this, EditInventorySlotActivity.class);
 		ItemStack stack = slot.getContents();
@@ -193,5 +208,62 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		for(int i = 0; i < inventory.size(); i++){
 			inventory.get(i).setSlot((byte) (i + 9));
 		}
+	}
+
+	public Dialog onCreateDialog(int dialogId) {
+		switch (dialogId) {
+			case DIALOG_SLOT_OPTIONS:
+				return createSlotOptionsDialog();
+			default:
+				return super.onCreateDialog(dialogId);
+		}
+	}
+
+	public void onPrepareDialog(int dialogId, Dialog dialog) {
+		switch (dialogId) {
+			case DIALOG_SLOT_OPTIONS:
+				InventorySlot slot = inventory.get(currentlySelectedSlot);
+				AlertDialog aDialog = (AlertDialog) dialog;
+				aDialog.setTitle(slot.toString());
+				break;
+			default:
+				super.onPrepareDialog(dialogId, dialog);
+		}
+	}
+
+	protected AlertDialog createSlotOptionsDialog() {
+		CharSequence[] options = {this.getResources().getText(R.string.slot_duplicate), this.getResources().getText(R.string.slot_delete)};
+		return new AlertDialog.Builder(this).setTitle("Slot name goes here").
+			setItems(options, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialogI, int button) {
+					switch (button) {
+						case 0: //slot duplicate
+							duplicateSelectedSlot();
+							break;
+						case 1: //slot delete
+							deleteSelectedSlot();
+							break;
+					}
+				}
+			}).create();
+	}
+
+	protected void duplicateSelectedSlot() {
+		InventorySlot oldSlot = inventory.get(currentlySelectedSlot);
+		InventorySlot newSlot = addEmptySlot();
+		if (newSlot != null) {
+			ItemStack oldStack = oldSlot.getContents();
+			ItemStack newStack = new ItemStack(oldStack);
+			newSlot.setContents(newStack);
+		}
+		inventoryListAdapter.notifyDataSetChanged();
+		EditorActivity.save(this);
+	}
+
+	protected void deleteSelectedSlot() {
+		EditorActivity.level.getPlayer().getInventory().remove(inventory.get(currentlySelectedSlot));
+		inventory.remove(currentlySelectedSlot);
+		inventoryListAdapter.notifyDataSetChanged();
+		EditorActivity.save(this);
 	}
 }

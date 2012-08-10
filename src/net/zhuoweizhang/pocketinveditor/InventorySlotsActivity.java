@@ -42,7 +42,14 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public static final int DIALOG_SLOT_OPTIONS = 805;
 
+	/** Currently selected slot, used for determining which slot the long-press menu modifies. */
+
 	private int currentlySelectedSlot = -1;
+
+	/** If there was an Intent for a slot editing request returned from the slot editing activity, 
+	 * but the app is not able to immediately handle it, it gets stored here. */
+
+	protected Intent slotActivityResultIntent = null;
 
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
@@ -51,26 +58,12 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		getListView().setOnItemLongClickListener(this);
 
 		if (Material.materials == null) {
-			new Thread(new MaterialLoader(getResources().getXml(R.xml.item_data))).start();
-			new Thread(new MaterialIconLoader(this)).start();
-			new Thread(new Runnable() {
-				public void run() {
-					try {
-						Thread.sleep(500);
-					} catch (Exception e) {}
-					InventorySlotsActivity.this.runOnUiThread(new Runnable() {
-						public void run() {
-							onMaterialsLoad();
-						}
-					});
-				}
-			}).start();
-		} else {
-			onMaterialsLoad();
-		}
-	}
+			//Load the materials on the main thread - may cause slowdowns
+			new MaterialLoader(getResources().getXml(R.xml.item_data)).run();
+			new MaterialIconLoader(this).run();
 
-	public void onMaterialsLoad() {
+		}
+
 		if (EditorActivity.level != null) {
 			onLevelDataLoad();
 		} else {
@@ -115,6 +108,10 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 		setListAdapter(inventoryListAdapter);
 		inventoryListAdapter.notifyDataSetChanged();
+
+		if (slotActivityResultIntent != null) {
+			onSlotActivityResult(slotActivityResultIntent);
+		}
 	}
 
 	public void onStart() {
@@ -148,19 +145,28 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 	protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
 		if (requestCode == EDIT_SLOT_REQUEST) {
 			if (resultCode == Activity.RESULT_OK) {
-				int slotIndex = intent.getIntExtra("Index", -1);
-				if (slotIndex < 0) {
-					System.err.println("wrong slot index");
-					return;
+				if (EditorActivity.level != null && inventory != null) {
+					onSlotActivityResult(intent);
+				} else {
+					slotActivityResultIntent = intent;
 				}
-				InventorySlot slot = inventory.get(slotIndex);
-				ItemStack stack = slot.getContents();
-				stack.setAmount(intent.getIntExtra("Count", 0));
-				stack.setDurability(intent.getShortExtra("Damage", (byte) 0));
-				stack.setTypeId(intent.getShortExtra("TypeId", (byte) 0));
-				EditorActivity.save(this);
 			}
 		}
+	}
+
+	protected void onSlotActivityResult(Intent intent) {
+		int slotIndex = intent.getIntExtra("Index", -1);
+		if (slotIndex < 0) {
+			System.err.println("wrong slot index");
+			return;
+		}
+		InventorySlot slot = inventory.get(slotIndex);
+		ItemStack stack = slot.getContents();
+		stack.setAmount(intent.getIntExtra("Count", 0));
+		stack.setDurability(intent.getShortExtra("Damage", (byte) 0));
+		stack.setTypeId(intent.getShortExtra("TypeId", (byte) 0));
+		EditorActivity.save(this);
+		slotActivityResultIntent = null;
 	}
 
 	@Override

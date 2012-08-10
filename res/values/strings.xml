@@ -50,6 +50,11 @@
     <string name="entity_cow">Cow</string>
     <string name="entity_pig">Pig</string>
     <string name="entity_sheep">Sheep</string>
+    <string name="entity_creeper">Creeper</string>
+    <string name="entity_skeleton">Skeleton</string>
+    <string name="entity_spider">Spider</string>
+    <string name="entity_primedtnt">Primed TNT</string>
+    <string name="entity_arrow">Arrow</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
     <string name="entities_edit">Edit entities</string>

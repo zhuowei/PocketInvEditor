@@ -282,6 +282,15 @@ public final class NBTConverter {
 			case 64:
 				return new Item();
 			default:
+				EntityType type = EntityType.getById(id);
+				if (type != null) {
+					try {
+						return type.getEntityClass().newInstance();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+				System.err.println("Unable to find entity class for entity type " + id);
 				return new Entity();
 		}
 	}

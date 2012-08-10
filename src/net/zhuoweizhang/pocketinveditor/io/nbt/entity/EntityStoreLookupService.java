@@ -21,6 +21,11 @@ public class EntityStoreLookupService {
 		addStore(12, new AnimalEntityStore<Pig>());
 		addStore(13, new SheepEntityStore<Sheep>());
 		addStore(32, new LivingEntityStore<Zombie>());
+		addStore(33, new LivingEntityStore<Creeper>());
+		addStore(34, new LivingEntityStore<Skeleton>());
+		addStore(35, new LivingEntityStore<Spider>());
 		addStore(64, new ItemEntityStore<Item>());
+		addStore(65, new TNTPrimedEntityStore<TNTPrimed>());
+		addStore(80, new ProjectileEntityStore<Arrow>());
 	}
 }

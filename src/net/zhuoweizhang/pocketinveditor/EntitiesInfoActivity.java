@@ -77,7 +77,9 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 	private String buildEntityCountString(Map<EntityType, Integer> countMap) {
 		StringBuilder builder = new StringBuilder();
 		for (Map.Entry<EntityType, Integer> entry: countMap.entrySet()) {
-			builder.append(this.getResources().getText(EntityTypeLocalization.namesMap.get(entry.getKey())));
+			Integer resId = EntityTypeLocalization.namesMap.get(entry.getKey());
+			if (resId == null) resId = new Integer(R.string.entity_unknown);
+			builder.append(this.getResources().getText(resId));
 			builder.append(':');
 			builder.append(entry.getValue());
 			builder.append('\n');

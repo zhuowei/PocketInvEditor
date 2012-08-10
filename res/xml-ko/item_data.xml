@@ -104,6 +104,7 @@
         <item hex="100" dec="256" name="철 삽" />
         <item hex="101" dec="257" name="철 곡괭이" />
         <item hex="102" dec="258" name="철 도끼" />
+        <item hex="105" dec="261" name="활" />
         <item hex="106" dec="262" name="화살" />
         <item hex="107" dec="263" id="0" name="석탄" />
         <item hex="107" dec="263" id="1" name="목탄" />
@@ -133,6 +134,7 @@
         <item hex="120" dec="288" name="깃털" />
         <item hex="121" dec="289" name="화약" />
         <item hex="128" dec="296" name="밀" />
+        <item hex="13E" dec="318" name="부싯돌" />
         <item hex="144" dec="324" name="나무 문" />
         <item hex="14A" dec="330" name="철문" />
         <item hex="14C" dec="332" name="눈덩이" />

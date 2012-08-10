@@ -105,6 +105,7 @@
         <item hex="100" dec="256" name="Eisenschaufel" />
         <item hex="101" dec="257" name="Eisenspitzhacke" />
         <item hex="102" dec="258" name="Eisenaxt" />
+        <item hex="105" dec="261" name="Bogen" />
         <item hex="106" dec="262" name="Pfeil" />
         <item hex="107" dec="263" id="0" name="Kohle" />
         <item hex="107" dec="263" id="1" name="Holzkohle" />
@@ -134,6 +135,7 @@
         <item hex="120" dec="288" name="Feder" />
         <item hex="121" dec="289" name="Schwarzpulver" />
         <item hex="128" dec="296" name="Weizen" />
+        <item hex="13E" dec="318" name="Feuerstein" />
         <item hex="144" dec="324" name="Holztür" />
         <item hex="14A" dec="330" name="Eisentür" />
         <item hex="14C" dec="332" name="Schneeball" />

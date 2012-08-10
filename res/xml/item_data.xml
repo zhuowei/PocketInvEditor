@@ -104,6 +104,7 @@
         <item hex="100" dec="256" name="Iron Shovel" />
         <item hex="101" dec="257" name="Iron Pickaxe" />
         <item hex="102" dec="258" name="Iron Axe" />
+        <item hex="105" dec="261" name="Bow" />
         <item hex="106" dec="262" name="Arrow" />
         <item hex="107" dec="263" id="0" name="Coal" />
         <item hex="107" dec="263" id="1" name="Charcoal" />
@@ -133,6 +134,7 @@
         <item hex="120" dec="288" name="Feather" />
         <item hex="121" dec="289" name="Gunpowder" />
         <item hex="128" dec="296" name="Wheat" />
+        <item hex="13E" dec="318" name="Flint" />
         <item hex="144" dec="324" name="Wooden Door" />
         <item hex="14A" dec="330" name="Iron Door" />
         <item hex="14C" dec="332" name="Snowball" />

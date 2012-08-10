@@ -100,6 +100,7 @@
     <item typeId="256" icon="items,5,2"/>
     <item typeId="257" icon="items,6,2"/>
     <item typeId="258" icon="items,7,2"/>
+    <item typeId="261" icon="items,1,5"/>
     <item typeId="262" icon="items,2,5"/>
     <item typeId="263" icon="items,0,7"/>
     <item typeId="264" icon="items,3,7"/>
@@ -128,6 +129,7 @@
     <item typeId="288" icon="items,1,8"/>
     <item typeId="289" icon="items,2,8"/>
     <item typeId="296" icon="items,1,9"/>
+    <item typeId="318" icon="items,0,6"/>
     <item typeId="324" icon="items,2,11"/>
     <item typeId="330" icon="items,2,12"/>
     <item typeId="332" icon="items,0,14"/>

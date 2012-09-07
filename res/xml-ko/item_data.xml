@@ -31,6 +31,8 @@
         <item hex="15" dec="21" name="청금석 원석" />
         <item hex="16" dec="22" name="청금석 블럭" />
         <item hex="18" dec="24" name="사암" />
+        <item hex="1A" dec="26" name="침대" />
+        <item hex="1F" dec="31" name="덤불" />
         <item hex="23" dec="35" id="0" name="양모" />
         <item hex="23" dec="35" id="1" name="주황색 양모" />
         <item hex="23" dec="35" id="2" name="자홍색 양모" />
@@ -77,6 +79,7 @@
         <item hex="38" dec="56" name="다이아몬드 원석" />
         <item hex="39" dec="57" name="다이아몬드 블럭" />
         <item hex="3A" dec="58" name="조합대" />
+        <item hex="3B" dec="59" name="작물" />
         <item hex="3C" dec="60" name="농토" />
         <item hex="3D" dec="61" name="화로" />
         <item hex="3E" dec="62" name="Burning Furnace" />
@@ -94,6 +97,8 @@
         <item hex="53" dec="83" name="사탕수수" />
         <item hex="55" dec="85" name="울타리" />
         <item hex="5F" dec="95" name="보이지않는 배드락" />
+        <item hex="60" dec="96" name="다락문" />
+        <item hex="62" dec="98" name="석재 벽돌" />
         <item hex="66" dec="102" name="유리판" />
         <item hex="6B" dec="107" name="울타리 문" />
         <item hex="6C" dec="108" name="벽돌 계단" />
@@ -104,6 +109,8 @@
         <item hex="100" dec="256" name="철 삽" />
         <item hex="101" dec="257" name="철 곡괭이" />
         <item hex="102" dec="258" name="철 도끼" />
+        <item hex="103" dec="259" name="라이터" />
+        <item hex="104" dec="260" name="사과" />
         <item hex="105" dec="261" name="활" />
         <item hex="106" dec="262" name="화살" />
         <item hex="107" dec="263" id="0" name="석탄" />
@@ -126,6 +133,7 @@
         <item hex="117" dec="279" name="다이아몬드 도끼" />
         <item hex="118" dec="280" name="막대기" />
         <item hex="119" dec="281" name="그릇" />
+        <item hex="11A" dec="282" name="버섯 스튜" />
         <item hex="11B" dec="283" name="금 칼" />
         <item hex="11C" dec="284" name="금 삽" />
         <item hex="11D" dec="285" name="금 곡괭이" />
@@ -133,8 +141,16 @@
         <item hex="11F" dec="287" name="거미줄" />
         <item hex="120" dec="288" name="깃털" />
         <item hex="121" dec="289" name="화약" />
+        <item hex="122" dec="290" name="나무 괭이" />
+        <item hex="123" dec="291" name="돌 괭이" />
+        <item hex="124" dec="292" name="철 괭이" />
+        <item hex="125" dec="293" name="다이아몬드 괭이" />
+        <item hex="126" dec="294" name="금 괭이" />
+        <item hex="127" dec="295" name="씨앗" />
         <item hex="128" dec="296" name="밀" />
         <item hex="13E" dec="318" name="부싯돌" />
+        <item hex="13F" dec="319" name="익히지 않은 돼지고기" />
+        <item hex="140" dec="320" name="구운 돼지고기" />
         <item hex="144" dec="324" name="나무 문" />
         <item hex="14A" dec="330" name="철문" />
         <item hex="14C" dec="332" name="눈덩이" />
@@ -145,6 +161,7 @@
         <item hex="153" dec="339" name="종이" />
         <item hex="154" dec="340" name="책" />
         <item hex="155" dec="341" name="슬라임볼" />
+        <item hex="158" dec="344" name="달걀" />
         <item hex="159" dec="345" name="나침반" />
         <item hex="15B" dec="347" name="시계" />
         <item hex="15C" dec="348" name="발광석 가루 (빛나는돌)" />
@@ -166,7 +183,12 @@
         <item hex="15F" dec="351" id="15" name="뼈 가루 (염료)" />
         <item hex="160" dec="352" name="뼈" />
         <item hex="161" dec="353" name="설탕" />
+        <item hex="163" dec="355" name="침대" />
         <item hex="167" dec="359" name="가위" />
+        <item hex="16B" dec="363" name="익히지 않은 소고기" />
+        <item hex="16C" dec="364" name="스테이크" />
+        <item hex="16D" dec="365" name="익히지 않은 닭고기" />
+        <item hex="16E" dec="366" name="구운 닭고기" />
         <item hex="1C8" dec="456" name="카메라" />
     </items>
 </data>

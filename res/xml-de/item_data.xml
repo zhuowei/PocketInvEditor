@@ -32,6 +32,8 @@
         <item hex="15" dec="21" name="Lapislazuli-Erz" />
         <item hex="16" dec="22" name="Lapislazuli-Block" />
         <item hex="18" dec="24" name="Sandstein" />
+        <item hex="1A" dec="26" name="Bett (Block)" />
+        <item hex="1F" dec="31" name="Toter Strauch" />
         <item hex="23" dec="35" id="0" name="Wolle" />
         <item hex="23" dec="35" id="1" name="Orangefarbene Wolle" />
         <item hex="23" dec="35" id="2" name="Magentafarbene Wolle" />
@@ -78,6 +80,7 @@
         <item hex="38" dec="56" name="Diamanterz" />
         <item hex="39" dec="57" name="Diamantblock" />
         <item hex="3A" dec="58" name="Werkbank" />
+        <item hex="3B" dec="59" name="Weizen" />
         <item hex="3C" dec="60" name="Ackerboden" />
         <item hex="3D" dec="61" name="Ofen" />
         <item hex="3E" dec="62" name="Brennender Ofen" />
@@ -95,6 +98,8 @@
         <item hex="53" dec="83" name="Zuckerrohr (block)" />
         <item hex="55" dec="85" name="Zaun" />
         <item hex="5F" dec="95" name="Invisible bedrock"/>
+        <item hex="60" dec="96" name="Falltür" />
+        <item hex="62" dec="98" name="Steinziegel" />
         <item hex="66" dec="102" name="Glasscheibe"/>
         <item hex="6B" dec="107" name="Zauntor"/>
         <item hex="6C" dec="108" name="Ziegeltreppe" />
@@ -105,6 +110,8 @@
         <item hex="100" dec="256" name="Eisenschaufel" />
         <item hex="101" dec="257" name="Eisenspitzhacke" />
         <item hex="102" dec="258" name="Eisenaxt" />
+        <item hex="103" dec="259" name="Feuerzeug" />
+        <item hex="104" dec="260" name="Äpfel" />
         <item hex="105" dec="261" name="Bogen" />
         <item hex="106" dec="262" name="Pfeil" />
         <item hex="107" dec="263" id="0" name="Kohle" />
@@ -127,6 +134,7 @@
         <item hex="117" dec="279" name="Diamantaxt" />
         <item hex="118" dec="280" name="Stock" />
         <item hex="119" dec="281" name="Schüssel" />
+        <item hex="11A" dec="282" name="Pilzsuppe" />
         <item hex="11B" dec="283" name="Goldenes Schwert" />
         <item hex="11C" dec="284" name="Goldene Schaufel" />
         <item hex="11D" dec="285" name="Goldene Spitzhacke" />
@@ -134,8 +142,16 @@
         <item hex="11F" dec="287" name="Faden" />
         <item hex="120" dec="288" name="Feder" />
         <item hex="121" dec="289" name="Schwarzpulver" />
+        <item hex="122" dec="290" name="Holzhacke" />
+        <item hex="123" dec="291" name="Steinhacke" />
+        <item hex="124" dec="292" name="Eisenhacke" />
+        <item hex="125" dec="293" name="Diamanthacke" />
+        <item hex="126" dec="294" name="Goldhacke" />
+        <item hex="127" dec="295" name="Samen" />
         <item hex="128" dec="296" name="Weizen" />
         <item hex="13E" dec="318" name="Feuerstein" />
+        <item hex="13F" dec="319" name="Schweinefleisch" />
+        <item hex="140" dec="320" name="Gebratenes Schweinefleisch" />
         <item hex="144" dec="324" name="Holztür" />
         <item hex="14A" dec="330" name="Eisentür" />
         <item hex="14C" dec="332" name="Schneeball" />
@@ -146,6 +162,7 @@
         <item hex="153" dec="339" name="Papier" />
         <item hex="154" dec="340" name="Buch" />
         <item hex="155" dec="341" name="Schleimball" />
+        <item hex="158" dec="344" name="Ei" />
         <item hex="159" dec="345" name="Kompass" />
         <item hex="15B" dec="347" name="Uhr" />
         <item hex="15C" dec="348" name="Leuchtsteinstaub" />
@@ -167,7 +184,12 @@
         <item hex="15F" dec="351" id="15" name="Knochenmehl" />
         <item hex="160" dec="352" name="Knochen" />
         <item hex="161" dec="353" name="Zucker" />
+        <item hex="163" dec="355" name="Bett" />
         <item hex="167" dec="359" name="Schere" />
+        <item hex="16B" dec="363" name="rohes Rindfleisch" />
+        <item hex="16C" dec="364" name="Steak" />
+        <item hex="16D" dec="365" name="rohes Hühnchen" />
+        <item hex="16E" dec="366" name="gebratenes Hühnchen" />
         <item hex="1C8" dec="456" name="Kamera" />
     </items>
 </data>

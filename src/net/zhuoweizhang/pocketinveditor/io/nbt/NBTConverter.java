@@ -82,6 +82,7 @@ public final class NBTConverter {
 		List<Tag> tags = compoundTag.getValue();
 		Player player = new Player();
 		for (Tag tag: tags) {
+			String name = tag.getName();
 			if (tag.getName().equals("Pos")) {
 				player.setLocation(readVector((ListTag<FloatTag>) tag));
 			} else if (tag.getName().equals("Motion")) {
@@ -106,12 +107,28 @@ public final class NBTConverter {
 				player.setHealth(((ShortTag) tag).getValue());
 			} else if (tag.getName().equals("HurtTime")) {
 				player.setHurtTime(((ShortTag) tag).getValue());
+			} else if (name.equals("BedPositionX")) {
+				player.setBedPositionX(((IntTag) tag).getValue());
+			} else if (name.equals("BedPositionY")) {
+				player.setBedPositionY(((IntTag) tag).getValue());
+			} else if (name.equals("BedPositionZ")) {
+				player.setBedPositionZ(((IntTag) tag).getValue());
 			} else if (tag.getName().equals("Dimension")) {
 				player.setDimension(((IntTag) tag).getValue());
 			} else if (tag.getName().equals("Inventory")) {
 				player.setInventory(readInventory((ListTag<CompoundTag>) tag));
 			} else if (tag.getName().equals("Score")) {
 				player.setScore(((IntTag) tag).getValue());
+			} else if (tag.getName().equals("Sleeping")) {
+				player.setSleeping(((ByteTag) tag).getValue() != 0);
+			} else if (name.equals("SleepTimer")) {
+				player.setSleepTimer(((ShortTag) tag).getValue());
+			} else if (name.equals("SpawnX")) {
+				player.setSpawnX(((IntTag) tag).getValue());
+			} else if (name.equals("SpawnY")) {
+				player.setSpawnY(((IntTag) tag).getValue());
+			} else if (name.equals("SpawnZ")) {
+				player.setSpawnZ(((IntTag) tag).getValue());
 			}
 		}
 		return player;
@@ -139,9 +156,17 @@ public final class NBTConverter {
 
 		/* Human specific tags */
 
+		tags.add(new IntTag("BedPositionX", player.getBedPositionX()));
+		tags.add(new IntTag("BedPositionY", player.getBedPositionY()));
+		tags.add(new IntTag("BedPositionZ", player.getBedPositionZ()));
 		tags.add(new IntTag("Dimension", player.getDimension()));
 		tags.add(writeInventory(player.getInventory(), "Inventory"));
 		tags.add(new IntTag("Score", player.getScore()));
+		tags.add(new ByteTag("Sleeping", player.isSleeping() ? (byte) 1: (byte) 0));
+		tags.add(new ShortTag("SleepTimer", player.getSleepTimer()));
+		tags.add(new IntTag("SpawnX", player.getSpawnX()));
+		tags.add(new IntTag("SpawnY", player.getSpawnY()));
+		tags.add(new IntTag("SpawnZ", player.getSpawnZ()));
 
 		/* all level.dat tags are sorted for some reason */
 

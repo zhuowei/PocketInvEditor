@@ -95,7 +95,7 @@ public class EditorActivity extends Activity {
 	@Override
 	protected void onRestart() {
 		super.onRestart();
-		worldNameView.setText(level.getLevelName());
+		updateUiAfterLevelLoad();
 	}
 
 	private void loadLevel() {
@@ -113,7 +113,7 @@ public class EditorActivity extends Activity {
 		worldLastPlayedView.setText(this.getResources().getText(R.string.lastplayed) + ": " + 
 			DateFormat.getInstance().format(new Date(level.getLastPlayed() * 1000)));
 		worldSeedView.setText(Long.toString(level.getRandomSeed()));
-		startInventoryEditorButton.setEnabled(true);
+		startInventoryEditorButton.setEnabled(level.getGameType() != 1);
 		startBackupButton.setEnabled(true);
 		startWorldInfoButton.setEnabled(true);
 		entitiesInfoButton.setEnabled(true);

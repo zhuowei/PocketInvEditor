@@ -26,6 +26,8 @@ public class EntityTypeLocalization {
 		namesMap.put(EntityType.ITEM, R.string.entity_item);
 		namesMap.put(EntityType.PRIMED_TNT, R.string.entity_primedtnt);
 		namesMap.put(EntityType.ARROW, R.string.entity_arrow);
+		namesMap.put(EntityType.SNOWBALL, R.string.entity_snowball);
+		namesMap.put(EntityType.EGG, R.string.entity_thrownegg);
 		namesMap.put(EntityType.UNKNOWN, R.string.entity_unknown);
 	}
 

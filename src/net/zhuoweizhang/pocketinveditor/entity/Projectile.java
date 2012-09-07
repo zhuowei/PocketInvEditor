@@ -9,10 +9,6 @@ public class Projectile extends Entity {
 
 	private short zTile = (short) 0;
 
-	private boolean player = false;
-
-	private byte inData = (byte) 0;
-
 	private boolean inGround = false;
 
 	private byte shake = (byte) 0;
@@ -41,22 +37,6 @@ public class Projectile extends Entity {
 
 	public void setZTile(short zTile) {
 		this.zTile = zTile;
-	}
-
-	public boolean isShotByPlayer() {
-		return player;
-	}
-
-	public void setShotByPlayer(boolean player) {
-		this.player = player;
-	}
-
-	public byte getInData() {
-		return inData;
-	}
-
-	public void setInData(byte inData) {
-		this.inData = inData;
 	}
 
 	public boolean isInGround() {

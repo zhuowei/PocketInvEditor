@@ -55,6 +55,8 @@
     <string name="entity_spider">Spider</string>
     <string name="entity_primedtnt">Primed TNT</string>
     <string name="entity_arrow">Arrow</string>
+    <string name="entity_snowball">Snowball</string>
+    <string name="entity_thrownegg">Thrown egg</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
     <string name="entities_edit">Edit entities</string>

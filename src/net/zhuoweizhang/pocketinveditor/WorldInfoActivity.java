@@ -13,9 +13,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.zhuoweizhang.pocketinveditor.entity.Player;
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
 public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener {
+
+	public static final int DAY_LENGTH = 19200; //16 minutes
 
 	private static final int DIALOG_CHANGE_GAME_MODE = 1167366;
 
@@ -115,15 +118,22 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		level.setSpawnX((int) loc.getX());
 		level.setSpawnY((int) loc.getY());
 		level.setSpawnZ((int) loc.getZ());
+		Player player = level.getPlayer();
+		player.setSpawnX((int) loc.getX());
+		player.setSpawnY((int) loc.getY());
+		player.setSpawnZ((int) loc.getZ());
+		player.setBedPositionX((int) loc.getX());
+		player.setBedPositionY((int) loc.getY());
+		player.setBedPositionZ((int) loc.getZ());
 	}
 
 	private void setTimeToMorning() {
-		EditorActivity.level.setTime((EditorActivity.level.getTime() / 14400) * 14400);
+		EditorActivity.level.setTime((EditorActivity.level.getTime() / DAY_LENGTH) * DAY_LENGTH);
 		EditorActivity.save(this);
 	}
 
 	private void setTimeToNight() {
-		EditorActivity.level.setTime(((EditorActivity.level.getTime() / 14400) * 14400) + 7200);
+		EditorActivity.level.setTime(((EditorActivity.level.getTime() / DAY_LENGTH) * DAY_LENGTH) + (DAY_LENGTH / 2));
 		EditorActivity.save(this);
 	}
 

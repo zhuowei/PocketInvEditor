@@ -26,6 +26,8 @@ public class EntityStoreLookupService {
 		addStore(35, new LivingEntityStore<Spider>());
 		addStore(64, new ItemEntityStore<Item>());
 		addStore(65, new TNTPrimedEntityStore<TNTPrimed>());
-		addStore(80, new ProjectileEntityStore<Arrow>());
+		addStore(80, new ArrowEntityStore<Arrow>());
+		addStore(81, new ProjectileEntityStore<Snowball>());
+		addStore(82, new ProjectileEntityStore<Egg>());
 	}
 }

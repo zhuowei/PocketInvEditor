@@ -40,6 +40,8 @@
     <string name="folder_rename_failed">Hernoemen map mislukt</string>
     <string name="slot_fillslot">Vul slot</string>
     <string name="slot_maxcountslot">255 in slot</string>
+    <string name="slot_duplicate">Depubliceren</string>
+    <string name="slot_delete">Verwijderen</string>
     <string name="world_info_warp_to_spawn">Ga naar spawn</string>
     <string name="world_info_sideways_mode">Activeer liggende speler model glitch: </string>
     <string name="entity_item">Gevallen item</string>
@@ -48,6 +50,11 @@
     <string name="entity_cow">Koe</string>
     <string name="entity_pig">Varken</string>
     <string name="entity_sheep">Schaap</string>
+    <string name="entity_creeper">Creeper</string>
+    <string name="entity_skeleton">Skelet</string>
+    <string name="entity_spider">Spin</string>
+    <string name="entity_primedtnt">Aangestoken TNT</string>
+    <string name="entity_arrow">Pijl</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
     <string name="entities_edit">Verander entities</string>

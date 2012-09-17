@@ -39,4 +39,9 @@ public class TileEntity {
 	public void setZ(int z) {
 		this.z = z;
 	}
+
+	@Override
+	public String toString() {
+		return this.id + ": X: " + x + " Y: " + y + " Z: " + z;
+	}
 }

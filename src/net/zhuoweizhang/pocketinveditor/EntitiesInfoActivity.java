@@ -19,7 +19,7 @@ import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
 import net.zhuoweizhang.pocketinveditor.util.Vector;
 
-public class EntitiesInfoActivity extends Activity implements View.OnClickListener, LevelDataLoadListener {
+public class EntitiesInfoActivity extends Activity implements View.OnClickListener, LevelDataLoadListener, EntityDataLoadListener {
 
 	private TextView entityCountText;
 
@@ -42,10 +42,10 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 	}
 
 	protected void loadEntities() {
-		new Thread(new LoadEntitiesTask()).start();
+		new Thread(new LoadEntitiesTask(this, this)).start();
 	}
 
-	protected void onEntitiesLoaded(EntityDataConverter.EntityData entitiesDat) {
+	public void onEntitiesLoaded(EntityDataConverter.EntityData entitiesDat) {
 		EditorActivity.level.setEntities(entitiesDat.entities);
 		EditorActivity.level.setTileEntities(entitiesDat.tileEntities);
 		this.entitiesList = entitiesDat.entities;
@@ -152,21 +152,31 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		}
 	}
 
-	private class LoadEntitiesTask implements Runnable {
+	public static class LoadEntitiesTask implements Runnable {
+
+		private final Activity activity;
+
+		private final EntityDataLoadListener listener;
+
+		public LoadEntitiesTask(Activity activity, EntityDataLoadListener listener) {
+			this.activity = activity;
+			this.listener = listener;
+		}
+
 		public void run() {
 			File entitiesFile = new File(EditorActivity.worldFolder, "entities.dat");
 			try {
 				final EntityDataConverter.EntityData entitiesList = EntityDataConverter.read(entitiesFile);
-				EntitiesInfoActivity.this.runOnUiThread(new Runnable() {
+				activity.runOnUiThread(new Runnable() {
 					public void run() {
-						EntitiesInfoActivity.this.onEntitiesLoaded(entitiesList);
+						listener.onEntitiesLoaded(entitiesList);
 					}
 				});
 			} catch (Exception e) {
 				e.printStackTrace();
-				EntitiesInfoActivity.this.runOnUiThread(new Runnable() {
+				activity.runOnUiThread(new Runnable() {
 					public void run() {
-						EntitiesInfoActivity.this.onEntitiesLoaded(new EntityDataConverter.EntityData(
+						listener.onEntitiesLoaded(new EntityDataConverter.EntityData(
 							new ArrayList<Entity>(), new ArrayList<TileEntity>()));
 					}
 				});

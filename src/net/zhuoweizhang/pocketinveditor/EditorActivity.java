@@ -46,6 +46,8 @@ public class EditorActivity extends Activity {
 
 	protected Button entitiesInfoButton;
 
+	protected Button viewTileEntitiesButton;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -80,6 +82,15 @@ public class EditorActivity extends Activity {
                                 startEntitiesInfo();
                         }
                 });
+
+                viewTileEntitiesButton = (Button) findViewById(R.id.main_view_tileentities);
+                viewTileEntitiesButton.setEnabled(false);
+                viewTileEntitiesButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                startViewTileEntities();
+                        }
+                });
+
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
 		if (Material.materials == null) {
@@ -117,6 +128,7 @@ public class EditorActivity extends Activity {
 		startBackupButton.setEnabled(true);
 		startWorldInfoButton.setEnabled(true);
 		entitiesInfoButton.setEnabled(true);
+		viewTileEntitiesButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -174,6 +186,11 @@ public class EditorActivity extends Activity {
 
 	public void startEntitiesInfo() {
 		Intent intent = new Intent(this, EntitiesInfoActivity.class);
+		startActivityWithExtras(intent);
+	}
+
+	public void startViewTileEntities() {
+		Intent intent = new Intent(this, TileEntityViewActivity.class);
 		startActivityWithExtras(intent);
 	}
 

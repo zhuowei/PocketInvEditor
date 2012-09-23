@@ -191,6 +191,7 @@ public class EditorActivity extends Activity {
 
 	public void startViewTileEntities() {
 		Intent intent = new Intent(this, TileEntityViewActivity.class);
+		intent.putExtra("CanEditSlots", false);
 		startActivityWithExtras(intent);
 	}
 

@@ -55,6 +55,8 @@
     <string name="entity_spider">Spin</string>
     <string name="entity_primedtnt">Aangestoken TNT</string>
     <string name="entity_arrow">Pijl</string>
+    <string name="entity_snowball">Sneeuwbal</string>
+    <string name="entity_thrownegg">Gegooid ei</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
     <string name="entities_edit">Verander entities</string>
@@ -75,6 +77,7 @@
     <string name="get_pro">Neem PocketInvEditor Pro</string>
     <string name="get_pro_to_spawn_mobs">Upgrade naar PocketInvEditor Pro om mobs te spawnen.</string>
     <string name="nothingtoseehere_activate">* Ik ga weg bij mijn tablet en adem in *</string>
+    <string name="main_view_tileentities">Laat kisten zien</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     Dit programma is gratis: je kan het herverdelen en/of veranderen
     Onder de termen van het GNU General Public License zoals gepubliceert door

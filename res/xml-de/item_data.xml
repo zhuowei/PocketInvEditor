@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
 <!-- Item names taken from the official Mojang translations as of 12w18a. When there is no Mojang translation, the Wiki names are used. -->
+<!-- Some parts contributed by PocketInvEditor translators. See the revision history of this file for details. -->
 <data>
     <blocks>
         <item hex="0" dec="0" name="Luft" />
@@ -149,6 +150,7 @@
         <item hex="126" dec="294" name="Goldhacke" />
         <item hex="127" dec="295" name="Samen" />
         <item hex="128" dec="296" name="Weizen" />
+        <item hex="129" dec="297" name="Brot" />
         <item hex="13E" dec="318" name="Feuerstein" />
         <item hex="13F" dec="319" name="Schweinefleisch" />
         <item hex="140" dec="320" name="Gebratenes Schweinefleisch" />

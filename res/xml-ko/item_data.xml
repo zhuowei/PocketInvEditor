@@ -82,7 +82,7 @@
         <item hex="3B" dec="59" name="작물" />
         <item hex="3C" dec="60" name="농토" />
         <item hex="3D" dec="61" name="화로" />
-        <item hex="3E" dec="62" name="Burning Furnace" />
+        <item hex="3E" dec="62" name="타고있는 화로" />
         <item hex="40" dec="64" name="나무 문" />
         <item hex="41" dec="65" name="사다리" />
         <item hex="43" dec="67" name="조약돌 계단" />
@@ -148,6 +148,7 @@
         <item hex="126" dec="294" name="금 괭이" />
         <item hex="127" dec="295" name="씨앗" />
         <item hex="128" dec="296" name="밀" />
+        <item hex="129" dec="297" name="빵" />
         <item hex="13E" dec="318" name="부싯돌" />
         <item hex="13F" dec="319" name="익히지 않은 돼지고기" />
         <item hex="140" dec="320" name="구운 돼지고기" />

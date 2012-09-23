@@ -149,6 +149,7 @@
         <item hex="126" dec="294" name="金锄" />
         <item hex="127" dec="295" name="小麦种子" />
         <item hex="128" dec="296" name="小麦" />
+        <item hex="129" dec="297" name="面包" />
         <item hex="13E" dec="318" name="燧石" />
         <item hex="13F" dec="319" name="生猪排" />
         <item hex="140" dec="320" name="熟猪排" />

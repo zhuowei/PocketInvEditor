@@ -148,6 +148,7 @@
         <item hex="126" dec="294" name="Gold Hoe" />
         <item hex="127" dec="295" name="Seeds (Wheat)" />
         <item hex="128" dec="296" name="Wheat" />
+        <item hex="129" dec="297" name="Bread" />
         <item hex="13E" dec="318" name="Flint" />
         <item hex="13F" dec="319" name="Raw Porkchop" />
         <item hex="140" dec="320" name="Cooked Porkchop" />

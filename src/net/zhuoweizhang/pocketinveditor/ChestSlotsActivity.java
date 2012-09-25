@@ -56,7 +56,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 
-		//getListView().setOnItemLongClickListener(this);
+		getListView().setOnItemLongClickListener(this);
 
 		if (Material.materials == null) {
 			//Load the materials on the main thread - may cause slowdowns
@@ -100,6 +100,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 	}
 
 	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+		if (!this.getIntent().getBooleanExtra("CanEditSlots", false)) return false;
 		currentlySelectedSlot = position;
 		showDialog(DIALOG_SLOT_OPTIONS);
 		return true;
@@ -143,11 +144,13 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		slotActivityResultIntent = null;
 	}
 
-	/*@Override
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
+		if (!this.getIntent().getBooleanExtra("CanEditSlots", false)) return false;
 		menu.add(getResources().getString(R.string.add_empty_slot));
+		menu.add(getResources().getString(R.string.warp_to_tile_entity));
 		return true;
-	}*/
+	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
@@ -156,37 +159,30 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 			if (newSlot != null) {
 				openInventoryEditScreen(inventoryListAdapter.getPosition(newSlot), newSlot);
 			}
+			return true;
+		} else if(item.getTitle().equals(getResources().getString(R.string.warp_to_tile_entity))) {
+			TileEntityViewActivity.warpToTileEntity(this, container);
+			return true;
 		}
-		return false;
-
+		return super.onOptionsItemSelected(item);
 	}
 
 	private InventorySlot addEmptySlot(){
-		//Check for 36 item cap, if we have a full inventory, just return
-		/*if(inventory.size() > 35){
+		if(inventory.size() > container.getContainerSize()){
 			return null;
 		}
-		List<InventorySlot> outInventory = new ArrayList<InventorySlot>();
-		for(int i = 0; i < tempInventory.size(); i++){
-			if(tempInventory.get(i).getSlot() < 9){
-				outInventory.add(tempInventory.get(i));
-			}
-		}
 
-
-		InventorySlot slot = new InventorySlot((byte) (inventory.size() + 9), new ItemStack((short)0,(short)0,(short)1));
+		InventorySlot slot = new InventorySlot((byte) inventory.size(), new ItemStack((short)0,(short)0,(short)1));
 		alignSlots();
 		inventory.add(slot);
 		inventoryListAdapter.notifyDataSetChanged();
-		outInventory.addAll(inventory);
-		EditorActivity.level.getPlayer().setInventory(outInventory);
-		EditorActivity.save(this);
-		return slot;*/return null;
+		EntitiesInfoActivity.save(this);
+		return slot;
 	}
 
 	private void alignSlots(){
 		for(int i = 0; i < inventory.size(); i++){
-			inventory.get(i).setSlot((byte) (i + 9));
+			inventory.get(i).setSlot((byte) i);
 		}
 	}
 
@@ -237,11 +233,10 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 			newSlot.setContents(newStack);
 		}
 		inventoryListAdapter.notifyDataSetChanged();
-		EditorActivity.save(this);
+		EntitiesInfoActivity.save(this);
 	}
 
 	protected void deleteSelectedSlot() {
-		EditorActivity.level.getPlayer().getInventory().remove(inventory.get(currentlySelectedSlot));
 		inventory.remove(currentlySelectedSlot);
 		inventoryListAdapter.notifyDataSetChanged();
 		EditorActivity.save(this);

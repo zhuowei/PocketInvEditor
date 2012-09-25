@@ -79,6 +79,7 @@
     <string name="nothingtoseehere_activate">* I move away from the tablet to breathe in *</string>
     <string name="main_view_tileentities">View containers</string>
     <string name="main_edit_tileentities">Edit containers</string>
+    <string name="warp_to_tile_entity">Warp to container</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -90,11 +91,14 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.\n
     </string>
+    <string name="about_copyright_pro">Copyright (C) 2012 Zhuowei Zhang. Do not distribute without permission.</string>
     <string name="about_librarycredits">This app uses the SimpleNBT library developed by
     the SpoutDev team.\n
     This program contains a modified version of item-data.xml from TexasGamer\'s itemid plugin.\n
     This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
     The item icons used in this program are created by Mojang. </string>
+    <string name="about_thankscommunity">This application was made possible by the work of many talented translators, testers, and programmers. Thank you.\nView the Minecraft Forums thread for a list of contributors.</string>
+    <string name="about_go_to_forums">Open Minecraft Forums thread for PocketInvEditor</string>
     <string name="add_empty_slot">Add Empty Slot</string>
     <string name="unlicensed_dialog_title">Arr! Yer be a pirate, matey!</string>
     <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Google Play.</string>

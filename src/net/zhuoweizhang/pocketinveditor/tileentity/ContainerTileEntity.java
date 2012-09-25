@@ -15,4 +15,9 @@ public class ContainerTileEntity extends TileEntity {
 	public void setItems(List<InventorySlot> items) {
 		this.items = items;
 	}
+
+	/** Get the maximum number of InventorySlots this container can hold. */
+	public int getContainerSize() {
+		return 27;
+	}
 }

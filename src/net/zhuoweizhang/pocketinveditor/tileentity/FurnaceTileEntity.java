@@ -20,4 +20,9 @@ public class FurnaceTileEntity extends ContainerTileEntity {
 	public void setCookTime(short cookTime) {
 		this.cookTime = cookTime;
 	}
+
+	@Override
+	public int getContainerSize() {
+		return 3; //input, fuel, output
+	}
 }

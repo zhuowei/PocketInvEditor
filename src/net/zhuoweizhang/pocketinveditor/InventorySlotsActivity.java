@@ -182,8 +182,9 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 			if (newSlot != null) {
 				openInventoryEditScreen(inventoryListAdapter.getPosition(newSlot), newSlot);
 			}
+			return true;
 		}
-		return false;
+		return super.onOptionsItemSelected(item);
 
 	}
 

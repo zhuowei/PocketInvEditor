@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
     <TextView
         android:id="@+id/about_appnametext"
         android:layout_width="wrap_content"
@@ -22,6 +25,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <TextView android:text="@string/about_thankscommunity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/about_go_to_forums_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about_go_to_forums"/>
+
     <TextView
         android:id="@+id/about_librarycreditstext"
         android:layout_width="fill_parent"
@@ -35,3 +47,4 @@
         android:text="@string/about_copyright"/>
 
 </LinearLayout>
+</ScrollView>

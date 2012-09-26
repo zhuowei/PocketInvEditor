@@ -19,6 +19,7 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -95,8 +96,11 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		if (!this.getIntent().getBooleanExtra("CanEditSlots", false)) return;
-		openInventoryEditScreen(position, inventory.get(position));
+		if (!this.getIntent().getBooleanExtra("CanEditSlots", false)) {
+			showGetProMessage();
+		} else {
+			openInventoryEditScreen(position, inventory.get(position));
+		}
 	}
 
 	public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -167,7 +171,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		return super.onOptionsItemSelected(item);
 	}
 
-	private InventorySlot addEmptySlot(){
+	private InventorySlot addEmptySlot() {
 		if(inventory.size() > container.getContainerSize()){
 			return null;
 		}
@@ -180,7 +184,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		return slot;
 	}
 
-	private void alignSlots(){
+	private void alignSlots() {
 		for(int i = 0; i < inventory.size(); i++){
 			inventory.get(i).setSlot((byte) i);
 		}
@@ -240,5 +244,9 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		inventory.remove(currentlySelectedSlot);
 		inventoryListAdapter.notifyDataSetChanged();
 		EditorActivity.save(this);
+	}
+
+	protected void showGetProMessage() {
+		Toast.makeText(this, R.string.get_pro_to_edit_containers, Toast.LENGTH_SHORT).show();
 	}
 }

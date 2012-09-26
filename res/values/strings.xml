@@ -80,6 +80,7 @@
     <string name="main_view_tileentities">View containers</string>
     <string name="main_edit_tileentities">Edit containers</string>
     <string name="warp_to_tile_entity">Warp to container</string>
+    <string name="get_pro_to_edit_containers">Upgrade to PocketInvEditor Pro to edit containers.</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

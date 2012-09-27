@@ -3,63 +3,101 @@
     <string name="app_name">PocketInvEditor</string>
     <string name="select_world">Wähle eine Welt</string>
     <string name="inventory">Inventar</string>
-    <string name="select_slot">Wähle einen Inventar slot</string>
+    <string name="select_slot">Wähle einen Slot</string>
     <string name="item_id">Block ID:</string>
     <string name="item_damage">Block Schaden: </string>
     <string name="item_count">Anzahl: </string>
-    <string name="item_id_browse">Wähle...</string>
-    <string name="loading">Laden...</string>
-    <string name="edit_inventory">Ändere dein Inventar</string>
-    <string name="edit_world_info">Verschiedene Welt Einstellungen</string>
-    <string name="lastplayed">Letztes mal gespielt</string>
-    <string name="seed">Seed</string>
+    <string name="item_id_browse">Suche...</string>
+    <string name="loading">Lade...</string>
+    <string name="edit_inventory">Bearbeite Inventar</string>
+    <string name="edit_world_info">Verschiedenes</string>
+    <string name="lastplayed">Letztes mal gespielt: </string>
+    <string name="seed">Seed:</string>
     <string name="saved">Gespeichert</string>
-    <string name="savefailed">Speichern fehlgeschlagen.</string>
+    <string name="savefailed">Speichern fehlgeschlagen</string>
     <string name="backup">Erstelle ein Backup</string>
     <string name="backupcreated">Backup erstellt: </string>
     <string name="backupfailed">Backup fehlgeschlagen.</string>
     <string name="backup_start">Backup gestartet. Das kann eine Weile dauern.</string>
     <string name="about_about">Über</string>
     <string name="change">Ändere</string>
-    <string name="gamemode">Spielart: </string>
+    <string name="gamemode">Levelart: </string>
     <string name="gamemode_survival">Überleben</string>
     <string name="gamemode_creative">Kreativ</string>
     <string name="main_edit_world_info">Verschiedenes</string>
     <string name="item_filter_hint">Suche...</string>
-    <string name="world_info_time">Uhrzeit: </string>
-    <string name="world_info_spawn_to_player">Setze den Spawn Punkt auf deiner aktuellen Position</string>
-    <string name="invalid_number">Nicht zulässige nummer</string>
-    <string name="world_info_time_set_morning">6 Uhr früh</string>
+    <string name="world_info_time">Zeit: </string>
+    <string name="world_info_spawn_to_player">Setze den Spawn auf deiner akt. Position</string>
+    <string name="invalid_number">Ungültig</string>
+    <string name="world_info_time_set_morning">6 Uhr</string>
     <string name="world_info_time_set_night">24 Uhr</string>
-    <string name="world_info_player_location">Deine Position:</string>
-    <string name= "world_info_half_hearts" >Halbe Herzen: </string>
-    <string name= "world_info_set_to_full_health" >Herzen auffüllen </string>
-    <string name= "world_info_set_to_infinite_health" > Unendlich Herzen</string>
-    <string name= "slot_fillslot" > 64 Stück </string>
-    <string name="world_info_warp_to_spawn">Teleportiere dich zum spawn</string>
-    <string name="world_info_sideways_mode">Aktiviere den "toter Steve" bug: </string>
-    <string name="entity_item">Liegende items</string>
-    <string name="entity_zombie">Zombies</string>
+    <string name="world_info_player_location">Spieler Position: </string>
+    <string name="world_info_half_hearts">Halbe Herzen: </string>
+    <string name="world_info_set_to_full_health">Volles Leben</string>
+    <string name="world_info_set_to_infinite_health">Unendlich Leben</string>
+    <string name="world_info_folder">Ordner: </string>
+    <string name="folder_exists">Ordner existiert bereits; wähle einen anderen Namen</string>
+    <string name="folder_rename_failed">Fehlgeschlagen</string>
+    <string name="slot_fillslot">64 Stück</string>
+    <string name="slot_maxcountslot">255 Stück</string>
+    <string name="slot_duplicate">Dupliziere</string>
+    <string name="slot_delete">Lösche</string>
+    <string name="world_info_warp_to_spawn">Teleportiere zum Spawn</string>
+    <string name="world_info_sideways_mode">Aktiviere den "Toten Steve" modus: </string>
+    <string name="entity_item">Liegende Items</string>
+    <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Hühner</string>
-    <string name="entity_cow">Kühe</string>
-    <string name="entity_pig">Schweine</string>
-    <string name="entity_sheep">Schafe</string>
-    <string name="entity_unknown">Unbekannter mob type</string>
-    <string name="entities_info">Zeige info verschiedner Mobs, Gegenstände</string>
-    <string name="apocowlypse">Spawne kühe</string>
-    <string name="noworldsfound_title">Keine Welten gefunden :-(</string>
-    <string name="noworldsfound_text">PocketInvEditor konnte keine Welten, welche mit der Minecraft PE vollversion erstellt wurden finden\n
-		Dieses Programm ist da, um Welten zu verändern, bearbeiten welche mit der Minecraft PE Vollversion generiert wurden</string>
+    <string name="entity_cow">Kuh</string>
+    <string name="entity_pig">Schwein</string>
+    <string name="entity_sheep">Schaf</string>
+    <string name="entity_creeper">Creeper</string>
+    <string name="entity_skeleton">Skelette</string>
+    <string name="entity_spider">Spinnen</string>
+    <string name="entity_primedtnt">Gezündetes TNT</string>
+    <string name="entity_arrow">Pfeile</string>
+    <string name="entity_snowball">Schneeball</string>
+    <string name="entity_thrownegg">Geworfene Eier</string>
+    <string name="entity_unknown">Unbekannter entity Typ</string>
+    <string name="entities_info">Zeige Entity Infos</string>
+    <string name="entities_edit">Bearbeite Entitys (Tiere, Spezielle Gegenstände)</string>
+    <string name="entities_none">Keine Entitys gefunden</string>
+    <string name="entities_spawn_mobs">Spawne mobs</string>
+    <string name="entities_spawn_drops">Spawn drops</string>
+    <string name="entities_remove_entities">Entferne Entities</string>
+    <string name="entities_cow_tipping">Kuh neigung</string>
+    <string name="entities_mob_tipping">Mob neigung</string>
+    <string name="entities_mob_type">Mob: </string>
+    <string name="entities_entity_type">Typ: </string>
+    <string name="entities_babyfy_mobs">Vejüngere Mobs</string>
+    <string name="apocowlypse">Nichts here...</string>
+    <string name="entities_angle">Radius: </string>
+    <string name="noworldsfound_title">KEINE WELTEN!?</string>
+    <string name="noworldsfound_text">PocketInvEditor konnte keine Welten, welche mit der Minecraft PE vollversion erstellt wurden finden\nDieses Programm ist da, um Welten zu verändern, bearbeiten welche mit der Minecraft PE Vollversion generiert wurden</string>
+    <string name="get_pro">Hol dir PocketInvEditor Pro</string>
+    <string name="get_pro_to_spawn_mobs">Upgrade zu PocketInvEditor Pro um Mobs zu spawnen.</string>
+    <string name="nothingtoseehere_activate">* Ey was soll das? *</string>
+    <string name="main_view_tileentities">Zeige Behälter</string>
+    <string name="main_edit_tileentities">Bearbeite Behälter</string>
+    <string name="warp_to_tile_entity">Teleportiere zum Behälter</string>
+    <string name="get_pro_to_edit_containers">Upgrade zu PocketInvEditor Pro um Behälter (Truhen, Öfen) zu bearbeiten</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
-     Dieses Programm ist gratis: du darfst es veröffentlichen und/oder modifizieren,
-     unter den der GNU General Public License veröffentlicht von
-     the Free Software Foundation, nur version 3 der Lizenz, oder
-     irgendeiner neuen Version.\n
-     Dieses Programm ist veröffentlich in der Hoffnung das es nützlich ist,
-     aber OHNE JEGLICHER GARANTIE; without even the implied warranty of
-     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. In der
-     GNU General Public License können mehr details gefunden werden.\n
+    Dieses Programm ist gratis: du darfst es veröffentlichen und/oder modifizieren,
+    unter den der GNU General Public License veröffentlicht von
+    the Free Software Foundation, nur version 3 der Lizenz, oder
+    irgendeiner neuen Version.\n
+    Dieses Programm ist veröffentlich in der Hoffnung das es nützlich ist,
+    aber OHNE JEGLICHER GARANTIE; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. In der
+    GNU General Public License können mehr details gefunden werden.\n
     </string>
     <string name="about_librarycredits">Diese App verwendet die SpoutNBT libary welche von dem SpoutDev team programmiert wurde.</string>
     <string name="add_empty_slot">Füge einen leeren Slot hinzu</string>
+    <string name="about_thankscommunity">Diese App wurde mit der Hilfe von vielen Community Membern ermöglicht!\nKlicke hier um eine Liste der Mitwirkenden zu sehen:</string>
+    <string name="about_go_to_forums">Öffne den offiziellen PocketInvEditor thread im minecraftforum.net</string>
+    <string name="unlicensed_dialog_title">Heast! Keine 79 Cent in der Tasche!?</string>
+    <string name="unlicensed_dialog_body">Diese App ist nicht lizensiert! Bitte kaufe sie vom Google PLay Store!</string>
+    <string name="buy_button">Kaufen!</string>
+    <string name="quit_button">Beenden</string>
+    
+    
 </resources>

@@ -1,3 +1,2 @@
-Place the SpoutNBT library .jar into this folder. 
-It can be downloaded from http://ci.spout.org/job/SpoutNBT/.
 Currently, this project is built with SpoutNBT build #11 (1.0.2-SNAPSHOT).
+It's a fairly old version that is no longer available on their Jenkins, and only on their much more obscure Maven repo, so it's included here for convenience.

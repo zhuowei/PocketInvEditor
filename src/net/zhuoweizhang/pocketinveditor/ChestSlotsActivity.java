@@ -151,6 +151,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
 		if (!this.getIntent().getBooleanExtra("CanEditSlots", false)) return false;
+		super.onCreateOptionsMenu(menu);
 		menu.add(getResources().getString(R.string.add_empty_slot));
 		menu.add(getResources().getString(R.string.warp_to_tile_entity));
 		return true;

@@ -69,6 +69,8 @@
     <string name="entities_mob_type">Mob: </string>
     <string name="entities_entity_type">Type: </string>
     <string name="entities_babyfy_mobs">Baby-fy animals</string>
+    <string name="entities_replace_entities">Replace entities</string>
+    <string name="entities_replace_with">Replace with: </string>
     <string name="apocowlypse">Nothing here</string>
     <string name="entities_angle">Angle: </string>
     <string name="noworldsfound_title">Y U NO WORLDS?!</string>

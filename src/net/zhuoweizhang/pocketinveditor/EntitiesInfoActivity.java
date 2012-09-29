@@ -152,6 +152,32 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		}
 	}
 
+	public void replaceEntities(EntityType type, EntityType toType) {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		Class<? extends Entity> toEntityClass = toType.getEntityClass();
+		int toEntityId = toType.getId();
+		for (int i = 0; i < entities.size(); ++i) {
+			Entity e = entities.get(i);
+			if (e.getEntityType() == type) {
+				Entity newE = null;
+				try {
+					newE = toEntityClass.newInstance();
+				} catch (Exception ex) {
+					ex.printStackTrace();
+					continue;
+				}
+				newE.setEntityTypeId(toEntityId);
+				newE.setLocation(e.getLocation());
+				newE.setOnGround(e.isOnGround());
+				newE.setVelocity(e.getVelocity());
+				newE.setPitch(e.getPitch());
+				newE.setYaw(e.getYaw());
+				newE.setFallDistance(e.getFallDistance());
+				entities.set(i, newE);
+			}
+		}
+	}
+
 	public static class LoadEntitiesTask implements Runnable {
 
 		private final Activity activity;

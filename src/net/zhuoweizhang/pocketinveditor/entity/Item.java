@@ -11,6 +11,7 @@ public class Item extends Entity {
 	private short age = 0;
 
 	public ItemStack getItemStack() {
+		if (stack == null) stack = new ItemStack((short) 0, (short) 0, 0);
 		return stack;
 	}
 

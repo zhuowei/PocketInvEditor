@@ -4,7 +4,12 @@ public class LivingEntity extends Entity {
 
 	private short attackTime, deathTime, hurtTime;
 
-	private short health = 20;
+	private short health;
+
+	public LivingEntity() {
+		super();
+		this.health = (short) this.getMaxHealth();
+	}
 
 	public short getAttackTime() {
 		return attackTime;

@@ -6,7 +6,7 @@
     <string name="select_slot">Selecteer inventaris slot</string>
     <string name="item_id">Item ID:</string>
     <string name="item_damage">Item schade: </string>
-    <string name="item_count">Hoeveelheid: </string>
+    <string name="item_count">aantal: </string>
     <string name="item_id_browse">Bladeren...</string>
     <string name="loading">Laden...</string>
     <string name="edit_inventory">Verander Inventaris</string>
@@ -78,6 +78,9 @@
     <string name="get_pro_to_spawn_mobs">Upgrade naar PocketInvEditor Pro om mobs te spawnen.</string>
     <string name="nothingtoseehere_activate">* Ik ga weg bij mijn tablet en adem in *</string>
     <string name="main_view_tileentities">Laat kisten zien</string>
+    <string name="main_edit_tileentities">Wijzig kisten</string>
+    <string name="warp_to_tile_entity">Teleporteer naar kist</string>
+    <string name="get_pro_to_edit_containers">Upgrade naar PocketInvEditor Pro om kist inhoud te veranderen.</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     Dit programma is gratis: je kan het herverdelen en/of veranderen
     Onder de termen van het GNU General Public License zoals gepubliceert door
@@ -89,11 +92,14 @@
     VERKOOPBAARHEID of GESCHIKTHEID VOOR EEN BEPAALD DOEL.  Zie het
     GNU General Public License voor meer informatie.\n
     </string>
+    <string name="about_copyright_pro">Copyright (C) 2012 Zhuowei Zhang. verspreid deze app niet zonder toestemming.</string>
     <string name="about_librarycredits">Deze app gebruikt de SimpleNBT library ontwikkeld door
     het SpoutDev team.\n
     Dit programma bevat een aangepaste versie van item-data.xml van TexasGamer\'s itemid plugin.\n
     Dit programma is uitgerust met een versie van UniversalOfGaming\'s oneindige gezondheid mod. \n
     De item iconen gebruikt in dit programma zijn gemaakt door Mojang. </string>
+    <string name="about_thankscommunity">Deze applicatie werd mogelijk gemaakt door het werk van veel getalenteerde vertalers, testers, en programmeurs. Bedankt.\nBekijk de Minecraft Forums post voor een lijst van medewerkers.</string>
+    <string name="about_go_to_forums">Open Minecraft Forums post van PocketInvEditor</string>
     <string name="add_empty_slot">Voeg leeg slot toe</string>
     <string name="unlicensed_dialog_title">Arr! Wees een piraat!</string>
     <string name="unlicensed_dialog_body">Deze applicatie heeft geen licensie, koop hem op Google Play.</string>

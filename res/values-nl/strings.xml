@@ -69,6 +69,8 @@
     <string name="entities_mob_type">Mob: </string>
     <string name="entities_entity_type">Type: </string>
     <string name="entities_babyfy_mobs">Baby dieren</string>
+    <string name="entities_replace_entities">vervang entities</string>
+    <string name="entities_replace_with">vervang met: </string>
     <string name="apocowlypse">Niks hier</string>
     <string name="entities_angle">Hoek: </string>
     <string name="noworldsfound_title">Waarom heb je geen werelden?!</string>

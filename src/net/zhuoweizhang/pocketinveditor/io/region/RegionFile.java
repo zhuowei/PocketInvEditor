@@ -1,4 +1,4 @@
-package net.minecraft.world.level.chunk.storage;
+package net.zhuoweizhang.pocketinveditor.io.region;
 
 /*
  ** 2011 January 5
@@ -20,6 +20,8 @@ package net.minecraft.world.level.chunk.storage;
  * formatter template).
  * 
  */
+
+// 2012 October 15: Modified by Zhuowei. Not for evil, I promise.
 
 // Interfaces with region files on the disk
 
@@ -129,22 +131,23 @@ public class RegionFile {
             }
 
             sectorFree.set(0, false); // chunk offset table
-            sectorFree.set(1, false); // for the last modified info
+            //sectorFree.set(1, false); // for the last modified info PE: no last modified
 
             file.seek(0);
             for (int i = 0; i < SECTOR_INTS; ++i) {
-                int offset = file.readInt();
+                int offset = Integer.reverseBytes(file.readInt()); //PE: reverse bytes
                 offsets[i] = offset;
+                debugln("Region: offset " + i + " is " + Integer.toString(offset, 16) + " length in sects: " + (offset & 0xff) + " sectors in: " + (offset >> 8)); //PE: debug harder
                 if (offset != 0 && (offset >> 8) + (offset & 0xFF) <= sectorFree.size()) {
                     for (int sectorNum = 0; sectorNum < (offset & 0xFF); ++sectorNum) {
                         sectorFree.set((offset >> 8) + sectorNum, false);
                     }
                 }
             }
-            for (int i = 0; i < SECTOR_INTS; ++i) {
+            /* for (int i = 0; i < SECTOR_INTS; ++i) {
                 int lastModValue = file.readInt();
                 chunkTimestamps[i] = lastModValue;
-            }
+            } PE: no last modified */
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -164,7 +167,7 @@ public class RegionFile {
 
     // various small debug printing helpers
     private void debug(String in) {
-//        System.out.print(in);
+        System.out.print(in); //PE: print ALL the debug messages
     }
 
     private void debugln(String in) {
@@ -187,7 +190,7 @@ public class RegionFile {
      * gets an (uncompressed) stream representing the chunk data returns null if
      * the chunk is not found or an error occurs
      */
-    public synchronized DataInputStream getChunkDataInputStream(int x, int z) {
+    public byte[] getChunkData(int x, int z) { //PE: not synchronized as this happens on one thread only, and return a byte[]
         if (outOfBounds(x, z)) {
             debugln("READ", x, z, "out of bounds");
             return null;
@@ -209,14 +212,14 @@ public class RegionFile {
             }
 
             file.seek(sectorNumber * SECTOR_BYTES);
-            int length = file.readInt();
+            int length = Integer.reverseBytes(file.readInt()); //PE: reverse bytes
 
             if (length > SECTOR_BYTES * numSectors) {
                 debugln("READ", x, z, "invalid length: " + length + " > 4096 * " + numSectors);
                 return null;
             }
 
-            byte version = file.readByte();
+            /*byte version = file.readByte();
             if (version == VERSION_GZIP) {
                 byte[] data = new byte[length - 1];
                 file.read(data);
@@ -232,7 +235,10 @@ public class RegionFile {
             }
 
             debugln("READ", x, z, "unknown version " + version);
-            return null;
+            return null; PE: no compression */
+            byte[] data = new byte[length - 1];
+            file.read(data);
+            return data;
         } catch (IOException e) {
             debugln("READ", x, z, "exception");
             return null;
@@ -264,7 +270,7 @@ public class RegionFile {
     }
 
     /* write a chunk at (x,z) with length bytes of data to disk */
-    protected synchronized void write(int x, int z, byte[] data, int length) {
+    public void write(int x, int z, byte[] data, int length) { //PE: only one thread
         try {
             int offset = getOffset(x, z);
             int sectorNumber = offset >> 8;
@@ -333,7 +339,7 @@ public class RegionFile {
                     setOffset(x, z, (sectorNumber << 8) | sectorsNeeded);
                 }
             }
-            setTimestamp(x, z, (int) (System.currentTimeMillis() / 1000L));
+            //setTimestamp(x, z, (int) (System.currentTimeMillis() / 1000L)); PE: not in PE
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -343,8 +349,8 @@ public class RegionFile {
     private void write(int sectorNumber, byte[] data, int length) throws IOException {
         debugln(" " + sectorNumber);
         file.seek(sectorNumber * SECTOR_BYTES);
-        file.writeInt(length + 1); // chunk length
-        file.writeByte(VERSION_DEFLATE); // chunk version number
+        file.writeInt(Integer.reverseBytes(length + 1)); // chunk length PE: reverse
+        //file.writeByte(VERSION_DEFLATE); // chunk version number PE: no version number
         file.write(data, 0, length); // chunk data
     }
 
@@ -364,13 +370,7 @@ public class RegionFile {
     private void setOffset(int x, int z, int offset) throws IOException {
         offsets[x + z * 32] = offset;
         file.seek((x + z * 32) * 4);
-        file.writeInt(offset);
-    }
-
-    private void setTimestamp(int x, int z, int value) throws IOException {
-        chunkTimestamps[x + z * 32] = value;
-        file.seek(SECTOR_BYTES + (x + z * 32) * 4);
-        file.writeInt(value);
+        file.writeInt(Integer.reverseBytes(offset));
     }
 
     public void close() throws IOException {

@@ -167,7 +167,7 @@ public class RegionFile {
 
     // various small debug printing helpers
     private void debug(String in) {
-        System.out.print(in); //PE: print ALL the debug messages
+    //    System.out.print(in);
     }
 
     private void debugln(String in) {

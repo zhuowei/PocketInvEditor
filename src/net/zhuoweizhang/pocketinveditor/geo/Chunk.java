@@ -5,6 +5,9 @@ public class Chunk {
 	public final int x, z;
 	public byte[] blocks, blockLight, skyLight, metaData, dirtyTable;
 
+	public boolean needsSaving = false;
+	private boolean hasFilledDirtyTable = false;
+
 	/** width on the X axis */
 	public static final int WIDTH = 16;
 	/** height on the Y axis */
@@ -67,6 +70,21 @@ public class Chunk {
 		System.arraycopy(rawData, offset, dirtyTable, 0, dirtyTable.length);
 	}
 
+	public byte[] saveToByteArray() {
+		byte[] retval = new byte[blocks.length + metaData.length + skyLight.length + blockLight.length + dirtyTable.length];
+		int offset = 0;
+		System.arraycopy(blocks, 0, retval, 0, blocks.length);
+		offset += blocks.length;
+		System.arraycopy(metaData, 0, retval, offset, metaData.length);
+		offset += metaData.length;
+		System.arraycopy(blockLight, 0, retval, offset, blockLight.length);
+		offset += blockLight.length;
+		System.arraycopy(skyLight, 0, retval, offset, skyLight.length);
+		offset += skyLight.length;
+		System.arraycopy(dirtyTable, 0, retval, offset, dirtyTable.length);
+		return retval;
+	}
+
 	/** Calculates and returns the number of diamond ore blocks in this chunk */
 
 	public int countDiamonds() {
@@ -94,6 +112,48 @@ public class Chunk {
 		int offset = getOffset(x, y, z);
 		int dualData = metaData[offset >> 1];
 		return offset % 1 == 0 ? dualData >> 4 : dualData & 0xf;
+	}
+
+	/** Sets a block type, and also set the corresponding dirty table entry and set the saving flag. */
+	public void setBlockTypeId(int x, int y, int z, int type) {
+		setBlockTypeIdNoDirty(x, y, z, type);
+		setDirtyTable(x, y, z);
+		setNeedsSaving(true);
+	}
+
+	public void setBlockTypeIdNoDirty(int x, int y, int z, int type) {
+		//System.out.println(this.x + ":" + this.z + " setBlockTypeIdNoDirty: " + x + ":" + y + ":" + z);
+		blocks[getOffset(x, y, z)] = (byte) type;
+	}
+
+	public void setBlockData(int x, int y, int z, int newData) {
+		setBlockDataNoDirty(x, y, z, newData);
+		setDirtyTable(x, y, z);
+		setNeedsSaving(true);
+	}
+
+	public void setBlockDataNoDirty(int x, int y, int z, int newData) {
+		int offset = getOffset(x, y, z);
+		byte oldData = metaData[offset >> 1];
+		if (offset % 1 == 0) {
+			metaData[offset >> 1] = (byte) ((newData << 4) | (oldData & 0xf));
+		} else {
+			metaData[offset >> 1] = (byte) ((oldData & 0xf0) | (newData & 0xf));
+		}
+	}
+
+	public void setDirtyTable(int x, int y, int z) {
+		if (hasFilledDirtyTable) return;
+		System.err.println("BRUTE FORCE AND IGNORANCE BEGIN! setDirtytable : fixme");
+		for (int i = 0; i < 256; i++) {
+			dirtyTable[i] = (byte) 0xff;
+		}
+		hasFilledDirtyTable = true;
+	}
+
+	/** Does this chunk need saving next time the ChunkManager issues a save? */
+	public void setNeedsSaving(boolean save) {
+		this.needsSaving = save;
 	}
 
 	private static int getOffset(int x, int y, int z) {

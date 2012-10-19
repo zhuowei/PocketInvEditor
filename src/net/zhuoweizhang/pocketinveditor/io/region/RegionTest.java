@@ -26,7 +26,26 @@ public class RegionTest {
 					}
 				}
 			}
-			mgr.unloadChunks();
+			for (int x = 0; x < 16; x++) {
+				for (int z = 0; z < 16; z++) {
+					Chunk chunk = mgr.getChunk(x, z);
+					if (chunk.dirtyTableIsReallyGross()) {
+						System.out.print("*");
+					} else {
+						System.out.print("_");
+					}
+				}
+				System.out.println("|");
+			}
+			//System.out.println("Adding lava from 100 to 150x and 50 to 100 z");
+			for (int x = 100; x < 150; x++) {
+				for (int z = 50; z < 100; z++) {
+					mgr.setBlockTypeId(x, 127, z, 10);
+				}
+			}
+			System.out.println("Saving chunks...");
+			System.out.println(mgr.saveAll() + " chunks saved");
+			mgr.unloadChunks(false);
 			mgr.close();
 		} catch (Exception e) {
 			e.printStackTrace();

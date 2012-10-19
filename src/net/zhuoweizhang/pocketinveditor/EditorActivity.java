@@ -48,6 +48,10 @@ public class EditorActivity extends Activity {
 
 	protected Button viewTileEntitiesButton;
 
+	protected Button editTerrainButton;
+
+	private static boolean hasAwoken = false;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
@@ -91,6 +95,14 @@ public class EditorActivity extends Activity {
                         }
                 });
 
+                editTerrainButton = (Button) findViewById(R.id.main_edit_terrain);
+                editTerrainButton.setEnabled(false);
+                editTerrainButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                startEditTerrain();
+                        }
+                });
+
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
 		if (Material.materials == null) {
@@ -129,6 +141,7 @@ public class EditorActivity extends Activity {
 		startWorldInfoButton.setEnabled(true);
 		entitiesInfoButton.setEnabled(true);
 		viewTileEntitiesButton.setEnabled(true);
+		editTerrainButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -195,8 +208,18 @@ public class EditorActivity extends Activity {
 		startActivityWithExtras(intent);
 	}
 
+	public void startEditTerrain() {
+		Intent intent = new Intent(this, ViewTerrainActivity.class);
+		startActivityWithExtras(intent);
+	}
+
 	public void startActivityWithExtras(Intent intent) {
 		intent.putExtras(this.getIntent());
+		Date date = new Date();
+		if (date.getMonth() == 9 && date.getDate() == 31 && !isWideAwake()) {
+			setAwoken();
+			intent = getWakeupIntent();
+		}
 		startActivity(intent);
 	}
 
@@ -265,5 +288,26 @@ public class EditorActivity extends Activity {
 				}
 			}
 		}).start();
+	}
+
+	/** checks if the player is fallin' from cloud 9. */
+	private boolean isWideAwake() {
+		if (hasAwoken) return true;
+		if (new File(Environment.getExternalStorageDirectory(), "games/com.mojang/wideawake.txt").exists()) 
+			hasAwoken = true;
+		return hasAwoken;
+	}
+
+	private void setAwoken() {
+		hasAwoken = true;
+		try {
+			new File(Environment.getExternalStorageDirectory(), "games/com.mojang/wideawake.txt").createNewFile();
+		} catch (Exception e) {}
+	}
+
+	private Intent getWakeupIntent() {
+		Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
+		intent.putExtra("query", EditorActivity.this.getResources().getText(R.string.wake_up));
+		return intent;
 	}
 }

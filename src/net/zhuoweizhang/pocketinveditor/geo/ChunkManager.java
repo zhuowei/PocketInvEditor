@@ -44,14 +44,48 @@ public class ChunkManager {
 	}
 
 	public int getBlockTypeId(int x, int y, int z) {
-		return getChunk(x >> 4, z >> 4).getBlockTypeId(x, y, z);
+		return getChunk(x >> 4, z >> 4).getBlockTypeId(x & 15, y, z & 15);
 	}
 
 	public int getBlockData(int x, int y, int z) {
-		return getChunk(x >> 4, z >> 4).getBlockData(x, y, z);
+		return getChunk(x >> 4, z >> 4).getBlockData(x & 15, y, z & 15);
 	}
 
-	public void unloadChunks() {
+	public void setBlockTypeId(int x, int y, int z, int type) {
+		//System.out.println("setBlockTypeId:" + x + ":" + y + ":" + z);
+		getChunk(x >> 4, z >> 4).setBlockTypeId(x & 15, y, z & 15, type);
+	}
+
+	public void setBlockData(int x, int y, int z, int data) {
+		getChunk(x >> 4, z >> 4).setBlockData(x & 15, y, z & 15, data);
+	}
+
+	/** Saves all chunks that needs saving. 
+	 * @return The number of chunks saved */
+
+	public int saveAll() {
+		int savedCount = 0;
+		for (Map.Entry<Chunk.Key, Chunk> entry: chunks.entrySet()) {
+			Chunk.Key key = entry.getKey();
+			Chunk value = entry.getValue();
+			if (key.getX() != value.x || key.getZ() != value.z) {
+				throw new AssertionError("WTF: key x = " + key.getX() + " z = " + key.getZ() + " chunk x=" + value.x + " chunk z=" + value.z);
+			}
+			if (value.needsSaving) {
+				saveChunk(value);
+				savedCount++;
+			}
+		}
+		return savedCount;
+	}
+
+	protected void saveChunk(Chunk chunk) {
+		byte[] chunkData = chunk.saveToByteArray();
+		region.write(chunk.x, chunk.z, chunkData, chunkData.length);
+	}
+
+	public void unloadChunks(boolean saveFirst) {
+		if (saveFirst) saveAll();
 		chunks.clear();
 	}
 

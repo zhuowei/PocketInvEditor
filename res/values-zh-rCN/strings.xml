@@ -94,4 +94,5 @@
     <string name="about_librarycredits">This app uses the SpoutNBT library developed by
     the SpoutDev team.</string>
     <string name="add_empty_slot">添加空物品栏</string>
+    <string name="wake_up">你就是那个玩家。该醒了。</string>
 </resources>

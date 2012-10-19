@@ -69,5 +69,13 @@
        android:enabled="false"/>
 
 
+    <Button
+       android:id="@+id/main_edit_terrain"
+       android:text="@string/main_view_terrain"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:enabled="false"/>
+
+
 </LinearLayout>
 </ScrollView>

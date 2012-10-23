@@ -34,10 +34,13 @@ public class ChunkManager {
 	}
 
 	public Chunk loadChunk(Chunk.Key key) {
+		//System.out.println("Loading chunk: " + key.getX() + ":" + key.getZ());
 		Chunk chunk = new Chunk(key.getX(), key.getZ());
 		byte[] data = region.getChunkData(key.getX(), key.getZ());
 		if (data != null) {
 			chunk.loadFromByteArray(data);
+		} else {
+			System.err.println("WTF:" + key.getX() + ":" + key.getZ());
 		}
 		chunks.put(key, chunk);
 		return chunk;

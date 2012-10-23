@@ -38,11 +38,14 @@ public class RegionTest {
 				System.out.println("|");
 			}
 			//System.out.println("Adding lava from 100 to 150x and 50 to 100 z");
-			for (int x = 100; x < 150; x++) {
-				for (int z = 50; z < 100; z++) {
-					mgr.setBlockTypeId(x, 127, z, 10);
+			for (int x = 0; x < 16; x++) {
+				for (int y = 0; y < 128; y++) {
+					for (int z = 0; z < 16; z++) {
+						mgr.getChunk(2, 12).setBlockTypeId(x, y, z, 10);
+					}
 				}
 			}
+			
 			System.out.println("Saving chunks...");
 			System.out.println(mgr.saveAll() + " chunks saved");
 			mgr.unloadChunks(false);

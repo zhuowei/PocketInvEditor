@@ -137,7 +137,7 @@ public class RegionFile {
             for (int i = 0; i < SECTOR_INTS; ++i) {
                 int offset = Integer.reverseBytes(file.readInt()); //PE: reverse bytes
                 offsets[i] = offset;
-                debugln("Region: offset " + i + " is " + Integer.toString(offset, 16) + " length in sects: " + (offset & 0xff) + " sectors in: " + (offset >> 8)); //PE: debug harder
+                //debugln("Region: offset " + i + " is " + Integer.toString(offset, 16) + " length in sects: " + (offset & 0xff) + " sectors in: " + (offset >> 8)); //PE: debug harder
                 if (offset != 0 && (offset >> 8) + (offset & 0xFF) <= sectorFree.size()) {
                     for (int sectorNum = 0; sectorNum < (offset & 0xFF); ++sectorNum) {
                         sectorFree.set((offset >> 8) + sectorNum, false);
@@ -212,6 +212,7 @@ public class RegionFile {
             }
 
             file.seek(sectorNumber * SECTOR_BYTES);
+            debugln("READ", x, z, "location = " + Integer.toString(sectorNumber * SECTOR_BYTES, 16));
             int length = Integer.reverseBytes(file.readInt()); //PE: reverse bytes
 
             if (length > SECTOR_BYTES * numSectors) {

@@ -30,16 +30,19 @@ public class ViewTerrainActivity extends Activity implements View.OnClickListene
 	}
 
 	public void discoInferno() {
-		ChunkManager mgr = new ChunkManager(new File(this.getIntent().getStringExtra("world") + "/chunk.dat"));
+		ChunkManager mgr = new ChunkManager(new File(this.getIntent().getStringExtra("world") + "/chunks.dat"));
+
 		Level level = EditorActivity.level;
 		Player player = level.getPlayer();
 		int beginX = (int) player.getLocation().getX();
 		int beginZ = (int) player.getLocation().getZ();
-		int width = 42;
-		int length = 42;
-		for (int x = beginX; x < beginX + width; x++) {
-			for (int z = beginZ; z < beginZ + length; z++) {
-				mgr.setBlockTypeId(x, 127, z, 10);
+		int beginY = (int) player.getLocation().getY() + 10;
+		if (beginY > 127 || beginY < 0) beginY = 127;
+		int hw = 21;
+		int hl = 21;
+		for (int x = beginX - hw; x < beginX + hw; x++) {
+			for (int z = beginZ - hl; z < beginZ + hl; z++) {
+				mgr.setBlockTypeId(x, beginY, z, 10);
 			}
 		}
 
@@ -50,6 +53,7 @@ public class ViewTerrainActivity extends Activity implements View.OnClickListene
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+
 	}
 
 	private void doneDisco() {

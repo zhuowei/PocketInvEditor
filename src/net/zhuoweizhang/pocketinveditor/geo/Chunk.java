@@ -71,16 +71,16 @@ public class Chunk {
 	}
 
 	public byte[] saveToByteArray() {
-		byte[] retval = new byte[blocks.length + metaData.length + skyLight.length + blockLight.length + dirtyTable.length];
+		byte[] retval = new byte[blocks.length + metaData.length + skyLight.length + blockLight.length + dirtyTable.length + 3];
 		int offset = 0;
 		System.arraycopy(blocks, 0, retval, 0, blocks.length);
 		offset += blocks.length;
 		System.arraycopy(metaData, 0, retval, offset, metaData.length);
 		offset += metaData.length;
-		System.arraycopy(blockLight, 0, retval, offset, blockLight.length);
-		offset += blockLight.length;
 		System.arraycopy(skyLight, 0, retval, offset, skyLight.length);
 		offset += skyLight.length;
+		System.arraycopy(blockLight, 0, retval, offset, blockLight.length);
+		offset += blockLight.length;
 		System.arraycopy(dirtyTable, 0, retval, offset, dirtyTable.length);
 		return retval;
 	}

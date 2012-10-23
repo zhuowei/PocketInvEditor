@@ -82,8 +82,8 @@
     <string name="main_view_tileentities">View containers</string>
     <string name="main_edit_tileentities">Edit containers</string>
     <string name="warp_to_tile_entity">Warp to container</string>
-    <string name="main_view_terrain">View Terrain</string>
-    <string name="main_edit_terrain">Edit Terrain</string>
+    <string name="main_view_terrain">View terrain</string>
+    <string name="main_edit_terrain">Edit terrain</string>
     <string name="terrain_editing">Editing terrain. This may take a while.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
     <string name="get_pro_to_edit_containers">Upgrade to PocketInvEditor Pro to edit containers.</string>

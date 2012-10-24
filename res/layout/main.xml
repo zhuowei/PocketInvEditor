@@ -71,10 +71,11 @@
 
     <Button
        android:id="@+id/main_edit_terrain"
-       android:text="@string/main_view_terrain"
+       android:text="@string/main_edit_terrain"
        android:layout_width="fill_parent"
        android:layout_height="wrap_content"
-       android:enabled="false"/>
+       android:enabled="false"
+       android:visibility="gone"/>
 
 
 </LinearLayout>

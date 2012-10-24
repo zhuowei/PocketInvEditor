@@ -209,8 +209,7 @@ public class EditorActivity extends Activity {
 	}
 
 	public void startEditTerrain() {
-		Intent intent = new Intent(this, ViewTerrainActivity.class);
-		startActivityWithExtras(intent);
+		throw new UnsupportedOperationException("Not in free version!");
 	}
 
 	public void startActivityWithExtras(Intent intent) {

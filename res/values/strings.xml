@@ -9,13 +9,13 @@
     <string name="item_count">Amount: </string>
     <string name="item_id_browse">Browse...</string>
     <string name="loading">Loading...</string>
-    <string name="edit_inventory">Edit Inventory</string>
-    <string name="edit_world_info">Edit World Info</string>
+    <string name="edit_inventory">Edit inventory</string>
+    <string name="edit_world_info">Edit world info</string>
     <string name="lastplayed">Last played</string>
     <string name="seed">Seed:</string>
     <string name="saved">Saved</string>
     <string name="savefailed">Save failed.</string>
-    <string name="backup">Create Backup</string>
+    <string name="backup">Create backup</string>
     <string name="backupcreated">Backup Created: </string>
     <string name="backupfailed">Backup failed.</string>
     <string name="backup_start">Starting backup. This may take a while.</string>
@@ -24,7 +24,7 @@
     <string name="gamemode">Gamemode: </string>
     <string name="gamemode_survival">Survival</string>
     <string name="gamemode_creative">Creative</string>
-    <string name="main_edit_world_info">Edit World Info</string>
+    <string name="main_edit_world_info">Edit world info</string>
     <string name="item_filter_hint">Search...</string>
     <string name="world_info_time">Time: </string>
     <string name="world_info_spawn_to_player">Move spawn to player location</string>
@@ -82,11 +82,17 @@
     <string name="main_view_tileentities">View containers</string>
     <string name="main_edit_tileentities">Edit containers</string>
     <string name="warp_to_tile_entity">Warp to container</string>
-    <string name="main_view_terrain">View terrain</string>
+    <string name="get_pro_to_edit_containers">Upgrade to PocketInvEditor Pro to edit containers.</string>
     <string name="main_edit_terrain">Edit terrain</string>
     <string name="terrain_editing">Editing terrain. This may take a while.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
-    <string name="get_pro_to_edit_containers">Upgrade to PocketInvEditor Pro to edit containers.</string>
+    <string name="terrain_replaceblocks">Replace blocks</string>
+    <string name="terrain_setblocks">Set blocks</string>
+    <string name="terrain_region_shift">Shift region</string>
+    <string name="terrain_region_expand">Expand region</string>
+    <string name="terrain_analyze">Analyze</string>
+    <string name="terrain_autoselect">Auto-select region</string>
+    <string name="block_type">Block type:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

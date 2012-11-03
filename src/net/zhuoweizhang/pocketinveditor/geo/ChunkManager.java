@@ -8,7 +8,7 @@ import java.util.Map;
 
 import net.zhuoweizhang.pocketinveditor.io.region.*;
 
-public class ChunkManager {
+public class ChunkManager implements AreaChunkAccess {
 
 	protected Map<Chunk.Key, Chunk> chunks = new HashMap<Chunk.Key, Chunk>();
 

@@ -20,6 +20,10 @@ public class CuboidRegion {
 		this.length = length;
 	}
 
+	public CuboidRegion(Vector pos, Vector size) {
+		this(pos.getBlockX(), pos.getBlockY(), pos.getBlockZ(), size.getBlockX(), size.getBlockY(), size.getBlockZ());
+	}
+
 	/** Build a CuboidRegion from two points. Calculates width, height, and length from the difference of the two vectors. */
 	public static CuboidRegion fromPoints(Vector pos1, Vector pos2) {
 		int minX, maxX, minY, maxY, minZ, maxZ;

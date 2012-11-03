@@ -32,4 +32,15 @@ public class Vector {
 	public void setZ(float z) {
 		this.z = z;
 	}
+
+	public int getBlockX() {
+		return (int) x;
+	}
+
+	public int getBlockY() {
+		return (int) y;
+	}
+	public int getBlockZ() {
+		return (int) z;
+	}
 }

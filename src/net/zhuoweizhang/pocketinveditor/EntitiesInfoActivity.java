@@ -17,7 +17,7 @@ import android.widget.Toast;
 import net.zhuoweizhang.pocketinveditor.entity.*;
 import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class EntitiesInfoActivity extends Activity implements View.OnClickListener, LevelDataLoadListener, EntityDataLoadListener {
 
@@ -89,7 +89,7 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 
 	public void apoCowlypse() {
 		List<Entity> list = EditorActivity.level.getEntities();
-		Vector playerLoc = EditorActivity.level.getPlayer().getLocation();
+		Vector3f playerLoc = EditorActivity.level.getPlayer().getLocation();
 		int beginX = (int) playerLoc.getX() - 16;
 		int endX = (int) playerLoc.getX() + 16;
 		int beginZ = (int) playerLoc.getZ() - 16;
@@ -97,7 +97,7 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		for (int x = beginX; x < endX; x += 2) {
 			for (int z = beginZ; z < endZ; z += 2) {
 				Cow cow = new Cow();
-				cow.setLocation(new Vector(x, 128, z));
+				cow.setLocation(new Vector3f(x, 128, z));
 				cow.setEntityTypeId(EntityType.COW.getId());
 				cow.setHealth((short) 128);
 				list.add(cow);
@@ -117,7 +117,7 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		save(this);
 	}
 
-	public void spawnMobs(EntityType type, Vector loc, int count) throws Exception {
+	public void spawnMobs(EntityType type, Vector3f loc, int count) throws Exception {
 		List<Entity> entities = EditorActivity.level.getEntities();
 		for (int i = 0; i < count; i++) {
 			Entity e = type.getEntityClass().newInstance();

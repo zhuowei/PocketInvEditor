@@ -1,16 +1,16 @@
 package net.zhuoweizhang.pocketinveditor.entity;
 
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class Entity {
 
-	private Vector location = new Vector(0, 0, 0);
+	private Vector3f location = new Vector3f(0, 0, 0);
 
 	private float pitch;
 
 	private float yaw;
 
-	private Vector motion = new Vector(0, 0, 0);
+	private Vector3f motion = new Vector3f(0, 0, 0);
 
 	private float fallDistance;
 
@@ -22,11 +22,11 @@ public class Entity {
 
 	private int typeId = 0;
 
-	public Vector getLocation() {
+	public Vector3f getLocation() {
 		return location;
 	}
 
-	public void setLocation(Vector location) {
+	public void setLocation(Vector3f location) {
 		this.location = location;
 	}
 
@@ -46,11 +46,11 @@ public class Entity {
 		this.yaw = yaw;
 	}
 
-	public Vector getVelocity() {
+	public Vector3f getVelocity() {
 		return motion;
 	}
 
-	public void setVelocity(Vector velocity) {
+	public void setVelocity(Vector3f velocity) {
 		this.motion = velocity;
 	}
 

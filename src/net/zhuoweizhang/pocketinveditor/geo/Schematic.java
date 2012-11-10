@@ -1,6 +1,6 @@
 package net.zhuoweizhang.pocketinveditor.geo;
 
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class Schematic implements AreaBlockAccess, SizeLimitedArea {
 
@@ -9,16 +9,16 @@ public class Schematic implements AreaBlockAccess, SizeLimitedArea {
 
 	protected byte[] blocks, metaData;
 
-	public Schematic(Vector size, byte[] blocks, byte[] data) {
-		this.width = size.getBlockX();
-		this.height = size.getBlockY();
-		this.length = size.getBlockZ();
+	public Schematic(Vector3f size, byte[] blocks, byte[] data) {
+		this.width = (int) size.getX();
+		this.height = (int) size.getY();
+		this.length = (int) size.getZ();
 		this.blocks = blocks;
 		this.metaData = data;
 	}
 
-	public Schematic(Vector size) {
-		this(size, new byte[size.getBlockX() * size.getBlockY() * size.getBlockZ()], new byte[size.getBlockX() * size.getBlockY() * size.getBlockZ()]);
+	public Schematic(Vector3f size) {
+		this(size, new byte[(int) (size.getX() * size.getY() * size.getZ())], new byte[(int) (size.getX() * size.getY() * size.getZ())]);
 	}
 
 	public int getWidth() {
@@ -53,10 +53,10 @@ public class Schematic implements AreaBlockAccess, SizeLimitedArea {
 		return (y * width * length) + (z * width) + x;
 	}
 
-	public void place(AreaBlockAccess world, Vector startPoint) {
-		int beginX = startPoint.getBlockX();
-		int beginY = startPoint.getBlockY();
-		int beginZ = startPoint.getBlockZ();
+	public void place(AreaBlockAccess world, Vector3f startPoint) {
+		int beginX = (int) startPoint.getX();
+		int beginY = (int) startPoint.getY();
+		int beginZ = (int) startPoint.getZ();
 
 		for (int x = 0; x < width; ++x) {
 			for (int z = 0; z < length; ++z) {

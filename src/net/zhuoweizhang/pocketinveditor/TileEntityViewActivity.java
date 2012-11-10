@@ -23,7 +23,7 @@ import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class TileEntityViewActivity extends ListActivity implements LevelDataLoadListener, EntityDataLoadListener {
 
@@ -124,7 +124,7 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 
 	public static void warpToTileEntity(Activity activity, TileEntity entity) {
 		Player player = EditorActivity.level.getPlayer();
-		player.setLocation(new Vector(entity.getX() + 0.5f, entity.getY() + 1, entity.getZ() + 0.5f));
+		player.setLocation(new Vector3f(entity.getX() + 0.5f, entity.getY() + 1, entity.getZ() + 0.5f));
 		EditorActivity.save(activity);
 	}
 }

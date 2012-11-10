@@ -14,7 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.entity.Player;
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener {
 
@@ -106,7 +106,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	}
 
 	public void updatePlayerPositionText() {
-		Vector loc = EditorActivity.level.getPlayer().getLocation();
+		Vector3f loc = EditorActivity.level.getPlayer().getLocation();
 		playerXText.setText("X: " + Float.toString(loc.getX()));
 		playerYText.setText("Y: " + Float.toString(loc.getY()));
 		playerZText.setText("Z: " + Float.toString(loc.getZ()));
@@ -114,7 +114,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private void setSpawnToPlayerPosition() {
 		Level level = EditorActivity.level;
-		Vector loc = level.getPlayer().getLocation();
+		Vector3f loc = level.getPlayer().getLocation();
 		level.setSpawnX((int) loc.getX());
 		level.setSpawnY((int) loc.getY());
 		level.setSpawnZ((int) loc.getZ());
@@ -154,7 +154,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	}
 
 	private void warpPlayerToSpawn() {
-		Vector loc = EditorActivity.level.getPlayer().getLocation();
+		Vector3f loc = EditorActivity.level.getPlayer().getLocation();
 		Level level = EditorActivity.level;
 		loc.setX(level.getSpawnX());
 		loc.setY(level.getSpawnY());

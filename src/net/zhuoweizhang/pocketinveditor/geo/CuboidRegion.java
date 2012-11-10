@@ -1,6 +1,6 @@
 package net.zhuoweizhang.pocketinveditor.geo;
 
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class CuboidRegion {
 
@@ -20,12 +20,12 @@ public class CuboidRegion {
 		this.length = length;
 	}
 
-	public CuboidRegion(Vector pos, Vector size) {
-		this(pos.getBlockX(), pos.getBlockY(), pos.getBlockZ(), size.getBlockX(), size.getBlockY(), size.getBlockZ());
+	public CuboidRegion(Vector3f pos, Vector3f size) {
+		this((int) pos.getX(), (int) pos.getY(), (int) pos.getZ(), (int) size.getX(), (int) size.getY(), (int) size.getZ());
 	}
 
 	/** Build a CuboidRegion from two points. Calculates width, height, and length from the difference of the two vectors. */
-	public static CuboidRegion fromPoints(Vector pos1, Vector pos2) {
+	public static CuboidRegion fromPoints(Vector3f pos1, Vector3f pos2) {
 		int minX, maxX, minY, maxY, minZ, maxZ;
 		minX = (int) (pos1.getX() < pos2.getX() ? pos1.getX() : pos2.getX());
 		maxX = (int) (pos1.getX() >= pos2.getX() ? pos1.getX() : pos2.getX());

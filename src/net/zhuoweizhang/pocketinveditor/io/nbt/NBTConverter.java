@@ -23,7 +23,7 @@ import net.zhuoweizhang.pocketinveditor.io.nbt.tileentity.TileEntityStoreLookupS
 
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
 
-import net.zhuoweizhang.pocketinveditor.util.Vector;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public final class NBTConverter {
 
@@ -182,12 +182,12 @@ public final class NBTConverter {
 		return new CompoundTag(name, tags);
 	}
 
-	public static Vector readVector(ListTag<FloatTag> tag) {
+	public static Vector3f readVector(ListTag<FloatTag> tag) {
 		List<FloatTag> tags = tag.getValue();
-		return new Vector(tags.get(0).getValue(), tags.get(1).getValue(), tags.get(2).getValue());
+		return new Vector3f(tags.get(0).getValue(), tags.get(1).getValue(), tags.get(2).getValue());
 	}
 
-	public static ListTag<FloatTag> writeVector(Vector vector, String tagName) {
+	public static ListTag<FloatTag> writeVector(Vector3f vector, String tagName) {
 		List<FloatTag> tags = new ArrayList<FloatTag>(3);
 		tags.add(new FloatTag("", vector.getX()));
 		tags.add(new FloatTag("", vector.getY()));

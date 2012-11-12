@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
-import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 
 /** An ArrayAdapter that displays item icons based on the InventorySlot. */
 public class MaterialIconArrayAdapter<T extends InventorySlot> extends ArrayAdapter<T> {

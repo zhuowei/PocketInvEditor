@@ -13,8 +13,8 @@ import android.graphics.BitmapFactory;
 
 import net.zhuoweizhang.pocketinveditor.R;
 
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
-import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
 
 public final class MaterialIconLoader implements Runnable {
 

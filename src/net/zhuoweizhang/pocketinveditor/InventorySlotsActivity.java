@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
-import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;

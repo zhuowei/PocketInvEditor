@@ -10,11 +10,18 @@ import net.zhuoweizhang.pocketinveditor.io.region.*;
 
 public class ChunkManager implements AreaChunkAccess {
 
+	public static final int WORLD_WIDTH = 256;
+	public static final int WORLD_HEIGHT = 128;
+	public static final int WORLD_LENGTH = 256;
+
 	protected Map<Chunk.Key, Chunk> chunks = new HashMap<Chunk.Key, Chunk>();
 
 	protected File chunkFile;
 
 	protected RegionFile region;
+
+	private Chunk.Key lastKey = null;
+	private Chunk lastChunk = null;
 
 	public ChunkManager(File chunkFile) {
 		this.chunkFile = chunkFile;
@@ -27,9 +34,14 @@ public class ChunkManager implements AreaChunkAccess {
 	}
 
 	public Chunk getChunk(Chunk.Key key) {
+		if (lastKey != null && lastKey.equals(key)) {
+			return lastChunk;
+		}
 		Chunk chunk = chunks.get(key);
 		if (chunk == null)
 			chunk = loadChunk(key);
+		lastKey = key;
+		lastChunk = chunk;
 		return chunk;
 	}
 

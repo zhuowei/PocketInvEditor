@@ -1,4 +1,4 @@
-package net.zhuoweizhang.pocketinveditor.material.icon;
+package net.zhuoweizhang.pocketinveditor.material;
 
 public final class MaterialKey {
 
@@ -26,5 +26,10 @@ public final class MaterialKey {
 		result = prime * result + typeId;
 		result = prime * result + damage;
 		return result;
+	}
+
+	@Override
+	public String toString() {
+		return "MaterialKey[typeId=" + typeId + ";damage=" + damage + "]";
 	}
 }

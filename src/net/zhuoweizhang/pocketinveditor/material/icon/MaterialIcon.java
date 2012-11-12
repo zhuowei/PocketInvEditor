@@ -4,6 +4,8 @@ import java.util.Map;
 
 import android.graphics.Bitmap;
 
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
+
 public class MaterialIcon {
 
 	public static Map<MaterialKey, MaterialIcon> icons;

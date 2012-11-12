@@ -21,7 +21,7 @@ import java.util.List;
 import net.zhuoweizhang.pocketinveditor.entity.Player;
 import net.zhuoweizhang.pocketinveditor.io.EntityDataConverter;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
-import net.zhuoweizhang.pocketinveditor.material.icon.MaterialKey;
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 import net.zhuoweizhang.pocketinveditor.tileentity.*;
 import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 

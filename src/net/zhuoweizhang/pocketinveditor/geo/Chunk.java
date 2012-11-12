@@ -111,7 +111,7 @@ public class Chunk {
 	public int getBlockData(int x, int y, int z) {
 		int offset = getOffset(x, y, z);
 		int dualData = metaData[offset >> 1];
-		return offset % 1 == 0 ? dualData >> 4 : dualData & 0xf;
+		return offset % 1 == 0 ? (dualData >> 4) & 0xf : dualData & 0xf;
 	}
 
 	/** Sets a block type, and also set the corresponding dirty table entry and set the saving flag. */
@@ -144,7 +144,7 @@ public class Chunk {
 
 	public void setDirtyTable(int x, int y, int z) {
 		if (hasFilledDirtyTable) return;
-		System.err.println("BRUTE FORCE AND IGNORANCE BEGIN! setDirtytable : fixme");
+		//System.err.println("BRUTE FORCE AND IGNORANCE BEGIN! setDirtytable : fixme");
 		for (int i = 0; i < 256; i++) {
 			dirtyTable[i] = (byte) 0xff;
 		}

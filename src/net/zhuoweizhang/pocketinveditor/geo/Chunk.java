@@ -105,17 +105,26 @@ public class Chunk {
 	}
 
 	public int getBlockTypeId(int x, int y, int z) {
+		if (x >= WIDTH || y >= HEIGHT || z >= LENGTH || x < 0 || y < 0 || z < 0) {
+			return 0;
+		}
 		return blocks[getOffset(x, y, z)];
 	}
 
 	public int getBlockData(int x, int y, int z) {
+		if (x >= WIDTH || y >= HEIGHT || z >= LENGTH || x < 0 || y < 0 || z < 0) {
+			return 0;
+		}
 		int offset = getOffset(x, y, z);
 		int dualData = metaData[offset >> 1];
-		return offset % 1 == 0 ? (dualData >> 4) & 0xf : dualData & 0xf;
+		return offset % 2 == 1 ? (dualData >> 4) & 0xf : dualData & 0xf;
 	}
 
 	/** Sets a block type, and also set the corresponding dirty table entry and set the saving flag. */
 	public void setBlockTypeId(int x, int y, int z, int type) {
+		if (x >= WIDTH || y >= HEIGHT || z >= LENGTH || x < 0 || y < 0 || z < 0) {
+			return;
+		}
 		setBlockTypeIdNoDirty(x, y, z, type);
 		setDirtyTable(x, y, z);
 		setNeedsSaving(true);
@@ -127,6 +136,9 @@ public class Chunk {
 	}
 
 	public void setBlockData(int x, int y, int z, int newData) {
+		if (x >= WIDTH || y >= HEIGHT || z >= LENGTH || x < 0 || y < 0 || z < 0) {
+			return;
+		}
 		setBlockDataNoDirty(x, y, z, newData);
 		setDirtyTable(x, y, z);
 		setNeedsSaving(true);
@@ -135,7 +147,7 @@ public class Chunk {
 	public void setBlockDataNoDirty(int x, int y, int z, int newData) {
 		int offset = getOffset(x, y, z);
 		byte oldData = metaData[offset >> 1];
-		if (offset % 1 == 0) {
+		if (offset % 2 == 1) {
 			metaData[offset >> 1] = (byte) ((newData << 4) | (oldData & 0xf));
 		} else {
 			metaData[offset >> 1] = (byte) ((oldData & 0xf0) | (newData & 0xf));

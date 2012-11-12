@@ -59,19 +59,31 @@ public class ChunkManager implements AreaChunkAccess {
 	}
 
 	public int getBlockTypeId(int x, int y, int z) {
+		if (x >= WORLD_WIDTH || y >= WORLD_HEIGHT || z >= WORLD_LENGTH || x < 0 || y < 0 || z < 0) {
+			return 0;
+		}
 		return getChunk(x >> 4, z >> 4).getBlockTypeId(x & 15, y, z & 15);
 	}
 
 	public int getBlockData(int x, int y, int z) {
+		if (x >= WORLD_WIDTH || y >= WORLD_HEIGHT || z >= WORLD_LENGTH || x < 0 || y < 0 || z < 0) {
+			return 0;
+		}
 		return getChunk(x >> 4, z >> 4).getBlockData(x & 15, y, z & 15);
 	}
 
 	public void setBlockTypeId(int x, int y, int z, int type) {
+		if (x >= WORLD_WIDTH || y >= WORLD_HEIGHT || z >= WORLD_LENGTH || x < 0 || y < 0 || z < 0) {
+			return;
+		}
 		//System.out.println("setBlockTypeId:" + x + ":" + y + ":" + z);
 		getChunk(x >> 4, z >> 4).setBlockTypeId(x & 15, y, z & 15, type);
 	}
 
 	public void setBlockData(int x, int y, int z, int data) {
+		if (x >= WORLD_WIDTH || y >= WORLD_HEIGHT || z >= WORLD_LENGTH || x < 0 || y < 0 || z < 0) {
+			return;
+		}
 		getChunk(x >> 4, z >> 4).setBlockData(x & 15, y, z & 15, data);
 	}
 

@@ -25,4 +25,34 @@ public final class GeoUtils {
 		}
 		return counts;
 	}
+
+	public static int replaceBlocks(AreaBlockAccess mgr, CuboidRegion region, MaterialKey from, MaterialKey to) {
+		int replacedCount = 0;
+		for (int x = region.x; x < region.x + region.width; ++x) {
+			for (int z = region.z; z < region.z + region.length; ++z) {
+				for (int y = region.y; y < region.y + region.height; ++y) {
+					int type = mgr.getBlockTypeId(x, y, z);
+					int data = mgr.getBlockData(x, y, z);
+					if (type == from.typeId && (data == from.damage || from.damage == -1)) {
+						mgr.setBlockTypeId(x, y, z, to.typeId);
+						mgr.setBlockData(x, y, z, to.damage);
+						replacedCount++;
+					}
+				}
+			}
+		}
+		return replacedCount;
+	}
+
+	public static void setBlocks(AreaBlockAccess mgr, CuboidRegion region, MaterialKey to) {
+		int replacedCount = 0;
+		for (int x = region.x; x < region.x + region.width; ++x) {
+			for (int z = region.z; z < region.z + region.length; ++z) {
+				for (int y = region.y; y < region.y + region.height; ++y) {
+					mgr.setBlockTypeId(x, y, z, to.typeId);
+					mgr.setBlockData(x, y, z, to.damage);
+				}
+			}
+		}
+	}
 }

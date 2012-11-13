@@ -214,11 +214,6 @@ public class EditorActivity extends Activity {
 
 	public void startActivityWithExtras(Intent intent) {
 		intent.putExtras(this.getIntent());
-		Date date = new Date();
-		if (date.getMonth() == 9 && date.getDate() == 31 && !isWideAwake()) {
-			setAwoken();
-			intent = getWakeupIntent();
-		}
 		startActivity(intent);
 	}
 
@@ -289,24 +284,4 @@ public class EditorActivity extends Activity {
 		}).start();
 	}
 
-	/** checks if the player is fallin' from cloud 9. */
-	private boolean isWideAwake() {
-		if (hasAwoken) return true;
-		if (new File(Environment.getExternalStorageDirectory(), "games/com.mojang/wideawake.txt").exists()) 
-			hasAwoken = true;
-		return hasAwoken;
-	}
-
-	private void setAwoken() {
-		hasAwoken = true;
-		try {
-			new File(Environment.getExternalStorageDirectory(), "games/com.mojang/wideawake.txt").createNewFile();
-		} catch (Exception e) {}
-	}
-
-	private Intent getWakeupIntent() {
-		Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-		intent.putExtra("query", EditorActivity.this.getResources().getText(R.string.wake_up));
-		return intent;
-	}
 }

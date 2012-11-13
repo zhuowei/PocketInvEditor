@@ -83,6 +83,17 @@
     <string name="main_edit_tileentities">Wijzig kisten</string>
     <string name="warp_to_tile_entity">Teleporteer naar kist</string>
     <string name="get_pro_to_edit_containers">Upgrade naar PocketInvEditor Pro om kist inhoud te veranderen.</string>
+    <string name="main_edit_terrain">Bewerk terein</string>
+    <string name="terrain_editing">Bewerken van het terein. Dit kan even duren.</string>
+    <string name="terrain_burnbabyburn">@string/apocowlypse</string>
+    <string name="terrain_replaceblocks">vervang blokken</string>
+    <string name="terrain_setblocks">Zet blokken</string>
+    <string name="terrain_region_shift">Verschuif regio</string>
+    <string name="terrain_region_expand">Vergroot regio</string>
+    <string name="terrain_analyze">Analyzeren</string>
+    <string name="terrain_autoselect">Auto-selecteer regio</string>
+    <string name="terrain_block_counts">Aantal blokken</string>
+    <string name="block_type">Blok type:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     Dit programma is gratis: je kan het herverdelen en/of veranderen
     Onder de termen van het GNU General Public License zoals gepubliceert door

@@ -22,6 +22,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private static final int DIALOG_CHANGE_GAME_MODE = 1167366;
 
+	private static final int DIALOG_MOVE_PLAYER = 4142;
+
 	private static final String[] GAMEMODES = {"Survival", "Creative"};
 
 	private TextView gameModeText;
@@ -45,6 +47,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	private Button fullHealthButton, infiniteHealthButton;
 
 	private Button sidewaysOnButton, sidewaysOffButton;
+
+	private Button movePlayerButton;
 
 	private TextView worldNameText;
 
@@ -83,13 +87,20 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		worldNameText.setOnFocusChangeListener(this);
 		worldFolderNameText = (TextView) findViewById(R.id.world_info_folder_name);
 		worldFolderNameText.setOnFocusChangeListener(this);
+		movePlayerButton = (Button) findViewById(R.id.world_info_move_player);
+		movePlayerButton.setOnClickListener(this);
 
-		if (EditorActivity.level != null) {
-			onLevelDataLoad();
-		} else {
-			EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
-		}
+		//if (EditorActivity.level != null) {
+		//	onLevelDataLoad();
+		//} else {
 
+		//}
+
+	}
+
+	public void onStart() {
+		super.onStart();
+		EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
 	}
 
 	public void onLevelDataLoad() {
@@ -191,6 +202,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			playerSideways(true);
 		} else if (v == sidewaysOffButton) {
 			playerSideways(false);
+		} else if (v == movePlayerButton) {
+			showDialog(DIALOG_MOVE_PLAYER);
 		}
 	}
 
@@ -198,6 +211,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		switch (dialogId) {
 			case DIALOG_CHANGE_GAME_MODE:
 				return createChangeGameModeDialog();
+			case DIALOG_MOVE_PLAYER:
+				return createMovePlayerDialog();
 			default:
 				return super.onCreateDialog(dialogId);
 		}
@@ -208,6 +223,13 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			case DIALOG_CHANGE_GAME_MODE:
 				int levelType = EditorActivity.level.getGameType() == 1 ? 1 : 0;
 				((AlertDialog) dialog).getListView().setSelection(levelType);
+				break;
+			case DIALOG_MOVE_PLAYER:
+				Player player = EditorActivity.level.getPlayer();
+				Vector3f playerLoc = player.getLocation();
+				((EditText) dialog.findViewById(R.id.entities_spawn_x)).setText(Float.toString(playerLoc.getX()));
+				((EditText) dialog.findViewById(R.id.entities_spawn_y)).setText(Float.toString(playerLoc.getY()));
+				((EditText) dialog.findViewById(R.id.entities_spawn_z)).setText(Float.toString(playerLoc.getZ()));
 				break;
 			default:
 				super.onPrepareDialog(dialogId, dialog);
@@ -226,6 +248,34 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 						dialog.dismiss();
 					}
 			}).create();
+	}
+
+	protected Dialog createMovePlayerDialog() {
+		final View textEntryView = getLayoutInflater().inflate(R.layout.move_player_dialog, null);
+		return new AlertDialog.Builder(this)
+			.setTitle(R.string.world_info_move_player)
+			.setView(textEntryView)
+			.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialogI, int button) {
+					try {
+						AlertDialog dialog = (AlertDialog) dialogI;
+						float x = Float.parseFloat(((EditText) dialog.findViewById(R.id.entities_spawn_x)).getText().toString());
+						float y = Float.parseFloat(((EditText) dialog.findViewById(R.id.entities_spawn_y)).getText().toString());
+						float z = Float.parseFloat(((EditText) dialog.findViewById(R.id.entities_spawn_z)).getText().toString());
+
+						EditorActivity.level.getPlayer().setLocation(new Vector3f(x, y, z));
+						EditorActivity.save(WorldInfoActivity.this);
+						updatePlayerPositionText();
+					} catch (NumberFormatException ne) {
+						Toast.makeText(WorldInfoActivity.this, R.string.invalid_number, Toast.LENGTH_SHORT).show();
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+					
+				}
+			})
+			.setNegativeButton(android.R.string.cancel, null)
+			.create();
 	}
 
 	public void onFocusChange(View v, boolean hasFocus) {

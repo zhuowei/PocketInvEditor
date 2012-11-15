@@ -152,6 +152,7 @@ public class EditorActivity extends Activity {
 		new Thread(new Runnable() {
 			public void run() {
 				try {
+					System.out.println("Saving level.dat for Activity " + context);
 					LevelDataConverter.write(level, new File(worldFolder, "level.dat"));
 					if (context != null) {
 						context.runOnUiThread(new Runnable() {
@@ -220,6 +221,7 @@ public class EditorActivity extends Activity {
 	private class LevelLoadTask implements Runnable {
 		public void run() {
 			try {
+				System.out.println("Loading level data from EditorActivity");
 				final Level level = LevelDataConverter.read(new File(worldFolder, "level.dat"));
 				EditorActivity.this.runOnUiThread(new Runnable() {
 					public void run() {
@@ -265,7 +267,7 @@ public class EditorActivity extends Activity {
 	}
 
 	public static void loadLevelData(final Activity activity, final LevelDataLoadListener listener, final String location) {
-		System.err.println("Loading level data:" + activity + ":" + listener + ":" + location);
+		System.out.println("Loading level data:" + activity + ":" + listener + ":" + location);
 		worldFolder = new File(location);
 		new Thread(new Runnable() {
 			public void run() {

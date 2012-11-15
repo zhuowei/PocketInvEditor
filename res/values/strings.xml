@@ -44,6 +44,7 @@
     <string name="slot_delete">Delete</string>
     <string name="world_info_warp_to_spawn">Warp to spawn</string>
     <string name="world_info_sideways_mode">Activate sideways player model glitch: </string>
+    <string name="world_info_move_player">Move Player</string>
     <string name="entity_item">Dropped item</string>
     <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Chicken</string>

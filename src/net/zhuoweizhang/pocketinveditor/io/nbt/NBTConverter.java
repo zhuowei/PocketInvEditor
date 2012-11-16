@@ -308,7 +308,7 @@ public final class NBTConverter {
 				return new Item();
 			default:
 				EntityType type = EntityType.getById(id);
-				if (type != null) {
+				if (type != null && type.getEntityClass() != null) {
 					try {
 						return type.getEntityClass().newInstance();
 					} catch (Exception e) {
@@ -415,14 +415,8 @@ public final class NBTConverter {
 		return entity;
 	}
 
-	public static TileEntity createTileEntityById(String id) {
-		if (id.equals("Furnace")) {
-			return new FurnaceTileEntity();
-		} else if (id.equals("Chest")) {
-			return new ContainerTileEntity();
-		} else {
-			return new TileEntity();
-		}
+	public static TileEntity createTileEntityById(String id) { 
+		return TileEntityStoreLookupService.createTileEntityById(id);
 	}
 
 	public static CompoundTag writeTileEntity(TileEntity entity) {

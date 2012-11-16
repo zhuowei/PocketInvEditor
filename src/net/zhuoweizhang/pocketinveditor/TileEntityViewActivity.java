@@ -84,6 +84,7 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 
 	protected void onListItemClick(ListView l, View v, int position, long id) {
 		TileEntity entity = listAdapter.getItem(position);
+		if (showUpgradeForEditMessage(entity)) return;
 		Intent intent = getTileEntityIntent(entity.getClass());
 		if (intent == null) return;
 		intent.putExtras(this.getIntent());
@@ -116,9 +117,19 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 		return null;
 	}
 
+	/**
+	 * @return true if user is prevented from entering next page; false if ok
+	 */
+	protected boolean showUpgradeForEditMessage(TileEntity entity) {
+		return false;
+	}
+			
+
 	/** Provides a MaterialKey for the material to be displayed as an icon in the selection list. */
 	public static MaterialKey getIconMaterial(Class<? extends TileEntity> clazz) {
 		if (clazz == FurnaceTileEntity.class) return new MaterialKey((short) 61, (short) 0); //Lit furnace
+		if (clazz == SignTileEntity.class) return new MaterialKey((short) 323, (short) 0); //Sign
+		if (clazz == NetherReactorTileEntity.class) return new MaterialKey((short) 247, (short) 0); //Reactor
 		return new MaterialKey((short) 54, (short) 0); //Chest
 	}
 

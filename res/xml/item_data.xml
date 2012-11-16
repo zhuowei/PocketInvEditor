@@ -32,6 +32,7 @@
         <item hex="16" dec="22" name="Lapis Lazuli Block" />
         <item hex="18" dec="24" name="Sandstone" />
         <item hex="1A" dec="26" name="Bed (Block)" />
+        <item hex="1E" dec="30" name="Cobweb" />
         <item hex="1F" dec="31" name="Dead Shrub (Tall Grass Retexture)" />
         <item hex="23" dec="35" id="0" name="White Wool" />
         <item hex="23" dec="35" id="1" name="Orange Wool" />
@@ -83,9 +84,11 @@
         <item hex="3C" dec="60" name="Farmland" />
         <item hex="3D" dec="61" name="Furnace" />
         <item hex="3E" dec="62" name="Burning Furnace" />
+        <item hex="3F" dec="63" name="Sign Post" />
         <item hex="40" dec="64" name="Wooden Door (Block)" />
         <item hex="41" dec="65" name="Ladder" />
         <item hex="43" dec="67" name="Cobblestone Stairs" />
+        <item hex="44" dec="68" name="Wall Sign" />
         <item hex="47" dec="71" name="Iron Door (Block)" />
         <item hex="49" dec="73" name="Redstone Ore" />
         <item hex="4A" dec="74" name="Glowing Redstone Ore" />
@@ -96,12 +99,17 @@
         <item hex="52" dec="82" name="Clay Block" />
         <item hex="53" dec="83" name="Sugar Cane" />
         <item hex="55" dec="85" name="Fence" />
+        <item hex="59" dec="89" name="Glowstone" />
         <item hex="5F" dec="95" name="Invisible bedrock" />
         <item hex="60" dec="96" name="Trapdoor" />
         <item hex="62" dec="98" name="Stone Brick" />
         <item hex="66" dec="102" name="Glass Pane"/>
+        <item hex="67" dec="103" name="Melon"/>
+        <item hex="69" dec="105" name="Melon Stem"/>
         <item hex="6B" dec="107" name="Fence Gate"/>
         <item hex="6C" dec="108" name="Brick Stairs" />
+        <item hex="F6" dec="246" name="Glowing Obsidian" />
+        <item hex="F7" dec="247" name="Nether Reactor Core" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
         <item hex="F9" dec="249" name="'Update Game' block 2" />
     </blocks>
@@ -152,6 +160,8 @@
         <item hex="13E" dec="318" name="Flint" />
         <item hex="13F" dec="319" name="Raw Porkchop" />
         <item hex="140" dec="320" name="Cooked Porkchop" />
+        <item hex="141" dec="321" name="Painting" />
+        <item hex="143" dec="323" name="Sign" />
         <item hex="144" dec="324" name="Wooden Door" />
         <item hex="14A" dec="330" name="Iron Door" />
         <item hex="14C" dec="332" name="Snowball" />
@@ -186,6 +196,8 @@
         <item hex="161" dec="353" name="Sugar" />
         <item hex="163" dec="355" name="Bed" />
         <item hex="167" dec="359" name="Shears" />
+        <item hex="168" dec="360" name="Melon (slice)" />
+        <item hex="16A" dec="362" name="Melon Seeds" />
         <item hex="16B" dec="363" name="Raw Beef" />
         <item hex="16C" dec="364" name="Steak" />
         <item hex="16D" dec="365" name="Raw Chicken" />

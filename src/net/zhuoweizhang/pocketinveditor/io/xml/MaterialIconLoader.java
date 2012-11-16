@@ -24,6 +24,8 @@ public final class MaterialIconLoader implements Runnable {
 
 	public Bitmap guiBlocks2Bitmap;
 
+	public Bitmap guiBlocks3Bitmap;
+
 	public Bitmap terrainBitmap;
 
 	public Bitmap itemsBitmap;
@@ -34,6 +36,7 @@ public final class MaterialIconLoader implements Runnable {
 		try {
 			this.guiBlocksBitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks.png"));
 			this.guiBlocks2Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_2.png"));
+			this.guiBlocks3Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_3.png"));
 			this.terrainBitmap = BitmapFactory.decodeStream(asMgr.open("terrain.png"));
 			this.itemsBitmap = BitmapFactory.decodeStream(asMgr.open("gui/items.png"));
 		} catch (Exception e) {
@@ -41,23 +44,26 @@ public final class MaterialIconLoader implements Runnable {
 		}
 	}
 
-	public MaterialIconLoader(XmlResourceParser parser, Bitmap guiBlocksBitmap, Bitmap guiBlocks2Bitmap, Bitmap terrainBitmap, Bitmap itemsBitmap) {
+	public MaterialIconLoader(XmlResourceParser parser, Bitmap guiBlocksBitmap, Bitmap guiBlocks2Bitmap, Bitmap guiBlocks3Bitmap,
+			Bitmap terrainBitmap, Bitmap itemsBitmap) {
 		this.parser = parser;
 		this.guiBlocksBitmap = guiBlocksBitmap;
 		this.guiBlocks2Bitmap = guiBlocks2Bitmap;
+		this.guiBlocks3Bitmap = guiBlocks3Bitmap;
 		this.terrainBitmap = terrainBitmap;
 		this.itemsBitmap = itemsBitmap;
 	}
 
 	public void run() {
 		try {
-			loadMaterials(parser, guiBlocksBitmap, guiBlocks2Bitmap, terrainBitmap, itemsBitmap);
+			loadMaterials(parser, guiBlocksBitmap, guiBlocks2Bitmap, guiBlocks3Bitmap, terrainBitmap, itemsBitmap);
 		} finally {
 			parser.close();
 		}
 	}
 
-	public static void loadMaterials(XmlPullParser parser, Bitmap guiBlocksBitmap, Bitmap guiBlocks2Bitmap, Bitmap terrainBitmap, Bitmap itemsBitmap) {
+	public static void loadMaterials(XmlPullParser parser, Bitmap guiBlocksBitmap, Bitmap guiBlocks2Bitmap, Bitmap guiBlocks3Bitmap,
+			Bitmap terrainBitmap, Bitmap itemsBitmap) {
 		Map<MaterialKey, MaterialIcon> retval = new HashMap<MaterialKey, MaterialIcon>();
 		try {
 			while (parser.next() != XmlPullParser.END_DOCUMENT) {
@@ -93,6 +99,10 @@ public final class MaterialIconLoader implements Runnable {
 							cellWidthY = 48;
 						} else if (iconSource.equals("guiblocks2")) {
 							sourceBitmap = guiBlocks2Bitmap;
+							cellWidthX = 48;
+							cellWidthY = 48;
+						} else if (iconSource.equals("guiblocks3")) {
+							sourceBitmap = guiBlocks3Bitmap;
 							cellWidthX = 48;
 							cellWidthY = 48;
 						} else if (iconSource.equals("terrain")) {

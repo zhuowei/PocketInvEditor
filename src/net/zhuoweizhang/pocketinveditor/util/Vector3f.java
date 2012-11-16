@@ -41,4 +41,16 @@ public class Vector3f {
 		return this;
 	}
 
+	public int getBlockX() {
+		return (int) x;
+	}
+
+	public int getBlockY() {
+		return (int) y;
+	}
+
+	public int getBlockZ() {
+		return (int) z;
+	}
+
 }

@@ -24,6 +24,7 @@ public class EntityStoreLookupService {
 		addStore(33, new LivingEntityStore<Creeper>());
 		addStore(34, new LivingEntityStore<Skeleton>());
 		addStore(35, new LivingEntityStore<Spider>());
+		addStore(36, new PigZombieEntityStore<PigZombie>());
 		addStore(64, new ItemEntityStore<Item>());
 		addStore(65, new TNTPrimedEntityStore<TNTPrimed>());
 		addStore(80, new ArrowEntityStore<Arrow>());

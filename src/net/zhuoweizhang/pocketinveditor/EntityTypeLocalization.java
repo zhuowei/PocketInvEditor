@@ -23,11 +23,13 @@ public class EntityTypeLocalization {
 		namesMap.put(EntityType.CREEPER, R.string.entity_creeper);
 		namesMap.put(EntityType.SKELETON, R.string.entity_skeleton);
 		namesMap.put(EntityType.SPIDER, R.string.entity_spider);
+		namesMap.put(EntityType.PIG_ZOMBIE, R.string.entity_pigzombie);
 		namesMap.put(EntityType.ITEM, R.string.entity_item);
 		namesMap.put(EntityType.PRIMED_TNT, R.string.entity_primedtnt);
 		namesMap.put(EntityType.ARROW, R.string.entity_arrow);
 		namesMap.put(EntityType.SNOWBALL, R.string.entity_snowball);
 		namesMap.put(EntityType.EGG, R.string.entity_thrownegg);
+		namesMap.put(EntityType.PAINTING, R.string.entity_painting);
 		namesMap.put(EntityType.UNKNOWN, R.string.entity_unknown);
 	}
 

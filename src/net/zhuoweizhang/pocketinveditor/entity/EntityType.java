@@ -12,11 +12,13 @@ public enum EntityType {
 	CREEPER(33, Creeper.class),
 	SKELETON(34, Skeleton.class),
 	SPIDER(35, Spider.class),
+	PIG_ZOMBIE(36, PigZombie.class),
 	ITEM(64, Item.class),
 	PRIMED_TNT(65, TNTPrimed.class),
 	ARROW(80, Arrow.class),
 	SNOWBALL(81, Snowball.class),
 	EGG(82, Egg.class),
+	PAINTING(83, Painting.class),
 	UNKNOWN(-1, null);
 
 	private static Map<Integer, EntityType> idMap = new HashMap<Integer, EntityType>();

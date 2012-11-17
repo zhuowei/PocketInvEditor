@@ -28,6 +28,7 @@
     <string name="item_filter_hint">搜索...</string>
     <string name="world_info_time">时间: </string>
     <string name="world_info_spawn_to_player">重生点移动到玩家位置</string>
+    <string name="world_info_move_player">移动玩家</string>
     <string name="invalid_number">无效数字</string>
     <string name="world_info_time_set_morning">变成日出</string>
     <string name="world_info_time_set_night">变成日落</string>
@@ -53,10 +54,12 @@
     <string name="entity_creeper">爬行者</string>
     <string name="entity_skeleton">骷髅</string>
     <string name="entity_spider">蜘蛛</string>
+    <string name="entity_pigzombie">僵尸猪人</string>
     <string name="entity_primedtnt">激活的TNT</string>
     <string name="entity_arrow">箭</string>
     <string name="entity_snowball">雪球</string>
     <string name="entity_thrownegg">抛出的鸡蛋</string>
+    <string name="entity_painting">画</string>
     <string name="entity_unknown">未知实体种类</string>
     <string name="entities_info">实体信息</string>
     <string name="entities_edit">编辑实体</string>
@@ -80,6 +83,8 @@
     <string name="main_edit_tileentities">编辑箱子</string>
     <string name="warp_to_tile_entity">传送到此箱子</string>
     <string name="get_pro_to_edit_containers">编辑请升级到PocketInvEditor Pro。</string>
+    <string name="get_pro_to_edit_signs">编辑请升级到PocketInvEditor Pro。</string>
+    <string name="get_pro_to_adjust_reactor">编辑请升级到PocketInvEditor Pro。</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

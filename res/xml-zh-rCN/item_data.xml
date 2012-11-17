@@ -33,6 +33,7 @@
         <item hex="16" dec="22" name="青金石块" />
         <item hex="18" dec="24" name="沙石" />
         <item hex="1A" dec="26" name="床（方块）" />
+        <item hex="1E" dec="30" name="蜘蛛网" />
         <item hex="1F" dec="31" name="枯死的灌木" />
         <item hex="23" dec="35" id="0" name="白色羊毛" />
         <item hex="23" dec="35" id="1" name="橙色羊毛" />
@@ -84,9 +85,11 @@
         <item hex="3C" dec="60" name="耕地" />
         <item hex="3D" dec="61" name="熔炉" />
         <item hex="3E" dec="62" name="燃烧中的熔炉" />
+        <item hex="3F" dec="63" name="告示牌 (方块)" />
         <item hex="40" dec="64" name="木门 (方块)" />
         <item hex="41" dec="65" name="梯子" />
         <item hex="43" dec="67" name="石楼梯" />
+        <item hex="44" dec="68" name="墙上的告示牌" />
         <item hex="47" dec="71" name="铁门 (方块)" />
         <item hex="49" dec="73" name="红石矿石" />
         <item hex="4A" dec="74" name="发光的红石矿石" />
@@ -101,8 +104,12 @@
         <item hex="60" dec="96" name="活板门" />
         <item hex="62" dec="98" name="石砖" />
         <item hex="66" dec="102" name="玻璃板"/>
+        <item hex="67" dec="103" name="西瓜"/>
+        <item hex="69" dec="105" name="西瓜梗"/>
         <item hex="6B" dec="107" name="栅栏门"/>
         <item hex="6C" dec="108" name="砖楼梯" />
+        <item hex="F6" dec="246" name="发光的黑曜石" />
+        <item hex="F7" dec="247" name="下界反应核" />
         <item hex="F8" dec="248" name="'更新游戏'方块1" />
         <item hex="F9" dec="249" name="'更新游戏'方块2" />
     </blocks>
@@ -153,6 +160,8 @@
         <item hex="13E" dec="318" name="燧石" />
         <item hex="13F" dec="319" name="生猪排" />
         <item hex="140" dec="320" name="熟猪排" />
+        <item hex="141" dec="321" name="画" />
+        <item hex="143" dec="323" name="告示牌" />
         <item hex="144" dec="324" name="木门" />
         <item hex="14A" dec="330" name="铁门" />
         <item hex="14C" dec="332" name="雪球" />
@@ -187,6 +196,8 @@
         <item hex="161" dec="353" name="糖" />
         <item hex="163" dec="355" name="床" />
         <item hex="167" dec="359" name="剪刀" />
+        <item hex="168" dec="360" name="西瓜片" />
+        <item hex="16A" dec="362" name="西瓜种子" />
         <item hex="16B" dec="363" name="生牛肉" />
         <item hex="16C" dec="364" name="牛排" />
         <item hex="16D" dec="365" name="生鸡肉" />

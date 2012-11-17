@@ -34,6 +34,7 @@
         <item hex="16" dec="22" name="Lapislazuli-Block" />
         <item hex="18" dec="24" name="Sandstein" />
         <item hex="1A" dec="26" name="Bett (Block)" />
+        <item hex="1E" dec="30" name="Spinnennetz" />
         <item hex="1F" dec="31" name="Toter Strauch" />
         <item hex="23" dec="35" id="0" name="Wolle" />
         <item hex="23" dec="35" id="1" name="Orangefarbene Wolle" />
@@ -85,9 +86,11 @@
         <item hex="3C" dec="60" name="Ackerboden" />
         <item hex="3D" dec="61" name="Ofen" />
         <item hex="3E" dec="62" name="Brennender Ofen" />
+        <item hex="3F" dec="63" name="Schild (block)" />
         <item hex="40" dec="64" name="Holztür (block)" />
         <item hex="41" dec="65" name="Leiter" />
         <item hex="43" dec="67" name="Steintreppe" />
+        <item hex="44" dec="68" name="Wandschild" />
         <item hex="47" dec="71" name="Eisentür (block)" />
         <item hex="49" dec="73" name="Redstone-Erz" />
         <item hex="4A" dec="74" name="Leuchtendes Redstoneerz" />
@@ -98,12 +101,17 @@
         <item hex="52" dec="82" name="Lehm (block)" />
         <item hex="53" dec="83" name="Zuckerrohr (block)" />
         <item hex="55" dec="85" name="Zaun" />
+        <item hex="59" dec="89" name="Glowstone" />
         <item hex="5F" dec="95" name="Invisible bedrock"/>
         <item hex="60" dec="96" name="Falltür" />
         <item hex="62" dec="98" name="Steinziegel" />
         <item hex="66" dec="102" name="Glasscheibe"/>
+        <item hex="67" dec="103" name="Melone"/>
+        <item hex="69" dec="105" name="Melonenpflanze"/>
         <item hex="6B" dec="107" name="Zauntor"/>
         <item hex="6C" dec="108" name="Ziegeltreppe" />
+        <item hex="F6" dec="246" name="Leuchtendes Obsidian" />
+        <item hex="F7" dec="247" name="Nether-Reaktorkern" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
         <item hex="F9" dec="249" name="'Update Game' block 2" />
     </blocks>
@@ -154,6 +162,8 @@
         <item hex="13E" dec="318" name="Feuerstein" />
         <item hex="13F" dec="319" name="Schweinefleisch" />
         <item hex="140" dec="320" name="Gebratenes Schweinefleisch" />
+        <item hex="141" dec="321" name="Gemälde" />
+        <item hex="143" dec="323" name="Schild" />
         <item hex="144" dec="324" name="Holztür" />
         <item hex="14A" dec="330" name="Eisentür" />
         <item hex="14C" dec="332" name="Schneeball" />
@@ -188,6 +198,8 @@
         <item hex="161" dec="353" name="Zucker" />
         <item hex="163" dec="355" name="Bett" />
         <item hex="167" dec="359" name="Schere" />
+        <item hex="168" dec="360" name="Melonenscheibe" />
+        <item hex="16A" dec="362" name="Melonenkerne" />
         <item hex="16B" dec="363" name="rohes Rindfleisch" />
         <item hex="16C" dec="364" name="Steak" />
         <item hex="16D" dec="365" name="rohes Hühnchen" />

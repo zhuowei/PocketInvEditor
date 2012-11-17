@@ -406,7 +406,7 @@ public final class NBTConverter {
 	public static TileEntity readTileEntity(String id, CompoundTag tag) {
 		TileEntity entity = createTileEntityById(id);
 		entity.setId(id);
-		TileEntityStore store = TileEntityStoreLookupService.idMap.get(id);
+		TileEntityStore store = TileEntityStoreLookupService.getStoreById(id);
 		if (store == null) {
 			System.err.println("Warning: unknown tile entity id " + id + "; using default tileentity store.");
 			store = TileEntityStoreLookupService.defaultStore;

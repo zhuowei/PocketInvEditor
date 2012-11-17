@@ -31,6 +31,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:maxLines="1"/>
+        <Button
+            android:id="@+id/main_copy_seed"
+            android:text="@string/copy_seed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"/>
     </LinearLayout>
 
     <Button

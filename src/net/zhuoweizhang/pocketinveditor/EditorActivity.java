@@ -12,6 +12,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
+import android.text.ClipboardManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -49,6 +50,8 @@ public class EditorActivity extends Activity {
 	protected Button viewTileEntitiesButton;
 
 	protected Button editTerrainButton;
+
+	protected Button copySeedButton;
 
 	private static boolean hasAwoken = false;
 
@@ -103,6 +106,14 @@ public class EditorActivity extends Activity {
                         }
                 });
 
+                copySeedButton = (Button) findViewById(R.id.main_copy_seed);
+                copySeedButton.setEnabled(false);
+                copySeedButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                copySeedToClipboard();
+                        }
+                });
+
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();
 		if (Material.materials == null) {
@@ -142,6 +153,7 @@ public class EditorActivity extends Activity {
 		entitiesInfoButton.setEnabled(true);
 		viewTileEntitiesButton.setEnabled(true);
 		editTerrainButton.setEnabled(true);
+		copySeedButton.setEnabled(true);
 	}
 
 	private void startInventoryEditor() {
@@ -191,6 +203,15 @@ public class EditorActivity extends Activity {
 
 		Toast.makeText(this, R.string.backup_start, Toast.LENGTH_LONG).show();
 		new Thread(new BackupTask(worldFolder, backupFile)).start();
+	}
+
+	public void copySeedToClipboard() {
+		try {
+			ClipboardManager mgr = (ClipboardManager) this.getSystemService(CLIPBOARD_SERVICE);
+			mgr.setText(Long.toString(level.getRandomSeed()));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void startWorldInfo() {

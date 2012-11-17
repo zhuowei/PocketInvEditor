@@ -13,6 +13,7 @@
     <string name="edit_world_info">编辑世界信息</string>
     <string name="lastplayed">修改时间</string>
     <string name="seed">种子:</string>
+    <string name="copy_seed">复制种子</string>
     <string name="saved">已存储</string>
     <string name="savefailed">存储失败.</string>
     <string name="backup">建立备份</string>

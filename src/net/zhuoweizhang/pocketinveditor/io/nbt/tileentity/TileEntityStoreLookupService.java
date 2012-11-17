@@ -13,14 +13,17 @@ public class TileEntityStoreLookupService {
 
 	public static TileEntityStore<TileEntity> defaultStore = new TileEntityStore<TileEntity>();
 
-	/** Binds a TileEntityStore to a tile entity ID and register the preferred class for the store. */
+	/** Binds a TileEntityStore to a tile entity ID and register the preferred class for the store. 
+	 *  All IDs are stored as uppercase.
+	 */
 	public static void addStore(String id, TileEntityStore store, Class clazz) {
-		idMap.put(id, store);
-		classMap.put(id, clazz);
+		String realId = id.toUpperCase();
+		idMap.put(realId, store);
+		classMap.put(realId, clazz);
 	}
 
 	public static TileEntity createTileEntityById(String id) {
-		Class<TileEntity> clazz = (Class<TileEntity>) classMap.get(id);
+		Class<TileEntity> clazz = (Class<TileEntity>) classMap.get(id.toUpperCase());
 		if (clazz == null) return new TileEntity();
 		try {
 			return clazz.newInstance();
@@ -28,6 +31,10 @@ public class TileEntityStoreLookupService {
 			e.printStackTrace();
 			return new TileEntity();
 		}
+	}
+
+	public static TileEntityStore getStoreById(String id) {
+		return idMap.get(id.toUpperCase());
 	}
 
 	static {

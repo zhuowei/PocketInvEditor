@@ -14,6 +14,7 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -121,6 +122,13 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 	 * @return true if user is prevented from entering next page; false if ok
 	 */
 	protected boolean showUpgradeForEditMessage(TileEntity entity) {
+		if (entity.getClass() == SignTileEntity.class) {
+			Toast.makeText(this, R.string.get_pro_to_edit_signs, Toast.LENGTH_SHORT).show();
+			return true;
+		} else if (entity.getClass() == NetherReactorTileEntity.class) {
+			Toast.makeText(this, R.string.get_pro_to_adjust_reactor, Toast.LENGTH_SHORT).show();
+			return true;
+		}
 		return false;
 	}
 			

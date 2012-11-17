@@ -30,5 +30,6 @@ public class EntityStoreLookupService {
 		addStore(80, new ArrowEntityStore<Arrow>());
 		addStore(81, new ProjectileEntityStore<Snowball>());
 		addStore(82, new ProjectileEntityStore<Egg>());
+		addStore(83, new PaintingEntityStore<Painting>());
 	}
 }

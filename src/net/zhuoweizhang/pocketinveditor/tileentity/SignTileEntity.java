@@ -2,6 +2,8 @@ package net.zhuoweizhang.pocketinveditor.tileentity;
 
 public class SignTileEntity extends TileEntity {
 
+	public static final int NUM_LINES = 4;
+
 	private String[] lines = {"", "", "", ""};
 
 	public String getLine(int index) {

@@ -26,7 +26,7 @@ import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 
-public final class BrowseItemsActivity extends ListActivity implements OnItemClickListener, TextWatcher {
+public class BrowseItemsActivity extends ListActivity implements OnItemClickListener, TextWatcher {
 
 	private ArrayAdapter<Material> itemsListAdapter;
 
@@ -42,7 +42,7 @@ public final class BrowseItemsActivity extends ListActivity implements OnItemCli
 
 		}
 		setContentView(R.layout.item_id_browse);
-		itemsListAdapter = new ArrayAdapter<Material>(this, R.layout.item_id_list_item, R.id.item_id_main_text, Material.materials) {
+		itemsListAdapter = new ArrayAdapter<Material>(this, R.layout.item_id_list_item, R.id.item_id_main_text, getMaterialsForList()) {
 			public View getView(int position, View convertView, ViewGroup parent) {
 				View retval = super.getView(position, convertView, parent);
 				ImageView iconView = (ImageView) retval.findViewById(R.id.item_id_icon);
@@ -88,6 +88,10 @@ public final class BrowseItemsActivity extends ListActivity implements OnItemCli
 
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		itemsListAdapter.getFilter().filter(s);
+	}
+
+	protected List<Material> getMaterialsForList() {
+		return Material.materials;
 	}
 
 }

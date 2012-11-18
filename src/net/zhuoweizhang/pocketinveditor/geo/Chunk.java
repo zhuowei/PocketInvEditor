@@ -108,7 +108,9 @@ public class Chunk {
 		if (x >= WIDTH || y >= HEIGHT || z >= LENGTH || x < 0 || y < 0 || z < 0) {
 			return 0;
 		}
-		return blocks[getOffset(x, y, z)];
+		int typeId = blocks[getOffset(x, y, z)];
+		if (typeId < 0) typeId = 256 + typeId;
+		return typeId;
 	}
 
 	public int getBlockData(int x, int y, int z) {

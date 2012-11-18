@@ -8,6 +8,7 @@ import org.xmlpull.v1.XmlPullParser;
 import android.content.res.XmlResourceParser;
 
 import net.zhuoweizhang.pocketinveditor.material.Material;
+import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 
 public final class MaterialLoader implements Runnable {
 
@@ -51,7 +52,9 @@ public final class MaterialLoader implements Runnable {
 						}
 					}
 					if (itemName != null) {
-						materials.add(new Material(itemId, itemName, itemDamage, itemHasSubtypes));
+						Material matt = new Material(itemId, itemName, itemDamage, itemHasSubtypes);
+						materials.add(matt);
+						Material.materialMap.put(new MaterialKey((short) itemId, itemDamage), matt);
 					}
 				}
 			}

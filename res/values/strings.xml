@@ -86,6 +86,11 @@
     <string name="main_view_tileentities">View tile entities</string>
     <string name="main_edit_tileentities">Edit tile entities</string>
     <string name="warp_to_tile_entity">Warp to tile entity</string>
+    <string name="edit_sign">Edit sign</string>
+    <string name="reactor_is_initialized">Is initialized</string>
+    <string name="reactor_has_finished">Has finished</string>
+    <string name="reactor_progress">Progress</string>
+    <string name="reactor_overtime">Set to overtime mode</string>
     <string name="get_pro_to_edit_containers">Upgrade to PocketInvEditor Pro to edit containers.</string>
     <string name="get_pro_to_edit_signs">Upgrade to PocketInvEditor Pro to edit text on signs.</string>
     <string name="get_pro_to_adjust_reactor">Upgrade to PocketInvEditor Pro to adjust Nether Reactors.</string>
@@ -99,6 +104,9 @@
     <string name="terrain_analyze">Analyze</string>
     <string name="terrain_autoselect">Auto-select region</string>
     <string name="terrain_block_counts">Block counts</string>
+    <string name="terrain_coords_to_player">Use player coordinates</string>
+    <string name="terrain_number_blocks_changed"> blocks changed.</string>
+    <string name="terrain_busy">Reading terrain data...</string>
     <string name="block_type">Block type:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify

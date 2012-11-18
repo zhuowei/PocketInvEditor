@@ -1,10 +1,14 @@
 package net.zhuoweizhang.pocketinveditor.material;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Material {
 
 	public static List<Material> materials;
+
+	public static Map<MaterialKey, Material> materialMap = new HashMap<MaterialKey, Material>();
 
 	private int id;
 

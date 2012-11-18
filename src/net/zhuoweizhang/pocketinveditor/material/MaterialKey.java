@@ -6,6 +6,9 @@ public final class MaterialKey {
 
 	public final short damage;
 
+	/**
+	 * @param damage the damage/data value of the material. -1 is a pseudo-value that tells any replacement routines to match all data values.
+	 */
 	public MaterialKey(short typeId, short damage) {
 		this.typeId = typeId;
 		this.damage = damage;
@@ -31,5 +34,15 @@ public final class MaterialKey {
 	@Override
 	public String toString() {
 		return "MaterialKey[typeId=" + typeId + ";damage=" + damage + "]";
+	}
+
+	public static MaterialKey parse(String str) {
+		String[] parts = str.split(":");
+		if (parts.length == 0) throw new IllegalArgumentException("Why is the string blank?!");
+		else if (parts.length == 1) {
+			return new MaterialKey(Short.parseShort(parts[0]), (short) -1);
+		} else {
+			return new MaterialKey(Short.parseShort(parts[0]), Short.parseShort(parts[1]));
+		}
 	}
 }

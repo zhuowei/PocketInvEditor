@@ -13,6 +13,7 @@
     <string name="edit_world_info">Verander Wereld Informatie</string>
     <string name="lastplayed">Laatst gespeeld</string>
     <string name="seed">Seed:</string>
+    <string name="copy_seed">kopieer seed</string>
     <string name="saved">Opgeslagen</string>
     <string name="savefailed">Opslaan mislukt.</string>
     <string name="backup">Maak Backup</string>
@@ -44,6 +45,7 @@
     <string name="slot_delete">Verwijderen</string>
     <string name="world_info_warp_to_spawn">Ga naar spawn</string>
     <string name="world_info_sideways_mode">Activeer liggende speler model glitch: </string>
+    <string name="world_info_move_player">Verplaats Speler</string>
     <string name="entity_item">Gevallen item</string>
     <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Kip</string>
@@ -53,10 +55,12 @@
     <string name="entity_creeper">Creeper</string>
     <string name="entity_skeleton">Skelet</string>
     <string name="entity_spider">Spin</string>
+    <string name="entity_pigzombie">Zombie Pigman</string>
     <string name="entity_primedtnt">Aangestoken TNT</string>
     <string name="entity_arrow">Pijl</string>
     <string name="entity_snowball">Sneeuwbal</string>
     <string name="entity_thrownegg">Gegooid ei</string>
+    <string name="entity_painting">Schilderij</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
     <string name="entities_edit">Verander entities</string>
@@ -83,6 +87,8 @@
     <string name="main_edit_tileentities">Wijzig kisten</string>
     <string name="warp_to_tile_entity">Teleporteer naar kist</string>
     <string name="get_pro_to_edit_containers">Upgrade naar PocketInvEditor Pro om kist inhoud te veranderen.</string>
+    <string name="get_pro_to_edit_signs">Upgrade naar PocketInvEditor Pro om tekst op sings te veranderen.</string>
+    <string name="get_pro_to_adjust_reactor">Upgrade naar PocketInvEditor Pro om Nether Reactors aan te passen.</string>
     <string name="main_edit_terrain">Bewerk terein</string>
     <string name="terrain_editing">Bewerken van het terein. Dit kan even duren.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>

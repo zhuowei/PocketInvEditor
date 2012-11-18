@@ -107,6 +107,7 @@
     <string name="terrain_coords_to_player">Use player coordinates</string>
     <string name="terrain_number_blocks_changed"> blocks changed.</string>
     <string name="terrain_busy">Reading terrain data...</string>
+    <string name="terrain_experimental">This feature is experimental. There may be lighting glitches in edited areas. Back up world before using.</string>
     <string name="block_type">Block type:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify

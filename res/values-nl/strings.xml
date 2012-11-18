@@ -86,6 +86,11 @@
     <string name="main_view_tileentities">Laat kisten zien</string>
     <string name="main_edit_tileentities">Wijzig kisten</string>
     <string name="warp_to_tile_entity">Teleporteer naar kist</string>
+    <string name="edit_sign">Wijzig sign</string>
+    <string name="reactor_is_initialized">geïnitialiseerd</string>
+    <string name="reactor_has_finished">Is voltooid</string>
+    <string name="reactor_progress">Vooruitgang</string>
+    <string name="reactor_overtime">Zet naar overwerk modus</string>
     <string name="get_pro_to_edit_containers">Upgrade naar PocketInvEditor Pro om kist inhoud te veranderen.</string>
     <string name="get_pro_to_edit_signs">Upgrade naar PocketInvEditor Pro om tekst op sings te veranderen.</string>
     <string name="get_pro_to_adjust_reactor">Upgrade naar PocketInvEditor Pro om Nether Reactors aan te passen.</string>
@@ -99,6 +104,9 @@
     <string name="terrain_analyze">Analyzeren</string>
     <string name="terrain_autoselect">Auto-selecteer regio</string>
     <string name="terrain_block_counts">Aantal blokken</string>
+    <string name="terrain_coords_to_player">Gebruik spelers coördinaten</string>
+    <string name="terrain_number_blocks_changed">blokken veranderd.</string>
+    <string name="terrain_busy">Lezen van de terreingegevens...</string>
     <string name="block_type">Blok type:</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     Dit programma is gratis: je kan het herverdelen en/of veranderen

@@ -17,6 +17,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.entity.Player;
@@ -57,7 +59,21 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 	public void onEntitiesLoaded(EntityDataConverter.EntityData entitiesDat) {
 		EditorActivity.level.setEntities(entitiesDat.entities);
 		EditorActivity.level.setTileEntities(entitiesDat.tileEntities);
-		this.tileEntities = entitiesDat.tileEntities;
+		this.tileEntities = new ArrayList<TileEntity>(entitiesDat.tileEntities);
+		final Vector3f playerLoc = EditorActivity.level.getPlayer().getLocation();
+		Collections.sort(this.tileEntities, new Comparator<TileEntity>() {
+			public int compare(TileEntity a, TileEntity b) {
+				double aDist = a.distanceSquaredTo(playerLoc);
+				double bDist = b.distanceSquaredTo(playerLoc);
+				if (aDist < bDist) {
+					return -1;
+				} else if (aDist > bDist) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		});
 		listAdapter = new ArrayAdapter<TileEntity>(this, R.layout.slot_list_item, R.id.slot_list_main_text, tileEntities) {
 			public View getView(int position, View convertView, ViewGroup parent) {
 				View retval = super.getView(position, convertView, parent);

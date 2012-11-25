@@ -1,5 +1,7 @@
 package net.zhuoweizhang.pocketinveditor.tileentity;
 
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
+
 public class TileEntity {
 
 	private String id = null;
@@ -38,6 +40,10 @@ public class TileEntity {
 
 	public void setZ(int z) {
 		this.z = z;
+	}
+
+	public double distanceSquaredTo(Vector3f other) {
+		return Math.pow(other.x - this.x, 2) + Math.pow(other.y - this.y, 2) + Math.pow(other.z - this.z, 2);
 	}
 
 	@Override

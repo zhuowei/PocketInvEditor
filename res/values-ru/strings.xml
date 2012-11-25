@@ -124,5 +124,4 @@
     <string name="unlicensed_dialog_body">Это приложение не лицензионно. Пожалуйста, приобретите его в Google Play.</string>
     <string name="buy_button">Купить приложение</string>
     <string name="quit_button">Выход</string>
-    <string name="built_for">Для Google Play</string>
 </resources>

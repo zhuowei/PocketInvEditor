@@ -53,4 +53,8 @@ public class Vector3f {
 		return (int) z;
 	}
 
+	public double distSquared(Vector3f other) {
+		return Math.pow(other.x - (double) this.x, 2) + Math.pow(other.y - (double) this.y, 2) + Math.pow(other.z - (double) this.z, 2);
+	}
+
 }

@@ -34,11 +34,14 @@ public final class MaterialIconLoader implements Runnable {
 		AssetManager asMgr = context.getAssets();
 		this.parser = context.getResources().getXml(R.xml.item_icon);
 		try {
+			BitmapFactory.Options bmpOptions = new BitmapFactory.Options();
+			bmpOptions.inDither = false;
+			bmpOptions.inScaled = false;
 			this.guiBlocksBitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks.png"));
 			this.guiBlocks2Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_2.png"));
 			this.guiBlocks3Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_3.png"));
 			this.terrainBitmap = BitmapFactory.decodeStream(asMgr.open("terrain.png"));
-			this.itemsBitmap = BitmapFactory.decodeStream(asMgr.open("gui/items.png"));
+			this.itemsBitmap = BitmapFactory.decodeStream(asMgr.open("gui/items.png"), null, bmpOptions);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -116,7 +119,7 @@ public final class MaterialIconLoader implements Runnable {
 						int sourceRow = Integer.parseInt(iconParams[1]);
 						int sourceColumn = Integer.parseInt(iconParams[2]);
 						Bitmap itemIconBitmap = Bitmap.createBitmap(sourceBitmap, sourceColumn * cellWidthX, 
-							sourceRow * cellWidthY, cellWidthX, cellWidthY);
+							sourceRow * cellWidthY, cellWidthX, cellWidthY, null, false);
 						MaterialIcon materialIcon = new MaterialIcon(itemId, itemDamage, itemIconBitmap);
 						retval.put(key, materialIcon);
 					}

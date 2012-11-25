@@ -14,6 +14,8 @@ public class ChunkManager implements AreaChunkAccess {
 	public static final int WORLD_HEIGHT = 128;
 	public static final int WORLD_LENGTH = 256;
 
+	public static CuboidRegion worldRegion = new CuboidRegion(0, 0, 0, WORLD_WIDTH, WORLD_HEIGHT, WORLD_LENGTH);
+
 	protected Map<Chunk.Key, Chunk> chunks = new HashMap<Chunk.Key, Chunk>();
 
 	protected File chunkFile;
@@ -30,6 +32,7 @@ public class ChunkManager implements AreaChunkAccess {
 
 
 	public Chunk getChunk(int x, int z) {
+		if (lastKey != null && lastKey.getX() == x && lastKey.getZ() == z) return lastChunk;
 		return getChunk(new Chunk.Key(x, z));
 	}
 

@@ -105,7 +105,7 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 		Intent intent = getTileEntityIntent(entity.getClass());
 		if (intent == null) return;
 		intent.putExtras(this.getIntent());
-		intent.putExtra("Index", position);
+		intent.putExtra("Index", EditorActivity.level.getTileEntities().indexOf(entity));
 		startActivity(intent);
 	}
 

@@ -21,6 +21,8 @@ public final class AboutAppActivity extends Activity implements View.OnLongClick
 
 	public TextView appNameText;
 
+	public TextView appVersionText;
+
 	public Button gotoForumsButton;
 
 	public int frame;
@@ -42,6 +44,14 @@ public final class AboutAppActivity extends Activity implements View.OnLongClick
 		if (savedInstanceState != null) {
 			flipActivated = savedInstanceState.getBoolean("flipActivated", false);
 		}
+		appVersionText = (TextView) findViewById(R.id.about_appversiontext);
+		String appVersion = "Top secret alpha pre-prerelease";
+		try {
+			appVersion = this.getPackageManager().getPackageInfo(this.getPackageName(), 0).versionName;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		appVersionText.setText(appVersion);
 	}
 
 	protected void onPause() {

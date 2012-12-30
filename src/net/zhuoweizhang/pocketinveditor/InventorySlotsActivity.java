@@ -42,6 +42,8 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public static final int DIALOG_SLOT_OPTIONS = 805;
 
+	public static final int DIALOG_CLEAR_INVENTORY = 2;
+
 	/** Currently selected slot, used for determining which slot the long-press menu modifies. */
 
 	private int currentlySelectedSlot = -1;
@@ -116,9 +118,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	public void onStart() {
 		super.onStart();
-		if (EditorActivity.level != null && inventoryListAdapter != null) {
-			inventoryListAdapter.notifyDataSetChanged();
-		}
+		EditorActivity.loadLevelData(this, this, this.getIntent().getStringExtra("world"));
 	}
 
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -172,6 +172,9 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu){
 		menu.add(getResources().getString(R.string.add_empty_slot));
+		menu.add(getResources().getString(R.string.loadout_export));
+		menu.add(getResources().getString(R.string.loadout_import));
+		menu.add(getResources().getString(R.string.clear_inventory));
 		return true;
 	}
 
@@ -182,6 +185,15 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 			if (newSlot != null) {
 				openInventoryEditScreen(inventoryListAdapter.getPosition(newSlot), newSlot);
 			}
+			return true;
+		} else if (item.getTitle().equals(getResources().getString(R.string.loadout_export))) {
+			openExportLoadoutActivity();
+			return true;
+		} else if (item.getTitle().equals(getResources().getString(R.string.loadout_import))) {
+			openImportLoadoutActivity();
+			return true;
+		} else if (item.getTitle().equals(getResources().getString(R.string.clear_inventory))) {
+			showDialog(DIALOG_CLEAR_INVENTORY);
 			return true;
 		}
 		return super.onOptionsItemSelected(item);
@@ -221,6 +233,8 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		switch (dialogId) {
 			case DIALOG_SLOT_OPTIONS:
 				return createSlotOptionsDialog();
+			case DIALOG_CLEAR_INVENTORY:
+				return createClearInventoryDialog();
 			default:
 				return super.onCreateDialog(dialogId);
 		}
@@ -255,6 +269,18 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 			}).create();
 	}
 
+	protected AlertDialog createClearInventoryDialog() {
+		return new AlertDialog.Builder(this).setMessage(R.string.clear_inventory_are_you_sure)
+			.setPositiveButton(R.string.clear_inventory_clear, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialog, int which) {
+					EditorActivity.level.getPlayer().getInventory().clear();
+					EditorActivity.save(InventorySlotsActivity.this);
+					inventoryListAdapter.notifyDataSetChanged();
+				}
+			})
+			.setNegativeButton(android.R.string.cancel, null).create();
+	}
+
 	protected void duplicateSelectedSlot() {
 		InventorySlot oldSlot = inventory.get(currentlySelectedSlot);
 		InventorySlot newSlot = addEmptySlot();
@@ -272,5 +298,15 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		inventory.remove(currentlySelectedSlot);
 		inventoryListAdapter.notifyDataSetChanged();
 		EditorActivity.save(this);
+	}
+
+	protected void openImportLoadoutActivity() {
+		Intent intent = new Intent(this, LoadoutImportActivity.class);
+		startActivity(intent);
+	}
+
+	protected void openExportLoadoutActivity() {
+		Intent intent = new Intent(this, LoadoutExportActivity.class);
+		startActivity(intent);
 	}
 }

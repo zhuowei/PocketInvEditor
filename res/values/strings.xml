@@ -115,6 +115,14 @@
     <string name="terrain_region_out_of_world">This region extends beyond the world boundaries. Would you like to automatically shrink it?</string>
     <string name="terrain_unable_to_shrink_region">Unable to shrink region.</string>
     <string name="block_type">Block type:</string>
+    <string name="loadout_export">Export loadout</string>
+    <string name="loadout_import">Import loadout</string>
+    <string name="loadout_import_replace">Replace current inventory</string>
+    <string name="loadout_import_combine">Combine with current inventory</string>
+    <string name="loadout_import_too_many_items">Some items from the loadout cannot fit into the inventory.</string>
+    <string name="clear_inventory">Clear inventory</string>
+    <string name="clear_inventory_are_you_sure">Are you sure you want to clear the inventory?</string>
+    <string name="clear_inventory_clear">Clear</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

@@ -36,13 +36,13 @@ public final class MaterialKey {
 		return "MaterialKey[typeId=" + typeId + ";damage=" + damage + "]";
 	}
 
-	public static MaterialKey parse(String str) {
+	public static MaterialKey parse(String str, int radix) {
 		String[] parts = str.split(":");
 		if (parts.length == 0) throw new IllegalArgumentException("Why is the string blank?!");
 		else if (parts.length == 1) {
-			return new MaterialKey(Short.parseShort(parts[0]), (short) -1);
+			return new MaterialKey(Short.parseShort(parts[0], radix), (short) -1);
 		} else {
-			return new MaterialKey(Short.parseShort(parts[0]), Short.parseShort(parts[1]));
+			return new MaterialKey(Short.parseShort(parts[0], radix), Short.parseShort(parts[1], radix));
 		}
 	}
 }

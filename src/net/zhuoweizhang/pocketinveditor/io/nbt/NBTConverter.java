@@ -439,4 +439,21 @@ public final class NBTConverter {
 		return new CompoundTag("", tags);
 	}
 
+	public static CompoundTag writeLoadout(List<InventorySlot> slots) {
+		ListTag<CompoundTag> slotsTag = writeInventory(slots, "Inventory");
+		return new CompoundTag("", Collections.singletonList((Tag) slotsTag));
+	}
+
+	public static List<InventorySlot> readLoadout(CompoundTag tag) {
+		List<Tag> tags = tag.getValue();
+		for (Tag t: tags) {
+			if (t.getName().equals("Inventory")) {
+				return readInventory((ListTag<CompoundTag>) t);
+			}
+		}
+		System.err.println("Why is this blank?!");
+		return null;
+
+	}
+
 }

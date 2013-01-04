@@ -13,7 +13,7 @@ import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public class SchematicReader {
 
-	public static Schematic read(File file) throws IOException {
+	public static CuboidClipboard read(File file) throws IOException {
 
 		NBTInputStream stream = new NBTInputStream(new FileInputStream(file));
 		CompoundTag mainTag = (CompoundTag) stream.readTag();
@@ -47,7 +47,7 @@ public class SchematicReader {
 				System.err.println("WTF: invalid tag name: " + tagName);
 			}
 		}
-		return new Schematic(new Vector3f(width, height, length), blocks, data);
+		return new CuboidClipboard(new Vector3f(width, height, length), blocks, data);
 	}
 
 

@@ -115,6 +115,12 @@
     <string name="terrain_region_out_of_world">This region extends beyond the world boundaries. Would you like to automatically shrink it?</string>
     <string name="terrain_unable_to_shrink_region">Unable to shrink region.</string>
     <string name="block_type">Block type:</string>
+    <string name="terrain_clipboard">Clipboard: </string>
+    <string name="terrain_copy">Copy</string>
+    <string name="terrain_paste">Paste</string>
+    <string name="terrain_paste_without_air">Paste without air</string>
+    <string name="terrain_save_clipboard">Save</string>
+    <string name="terrain_load_clipboard">Load</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>
     <string name="loadout_import_replace">Replace current inventory</string>

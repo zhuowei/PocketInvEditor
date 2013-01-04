@@ -13,9 +13,9 @@ public final class SchematicTester {
 	public static void main(String[] args) {
 		try {
 			ChunkManager mgr = new ChunkManager(new File(args[0]));
-			Schematic schematic = SchematicReader.read(new File(args[1]));
+			CuboidClipboard schematic = SchematicReader.read(new File(args[1]));
 			Vector3f beginVector = new Vector3f(parseInt(args[2]), parseInt(args[3]), parseInt(args[4]));
-			schematic.place(mgr, beginVector);
+			schematic.place(mgr, beginVector, false);
 					
 			System.out.println("Saving chunks...");
 			System.out.println(mgr.saveAll() + " chunks saved");

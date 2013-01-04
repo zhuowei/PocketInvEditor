@@ -59,6 +59,14 @@ public class CuboidRegion {
 		return width >= 0 && height >= 0 && length >= 0;
 	}
 
+	public Vector3f getSize() {
+		return new Vector3f(width, height, length);
+	}
+
+	public Vector3f getPosition() {
+		return new Vector3f(x, y, z);
+	}
+
 	/** Build a CuboidRegion from two points (inclusive). Calculates width, height, and length from the difference of the two vectors. */
 	public static CuboidRegion fromPoints(Vector3f pos1, Vector3f pos2) {
 		int minX, maxX, minY, maxY, minZ, maxZ;

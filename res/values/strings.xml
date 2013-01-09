@@ -125,6 +125,8 @@
     <string name="terrain_schematic_imported">Imported schematic to clipboard</string>
     <string name="terrain_schematic_export_fail">Failed to export clipboard</string>
     <string name="terrain_schematic_import_fail">Failed to import clipboard</string>
+    <string name="terrain_schematic_input_name">Name for schematic:</string>
+    <string name="file_exists">A file with this name already exists</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>
     <string name="loadout_import_replace">Replace current inventory</string>
@@ -150,6 +152,7 @@
     This program contains a modified version of item-data.xml from TexasGamer\'s itemid plugin.\n
     This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
     The item icons used in this program are created by Mojang. </string>
+    <string name="about_pro_library_credits">This program uses the aFileChooser library by Paul Burke. For licensing information, check the Minecraft Forums thread.</string>
     <string name="about_thankscommunity">This application was made possible by the work of many talented translators, testers, and programmers. Thank you.\nView the Minecraft Forums thread for a list of contributors.</string>
     <string name="about_go_to_forums">Open Minecraft Forums thread for PocketInvEditor</string>
     <string name="add_empty_slot">Add Empty Slot</string>

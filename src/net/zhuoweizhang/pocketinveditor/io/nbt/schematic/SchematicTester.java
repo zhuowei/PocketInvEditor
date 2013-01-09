@@ -12,7 +12,7 @@ public final class SchematicTester {
 	/** shoves a schematic into a level based on command line prompts */
 	public static void main(String[] args) {
 		try {
-			//ChunkManager mgr = new ChunkManager(new File(args[0]));
+			ChunkManager mgr = new ChunkManager(new File(args[0]));
 			CuboidClipboard schematic = SchematicIO.read(new File(args[1]));
 			SchematicIO.save(schematic, new File(args[1] + ".new"));
 			Vector3f beginVector = new Vector3f(parseInt(args[2]), parseInt(args[3]), parseInt(args[4]));

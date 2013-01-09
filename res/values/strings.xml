@@ -119,8 +119,12 @@
     <string name="terrain_copy">Copy</string>
     <string name="terrain_paste">Paste</string>
     <string name="terrain_paste_without_air">Paste without air</string>
-    <string name="terrain_save_clipboard">Save</string>
-    <string name="terrain_load_clipboard">Load</string>
+    <string name="terrain_schematic_export">Export clipboard</string>
+    <string name="terrain_schematic_import">Import clipboard</string>
+    <string name="terrain_schematic_exported">Clipboard exported to schematic</string>
+    <string name="terrain_schematic_imported">Imported schematic to clipboard</string>
+    <string name="terrain_schematic_export_fail">Failed to export clipboard</string>
+    <string name="terrain_schematic_import_fail">Failed to import clipboard</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>
     <string name="loadout_import_replace">Replace current inventory</string>
@@ -153,4 +157,6 @@
     <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Google Play.</string>
     <string name="buy_button">Buy app</string>
     <string name="quit_button">Exit</string>
+    <!-- Anti-piracy messages go here -->
+    <string name="shame_on_you"></string>
 </resources>

@@ -1,0 +1,5 @@
+<MimeTypes>
+<!-- specifies MIME types for Minecraft-related files for picking files -->
+<type mimetype="application/x-schematic" extension=".schematic"/>
+
+</MimeTypes>

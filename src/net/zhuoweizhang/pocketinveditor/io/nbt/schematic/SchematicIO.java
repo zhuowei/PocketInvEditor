@@ -2,7 +2,7 @@ package net.zhuoweizhang.pocketinveditor.io.nbt.schematic;
 
 import java.io.*;
 
-import java.util.List;
+import java.util.*;
 
 import org.spout.nbt.*;
 
@@ -11,7 +11,7 @@ import org.spout.nbt.stream.*;
 import net.zhuoweizhang.pocketinveditor.geo.*;
 import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
-public class SchematicReader {
+public class SchematicIO {
 
 	public static CuboidClipboard read(File file) throws IOException {
 
@@ -48,6 +48,24 @@ public class SchematicReader {
 			}
 		}
 		return new CuboidClipboard(new Vector3f(width, height, length), blocks, data);
+	}
+
+	public static void save(CuboidClipboard clipboard, File file) throws IOException {
+		List<Tag> tags = new ArrayList<Tag>();
+		tags.add(new ShortTag("Width", (short) clipboard.getWidth()));
+		tags.add(new ShortTag("Height", (short) clipboard.getHeight()));
+		tags.add(new ShortTag("Length", (short) clipboard.getLength()));
+		tags.add(new StringTag("Materials", "Alpha")); //technically Pocket uses different materails, but this is the closest
+		tags.add(new ByteArrayTag("Blocks", clipboard.blocks));
+		tags.add(new ByteArrayTag("Data", clipboard.metaData));
+		//TODO: entities
+		tags.add(new ListTag<CompoundTag>("Entities", CompoundTag.class, (List<CompoundTag>) Collections.EMPTY_LIST));
+		tags.add(new ListTag<CompoundTag>("TileEntities", CompoundTag.class, (List<CompoundTag>) Collections.EMPTY_LIST));
+		CompoundTag mainTag = new CompoundTag("Schematic", tags);
+
+		NBTOutputStream stream = new NBTOutputStream(new FileOutputStream(file));
+		stream.writeTag(mainTag);
+		stream.close();
 	}
 
 

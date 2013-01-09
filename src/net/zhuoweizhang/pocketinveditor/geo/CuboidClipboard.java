@@ -9,7 +9,7 @@ public class CuboidClipboard implements AreaBlockAccess, SizeLimitedArea {
 
 	protected int width, height, length;
 
-	protected byte[] blocks, metaData;
+	public byte[] blocks, metaData;
 
 	public CuboidClipboard(Vector3f size, byte[] blocks, byte[] data) {
 		this.width = (int) size.getX();
@@ -88,4 +88,5 @@ public class CuboidClipboard implements AreaBlockAccess, SizeLimitedArea {
 			}
 		}
 	}
+
 }

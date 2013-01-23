@@ -178,6 +178,15 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		}
 	}
 
+	public void dyeAllSheep(byte colour) {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (Entity e: entities) {
+			if (e instanceof Sheep) {
+				((Sheep) e).setColor(colour);
+			}
+		}
+	}
+
 	public static class LoadEntitiesTask implements Runnable {
 
 		private final Activity activity;

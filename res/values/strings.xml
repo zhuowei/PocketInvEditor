@@ -127,6 +127,9 @@
     <string name="terrain_schematic_export_fail">Failed to export clipboard</string>
     <string name="terrain_schematic_import_fail">Failed to import clipboard</string>
     <string name="terrain_schematic_input_name">Name for schematic:</string>
+    <string name="terrain_radius">Radius:</string>
+    <string name="terrain_hollow_sphere">Hollow sphere</string>
+    <string name="terrain_solid_sphere">Solid sphere</string>
     <string name="file_exists">A file with this name already exists</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>

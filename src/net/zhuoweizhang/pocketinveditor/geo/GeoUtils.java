@@ -5,6 +5,7 @@ import java.util.Map;
 
 import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
 import net.zhuoweizhang.pocketinveditor.material.MaterialCount;
+import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public final class GeoUtils {
 
@@ -54,5 +55,31 @@ public final class GeoUtils {
 				}
 			}
 		}
+	}
+
+	public static int makeSphere(AreaBlockAccess mgr, Vector3f center, int radius, MaterialKey to, boolean hollow) {
+		return makeSphere(mgr, center.getBlockX(), center.getBlockY(), center.getBlockZ(), radius, to, hollow);
+	}
+
+	public static int makeSphere(AreaBlockAccess mgr, int centerX, int centerY, int centerZ, int radius, MaterialKey to, boolean hollow) {
+		int replacedCount = 0;
+
+		int radiusSquared = radius * radius;
+		int hollowRadiusSquared = (radius - 1) * (radius - 1);
+		
+		for (int x = -radius; x < radius; ++x) {
+			for (int z = -radius; z < radius; ++z) {
+				for (int y = -radius; y < radius; ++y) {
+					double distFromCenter = Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2);
+					if (distFromCenter <= radiusSquared && (!hollow || distFromCenter >= hollowRadiusSquared)) {
+						mgr.setBlockTypeId(centerX + x, centerY + y, centerZ + z, to.typeId);
+						mgr.setBlockData(centerX + x, centerY + y, centerZ + z, to.damage);
+						++replacedCount;
+					}
+				}
+			}
+		}
+		return replacedCount;
+
 	}
 }

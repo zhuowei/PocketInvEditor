@@ -26,7 +26,7 @@ public enum DyeColor {
 	}
 
 	DyeColor(int red, int green, int blue) {
-		this((red << 24) | (green << 16) | blue);
+		this(0xff000000 | (red << 16) | (green << 8) | blue);
 	}
 
 	public byte getWoolData() {

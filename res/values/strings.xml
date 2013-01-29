@@ -130,6 +130,8 @@
     <string name="terrain_radius">Radius:</string>
     <string name="terrain_hollow_sphere">Hollow sphere</string>
     <string name="terrain_solid_sphere">Solid sphere</string>
+    <string name="terrain_hollow_dome">Hollow dome</string>
+    <string name="terrain_solid_dome">Solid dome</string>
     <string name="file_exists">A file with this name already exists</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>

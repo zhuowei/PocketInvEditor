@@ -82,4 +82,30 @@ public final class GeoUtils {
 		return replacedCount;
 
 	}
+
+	public static int makeDome(AreaBlockAccess mgr, Vector3f center, int radius, MaterialKey to, boolean hollow) {
+		return makeDome(mgr, center.getBlockX(), center.getBlockY(), center.getBlockZ(), radius, to, hollow);
+	}
+
+	public static int makeDome(AreaBlockAccess mgr, int centerX, int centerY, int centerZ, int radius, MaterialKey to, boolean hollow) {
+		int replacedCount = 0;
+
+		int radiusSquared = radius * radius;
+		int hollowRadiusSquared = (radius - 1) * (radius - 1);
+		
+		for (int x = -radius; x < radius; ++x) {
+			for (int z = -radius; z < radius; ++z) {
+				for (int y = 0; y < radius; ++y) {
+					double distFromCenter = Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2);
+					if (distFromCenter <= radiusSquared && (!hollow || distFromCenter >= hollowRadiusSquared)) {
+						mgr.setBlockTypeId(centerX + x, centerY + y, centerZ + z, to.typeId);
+						mgr.setBlockData(centerX + x, centerY + y, centerZ + z, to.damage);
+						++replacedCount;
+					}
+				}
+			}
+		}
+		return replacedCount;
+
+	}
 }

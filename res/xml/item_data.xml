@@ -30,7 +30,9 @@
         <item hex="14" dec="20" name="Glass" />
         <item hex="15" dec="21" name="Lapis Lazuli Ore" />
         <item hex="16" dec="22" name="Lapis Lazuli Block" />
-        <item hex="18" dec="24" name="Sandstone" />
+        <item hex="18" dec="24" id="0" name="Sandstone" />
+        <item hex="18" dec="24" id="1" name="Chiseled Sandstone" />
+        <item hex="18" dec="24" id="2" name="Smooth Sandstone" />
         <item hex="1A" dec="26" name="Bed (Block)" />
         <item hex="1E" dec="30" name="Cobweb" />
         <item hex="1F" dec="31" name="Dead Shrub (Tall Grass Retexture)" />
@@ -99,15 +101,27 @@
         <item hex="52" dec="82" name="Clay Block" />
         <item hex="53" dec="83" name="Sugar Cane" />
         <item hex="55" dec="85" name="Fence" />
+        <item hex="57" dec="87" name="Netherrack" />
         <item hex="59" dec="89" name="Glowstone" />
         <item hex="5F" dec="95" name="Invisible bedrock" />
         <item hex="60" dec="96" name="Trapdoor" />
-        <item hex="62" dec="98" name="Stone Brick" />
+        <item hex="62" dec="98" id="0" name="Stone Bricks" />
+        <item hex="62" dec="98" id="1" name="Stone Bricks (mossy)" />
+        <item hex="62" dec="98" id="2" name="Stone Bricks (cracked)" />
+        <item hex="62" dec="98" id="3" name="Stone Bricks (chiseled)" />
         <item hex="66" dec="102" name="Glass Pane"/>
         <item hex="67" dec="103" name="Melon"/>
         <item hex="69" dec="105" name="Melon Stem"/>
         <item hex="6B" dec="107" name="Fence Gate"/>
         <item hex="6C" dec="108" name="Brick Stairs" />
+        <item hex="6D" dec="109" name="Stone Brick Stairs" />
+        <item hex="70" dec="112" name="Nether Brick (block)" />
+        <item hex="72" dec="114" name="Nether Brick Stairs" />
+        <item hex="80" dec="128" name="Sandstone Stairs" />
+        <iten hex="9B" dec="155" id="0" name="Block of Quartz" />
+        <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
+        <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
+        <iten hex="9C" dec="156" name="Quartz Stairs" />
         <item hex="F6" dec="246" name="Glowing Obsidian" />
         <item hex="F7" dec="247" name="Nether Reactor Core" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
@@ -157,6 +171,26 @@
         <item hex="127" dec="295" name="Seeds (Wheat)" />
         <item hex="128" dec="296" name="Wheat" />
         <item hex="129" dec="297" name="Bread" />
+        <item hex="12A" dec="298" name="Leather Helmet" />
+        <item hex="12B" dec="299" name="Leather Chestplate" />
+        <item hex="12C" dec="300" name="Leather Leggings" />
+        <item hex="12D" dec="301" name="Leather Boots" />
+        <item hex="12E" dec="302" name="Chainmail Helmet" />
+        <item hex="12F" dec="303" name="Chainmail Chestplate" />
+        <item hex="130" dec="304" name="Chainmail Leggings" />
+        <item hex="131" dec="305" name="Chainmail Boots" />
+        <item hex="132" dec="306" name="Iron Helmet" />
+        <item hex="133" dec="307" name="Iron Chestplate" />
+        <item hex="134" dec="308" name="Iron Leggings" />
+        <item hex="135" dec="309" name="Iron Boots" />
+        <item hex="136" dec="310" name="Diamond Helmet" />
+        <item hex="137" dec="311" name="Diamond Chestplate" />
+        <item hex="138" dec="312" name="Diamond Leggings" />
+        <item hex="139" dec="313" name="Diamond Boots" />
+        <item hex="13A" dec="314" name="Gold Helmet" />
+        <item hex="13B" dec="315" name="Gold Chestplate" />
+        <item hex="13C" dec="316" name="Gold Leggings" />
+        <item hex="13D" dec="317" name="Gold Boots" />
         <item hex="13E" dec="318" name="Flint" />
         <item hex="13F" dec="319" name="Raw Porkchop" />
         <item hex="140" dec="320" name="Cooked Porkchop" />
@@ -202,6 +236,7 @@
         <item hex="16C" dec="364" name="Steak" />
         <item hex="16D" dec="365" name="Raw Chicken" />
         <item hex="16E" dec="366" name="Cooked Chicken" />
+        <item hex="195" dec="405" name="Nether Brick" />
         <item hex="1C8" dec="456" name="Camera" />
     </items>
 </data>

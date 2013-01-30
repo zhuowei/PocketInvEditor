@@ -153,7 +153,30 @@
     <item typeId="295" icon="items,0,9"/>
     <item typeId="296" icon="items,1,9"/>
     <item typeId="297" icon="items,2,9"/>
+
+    <!-- armour -->
+    <item typeId="298" icon="items,0,0"/>
+    <item typeId="299" icon="items,1,0"/>
+    <item typeId="300" icon="items,2,0"/>
+    <item typeId="301" icon="items,3,0"/>
+    <item typeId="302" icon="items,0,1"/>
+    <item typeId="303" icon="items,1,1"/>
+    <item typeId="304" icon="items,2,1"/>
+    <item typeId="305" icon="items,3,1"/>
+    <item typeId="306" icon="items,0,2"/>
+    <item typeId="307" icon="items,1,2"/>
+    <item typeId="308" icon="items,2,2"/>
+    <item typeId="309" icon="items,3,2"/>
+    <item typeId="310" icon="items,0,3"/>
+    <item typeId="311" icon="items,1,3"/>
+    <item typeId="312" icon="items,2,3"/>
+    <item typeId="313" icon="items,3,3"/>
+    <item typeId="314" icon="items,0,4"/>
+    <item typeId="315" icon="items,1,4"/>
+    <item typeId="316" icon="items,2,4"/>
+    <item typeId="317" icon="items,3,4"/>
     <item typeId="318" icon="items,0,6"/>
+
     <item typeId="319" icon="items,5,7"/>
     <item typeId="320" icon="items,5,8"/>
     <item typeId="321" icon="items,1,10"/>

@@ -31,7 +31,9 @@
         <item hex="14" dec="20" name="玻璃" />
         <item hex="15" dec="21" name="青金石矿石" />
         <item hex="16" dec="22" name="青金石块" />
-        <item hex="18" dec="24" name="沙石" />
+        <item hex="18" dec="24" id="0" name="沙石" />
+        <item hex="18" dec="24" id="1" name="錾制沙石" />
+        <item hex="18" dec="24" id="2" name="平滑沙石" />
         <item hex="1A" dec="26" name="床（方块）" />
         <item hex="1E" dec="30" name="蜘蛛网" />
         <item hex="1F" dec="31" name="枯死的灌木" />
@@ -100,14 +102,27 @@
         <item hex="52" dec="82" name="粘土块" />
         <item hex="53" dec="83" name="甘蔗" />
         <item hex="55" dec="85" name="栅栏" />
+        <item hex="57" dec="87" name="地狱岩" />
+        <item hex="59" dec="89" name="荧石" />
         <item hex="5F" dec="95" name="隐形基岩"/>
         <item hex="60" dec="96" name="活板门" />
-        <item hex="62" dec="98" name="石砖" />
+        <item hex="62" dec="98" id="0" name="石砖" />
+        <item hex="62" dec="98" id="1" name="苔石砖" />
+        <item hex="62" dec="98" id="2" name="裂石砖" />
+        <item hex="62" dec="98" id="3" name="錾制石砖" />
         <item hex="66" dec="102" name="玻璃板"/>
         <item hex="67" dec="103" name="西瓜"/>
         <item hex="69" dec="105" name="西瓜梗"/>
         <item hex="6B" dec="107" name="栅栏门"/>
         <item hex="6C" dec="108" name="砖楼梯" />
+        <item hex="6D" dec="109" name="石砖楼梯" />
+        <item hex="70" dec="112" name="地狱砖 (方块)" />
+        <item hex="72" dec="114" name="地狱砖楼梯" />
+        <item hex="80" dec="128" name="沙石楼梯" />
+        <iten hex="9B" dec="155" id="0" name="石英方块" />
+        <iten hex="9B" dec="155" id="1" name="錾石英方块" />
+        <iten hex="9B" dec="155" id="2" name="柱石英方块" />
+        <iten hex="9C" dec="156" name="石英楼梯" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />
         <item hex="F8" dec="248" name="'更新游戏'方块1" />
@@ -157,6 +172,26 @@
         <item hex="127" dec="295" name="小麦种子" />
         <item hex="128" dec="296" name="小麦" />
         <item hex="129" dec="297" name="面包" />
+        <item hex="12A" dec="298" name="皮革帽子" />
+        <item hex="12B" dec="299" name="皮革外套" />
+        <item hex="12C" dec="300" name="皮革裤子" />
+        <item hex="12D" dec="301" name="皮革靴子" />
+        <item hex="12E" dec="302" name="锁链头盔" />
+        <item hex="12F" dec="303" name="锁链胸甲" />
+        <item hex="130" dec="304" name="锁链护腿" />
+        <item hex="131" dec="305" name="锁链靴子" />
+        <item hex="132" dec="306" name="铁头盔" />
+        <item hex="133" dec="307" name="铁胸甲" />
+        <item hex="134" dec="308" name="铁护腿" />
+        <item hex="135" dec="309" name="铁靴子" />
+        <item hex="136" dec="310" name="钻石头盔" />
+        <item hex="137" dec="311" name="钻石胸甲" />
+        <item hex="138" dec="312" name="钻石护腿" />
+        <item hex="139" dec="313" name="钻石靴子" />
+        <item hex="13A" dec="314" name="金头盔" />
+        <item hex="13B" dec="315" name="金胸甲" />
+        <item hex="13C" dec="316" name="金护腿" />
+        <item hex="13D" dec="317" name="金靴子" />
         <item hex="13E" dec="318" name="燧石" />
         <item hex="13F" dec="319" name="生猪排" />
         <item hex="140" dec="320" name="熟猪排" />
@@ -202,6 +237,7 @@
         <item hex="16C" dec="364" name="牛排" />
         <item hex="16D" dec="365" name="生鸡肉" />
         <item hex="16E" dec="366" name="熟鸡肉" />
+        <item hex="195" dec="405" name="地狱砖" />
         <item hex="1C8" dec="456" name="照相机" />
     </items>
 </data>

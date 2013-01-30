@@ -25,6 +25,10 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 
 	private List<Entity> entitiesList;
 
+	public static final int BABY_GROWTH_TICKS = -24000;
+
+	public static final int BREED_TICKS = 9999; //wait until release to find out actual value
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.entities_info);
@@ -143,11 +147,11 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		return removedCount;
 	}
 
-	public void babyfyMobs(EntityType type) {
+	public void setAllAnimalsAge(EntityType type, int ticks) {
 		List<Entity> entities = EditorActivity.level.getEntities();
 		for (Entity e: entities) {
 			if (e.getEntityType() == type) {
-				((Animal) e).setAge(-24000);
+				((Animal) e).setAge(ticks);
 			}
 		}
 	}
@@ -183,6 +187,35 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		for (Entity e: entities) {
 			if (e instanceof Sheep) {
 				((Sheep) e).setColor(colour);
+			}
+		}
+	}
+
+	public void setAllBreeding(EntityType type, int breedTicks) {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (Entity e: entities) {
+			if (e.getEntityType() == type) {
+				//((Animal) e).setInLove(breedTicks);
+			}
+		}
+	}
+
+	public void spawnOnSigns() {
+		List<Entity> entities = EditorActivity.level.getEntities();
+		List<TileEntity> tileEntities = EditorActivity.level.getTileEntities();
+		String spawnedText = "Spawned!";
+		for (TileEntity t: tileEntities) {
+			if (t instanceof SignTileEntity) {
+				SignTileEntity sign = (SignTileEntity) t;
+				if (sign.getLine(2).equals(spawnedText)) {
+					continue;
+				}
+				int count = 1;
+				try {
+					count = Integer.parseInt(sign.getLine(1));
+				} catch (Exception e) {
+					continue;
+				}
 			}
 		}
 	}

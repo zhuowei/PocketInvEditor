@@ -61,6 +61,7 @@
     <string name="entity_snowball">Snowball</string>
     <string name="entity_thrownegg">Thrown egg</string>
     <string name="entity_painting">Painting</string>
+    <string name="entity_fallingsand">Falling sand</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
     <string name="entities_edit">Edit entities</string>
@@ -78,6 +79,9 @@
     <string name="apocowlypse">Nothing here</string>
     <string name="entities_angle">Angle: </string>
     <string name="entities_dye_all_sheep">Dye all sheep</string>
+    <string name="entities_age_all_animals">Age all animals</string>
+    <string name="entities_breed_all_animals">Breed All</string>
+    <string name="entities_unbreed_all_animals">Unbreed All</string>
     <string name="noworldsfound_title">Y U NO WORLDS?!</string>
     <string name="noworldsfound_text">PocketInvEditor was unable to find any Minecraft PE worlds on this device.\n
     This program is designed to edit worlds created by the full version of Minecraft Pocket Edition by Mojang.</string>

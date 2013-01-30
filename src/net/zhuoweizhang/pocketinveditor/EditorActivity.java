@@ -168,6 +168,7 @@ public class EditorActivity extends Activity {
 						System.out.println("Saving level.dat for Activity " + context);
 						LevelDataConverter.write(level, new File(worldFolder, "level.dat"));
 					}
+					System.out.println("... LIKE A BOSS!"); //For @joshhuelsman
 					if (context != null) {
 						context.runOnUiThread(new Runnable() {
 							public void run() {

@@ -123,10 +123,14 @@
         <iten hex="9B" dec="155" id="1" name="錾石英方块" />
         <iten hex="9B" dec="155" id="2" name="柱石英方块" />
         <iten hex="9C" dec="156" name="石英楼梯" />
+        <item hex="F5" dec="245" name="切石机" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />
         <item hex="F8" dec="248" name="'更新游戏'方块1" />
         <item hex="F9" dec="249" name="'更新游戏'方块2" />
+        <item hex="FD" dec="253" name="故障草 (grass_carried)" />
+        <item hex="FE" dec="254" name="故障叶 (leaves_carried)" />
+        <item hex="FF" dec="255" name="故障石 (info_reserved6)" />
     </blocks>
     <items>
         <item hex="100" dec="256" name="铁锹" />

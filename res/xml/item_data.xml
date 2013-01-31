@@ -122,10 +122,14 @@
         <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
         <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
         <iten hex="9C" dec="156" name="Quartz Stairs" />
+        <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Glowing Obsidian" />
         <item hex="F7" dec="247" name="Nether Reactor Core" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
         <item hex="F9" dec="249" name="'Update Game' block 2" />
+        <item hex="FD" dec="253" name="Glitch Grass (grass_carried)" />
+        <item hex="FE" dec="254" name="Glitch Leaves (leaves_carried)" />
+        <item hex="FF" dec="255" name="Glitch Stone (info_reserved6)" />
     </blocks>
     <items>
         <item hex="100" dec="256" name="Iron Shovel" />

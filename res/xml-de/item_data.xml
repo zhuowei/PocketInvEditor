@@ -32,7 +32,9 @@
         <item hex="14" dec="20" name="Glas" />
         <item hex="15" dec="21" name="Lapislazuli-Erz" />
         <item hex="16" dec="22" name="Lapislazuli-Block" />
-        <item hex="18" dec="24" name="Sandstein" />
+        <item hex="18" dec="24" id="0" name="Sandstein" />
+        <item hex="18" dec="24" id="1" name="Gemeißelter Sandstein" />
+        <item hex="18" dec="24" id="2" name="Glatter Sandstein" />
         <item hex="1A" dec="26" name="Bett (Block)" />
         <item hex="1E" dec="30" name="Spinnennetz" />
         <item hex="1F" dec="31" name="Toter Strauch" />
@@ -101,19 +103,35 @@
         <item hex="52" dec="82" name="Lehm (block)" />
         <item hex="53" dec="83" name="Zuckerrohr (block)" />
         <item hex="55" dec="85" name="Zaun" />
+        <item hex="57" dec="87" name="Netherstein" />
         <item hex="59" dec="89" name="Glowstone" />
         <item hex="5F" dec="95" name="Invisible bedrock"/>
         <item hex="60" dec="96" name="Falltür" />
-        <item hex="62" dec="98" name="Steinziegel" />
+        <item hex="62" dec="98" id="0" name="Steinziegel" />
+        <item hex="62" dec="98" id="1" name="Bemooste Steinziegel" />
+        <item hex="62" dec="98" id="2" name="Rissiger Steinziegel" />
+        <item hex="62" dec="98" id="3" name="Gemeißelte Steinziegel" />
         <item hex="66" dec="102" name="Glasscheibe"/>
         <item hex="67" dec="103" name="Melone"/>
         <item hex="69" dec="105" name="Melonenpflanze"/>
         <item hex="6B" dec="107" name="Zauntor"/>
+        <item hex="6D" dec="109" name="Steinziegeltreppe" />
+        <item hex="70" dec="112" name="Netherziegel (block)" />
+        <item hex="72" dec="114" name="Netherziegeltreppe" />
+        <item hex="80" dec="128" name="Sandsteintreppe" />
+        <iten hex="9B" dec="155" id="0" name="Quarzblock" />
+        <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
+        <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
+        <iten hex="9C" dec="156" name="Quarztreppe" />
+        <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="6C" dec="108" name="Ziegeltreppe" />
         <item hex="F6" dec="246" name="Leuchtendes Obsidian" />
         <item hex="F7" dec="247" name="Nether-Reaktorkern" />
         <item hex="F8" dec="248" name="'Update Game' block 1" />
         <item hex="F9" dec="249" name="'Update Game' block 2" />
+        <item hex="FD" dec="253" name="Glitch Grass (grass_carried)" />
+        <item hex="FE" dec="254" name="Glitch Leaves (leaves_carried)" />
+        <item hex="FF" dec="255" name="Glitch Stone (info_reserved6)" />
     </blocks>
     <items>
         <item hex="100" dec="256" name="Eisenschaufel" />
@@ -159,6 +177,26 @@
         <item hex="127" dec="295" name="Samen" />
         <item hex="128" dec="296" name="Weizen" />
         <item hex="129" dec="297" name="Brot" />
+        <item hex="12A" dec="298" name="Lederkappe" />
+        <item hex="12B" dec="299" name="Lederweste" />
+        <item hex="12C" dec="300" name="Lederhose" />
+        <item hex="12D" dec="301" name="Lederstiefel" />
+        <item hex="12E" dec="302" name="Kettenhaube" />
+        <item hex="12F" dec="303" name="Kettenhemd" />
+        <item hex="130" dec="304" name="Kettenhose" />
+        <item hex="131" dec="305" name="Kettenstiefel" />
+        <item hex="132" dec="306" name="Eisenhelm" />
+        <item hex="133" dec="307" name="Eisenbrustpanzer" />
+        <item hex="134" dec="308" name="Eisenbeinschutz" />
+        <item hex="135" dec="309" name="Eisenstiefel" />
+        <item hex="136" dec="310" name="Diamanthelm" />
+        <item hex="137" dec="311" name="Diamantbrustpanzer" />
+        <item hex="138" dec="312" name="Diamantbeinschutz" />
+        <item hex="139" dec="313" name="Diamantstiefel" />
+        <item hex="13A" dec="314" name="Goldhelm" />
+        <item hex="13B" dec="315" name="Goldener Brustpanzer" />
+        <item hex="13C" dec="316" name="Goldene Gamaschen" />
+        <item hex="13D" dec="317" name="Goldstiefel" />
         <item hex="13E" dec="318" name="Feuerstein" />
         <item hex="13F" dec="319" name="Schweinefleisch" />
         <item hex="140" dec="320" name="Gebratenes Schweinefleisch" />
@@ -204,6 +242,7 @@
         <item hex="16C" dec="364" name="Steak" />
         <item hex="16D" dec="365" name="rohes Hühnchen" />
         <item hex="16E" dec="366" name="gebratenes Hühnchen" />
+        <item hex="195" dec="405" name="Netherziegel" />
         <item hex="1C8" dec="456" name="Kamera" />
     </items>
 </data>

@@ -15,6 +15,7 @@ public enum EntityType {
 	PIG_ZOMBIE(36, PigZombie.class),
 	ITEM(64, Item.class),
 	PRIMED_TNT(65, TNTPrimed.class),
+	FALLING_BLOCK(66, FallingBlock.class),
 	ARROW(80, Arrow.class),
 	SNOWBALL(81, Snowball.class),
 	EGG(82, Egg.class),

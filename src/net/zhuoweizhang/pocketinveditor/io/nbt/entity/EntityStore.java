@@ -20,23 +20,28 @@ public class EntityStore<T extends Entity> {
 
 	@SuppressWarnings("unchecked")
 	public void loadTag(T entity, Tag tag) {
-		if (tag.getName().equals("Pos")) {
+		String name = tag.getName();
+		if (name.equals("Pos")) {
 			entity.setLocation(NBTConverter.readVector((ListTag<FloatTag>) tag));
-		} else if (tag.getName().equals("Motion")) {
+		} else if (name.equals("Motion")) {
 			entity.setVelocity(NBTConverter.readVector((ListTag<FloatTag>) tag));
-		} else if (tag.getName().equals("Air")) {
+		} else if (name.equals("Air")) {
 			entity.setAirTicks(((ShortTag) tag).getValue());
-		} else if (tag.getName().equals("Fire")) {
+		} else if (name.equals("Fire")) {
 			entity.setFireTicks(((ShortTag) tag).getValue());
-		} else if (tag.getName().equals("FallDistance")) {
+		} else if (name.equals("FallDistance")) {
 			entity.setFallDistance(((FloatTag) tag).getValue());
-		} else if (tag.getName().equals("Rotation")) {
+		} else if (name.equals("Rotation")) {
 			List<FloatTag> rotationTags = ((ListTag<FloatTag>) tag).getValue();
 			entity.setYaw(rotationTags.get(0).getValue());
 			entity.setPitch(rotationTags.get(1).getValue());
-		} else if (tag.getName().equals("OnGround")) {
+		} else if (name.equals("OnGround")) {
 			entity.setOnGround(((ByteTag) tag).getValue() > 0 ? true : false);
-		}
+		}/* else if (name.equals("id")) { Uncomment for debug output when reading unknown tags
+			//nothing - handled.
+		} else {
+			System.err.println("Unknown tag " + name + " for entity " + entity.toString());
+		}*/
 	}
 
 	@SuppressWarnings("unchecked")

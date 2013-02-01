@@ -61,7 +61,7 @@
     <string name="entity_snowball">Snowball</string>
     <string name="entity_thrownegg">Thrown egg</string>
     <string name="entity_painting">Painting</string>
-    <string name="entity_fallingsand">Falling sand</string>
+    <string name="entity_fallingblock">Falling block</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
     <string name="entities_edit">Edit entities</string>

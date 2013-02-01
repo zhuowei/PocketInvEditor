@@ -27,6 +27,7 @@ public class EntityStoreLookupService {
 		addStore(36, new PigZombieEntityStore<PigZombie>());
 		addStore(64, new ItemEntityStore<Item>());
 		addStore(65, new TNTPrimedEntityStore<TNTPrimed>());
+		addStore(66, new FallingBlockEntityStore<FallingBlock>());
 		addStore(80, new ArrowEntityStore<Arrow>());
 		addStore(81, new ProjectileEntityStore<Snowball>());
 		addStore(82, new ProjectileEntityStore<Egg>());

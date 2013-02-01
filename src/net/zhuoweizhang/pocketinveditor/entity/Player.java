@@ -3,6 +3,7 @@ package net.zhuoweizhang.pocketinveditor.entity;
 import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.InventorySlot;
+import net.zhuoweizhang.pocketinveditor.ItemStack;
 
 public class Player extends LivingEntity {
 	private List<InventorySlot> inventory;
@@ -12,6 +13,7 @@ public class Player extends LivingEntity {
 	private int spawnX = 0, spawnY = 64, spawnZ = 0;
 	private short sleepTimer = 0;
 	private boolean sleeping = false;
+	private List<ItemStack> armorSlots;
 
 	public List<InventorySlot> getInventory() {
 		return inventory;
@@ -98,6 +100,14 @@ public class Player extends LivingEntity {
 
 	public void setSleepTimer(short sleepTimer) {
 		this.sleepTimer = sleepTimer;
+	}
+
+	public List<ItemStack> getArmor() {
+		return armorSlots;
+	}
+
+	public void setArmor(List<ItemStack> armorSlots) {
+		this.armorSlots = armorSlots;
 	}
 
 }

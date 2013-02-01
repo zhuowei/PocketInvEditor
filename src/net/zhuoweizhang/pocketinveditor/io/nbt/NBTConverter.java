@@ -76,6 +76,22 @@ public final class NBTConverter {
 		return slots;
 	}
 
+	public static ListTag<CompoundTag> writeArmor(List<ItemStack> slots, String name) {
+		List<CompoundTag> values = new ArrayList<CompoundTag>(slots.size());
+		for (ItemStack slot: slots) {
+			values.add(writeItemStack(slot));
+		}
+		return new ListTag<CompoundTag>(name, CompoundTag.class, values);
+	}
+
+	public static List<ItemStack> readArmor(ListTag<CompoundTag> listTag) {
+		List<ItemStack> slots = new ArrayList<ItemStack>();
+		for (CompoundTag tag: listTag.getValue()) {
+			slots.add(readItemStack(tag));
+		}
+		return slots;
+	}
+
 	@SuppressWarnings("unchecked")
 	public static Player readPlayer(CompoundTag compoundTag) {
 		/* todo: separate this out to another class like Glowstone's loading system */
@@ -107,6 +123,8 @@ public final class NBTConverter {
 				player.setHealth(((ShortTag) tag).getValue());
 			} else if (tag.getName().equals("HurtTime")) {
 				player.setHurtTime(((ShortTag) tag).getValue());
+			} else if (name.equals("Armor")) {
+				player.setArmor(readArmor((ListTag<CompoundTag>) tag));
 			} else if (name.equals("BedPositionX")) {
 				player.setBedPositionX(((IntTag) tag).getValue());
 			} else if (name.equals("BedPositionY")) {
@@ -156,6 +174,7 @@ public final class NBTConverter {
 
 		/* Human specific tags */
 
+		tags.add(writeArmor(player.getArmor(), "Armor"));
 		tags.add(new IntTag("BedPositionX", player.getBedPositionX()));
 		tags.add(new IntTag("BedPositionY", player.getBedPositionY()));
 		tags.add(new IntTag("BedPositionZ", player.getBedPositionZ()));

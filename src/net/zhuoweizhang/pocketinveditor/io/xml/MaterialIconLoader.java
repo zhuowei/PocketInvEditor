@@ -42,7 +42,7 @@ public final class MaterialIconLoader implements Runnable {
 			this.guiBlocksBitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks.png"));
 			this.guiBlocks2Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_2.png"));
 			this.guiBlocks3Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_3.png"));
-			//this.guiBlocks4Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_4.png"));
+			this.guiBlocks4Bitmap = BitmapFactory.decodeStream(asMgr.open("gui/gui_blocks_4.png"));
 			this.terrainBitmap = BitmapFactory.decodeStream(asMgr.open("terrain_3x.png"));
 			this.itemsBitmap = BitmapFactory.decodeStream(asMgr.open("gui/items_3x.png"), null, bmpOptions);
 		} catch (Exception e) {

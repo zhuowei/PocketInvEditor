@@ -28,7 +28,9 @@
     <item typeId="20" icon="guiblocks,3,6"/>
     <item typeId="21" icon="guiblocks2,5,9"/>
     <item typeId="22" icon="guiblocks2,4,7"/>
-    <item typeId="24" icon="guiblocks,1,6"/>
+    <item typeId="24" icon="guiblocks4,1,1"/>
+    <item typeId="24" damage="1" icon="guiblocks4,1,2"/>
+    <item typeId="24" damage="2" icon="guiblocks4,1,3"/>
     <item typeId="26" icon="terrain,8,6"/>
     <item typeId="30" icon="terrain,0,11"/>
     <item typeId="31" icon="terrain,3,7"/>
@@ -96,18 +98,33 @@
     <item typeId="82" icon="guiblocks,8,0"/>
     <item typeId="83" icon="guiblocks,4,8"/>
     <item typeId="85" icon="guiblocks,0,8"/>
+    <item typeId="87" icon="guiblocks4,2,0"/>
     <item typeId="89" icon="guiblocks3,6,5"/>
     <item typeId="96" icon="guiblocks2,0,0"/>
     <item typeId="98" icon="guiblocks2,6,1"/>
+    <item typeId="98" damage="1" icon="guiblocks4,0,2"/>
+    <item typeId="98" damage="2" icon="guiblocks4,0,3"/>
     <item typeId="102" icon="terrain,3,1"/>
     <item typeId="103" icon="guiblocks3,6,0"/>
     <item typeId="105" icon="terrain,6,15"/>
     <item typeId="107" icon="guiblocks,0,9"/>
     <item typeId="108" icon="guiblocks,9,4"/>
+    <item typeId="109" icon="guiblocks4,2,5"/>
+    <item typeId="112" icon="guiblocks4,1,9"/>
+    <item typeId="114" icon="guiblocks4,2,6"/>
+    <item typeId="128" icon="guiblocks4,2,4"/>
+    <item typeId="155" icon="guiblocks4,3,4"/>
+    <item typeId="155" damage="1" icon="guiblocks4,3,5"/>
+    <item typeId="155" damage="2" icon="guiblocks4,3,6"/>
+    <item typeId="156" icon="guiblocks4,2,7"/>
+    <item typeId="245" icon="guiblocks4,7,3"/>
     <item typeId="246" icon="terrain,13,10"/>
     <item typeId="247" icon="guiblocks3,6,4"/>
     <item typeId="248" icon="terrain,15,12"/>
     <item typeId="249" icon="terrain,15,13"/>
+    <item typeId="253" icon="guiblocks4,0,9"/>
+    <item typeId="254" icon="guiblocks4,8,0"/>
+    <item typeId="255" icon="guiblocks4,0,7"/>
 
     <!-- Items -->
 
@@ -221,5 +238,7 @@
     <item typeId="364" icon="items,6,10"/>
     <item typeId="365" icon="items,7,9"/>
     <item typeId="366" icon="items,7,10"/>
+    <item typeId="405" icon="items,9,5"/>
+    <item typeId="406" icon="items,10,5"/>
     <item typeId="456" icon="items,15,2"/>
 </items>

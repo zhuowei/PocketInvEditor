@@ -108,7 +108,6 @@
         <item hex="62" dec="98" id="0" name="Stone Bricks" />
         <item hex="62" dec="98" id="1" name="Stone Bricks (mossy)" />
         <item hex="62" dec="98" id="2" name="Stone Bricks (cracked)" />
-        <item hex="62" dec="98" id="3" name="Stone Bricks (chiseled)" />
         <item hex="66" dec="102" name="Glass Pane"/>
         <item hex="67" dec="103" name="Melon"/>
         <item hex="69" dec="105" name="Melon Stem"/>
@@ -241,6 +240,7 @@
         <item hex="16D" dec="365" name="Raw Chicken" />
         <item hex="16E" dec="366" name="Cooked Chicken" />
         <item hex="195" dec="405" name="Nether Brick" />
+        <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Camera" />
     </items>
 </data>

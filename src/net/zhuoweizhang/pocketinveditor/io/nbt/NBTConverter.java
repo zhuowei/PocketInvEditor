@@ -79,7 +79,7 @@ public final class NBTConverter {
 	public static ListTag<CompoundTag> writeArmor(List<ItemStack> slots, String name) {
 		List<CompoundTag> values = new ArrayList<CompoundTag>(slots.size());
 		for (ItemStack slot: slots) {
-			values.add(writeItemStack(slot));
+			values.add(writeItemStack(slot, ""));
 		}
 		return new ListTag<CompoundTag>(name, CompoundTag.class, values);
 	}

@@ -109,7 +109,6 @@
         <item hex="62" dec="98" id="0" name="石砖" />
         <item hex="62" dec="98" id="1" name="苔石砖" />
         <item hex="62" dec="98" id="2" name="裂石砖" />
-        <item hex="62" dec="98" id="3" name="錾制石砖" />
         <item hex="66" dec="102" name="玻璃板"/>
         <item hex="67" dec="103" name="西瓜"/>
         <item hex="69" dec="105" name="西瓜梗"/>
@@ -242,6 +241,7 @@
         <item hex="16D" dec="365" name="生鸡肉" />
         <item hex="16E" dec="366" name="熟鸡肉" />
         <item hex="195" dec="405" name="地狱砖" />
+        <item hex="196" dec="406" name="地狱石英" />
         <item hex="1C8" dec="456" name="照相机" />
     </items>
 </data>

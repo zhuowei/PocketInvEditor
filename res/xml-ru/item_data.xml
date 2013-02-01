@@ -108,7 +108,6 @@
         <item hex="62" dec="98" id="0" name="Каменная кладка" />
         <item hex="62" dec="98" id="1" name="Замшелые каменные кирпичи" />
         <item hex="62" dec="98" id="2" name="Потресканные каменные кирпичи" />
-        <item hex="62" dec="98" id="3" name="Резные каменные кирпичи" />
         <item hex="66" dec="102" name="Стекло" />
         <item hex="67" dec="103" name="Арбуз" />
         <item hex="69" dec="105" name="Саженец арбуза" />
@@ -118,10 +117,10 @@
         <item hex="70" dec="112" name="Адские кирпичи" />
         <item hex="72" dec="114" name="Адские ступеньки" />
         <item hex="80" dec="128" name="Ступеньки из песчаника" />
-        <iten hex="9B" dec="155" id="0" name="Block of Quartz" />
-        <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
-        <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
-        <iten hex="9C" dec="156" name="Quartz Stairs" />
+        <iten hex="9B" dec="155" id="0" name="Блок кварца" />
+        <iten hex="9B" dec="155" id="1" name="Резной блок кварца" />
+        <iten hex="9B" dec="155" id="2" name="Кварцевые колонны" />
+        <iten hex="9C" dec="156" name="Кварцевые ступеньки" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Светящийся обсидиан" />
         <item hex="F7" dec="247" name="Ядро реактора" />
@@ -241,6 +240,7 @@
         <item hex="16D" dec="365" name="Сырая курица" />
         <item hex="16E" dec="366" name="Жареная курица" />
         <item hex="195" dec="405" name="Адские кирпичи" />
+        <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Камера" />
     </items>
 </data>

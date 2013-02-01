@@ -110,7 +110,6 @@
         <item hex="62" dec="98" id="0" name="Steinziegel" />
         <item hex="62" dec="98" id="1" name="Bemooste Steinziegel" />
         <item hex="62" dec="98" id="2" name="Rissiger Steinziegel" />
-        <item hex="62" dec="98" id="3" name="Gemeißelte Steinziegel" />
         <item hex="66" dec="102" name="Glasscheibe"/>
         <item hex="67" dec="103" name="Melone"/>
         <item hex="69" dec="105" name="Melonenpflanze"/>
@@ -243,6 +242,7 @@
         <item hex="16D" dec="365" name="rohes Hühnchen" />
         <item hex="16E" dec="366" name="gebratenes Hühnchen" />
         <item hex="195" dec="405" name="Netherziegel" />
+        <item hex="196" dec="406" name="Netherquarz" />
         <item hex="1C8" dec="456" name="Kamera" />
     </items>
 </data>

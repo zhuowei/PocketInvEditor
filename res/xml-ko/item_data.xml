@@ -108,7 +108,6 @@
         <item hex="62" dec="98" id="0" name="석재 벽돌" />
         <item hex="62" dec="98" id="1" name="이끼 낀 석재 벽돌" />
         <item hex="62" dec="98" id="2" name="금 간 석재 벽돌" />
-        <item hex="62" dec="98" id="3" name="부드러운 석재 벽돌" />
         <item hex="66" dec="102" name="유리판" />
         <item hex="67" dec="103" name="수박"/>
         <item hex="69" dec="105" name="수박 (Stem)"/>
@@ -241,6 +240,7 @@
         <item hex="16D" dec="365" name="익히지 않은 닭고기" />
         <item hex="16E" dec="366" name="구운 닭고기" />
         <item hex="195" dec="405" name="네더 벽돌" />
+        <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="카메라" />
     </items>
 </data>

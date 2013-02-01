@@ -48,6 +48,11 @@ public class TileEntityViewActivity extends ListActivity implements LevelDataLoa
 		}
 	}
 
+	protected void onResume() {
+		super.onResume();
+		if (this.listAdapter != null) listAdapter.notifyDataSetChanged();
+	}
+
 	public void onLevelDataLoad() {
 		loadEntities();
 	}

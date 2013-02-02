@@ -117,10 +117,10 @@
         <item hex="70" dec="112" name="Nether Brick (block)" />
         <item hex="72" dec="114" name="Nether Brick Stairs" />
         <item hex="80" dec="128" name="Sandstone Stairs" />
-        <iten hex="9B" dec="155" id="0" name="Block of Quartz" />
-        <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
-        <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
-        <iten hex="9C" dec="156" name="Quartz Stairs" />
+        <item hex="9B" dec="155" id="0" name="Block of Quartz" />
+        <item hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
+        <item hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
+        <item hex="9C" dec="156" name="Quartz Stairs" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Glowing Obsidian" />
         <item hex="F7" dec="247" name="Nether Reactor Core" />

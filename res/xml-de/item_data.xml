@@ -118,10 +118,10 @@
         <item hex="70" dec="112" name="Netherziegel (block)" />
         <item hex="72" dec="114" name="Netherziegeltreppe" />
         <item hex="80" dec="128" name="Sandsteintreppe" />
-        <iten hex="9B" dec="155" id="0" name="Quarzblock" />
-        <iten hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
-        <iten hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
-        <iten hex="9C" dec="156" name="Quarztreppe" />
+        <item hex="9B" dec="155" id="0" name="Quarzblock" />
+        <item hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
+        <item hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
+        <item hex="9C" dec="156" name="Quarztreppe" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="6C" dec="108" name="Ziegeltreppe" />
         <item hex="F6" dec="246" name="Leuchtendes Obsidian" />

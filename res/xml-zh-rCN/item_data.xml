@@ -118,10 +118,10 @@
         <item hex="70" dec="112" name="地狱砖 (方块)" />
         <item hex="72" dec="114" name="地狱砖楼梯" />
         <item hex="80" dec="128" name="沙石楼梯" />
-        <iten hex="9B" dec="155" id="0" name="石英方块" />
-        <iten hex="9B" dec="155" id="1" name="錾石英方块" />
-        <iten hex="9B" dec="155" id="2" name="柱石英方块" />
-        <iten hex="9C" dec="156" name="石英楼梯" />
+        <item hex="9B" dec="155" id="0" name="石英方块" />
+        <item hex="9B" dec="155" id="1" name="錾石英方块" />
+        <item hex="9B" dec="155" id="2" name="柱石英方块" />
+        <item hex="9C" dec="156" name="石英楼梯" />
         <item hex="F5" dec="245" name="切石机" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />

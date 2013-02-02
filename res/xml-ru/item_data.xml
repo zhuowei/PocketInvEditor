@@ -117,10 +117,10 @@
         <item hex="70" dec="112" name="Адские кирпичи" />
         <item hex="72" dec="114" name="Адские ступеньки" />
         <item hex="80" dec="128" name="Ступеньки из песчаника" />
-        <iten hex="9B" dec="155" id="0" name="Блок кварца" />
-        <iten hex="9B" dec="155" id="1" name="Резной блок кварца" />
-        <iten hex="9B" dec="155" id="2" name="Кварцевые колонны" />
-        <iten hex="9C" dec="156" name="Кварцевые ступеньки" />
+        <item hex="9B" dec="155" id="0" name="Блок кварца" />
+        <item hex="9B" dec="155" id="1" name="Резной блок кварца" />
+        <item hex="9B" dec="155" id="2" name="Кварцевые колонны" />
+        <item hex="9C" dec="156" name="Кварцевые ступеньки" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Светящийся обсидиан" />
         <item hex="F7" dec="247" name="Ядро реактора" />

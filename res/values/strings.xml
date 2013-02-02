@@ -139,6 +139,9 @@
     <string name="terrain_coords_to_player_head">Head</string>
     <string name="terrain_coords_to_player_feet">Feet</string>
     <string name="file_exists">A file with this name already exists</string>
+    <string name="terrain_width">Width (X):</string>
+    <string name="terrain_height">Height (Y):</string>
+    <string name="terrain_length">Length (Z):</string>
     <string name="loadout_export">Export loadout</string>
     <string name="loadout_import">Import loadout</string>
     <string name="loadout_import_replace">Replace current inventory</string>
@@ -150,7 +153,7 @@
     <string name="armor_edit">Edit armor</string>
     <string name="armor_view">View armor</string>
     <string name="armor_get_pro_to_edit">Upgrade to PocketInvEditor Pro to edit armor</string>
-    <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
+    <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -161,7 +164,7 @@
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.\n
     </string>
-    <string name="about_copyright_pro">Copyright (C) 2012 Zhuowei Zhang. Do not distribute without permission.</string>
+    <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. Do not distribute without permission.</string>
     <string name="about_librarycredits">This app uses the SimpleNBT library developed by
     the SpoutDev team.\n
     This program contains a modified version of item-data.xml from TexasGamer\'s itemid plugin.\n

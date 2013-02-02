@@ -147,6 +147,9 @@
     <string name="clear_inventory">Clear inventory</string>
     <string name="clear_inventory_are_you_sure">Are you sure you want to clear the inventory?</string>
     <string name="clear_inventory_clear">Clear</string>
+    <string name="armor_edit">Edit armor</string>
+    <string name="armor_view">View armor</string>
+    <string name="armor_get_pro_to_edit">Upgrade to PocketInvEditor Pro to edit armor</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

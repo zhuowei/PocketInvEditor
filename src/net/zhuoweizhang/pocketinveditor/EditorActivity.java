@@ -156,7 +156,7 @@ public class EditorActivity extends Activity {
 		copySeedButton.setEnabled(true);
 	}
 
-	private void startInventoryEditor() {
+	protected void startInventoryEditor() {
 		startActivityWithExtras(new Intent(this, InventorySlotsActivity.class));
 	}
 

@@ -175,6 +175,11 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		menu.add(getResources().getString(R.string.loadout_export));
 		menu.add(getResources().getString(R.string.loadout_import));
 		menu.add(getResources().getString(R.string.clear_inventory));
+		if (this.getIntent().getBooleanExtra("CanEditArmor", false)) {
+			menu.add(getResources().getString(R.string.armor_edit));
+		} else {
+			menu.add(getResources().getString(R.string.armor_view));
+		}
 		return true;
 	}
 
@@ -195,6 +200,9 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		} else if (item.getTitle().equals(getResources().getString(R.string.clear_inventory))) {
 			showDialog(DIALOG_CLEAR_INVENTORY);
 			return true;
+		} else if (item.getTitle().equals(getResources().getString(R.string.armor_view)) || 
+				item.getTitle().equals(getResources().getString(R.string.armor_edit))) {
+			openEditArmorActivity();
 		}
 		return super.onOptionsItemSelected(item);
 
@@ -307,6 +315,12 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 
 	protected void openExportLoadoutActivity() {
 		Intent intent = new Intent(this, LoadoutExportActivity.class);
+		startActivity(intent);
+	}
+
+	protected void openEditArmorActivity() {
+		Intent intent = new Intent(this, ArmorSlotsActivity.class);
+		intent.putExtras(this.getIntent());
 		startActivity(intent);
 	}
 }

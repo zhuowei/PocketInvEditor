@@ -61,6 +61,7 @@
     <string name="entity_snowball">Sneeuwbal</string>
     <string name="entity_thrownegg">Gegooid ei</string>
     <string name="entity_painting">Schilderij</string>
+    <string name="entity_fallingsand">Vallend zand</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
     <string name="entities_edit">Verander entities</string>
@@ -77,6 +78,10 @@
     <string name="entities_replace_with">vervang met: </string>
     <string name="apocowlypse">Niks hier</string>
     <string name="entities_angle">Hoek: </string>
+    <string name="entities_dye_all_sheep">Kleur alle schapen</string>
+    <string name="entities_age_all_animals">Maak alle dieren volwassen</string>
+    <string name="entities_breed_all_animals">Fok alle dieren</string>
+    <string name="entities_unbreed_all_animals">Fok alle dieren ongedaan maken</string>
     <string name="noworldsfound_title">Waarom heb je geen werelden?!</string>
     <string name="noworldsfound_text">PocketInvEditor kon geen Minecraft PE werelden vinden op dit toestel.\n
     Dit programma is gemaakt om werelden te veranderen gemaakt door de volledige versie van Minecraft Pocket Edition gemaakt door Mojang.</string>
@@ -103,11 +108,45 @@
     <string name="terrain_region_expand">Vergroot regio</string>
     <string name="terrain_analyze">Analyzeren</string>
     <string name="terrain_autoselect">Auto-selecteer regio</string>
+    <string name="terrain_autoselect_choose_marker_block">Kies markeer blok type</string>
+    <string name="terrain_autoselect_not_found">niet in staat om automatisch te selecteren: er zijn minder dan 2 markeer blokken gevonden</string>
+    <string name="terrain_select_whole_world">Selecteer de hele wereld</string>
     <string name="terrain_block_counts">Aantal blokken</string>
     <string name="terrain_coords_to_player">Gebruik spelers coördinaten</string>
     <string name="terrain_number_blocks_changed">blokken veranderd.</string>
     <string name="terrain_busy">Lezen van de terreingegevens...</string>
+    <string name="terrain_experimental">Deze functie is experimenteel. Er kunnen lighting glitches in veranderd terrein zijn. Backup je wereld voordat je dit gebruikt.</string>
+    <string name="terrain_for_help">Voor help, bekijk het Minecraft Forums topic.</string>
+    <string name="terrain_region_out_of_world">Deze regio gaat tot achter de wereld grenzen. Wil je hem automatisch verkleinen.</string>
+    <string name="terrain_unable_to_shrink_region">niet in staat om de regio te verkleinen.</string>
     <string name="block_type">Blok type:</string>
+    <string name="terrain_clipboard">Klembord: </string>
+    <string name="terrain_copy">Kopieren</string>
+    <string name="terrain_paste">Plakken</string>
+    <string name="terrain_paste_without_air">Plakken zonder lucht</string>
+    <string name="terrain_schematic_export">Exporteren naar klembord</string>
+    <string name="terrain_schematic_import">Importeren van klembord</string>
+    <string name="terrain_schematic_exported">Klembord geëxporteerd naar schema</string>
+    <string name="terrain_schematic_imported">Schema geimporteerd naar klembord</string>
+    <string name="terrain_schematic_export_fail">Exporteren naar klembord mislukt</string>
+    <string name="terrain_schematic_import_fail">Importeren van klembord mislukt</string>
+    <string name="terrain_schematic_input_name">Naam van het schema:</string>
+    <string name="terrain_radius">Straal:</string>
+    <string name="terrain_hollow_sphere">Holle bol</string>
+    <string name="terrain_solid_sphere">Gevulde bol</string>
+    <string name="terrain_hollow_dome">Holle koepel</string>
+    <string name="terrain_solid_dome">Gevulde koepel</string>
+    <string name="terrain_coords_to_player_head">Hoofd</string>
+    <string name="terrain_coords_to_player_feet">Voeten</string>
+    <string name="file_exists">Er bestaat al een bestand met deze naam</string>
+    <string name="loadout_export">Loadout exporteren</string>
+    <string name="loadout_import">Loadout importeren</string>
+    <string name="loadout_import_replace">actuele inventory vervangen</string>
+    <string name="loadout_import_combine">Met actuele inventory combineren</string>
+    <string name="loadout_import_too_many_items">Sommige items van de loadout passen niet in de inventory.</string>
+    <string name="clear_inventory">inventory leeg maken</string>
+    <string name="clear_inventory_are_you_sure">Weet je zeker dat je je inventory leeg wilt maken?</string>
+    <string name="clear_inventory_clear">Leeg maken</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     Dit programma is gratis: je kan het herverdelen en/of veranderen
     Onder de termen van het GNU General Public License zoals gepubliceert door
@@ -125,6 +164,7 @@
     Dit programma bevat een aangepaste versie van item-data.xml van TexasGamer\'s itemid plugin.\n
     Dit programma is uitgerust met een versie van UniversalOfGaming\'s oneindige gezondheid mod. \n
     De item iconen gebruikt in dit programma zijn gemaakt door Mojang. </string>
+    <string name="about_pro_library_credits">Dit programma gebruikt de aFileChooser bibliotheek van Paul Burke. Voor licentie informatie, bekijk het forum op de minecraft forums</string>
     <string name="about_thankscommunity">Deze applicatie werd mogelijk gemaakt door het werk van veel getalenteerde vertalers, testers, en programmeurs. Bedankt.\nBekijk de Minecraft Forums post voor een lijst van medewerkers.</string>
     <string name="about_go_to_forums">Open Minecraft Forums post van PocketInvEditor</string>
     <string name="add_empty_slot">Voeg leeg slot toe</string>
@@ -132,4 +172,6 @@
     <string name="unlicensed_dialog_body">Deze applicatie heeft geen licensie, koop hem op Google Play.</string>
     <string name="buy_button">Koop deze app</string>
     <string name="quit_button">Stop</string>
+    <!-- Anti-piracy messages go here -->
+    <string name="shame_on_you"></string>
 </resources>

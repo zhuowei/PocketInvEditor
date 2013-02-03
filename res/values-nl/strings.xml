@@ -61,7 +61,7 @@
     <string name="entity_snowball">Sneeuwbal</string>
     <string name="entity_thrownegg">Gegooid ei</string>
     <string name="entity_painting">Schilderij</string>
-    <string name="entity_fallingsand">Vallend zand</string>
+    <string name="entity_fallingblock">Vallend blok</string>
     <string name="entity_unknown">Onbekend entity type</string>
     <string name="entities_info">Laat entities informatie zien</string>
     <string name="entities_edit">Verander entities</string>

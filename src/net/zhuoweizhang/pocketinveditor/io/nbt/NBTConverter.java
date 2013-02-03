@@ -174,7 +174,9 @@ public final class NBTConverter {
 
 		/* Human specific tags */
 
-		tags.add(writeArmor(player.getArmor(), "Armor"));
+		if (player.getArmor() != null) {
+			tags.add(writeArmor(player.getArmor(), "Armor"));
+		}
 		tags.add(new IntTag("BedPositionX", player.getBedPositionX()));
 		tags.add(new IntTag("BedPositionY", player.getBedPositionY()));
 		tags.add(new IntTag("BedPositionZ", player.getBedPositionZ()));

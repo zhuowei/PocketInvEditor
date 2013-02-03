@@ -74,6 +74,9 @@ public final class ArmorSlotsActivity extends ListActivity implements OnItemLong
 	public void onLevelDataLoad() {
 
 		inventory = EditorActivity.level.getPlayer().getArmor();
+		if (inventory == null) {
+			return;
+		}
 
 		inventoryListAdapter = new ArrayAdapter<ItemStack>(this, R.layout.slot_list_item, R.id.slot_list_main_text, inventory) {
 			public View getView(int position, View convertView, ViewGroup parent) {

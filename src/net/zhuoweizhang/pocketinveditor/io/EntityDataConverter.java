@@ -41,10 +41,12 @@ public final class EntityDataConverter {
 	}
 
 	public static void write(List<Entity> entitiesList, List<TileEntity> tileEntitiesList, File file) throws IOException {
-		FileOutputStream os = new FileOutputStream(file);
-		DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(os));
 		ByteArrayOutputStream bos = new ByteArrayOutputStream();
 		new NBTOutputStream(bos, false, true).writeTag(NBTConverter.writeEntities(entitiesList, tileEntitiesList));
+
+		FileOutputStream os = new FileOutputStream(file);
+		DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(os));
+
 		int length = bos.size();
 		dos.write(header);
 		dos.writeInt(Integer.reverseBytes(length));

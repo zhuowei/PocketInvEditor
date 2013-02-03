@@ -75,6 +75,8 @@
     <string name="entities_replace_with">变成: </string>
     <string name="apocowlypse">不要点</string>
     <string name="entities_angle">角度: </string>
+    <string name="entities_dye_all_sheep">给所有羊染色</string>
+    <string name="entities_age_all_animals">动物成长加速</string>
     <string name="noworldsfound_title">世界哪去了?!</string>
     <string name="noworldsfound_text">PocketInvEditor was unable to find any Minecraft PE worlds on this device.\n
     This program is designed to edit worlds created by the full version of Minecraft Pocket Edition by Mojang.</string>
@@ -83,9 +85,65 @@
     <string name="main_view_tileentities">箱子信息</string>
     <string name="main_edit_tileentities">编辑箱子</string>
     <string name="warp_to_tile_entity">传送到此箱子</string>
+    <string name="reactor_is_initialized">已经激活</string>
+    <string name="reactor_has_finished">已经结束</string>
     <string name="get_pro_to_edit_containers">编辑请升级到PocketInvEditor Pro。</string>
     <string name="get_pro_to_edit_signs">编辑请升级到PocketInvEditor Pro。</string>
     <string name="get_pro_to_adjust_reactor">编辑请升级到PocketInvEditor Pro。</string>
+    <string name="main_edit_terrain">编辑地形</string>
+    <string name="terrain_editing">读取地形中。请等待</string>
+    <string name="terrain_burnbabyburn">@string/apocowlypse</string>
+    <string name="terrain_replaceblocks">替换方块</string>
+    <string name="terrain_setblocks">放置方块</string>
+    <string name="terrain_region_shift">移动区域</string>
+    <string name="terrain_region_expand">扩充区域</string>
+    <string name="terrain_analyze">分析</string>
+    <string name="terrain_autoselect">自动选择区域</string>
+    <string name="terrain_autoselect_choose_marker_block">选择标记方块类型</string>
+    <string name="terrain_autoselect_not_found">无法自动选择：少于两个标记方块</string>
+    <string name="terrain_select_whole_world">选择整个世界</string>
+    <string name="terrain_block_counts">方块计数</string>
+    <string name="terrain_coords_to_player">使用玩家坐标</string>
+    <string name="terrain_number_blocks_changed">方块已替换</string>
+    <string name="terrain_busy">读取地形数据中</string>
+    <string name="terrain_experimental">这些功能仍在开发中.编辑区域后可能会出现灯光错误。请在使用前备份存档</string>
+    <string name="terrain_for_help">需要帮助，请登录Minecraft Forums.</string>
+    <string name="terrain_region_out_of_world">这个区域已经超过了地图范围，你需要自动收缩它吗？</string>
+    <string name="terrain_unable_to_shrink_region">无法收缩区域。</string>
+    <string name="block_type">方块类型:</string>
+    <string name="terrain_clipboard">剪贴板: </string>
+    <string name="terrain_copy">复制</string>
+    <string name="terrain_paste">粘贴</string>
+    <string name="terrain_paste_without_air">除去空气粘贴</string>
+    <string name="terrain_schematic_export">输出剪贴板</string>
+    <string name="terrain_schematic_import">读取剪贴板</string>
+    <string name="terrain_schematic_exported">剪贴板输出到备份</string>
+    <string name="terrain_schematic_imported">备份恢复到剪贴板</string>
+    <string name="terrain_schematic_export_fail">输出剪贴板失败</string>
+    <string name="terrain_schematic_import_fail">恢复剪贴板失败</string>
+    <string name="terrain_schematic_input_name">导出文件名称:</string>
+    <string name="terrain_radius">半径:</string>
+    <string name="terrain_hollow_sphere">空心球</string>
+    <string name="terrain_solid_sphere">实心球</string>
+    <string name="terrain_hollow_dome">空心圆顶</string>
+    <string name="terrain_solid_dome">实心圆顶</string>
+    <string name="terrain_coords_to_player_head">头</string>
+    <string name="terrain_coords_to_player_feet">脚</string>
+    <string name="file_exists">这个名称的文件已经存在</string>
+    <string name="terrain_width">长 (X):</string>
+    <string name="terrain_height">高 (Y):</string>
+    <string name="terrain_length">宽 (Z):</string>
+    <string name="loadout_export">输出物品数据</string>
+    <string name="loadout_import">恢复物品数据</string>
+    <string name="loadout_import_replace">替换物品栏</string>
+    <string name="loadout_import_combine">添加物品栏数据</string>
+    <string name="loadout_import_too_many_items">部分物品无法输出到物品栏</string>
+    <string name="clear_inventory">清除物品栏</string>
+    <string name="clear_inventory_are_you_sure">你确定要清除物品栏吗？</string>
+    <string name="clear_inventory_clear">清除</string>
+    <string name="armor_edit">编辑盔甲</string>
+    <string name="armor_view">查看盔甲</string>
+    <string name="armor_get_pro_to_edit">Upgrade to PocketInvEditor Pro to edit armor</string>
     <string name="about_copyright">Copyright (C) 2012 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -100,5 +158,7 @@
     <string name="about_librarycredits">This app uses the SpoutNBT library developed by
     the SpoutDev team.</string>
     <string name="add_empty_slot">添加空物品栏</string>
+    <string name="buy_button">购买程序</string>
+    <string name="quit_button">退出</string>
     <string name="shame_on_you"></string>
 </resources>

@@ -24,6 +24,10 @@ public class CuboidRegion {
 		this((int) pos.getX(), (int) pos.getY(), (int) pos.getZ(), (int) size.getX(), (int) size.getY(), (int) size.getZ());
 	}
 
+	public CuboidRegion(CuboidRegion other) {
+		this(other.x, other.y, other.z, other.width, other.height, other.length);
+	}
+
 	/** Checks if the other rectangle is fully contained in this rectangle. */
 	public boolean contains(CuboidRegion other) {
 		return other.x >= this.x && other.y >= this.y && other.z >= this.z &&
@@ -65,6 +69,10 @@ public class CuboidRegion {
 
 	public Vector3f getPosition() {
 		return new Vector3f(x, y, z);
+	}
+
+	public int getBlockCount() {
+		return width * height * length;
 	}
 
 	/** Build a CuboidRegion from two points (inclusive). Calculates width, height, and length from the difference of the two vectors. */

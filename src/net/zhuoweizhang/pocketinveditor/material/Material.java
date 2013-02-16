@@ -18,6 +18,8 @@ public class Material {
 
 	private boolean hasSubtypes;
 
+	private boolean damageable = false;
+
 	public Material(int id, String name) {
 		this(id, name, (short) 0, false);
 	}
@@ -47,6 +49,14 @@ public class Material {
 
 	public boolean hasSubtypes() {
 		return hasSubtypes;
+	}
+
+	public void setDamageable(boolean damageable) {
+		this.damageable = damageable;
+	}
+
+	public boolean isDamageable() {
+		return damageable;
 	}
 
 	public String toString() {

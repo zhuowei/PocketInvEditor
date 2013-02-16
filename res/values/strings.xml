@@ -138,6 +138,9 @@
     <string name="terrain_solid_dome">Solid dome</string>
     <string name="terrain_coords_to_player_head">Head</string>
     <string name="terrain_coords_to_player_feet">Feet</string>
+    <string name="terrain_hollow_cuboid">Hollow cuboid</string>
+    <string name="terrain_hollow_pyramid">Hollow pyramid</string>
+    <string name="terrain_solid_pyramid">Solid pyramid</string>
     <string name="file_exists">A file with this name already exists</string>
     <string name="terrain_width">Width (X):</string>
     <string name="terrain_height">Height (Y):</string>

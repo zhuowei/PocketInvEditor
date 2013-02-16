@@ -114,8 +114,8 @@
     <item typeId="114" icon="guiblocks4,2,6"/>
     <item typeId="128" icon="guiblocks4,2,4"/>
     <item typeId="155" icon="guiblocks4,3,4"/>
-    <item typeId="155" damage="1" icon="guiblocks4,3,5"/>
-    <item typeId="155" damage="2" icon="guiblocks4,3,6"/>
+    <item typeId="155" damage="1" icon="guiblocks4,3,6"/>
+    <item typeId="155" damage="2" icon="guiblocks4,3,5"/>
     <item typeId="156" icon="guiblocks4,2,7"/>
     <item typeId="245" icon="guiblocks4,7,3"/>
     <item typeId="246" icon="terrain,13,10"/>

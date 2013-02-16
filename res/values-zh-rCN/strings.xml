@@ -129,6 +129,9 @@
     <string name="terrain_solid_dome">实心圆顶</string>
     <string name="terrain_coords_to_player_head">头</string>
     <string name="terrain_coords_to_player_feet">脚</string>
+    <string name="terrain_hollow_cuboid">空心长方体</string>
+    <string name="terrain_hollow_pyramid">空心金字塔</string>
+    <string name="terrain_solid_pyramid">实心金字塔</string>
     <string name="file_exists">这个名称的文件已经存在</string>
     <string name="terrain_width">长 (X):</string>
     <string name="terrain_height">高 (Y):</string>

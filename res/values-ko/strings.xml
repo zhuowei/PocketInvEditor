@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">PocketInvEditor Pro</string>
     <string name="select_world">월드 선택</string>
     <string name="inventory">인벤토리</string>
     <string name="select_slot">인벤토리 슬롯 선택</string>
     <string name="item_id">아이템 ID:</string>
-    <string name="item_damage">아이템 데미지: </string>
-    <string name="item_count">수량: </string>
+    <string name="item_damage">아이템 데미지:</string>
+    <string name="item_count">수량:</string>
     <string name="item_id_browse">찾기...</string>
     <string name="loading">로딩중...</string>
     <string name="edit_inventory">인벤토리 수정</string>
@@ -16,17 +17,17 @@
     <string name="saved">저장됨</string>
     <string name="savefailed">저장 실패.</string>
     <string name="backup">백업 만들기</string>
-    <string name="backupcreated">백업 생성됨: </string>
+    <string name="backupcreated">백업 생성됨:</string>
     <string name="backupfailed">백업 실패.</string>
     <string name="backup_start">백업을 시작합니다. 이 과정은 다소 시간이 걸릴 수 있습니다.</string>
     <string name="about_about">정보</string>
     <string name="change">변경</string>
-    <string name="gamemode">게임모드: </string>
+    <string name="gamemode">게임모드:</string>
     <string name="gamemode_survival">서바이벌</string>
     <string name="gamemode_creative">크리에이티브</string>
     <string name="main_edit_world_info">월드 정보 수정</string>
     <string name="item_filter_hint">검색...</string>
-    <string name="world_info_time">시간: </string>
+    <string name="world_info_time">시간:</string>
     <string name="world_info_spawn_to_player">플레이어 위치로 스폰지역 설정</string>
     <string name="invalid_number">잘못된 값</string>
     <string name="world_info_time_set_morning">아침으로 설정</string>
@@ -35,15 +36,15 @@
     <string name="world_info_half_hearts">체력:</string>
     <string name="world_info_set_to_full_health">체력 회복</string>
     <string name="world_info_set_to_infinite_health">무한 체력 설정</string>
-    <string name="world_info_folder">폴더: </string>
+    <string name="world_info_folder">폴더:</string>
     <string name="folder_exists">이미 존재 합니다; choose a new name</string>
     <string name="folder_rename_failed">폴더 이름변경 실패</string>
-    <string name="slot_fillslot">Fill slot</string>
-    <string name="slot_maxcountslot">255 in slot</string>
+    <string name="slot_fillslot">슬릇 채우기</string>
+    <string name="slot_maxcountslot">슬릇에 255개로 채우기</string>
     <string name="slot_duplicate">복사</string>
     <string name="slot_delete">삭제</string>
     <string name="world_info_warp_to_spawn">스폰지점으로 이동</string>
-    <string name="world_info_sideways_mode">Activate sideways player model glitch: </string>
+    <string name="world_info_sideways_mode">플레이어가 가로로 되는 오류 활성화:</string>
     <string name="world_info_move_player">플레이어 이동</string>
     <string name="entity_item">떨어진 아이템</string>
     <string name="entity_zombie">좀비</string>
@@ -62,7 +63,7 @@
     <string name="entity_painting">그림</string>
     <string name="entity_fallingblock">떨어지는 블럭</string>
     <string name="entity_unknown">알수없는 블럭 종류</string>
-    <string name="entities_info">엔디티 정보 보기</string>
+    <string name="entities_info">엔디티 수정</string>
     <string name="entities_edit">엔디티 수정</string>
     <string name="entities_none">엔디티를 찾을 수 없습니다.</string>
     <string name="entities_spawn_mobs">몹 스폰</string>
@@ -70,20 +71,20 @@
     <string name="entities_remove_entities">엔디티 제거</string>
     <string name="entities_cow_tipping">소 눕히기</string>
     <string name="entities_mob_tipping">몹 눕히기</string>
-    <string name="entities_mob_type">Mob: </string>
-    <string name="entities_entity_type">종류: </string>
+    <string name="entities_mob_type">몹:</string>
+    <string name="entities_entity_type">종류:</string>
     <string name="entities_babyfy_mobs">어린 동물</string>
     <string name="entities_replace_entities">엔디티 변경</string>
-    <string name="entities_replace_with">다음으로 변경: </string>
+    <string name="entities_replace_with">다음으로 변경:</string>
     <string name="apocowlypse">아무것도 아닙니다</string>
-    <string name="entities_angle">앵글: </string>
+    <string name="entities_angle">앵글:</string>
     <string name="entities_dye_all_sheep">모든 양 염색</string>
     <string name="entities_age_all_animals">모든 동물 나이</string>
-    <string name="entities_breed_all_animals">Breed All</string>
-    <string name="entities_unbreed_all_animals">Unbreed All</string>
+    <string name="entities_breed_all_animals">모든 동물 성장</string>
+    <string name="entities_unbreed_all_animals">모든 동물 성장취소</string>
     <string name="noworldsfound_title">월드를 찾을 수 없습니다</string>
-    <string name="noworldsfound_text">어떤 Minecraft PE 월드도 찾지 못했습니다.\n
-    이 프로그램은 Mojang 에서 만든 정식 Minecraft PE 월드만 수정할 수 있습니다.</string>
+    <string name="noworldsfound_text">"어떤 Minecraft PE 월드도 찾지 못했습니다.
+ 이 프로그램은 Mojang 에서 만든 정식 Minecraft PE 월드만 수정할 수 있습니다."</string>
     <string name="get_pro">PocketInvEditor Pro 얻기</string>
     <string name="get_pro_to_spawn_mobs">PocketInvEditor Pro를 업그레이드 하세요.</string>
     <string name="nothingtoseehere_activate">* I move away from the tablet to breathe in *</string>
@@ -97,7 +98,7 @@
     <string name="reactor_overtime">시간 초과 모드로 설정</string>
     <string name="get_pro_to_edit_containers">상자를 수정하려면 PocketInvEditor Pro를 업그레이드 하세요.</string>
     <string name="get_pro_to_edit_signs">표지판을 수정하려면 PocketInvEditor Pro를 업그레이드 하세요.</string>
-    <string name="get_pro_to_adjust_reactor">Nether Reactors를 수정하려면 PocketInvEditor Pro를 업그레이드 하세요.</string>
+    <string name="get_pro_to_adjust_reactor">지옥 반응기를 수정하려면 PocketInvEditor Pro를 업그레이드 하세요.</string>
     <string name="main_edit_terrain">지형 수정</string>
     <string name="terrain_editing">지형을 수정합니다. 이 과정은 다소 시간이 걸릴 수 있습니다.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
@@ -112,14 +113,14 @@
     <string name="terrain_select_whole_world">전체 선택</string>
     <string name="terrain_block_counts">블럭 갯수</string>
     <string name="terrain_coords_to_player">플레이어 좌표 사용</string>
-    <string name="terrain_number_blocks_changed"> 블럭 변경됨.</string>
+    <string name="terrain_number_blocks_changed">블럭 변경됨.</string>
     <string name="terrain_busy">지형 데이터 읽는중...</string>
     <string name="terrain_experimental">이 기능은 실험중입니다. 편집된 영역에서 조명 에러가 발견될 수 있습니다. 작업하기 전에 백업을 추천합니다.</string>
     <string name="terrain_for_help">도움이 필요한 경우, Minecraft 포럼의 스레드 확인.</string>
     <string name="terrain_region_out_of_world">입력한 지역은 세계를 초과합니다. 자동으로 축소 하시겠습니까?</string>
     <string name="terrain_unable_to_shrink_region">지역을 축소 할 수 없습니다.</string>
     <string name="block_type">블럭 종류:</string>
-    <string name="terrain_clipboard">클립보드: </string>
+    <string name="terrain_clipboard">클립보드:</string>
     <string name="terrain_copy">복사</string>
     <string name="terrain_paste">붙여넣기</string>
     <string name="terrain_paste_without_air">공기 없이 붙여넣기</string>
@@ -146,31 +147,25 @@
     <string name="clear_inventory">인벤토리 비우기</string>
     <string name="clear_inventory_are_you_sure">정말로 비우시겠습니까?</string>
     <string name="clear_inventory_clear">비우기</string>
-    <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.\n
+    <string name="about_copyright">"Copyright (C) 2012-2013 Zhuowei Zhang
 
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-    GNU General Public License for more details.\n
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
     </string>
-    <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. Do not distribute without permission.</string>
-    <string name="about_librarycredits">이 응용 프로그램은 SpoutDev 팀에 의해
-    개발 된 SpoutNBT 라이브러리를 사용합니다.\n
-    이 프로그램은 TexasGamer의 itemid 플러그인에서의 item-data.xml의 수정된 버전이 포함되어 있습니다.\n
-    이 프로그램은 UniversalOfGaming의 \"Infinite Health mod\"를 사용합니다. \n
-    이 프로그램에 사용되는 아이템 아이콘은 Mojang에 의해 만들어집니다.</string>
+    <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. 아무런 권한 없이 배포하지 마세요.</string>
+    <string name="about_librarycredits">"이 응용 프로그램은 SpoutDev 팀에 의해 개발 된 SpoutNBT 라이브러리를 사용합니다.
+ 이 프로그램은 TexasGamer의 itemid 플러그인에서의 item-data.xml의 수정된 버전이 포함되어 있습니다.
+ 이 프로그램은 UniversalOfGaming의 \"Infinite Health mod\"를 사용합니다. 
+ 이 프로그램에 사용되는 아이템 아이콘은 Mojang에 의해 만들어집니다."</string>
     <string name="about_pro_library_credits">이 프로그램은 Paul Burke의 aFileChooser 라이브러리를 사용합니다. 라이센스 정보는, Minecraft 포럼 스레드를 확인하세요.</string>
-    <string name="about_thankscommunity">번역 : 제조일자(Jejo,win4263) / win4362@naver.com [MCPEKOREA]</string>
+    <string name="about_thankscommunity">This application was made possible by the work of many talented translators, testers, and programmers. Thank you.\nView the Minecraft Forums thread for a list of contributors.
+번역 : 제조일자(Jejo,win4263) / win4362@naver.com [MCPEKOREA]
+ChaosLand(woo8586) / woo8586@naver.com [AD TEAM,http://chaosland.tistory.com]</string>
     <string name="about_go_to_forums">PocketInvEditor에 대한 Minecraft 포럼 스레드 열기</string>
     <string name="add_empty_slot">빈 슬롯 추가</string>
     <string name="unlicensed_dialog_title">Arr! Yer be a pirate, matey!</string>
     <string name="unlicensed_dialog_body">라이센스를 확인할 수 없습니다. 구글 플레이에서 구입하세요.</string>
     <string name="buy_button">구입하기</string>
-    <string name="quit_button">Exit</string>
-    <!-- Anti-piracy messages go here -->
-    <string name="shame_on_you">KOR-제조일자</string>
+    <string name="quit_button">나가기</string>
+    <string name="shame_on_you"></string>
 </resources>

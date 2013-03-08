@@ -25,6 +25,7 @@ import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
+import net.zhuoweizhang.pocketinveditor.material.RepairableMaterials;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
@@ -180,6 +181,7 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		} else {
 			menu.add(getResources().getString(R.string.armor_view));
 		}
+		menu.add(getResources().getString(R.string.inventory_repair_all));
 		return true;
 	}
 
@@ -203,6 +205,8 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		} else if (item.getTitle().equals(getResources().getString(R.string.armor_view)) || 
 				item.getTitle().equals(getResources().getString(R.string.armor_edit))) {
 			openEditArmorActivity();
+		} else if (item.getTitle().equals(getResources().getString(R.string.inventory_repair_all))) {
+			repairAllItems();
 		}
 		return super.onOptionsItemSelected(item);
 
@@ -322,5 +326,18 @@ public final class InventorySlotsActivity extends ListActivity implements OnItem
 		Intent intent = new Intent(this, ArmorSlotsActivity.class);
 		intent.putExtras(this.getIntent());
 		startActivity(intent);
+	}
+
+	protected void repairAllItems() {
+		int repairedCount = 0;
+		for (InventorySlot slot: inventory) {
+			ItemStack stack = slot.getContents();
+			if (stack.getDurability() > 0 && RepairableMaterials.isRepairable(stack)) {
+				stack.setDurability((short) 0);
+				repairedCount++;
+			}
+		}
+		inventoryListAdapter.notifyDataSetChanged();
+		EditorActivity.save(this);
 	}
 }

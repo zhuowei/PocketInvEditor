@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
+import net.zhuoweizhang.pocketinveditor.material.RepairableMaterials;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
@@ -166,7 +167,36 @@ public final class ArmorSlotsActivity extends ListActivity implements OnItemLong
 		slotActivityResultIntent = null;
 	}
 
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		if (!this.getIntent().getBooleanExtra("CanEditArmor", false)) return false;
+		super.onCreateOptionsMenu(menu);
+		menu.add(getResources().getString(R.string.inventory_repair_all));
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		if (item.getTitle().equals(getResources().getString(R.string.inventory_repair_all))) {
+			repairAllItems();
+		}
+		return super.onOptionsItemSelected(item);
+	}
+
 	protected void showGetProMessage() {
 		Toast.makeText(this, R.string.armor_get_pro_to_edit, Toast.LENGTH_SHORT).show();
+	}
+
+
+	protected void repairAllItems() {
+		int repairedCount = 0;
+		for (ItemStack stack: inventory) {
+			if (stack.getDurability() > 0 && RepairableMaterials.isRepairable(stack)) {
+				stack.setDurability((short) 0);
+				repairedCount++;
+			}
+		}
+		inventoryListAdapter.notifyDataSetChanged();
+		EditorActivity.save(this);
 	}
 }

@@ -25,6 +25,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.zhuoweizhang.pocketinveditor.material.MaterialKey;
+import net.zhuoweizhang.pocketinveditor.material.RepairableMaterials;
 import net.zhuoweizhang.pocketinveditor.material.icon.MaterialIcon;
 
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
@@ -154,6 +155,7 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		super.onCreateOptionsMenu(menu);
 		menu.add(getResources().getString(R.string.add_empty_slot));
 		menu.add(getResources().getString(R.string.warp_to_tile_entity));
+		menu.add(getResources().getString(R.string.inventory_repair_all));
 		return true;
 	}
 
@@ -168,6 +170,8 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		} else if(item.getTitle().equals(getResources().getString(R.string.warp_to_tile_entity))) {
 			TileEntityViewActivity.warpToTileEntity(this, container);
 			return true;
+		} else if (item.getTitle().equals(getResources().getString(R.string.inventory_repair_all))) {
+			repairAllItems();
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -244,10 +248,24 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 	protected void deleteSelectedSlot() {
 		inventory.remove(currentlySelectedSlot);
 		inventoryListAdapter.notifyDataSetChanged();
-		EditorActivity.save(this);
+		EntitiesInfoActivity.save(this);
 	}
 
 	protected void showGetProMessage() {
 		Toast.makeText(this, R.string.get_pro_to_edit_containers, Toast.LENGTH_SHORT).show();
 	}
+
+	protected void repairAllItems() {
+		int repairedCount = 0;
+		for (InventorySlot slot: inventory) {
+			ItemStack stack = slot.getContents();
+			if (stack.getDurability() > 0 && RepairableMaterials.isRepairable(stack)) {
+				stack.setDurability((short) 0);
+				repairedCount++;
+			}
+		}
+		inventoryListAdapter.notifyDataSetChanged();
+		EntitiesInfoActivity.save(this);
+	}
+
 }

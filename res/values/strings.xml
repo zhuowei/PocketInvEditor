@@ -177,6 +177,7 @@
     <string name="about_thankscommunity">This application was made possible by the work of many talented translators, testers, and programmers. Thank you.\nView the Minecraft Forums thread for a list of contributors.</string>
     <string name="about_go_to_forums">Open Minecraft Forums thread for PocketInvEditor</string>
     <string name="add_empty_slot">Add Empty Slot</string>
+    <string name="inventory_repair_all">Repair all</string>
     <string name="unlicensed_dialog_title">Arr! Yer be a pirate, matey!</string>
     <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Google Play.</string>
     <string name="buy_button">Buy app</string>

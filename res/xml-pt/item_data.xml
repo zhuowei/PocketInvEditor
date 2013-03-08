@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<!-- from https://github.com/TexasGamer/itemid/blob/master/item-data.xml. Adapted for Pocket Edition. -->
+<!-- translation by pedronc1. Thanks! -->
+<data>
+    <blocks>
+        <item hex="0" dec="0" name="Ar" />
+        <item hex="1" dec="1" name="Pedra" />
+        <item hex="2" dec="2" name="Grama" />
+        <item hex="3" dec="3" name="Terra" />
+        <item hex="4" dec="4" name="Pedregulho" />
+        <item hex="5" dec="5" name="Tábuas de madeira" />
+        <item hex="6" dec="6" id="0" name="muda de carvalho" />
+        <item hex="6" dec="6" id="1" name="Muda de pinheiro" />
+        <item hex="6" dec="6" id="2" name="muda de eucalipto" />
+        <item hex="7" dec="7" name="Bedrock" />
+        <item hex="8" dec="8" name="Água" />
+        <item hex="9" dec="9" name="Água parada" />
+        <item hex="A" dec="10" name="Lava" />
+        <item hex="B" dec="11" name="Lava parada" />
+        <item hex="C" dec="12" name="Areia" />
+        <item hex="D" dec="13" name="Cascalho" />
+        <item hex="E" dec="14" name="Minério de Ouro" />
+        <item hex="F" dec="15" name="Minério de Ferro" />
+        <item hex="10" dec="16" name="Minério de Carvão" />
+        <item hex="11" dec="17" id="0" name="Madeira de Carvalho" />
+        <item hex="11" dec="17" id="1" name="Madeira de Pinheiro" />
+        <item hex="11" dec="17" id="2" name="Madeira de Eucalipto" />
+        <item hex="12" dec="18" id="0" name="Folhas de Carvalho" />
+        <item hex="12" dec="18" id="1" name="Folhas de Pinheiro" />
+        <item hex="12" dec="18" id="2" name="Folhas de Eucalipto" />
+        <item hex="14" dec="20" name="Vidro" />
+        <item hex="15" dec="21" name="Minério de Lapis Lazuli" />
+        <item hex="16" dec="22" name="Lapis Lazuli Block" />
+        <item hex="18" dec="24" id="0" name="Arenito" />
+        <item hex="18" dec="24" id="1" name="Arenito Talhado" />
+        <item hex="18" dec="24" id="2" name="Arenito Liso" />
+        <item hex="1A" dec="26" name="Cama (Bloco)" />
+        <item hex="1E" dec="30" name="Teia de Aranha" />
+        <item hex="1F" dec="31" name="Arbusto Morto (Grama alta Retexturada)" />
+        <item hex="23" dec="35" id="0" name="Lã Branca" />
+        <item hex="23" dec="35" id="1" name="Lã Laranja" />
+        <item hex="23" dec="35" id="2" name="Lã Magenta" />
+        <item hex="23" dec="35" id="3" name="Lã Azul Claro" />
+        <item hex="23" dec="35" id="4" name="Lã Amarela" />
+        <item hex="23" dec="35" id="5" name="Lã Verde Limão" />
+        <item hex="23" dec="35" id="6" name="Lã Rosa" /> 
+        <item hex="23" dec="35" id="7" name="Lã Cinza" />
+        <item hex="23" dec="35" id="8" name="Lã Cinza Claro" />
+        <item hex="23" dec="35" id="9" name="Lã Ciano" />
+        <item hex="23" dec="35" id="10" name="Lã Roxa" />
+        <item hex="23" dec="35" id="11" name="Lã Azul" />
+        <item hex="23" dec="35" id="12" name="Lã Marrom" />
+        <item hex="23" dec="35" id="13" name="Lã Verde" />
+        <item hex="23" dec="35" id="14" name="Lã Vermelha" />
+        <item hex="23" dec="35" id="15" name="Lã Preta" />
+        <item hex="25" dec="37" name="Flor" />
+        <item hex="26" dec="38" name="Rosa ciano" />
+        <item hex="27" dec="39" name="Cogumelo Marrom" />
+        <item hex="28" dec="40" name="Cogumelo Vermelho" />
+        <item hex="29" dec="41" name="Bloco de ouro" />
+        <item hex="2A" dec="42" name="Bloco de Ferro" />
+        <item hex="2B" dec="43" id="0" name="Lajes de Pedra" />
+        <item hex="2B" dec="43" id="1" name="Lajes de Arenito" />
+        <item hex="2B" dec="43" id="2" name="Lajes de Madeira" />
+        <item hex="2B" dec="43" id="3" name="Lajes de Pedregulho" />
+        <item hex="2B" dec="43" id="4" name="Lajes de Tijolo" />
+        <item hex="2B" dec="43" id="6" name="Lajes de Pedra" />
+        <item hex="2C" dec="44" id="0" name="Laje de Pedra" />
+        <item hex="2C" dec="44" id="1" name="Laje de Arenito" />
+        <item hex="2C" dec="44" id="2" name="Laje de Madeira" />
+        <item hex="2C" dec="44" id="3" name="Laje de Pedregulho" />
+        <item hex="2C" dec="44" id="4" name="Laje de Tijolo" />
+        <item hex="2C" dec="44" id="6" name="Laje de Pedra" />
+        <item hex="2D" dec="45" name="Bloco de Tijolo" />
+        <item hex="2E" dec="46" name="TNT" />
+        <item hex="2F" dec="47" name="Estante de Livros" />
+        <item hex="30" dec="48" name="Pedra com Musgo" />
+        <item hex="31" dec="49" name="Obsidiana" />
+        <item hex="32" dec="50" name="Tocha" />
+        <item hex="33" dec="51" name="Fogo" />
+        <item hex="35" dec="53" name="Escada de Madeira" />
+        <item hex="36" dec="54" name="Baú" />
+        <item hex="38" dec="56" name="Minério de Diamante" />
+        <item hex="39" dec="57" name="Bloco de Diamante" />
+        <item hex="3A" dec="58" name="Bancada de Trabalho" />
+        <item hex="3B" dec="59" name="Crops (Block)" />
+        <item hex="3C" dec="60" name="Farmland" />
+        <item hex="3D" dec="61" name="Fornalha" />
+        <item hex="3E" dec="62" name="Fornalha Acesa" />
+        <item hex="3F" dec="63" name="Placa" />
+        <item hex="40" dec="64" name="Porta de Madeira (Bloco)" />
+        <item hex="41" dec="65" name="Escada" />
+        <item hex="43" dec="67" name="Escada de Pedra" />
+        <item hex="44" dec="68" name="Placa na Parede" />
+        <item hex="47" dec="71" name="Porta de Madeira (Bloco)" />
+        <item hex="49" dec="73" name="Minério de Redstone" />
+        <item hex="4A" dec="74" name="Minério de Redstone brilhante" />
+        <item hex="4E" dec="78" name="Neve" />
+        <item hex="4F" dec="79" name="Gelo" />
+        <item hex="50" dec="80" name="Bloco de Neve" />
+        <item hex="51" dec="81" name="Cacto" />
+        <item hex="52" dec="82" name="Bloco de Argila" />
+        <item hex="53" dec="83" name="Cana de açúcar" />
+        <item hex="55" dec="85" name="Cerca" />
+        <item hex="57" dec="87" name="Rocha do Nether" />
+        <item hex="59" dec="89" name="Pedra luminosa" />
+        <item hex="5F" dec="95" name="Bedrock Invisível" />
+        <item hex="60" dec="96" name="Alçapão" />
+        <item hex="62" dec="98" id="0" name="Tijolo de Pedra" />
+        <item hex="62" dec="98" id="1" name="Tijolo de Pedra com Musgo" />
+        <item hex="62" dec="98" id="2" name="Tijolo de Pedra Rachado" />
+        <item hex="66" dec="102" name="Painel de Vidro"/>
+        <item hex="67" dec="103" name="Melancia"/>
+        <item hex="69" dec="105" name="Haste de Melancia"/>
+        <item hex="6B" dec="107" name="Portão"/>
+        <item hex="6C" dec="108" name="Escadas de Tijolo" />
+        <item hex="6D" dec="109" name="Escada de Tijolo de Pedra" />
+        <item hex="70" dec="112" name="Tijolo do Nether (Bloco)" />
+        <item hex="72" dec="114" name="Escada de Tijolo do Nether" />
+        <item hex="80" dec="128" name="Escada de Arenito" />
+        <item hex="9B" dec="155" id="0" name="Bloco de Quartzo" />
+        <item hex="9B" dec="155" id="1" name="Bloco de Quartzo Talhado" />
+        <item hex="9B" dec="155" id="2" name="Pilar de Quartzo" />
+        <item hex="9C" dec="156" name="Escada de Quartzo" />
+        <item hex="F5" dec="245" name="Cortador de Pedra" />
+        <item hex="F6" dec="246" name="Obsidiana Luminosa" />
+        <item hex="F7" dec="247" name="Núcleo do Reator do Nether" />
+        <item hex="F8" dec="248" name="'Update Game' block 1" />
+        <item hex="F9" dec="249" name="'Update Game' block 2" />
+        <item hex="FD" dec="253" name="Glitch Grass (grass_carried)" />
+        <item hex="FE" dec="254" name="Glitch Leaves (leaves_carried)" />
+        <item hex="FF" dec="255" name="Glitch Stone (info_reserved6)" />
+    </blocks>
+    <items>
+        <item hex="100" dec="256" name="Pá de Ferro" />
+        <item hex="101" dec="257" name="Picareta de Ferro" />
+        <item hex="102" dec="258" name="Machado de Ferro" />
+        <item hex="103" dec="259" name="Isqueiro" />
+        <item hex="104" dec="260" name="Maçã" />
+        <item hex="105" dec="261" name="Arco" />
+        <item hex="106" dec="262" name="Flecha" />
+        <item hex="107" dec="263" id="0" name="Carvão" />
+        <item hex="107" dec="263" id="1" name="Carvão Vegetal" />
+        <item hex="108" dec="264" name="Diamante" />
+        <item hex="109" dec="265" name="Barra de Ferro" />
+        <item hex="10A" dec="266" name="Barra de Ouro" />
+        <item hex="10B" dec="267" name="Espada de Ferro" />
+        <item hex="10C" dec="268" name="Espada de Madeira" />
+        <item hex="10D" dec="269" name="Pá de Madeira" />
+        <item hex="10E" dec="270" name="Picareta de Madeira" />
+        <item hex="10F" dec="271" name="Machado de Madeira" />
+        <item hex="110" dec="272" name="Espada de Pedra" />
+        <item hex="111" dec="273" name="Pá de Pedra" />
+        <item hex="112" dec="274" name="Picareta de Pedra" />
+        <item hex="113" dec="275" name="Machado de Pedra" />
+        <item hex="114" dec="276" name="Espada de Diamante" />
+        <item hex="115" dec="277" name="Pá de Diamante" />
+        <item hex="116" dec="278" name="Picareta de Diamante" />
+        <item hex="117" dec="279" name="Machado de Diamante" />
+        <item hex="118" dec="280" name="Graveto" />
+        <item hex="119" dec="281" name="Tijela" />
+        <item hex="11A" dec="282" name="Sopa de Cogumelos" />
+        <item hex="11B" dec="283" name="Espada de Ouro" />
+        <item hex="11C" dec="284" name="Pá de Ouro" />
+        <item hex="11D" dec="285" name="Picareta de Ouro" />
+        <item hex="11E" dec="286" name="Machado de Ouro" />
+        <item hex="11F" dec="287" name="Linha" />
+        <item hex="120" dec="288" name="Pena" />
+        <item hex="121" dec="289" name="Pólvora" />
+        <item hex="122" dec="290" name="Enxada de Madeira" />
+        <item hex="123" dec="291" name="Enxada de Pedra" />
+        <item hex="124" dec="292" name="Enxada de Ferro" />
+        <item hex="125" dec="293" name="Enxada de Diamante" />
+        <item hex="126" dec="294" name="Enxada de Ouro" />
+        <item hex="127" dec="295" name="Semtentes de Trigo" />
+        <item hex="128" dec="296" name="Trigo" />
+        <item hex="129" dec="297" name="Pão" />
+        <item hex="12A" dec="298" name="Capuz de Couro" />
+        <item hex="12B" dec="299" name="Túnica de Couro" />
+        <item hex="12C" dec="300" name="Calça de Couro" />
+        <item hex="12D" dec="301" name="Botas de Couro" />
+        <item hex="12E" dec="302" name="Coifa de Cota de Malha" />
+        <item hex="12F" dec="303" name="Peitoral de Cota de Malha" />
+        <item hex="130" dec="304" name="Calça de Cota de Malha" />
+        <item hex="131" dec="305" name="Botas de Cota de Malha" />
+        <item hex="132" dec="306" name="Elmo de Ferro" />
+        <item hex="133" dec="307" name="Peitoral de Ferro" />
+        <item hex="134" dec="308" name="Calça de Ferro" />
+        <item hex="135" dec="309" name="Botas de Ferro" />
+        <item hex="136" dec="310" name="Elmo de Diamante" />
+        <item hex="137" dec="311" name="Peitoral de Diamante" />
+        <item hex="138" dec="312" name="Calça de Diamante" />
+        <item hex="139" dec="313" name="Botas de Diamante" />
+        <item hex="13A" dec="314" name="Elmo de Ouro" />
+        <item hex="13B" dec="315" name="Peitoral de Ouro" />
+        <item hex="13C" dec="316" name="Calça de Ouro" />
+        <item hex="13D" dec="317" name="Botas de Ouro" />
+        <item hex="13E" dec="318" name="Pederneira" />
+        <item hex="13F" dec="319" name="Carne de Porco Crua" />
+        <item hex="140" dec="320" name="Carne de Porco Assada" />
+        <item hex="141" dec="321" name="Pintura" />
+        <item hex="143" dec="323" name="Placa" />
+        <item hex="144" dec="324" name="Porta de Madeira" />
+        <item hex="14A" dec="330" name="Porta de Ferro" />
+        <item hex="14C" dec="332" name="Bola de Neve" />
+        <item hex="14E" dec="334" name="Couro" />
+        <item hex="150" dec="336" name="Tijolo de Argila" />
+        <item hex="151" dec="337" name="Argila" />
+        <item hex="152" dec="338" name="Cana de Açucar" />
+        <item hex="153" dec="339" name="Papel" />
+        <item hex="154" dec="340" name="Livro" />
+        <item hex="155" dec="341" name="Gosma de Slime" />
+        <item hex="158" dec="344" name="Ovo" />
+        <item hex="159" dec="345" name="Bússola" />
+        <item hex="15B" dec="347" name="Relógio" />
+        <item hex="15C" dec="348" name="Pó de Pedra Luminosa" />
+        <item hex="15F" dec="351" id="0" name="Corante Bolsa de Tinta" />
+        <item hex="15F" dec="351" id="1" name="Corante Vermelho da Rosa" />
+        <item hex="15F" dec="351" id="2" name="Corante Verde do Cacto" />
+        <item hex="15F" dec="351" id="3" name="Corante Sementes de Cacau" />
+        <item hex="15F" dec="351" id="4" name="Corante Lapis Lazuli" />
+        <item hex="15F" dec="351" id="5" name="Corante Roxo" />
+        <item hex="15F" dec="351" id="6" name="Corante Ciano" />
+        <item hex="15F" dec="351" id="7" name="Corante Cinza Claro" />
+        <item hex="15F" dec="351" id="8" name="Corante Cinza" />
+        <item hex="15F" dec="351" id="9" name="Corante Rosa" />
+        <item hex="15F" dec="351" id="10" name="Corante Lima" />
+        <item hex="15F" dec="351" id="11" name="Corante Amarelo do Dente-de-Leão" />
+        <item hex="15F" dec="351" id="12" name="Corante Corante Azul Claro" />
+        <item hex="15F" dec="351" id="13" name="Corante Magenta" />
+        <item hex="15F" dec="351" id="14" name="Corante Laranja" />
+        <item hex="15F" dec="351" id="15" name="Corante Pó de osso" />
+        <item hex="160" dec="352" name="Osso" />
+        <item hex="161" dec="353" name="Açúcar" />
+        <item hex="163" dec="355" name="Cama" />
+        <item hex="167" dec="359" name="Tesoura" />
+        <item hex="168" dec="360" name="Melancia (Fatia)" />
+        <item hex="16A" dec="362" name="Semente de Melancia" />
+        <item hex="16B" dec="363" name="Bife Cru" />
+        <item hex="16C" dec="364" name="Filé" />
+        <item hex="16D" dec="365" name="Frango Cru" />
+        <item hex="16E" dec="366" name="Frango Assado" />
+        <item hex="195" dec="405" name="Tijolo do Nether" />
+        <item hex="196" dec="406" name="Nether Quartz" />
+        <item hex="1C8" dec="456" name="Camera" />
+    </items>
+</data>

@@ -163,5 +163,10 @@
     <string name="add_empty_slot">添加空物品栏</string>
     <string name="buy_button">购买程序</string>
     <string name="quit_button">退出</string>
-    <string name="shame_on_you"></string>
+    <string name="shame_on_you">jiayong620的提示:请不要盗版PocketInvEditor，如果你支持它，请在Google Play购买正版，并给予5分评价</string>
+    <string name="inventory_repair_all">修复全部</string>
+    <string name="unlicensed_dialog_title">啊！伙计，你是个海盗！</string>
+    <string name="unlicensed_dialog_body">这个程序没有授权，请从Google Play中购买</string>
+    <string name="buy_button">购买应用</string>
+    <string name="quit_button">退出</string>
 </resources>

@@ -182,6 +182,8 @@
     <string name="unlicensed_dialog_body">This application is not licensed. Please purchase it from Google Play.</string>
     <string name="buy_button">Buy app</string>
     <string name="quit_button">Exit</string>
+    <string name="mcpelauncher_promo">Try MCPELauncher, the next generation Minecraft PE patcher!</string>
+    <string name="mcpelauncher_promo_button_caption">Get it on Google Play</string>
     <!-- Anti-piracy messages go here -->
     <string name="shame_on_you"></string>
 </resources>

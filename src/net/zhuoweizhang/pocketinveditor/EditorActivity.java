@@ -10,6 +10,7 @@ import java.util.Locale;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.ClipboardManager;
@@ -52,6 +53,8 @@ public class EditorActivity extends Activity {
 	protected Button editTerrainButton;
 
 	protected Button copySeedButton;
+
+	protected Button promoButton;
 
 	private static Object loadLock = new Object();
 
@@ -111,6 +114,13 @@ public class EditorActivity extends Activity {
                 copySeedButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                                 copySeedToClipboard();
+                        }
+                });
+
+                promoButton = (Button) findViewById(R.id.main_promo_button);
+                promoButton.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                                launchPromo();
                         }
                 });
 
@@ -240,6 +250,16 @@ public class EditorActivity extends Activity {
 	public void startActivityWithExtras(Intent intent) {
 		intent.putExtras(this.getIntent());
 		startActivity(intent);
+	}
+
+	public void launchPromo() {
+		try {
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			intent.setData(Uri.parse("https://play.google.com/store/apps/details?id=net.zhuoweizhang.mcpelauncher"));
+			startActivity(intent);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	private class LevelLoadTask implements Runnable {

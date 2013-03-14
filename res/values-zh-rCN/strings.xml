@@ -77,6 +77,7 @@
     <string name="entities_angle">角度: </string>
     <string name="entities_dye_all_sheep">给所有羊染色</string>
     <string name="entities_age_all_animals">动物成长加速</string>
+    <string name="entities_remove_all_entities">删除所有实体</string>
     <string name="noworldsfound_title">世界哪去了?!</string>
     <string name="noworldsfound_text">PocketInvEditor was unable to find any Minecraft PE worlds on this device.\n
     This program is designed to edit worlds created by the full version of Minecraft Pocket Edition by Mojang.</string>

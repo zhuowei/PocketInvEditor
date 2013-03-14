@@ -220,6 +220,19 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		}
 	}
 
+	public int removeAllEntities() {
+		int removedCount = 0;
+		List<Entity> entities = EditorActivity.level.getEntities();
+		for (int i = entities.size() - 1; i >= 0; --i) {
+			Entity e = entities.get(i);
+			if (e.getEntityType() != EntityType.PAINTING) {
+				entities.remove(i);
+				removedCount++;
+			}
+		}
+		return removedCount;
+	}
+
 	public static class LoadEntitiesTask implements Runnable {
 
 		private final Activity activity;

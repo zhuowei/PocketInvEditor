@@ -105,6 +105,7 @@
         <item hex="55" dec="85" name="Zaun" />
         <item hex="57" dec="87" name="Netherstein" />
         <item hex="59" dec="89" name="Glowstone" />
+        <item hex="5C" dec="92" name="Kuchenblock" />
         <item hex="5F" dec="95" name="Invisible bedrock"/>
         <item hex="60" dec="96" name="Falltür" />
         <item hex="62" dec="98" id="0" name="Steinziegel" />
@@ -202,6 +203,10 @@
         <item hex="141" dec="321" name="Gemälde" />
         <item hex="143" dec="323" name="Schild" />
         <item hex="144" dec="324" name="Holztür" />
+        <item hex="145" dec="325" name="Eimer" />
+        <item hex="145" dec="325" id="8" name="Wassereimer" />
+        <item hex="145" dec="325" id="10" name="Lavaeimer" />
+        <item hex="149" dec="329" name="Sattel" />
         <item hex="14A" dec="330" name="Eisentür" />
         <item hex="14C" dec="332" name="Schneeball" />
         <item hex="14E" dec="334" name="Leder" />
@@ -233,6 +238,7 @@
         <item hex="15F" dec="351" id="15" name="Knochenmehl" />
         <item hex="160" dec="352" name="Knochen" />
         <item hex="161" dec="353" name="Zucker" />
+        <item hex="162" dec="354" name="Kuchen" />
         <item hex="163" dec="355" name="Bett" />
         <item hex="167" dec="359" name="Schere" />
         <item hex="168" dec="360" name="Melonenscheibe" />
@@ -241,6 +247,10 @@
         <item hex="16C" dec="364" name="Steak" />
         <item hex="16D" dec="365" name="rohes Hühnchen" />
         <item hex="16E" dec="366" name="gebratenes Hühnchen" />
+        <item hex="17F" dec="383" id="10" name="Erschaffe Huhn" />
+        <item hex="17F" dec="383" id="11" name="Erschaffe Kuh" />
+        <item hex="17F" dec="383" id="12" name="Erschaffe Schwein" />
+        <item hex="17F" dec="383" id="13" name="Erschaffe Schaf" />
         <item hex="195" dec="405" name="Netherziegel" />
         <item hex="196" dec="406" name="Netherquarz" />
         <item hex="1C8" dec="456" name="Kamera" />

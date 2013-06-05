@@ -100,6 +100,7 @@
     <item typeId="85" icon="guiblocks,0,8"/>
     <item typeId="87" icon="guiblocks4,2,0"/>
     <item typeId="89" icon="guiblocks3,6,5"/>
+    <item typeId="92" icon="terrain,7,9"/>
     <item typeId="96" icon="guiblocks2,0,0"/>
     <item typeId="98" icon="guiblocks2,6,1"/>
     <item typeId="98" damage="1" icon="guiblocks4,0,2"/>
@@ -199,6 +200,10 @@
     <item typeId="321" icon="items,1,10"/>
     <item typeId="323" icon="items,2,10"/>
     <item typeId="324" icon="items,2,11"/>
+    <item typeId="325" icon="items,4,10"/>
+    <item typeId="325" damage="8" icon="items,4,11"/>
+    <item typeId="325" damage="10" icon="items,4,12"/>
+    <item typeId="329" icon="items,6,8"/>
     <item typeId="330" icon="items,2,12"/>
     <item typeId="332" icon="items,0,14"/>
     <item typeId="334" icon="items,6,7"/>
@@ -230,6 +235,7 @@
     <item typeId="351" damage="15" icon="items,11,15"/>
     <item typeId="352" icon="items,1,12"/>
     <item typeId="353" icon="items,0,13"/>
+    <item typeId="354" icon="items,1,13"/>
     <item typeId="355" icon="items,2,13"/>
     <item typeId="359" icon="items,5,13"/>
     <item typeId="360" icon="items,6,13"/>
@@ -238,6 +244,10 @@
     <item typeId="364" icon="items,6,10"/>
     <item typeId="365" icon="items,7,9"/>
     <item typeId="366" icon="items,7,10"/>
+    <item typeId="383" icon="items,14,0"/>
+    <item typeId="383" damage="11" icon="items,14,1"/>
+    <item typeId="383" damage="12" icon="items,14,2"/>
+    <item typeId="383" damage="13" icon="items,14,3"/>
     <item typeId="405" icon="items,9,5"/>
     <item typeId="406" icon="items,10,5"/>
     <item typeId="456" icon="items,15,2"/>

@@ -104,6 +104,7 @@
         <item hex="55" dec="85" name="Cerca" />
         <item hex="57" dec="87" name="Rocha do Nether" />
         <item hex="59" dec="89" name="Pedra luminosa" />
+        <item hex="5C" dec="92" name="Bolo (Bloco)" />
         <item hex="5F" dec="95" name="Bedrock Invisível" />
         <item hex="60" dec="96" name="Alçapão" />
         <item hex="62" dec="98" id="0" name="Tijolo de Pedra" />
@@ -201,6 +202,10 @@
         <item hex="141" dec="321" name="Pintura" />
         <item hex="143" dec="323" name="Placa" />
         <item hex="144" dec="324" name="Porta de Madeira" />
+        <item hex="145" dec="325" name="Balde" />
+        <item hex="145" dec="325" id="8" name="Balde de Água" />
+        <item hex="145" dec="325" id="10" name="Balde de Lava" />
+        <item hex="149" dec="329" name="Sela" />
         <item hex="14A" dec="330" name="Porta de Ferro" />
         <item hex="14C" dec="332" name="Bola de Neve" />
         <item hex="14E" dec="334" name="Couro" />
@@ -232,6 +237,7 @@
         <item hex="15F" dec="351" id="15" name="Corante Pó de osso" />
         <item hex="160" dec="352" name="Osso" />
         <item hex="161" dec="353" name="Açúcar" />
+        <item hex="162" dec="354" name="Bolo" />
         <item hex="163" dec="355" name="Cama" />
         <item hex="167" dec="359" name="Tesoura" />
         <item hex="168" dec="360" name="Melancia (Fatia)" />
@@ -240,6 +246,10 @@
         <item hex="16C" dec="364" name="Filé" />
         <item hex="16D" dec="365" name="Frango Cru" />
         <item hex="16E" dec="366" name="Frango Assado" />
+        <item hex="17F" dec="383" id="10" name="Invocar Galinha" />
+        <item hex="17F" dec="383" id="11" name="Invocar Vaca" />
+        <item hex="17F" dec="383" id="12" name="Invocar Porco" />
+        <item hex="17F" dec="383" id="13" name="Invocar Ovelha" />
         <item hex="195" dec="405" name="Tijolo do Nether" />
         <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Camera" />

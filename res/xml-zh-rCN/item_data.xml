@@ -104,6 +104,7 @@
         <item hex="55" dec="85" name="栅栏" />
         <item hex="57" dec="87" name="地狱岩" />
         <item hex="59" dec="89" name="荧石" />
+        <item hex="5C" dec="92" name="蛋糕 (方块)" />
         <item hex="5F" dec="95" name="隐形基岩"/>
         <item hex="60" dec="96" name="活板门" />
         <item hex="62" dec="98" id="0" name="石砖" />
@@ -201,6 +202,10 @@
         <item hex="141" dec="321" name="画" />
         <item hex="143" dec="323" name="告示牌" />
         <item hex="144" dec="324" name="木门" />
+        <item hex="145" dec="325" name="桶" />
+        <item hex="145" dec="325" id="8" name="水桶" />
+        <item hex="145" dec="325" id="10" name="岩浆桶" />
+        <item hex="149" dec="329" name="鞍" />
         <item hex="14A" dec="330" name="铁门" />
         <item hex="14C" dec="332" name="雪球" />
         <item hex="14E" dec="334" name="皮革" />
@@ -232,6 +237,7 @@
         <item hex="15F" dec="351" id="15" name="骨粉" />
         <item hex="160" dec="352" name="骨头" />
         <item hex="161" dec="353" name="糖" />
+        <item hex="162" dec="354" name="蛋糕" />
         <item hex="163" dec="355" name="床" />
         <item hex="167" dec="359" name="剪刀" />
         <item hex="168" dec="360" name="西瓜片" />
@@ -240,6 +246,10 @@
         <item hex="16C" dec="364" name="牛排" />
         <item hex="16D" dec="365" name="生鸡肉" />
         <item hex="16E" dec="366" name="熟鸡肉" />
+        <item hex="17F" dec="383" id="10" name="生成鸡" />
+        <item hex="17F" dec="383" id="11" name="生成牛" />
+        <item hex="17F" dec="383" id="12" name="生成猪" />
+        <item hex="17F" dec="383" id="13" name="生成羊" />
         <item hex="195" dec="405" name="地狱砖" />
         <item hex="196" dec="406" name="地狱石英" />
         <item hex="1C8" dec="456" name="照相机" />

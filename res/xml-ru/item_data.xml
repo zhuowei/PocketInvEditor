@@ -103,6 +103,7 @@
         <item hex="55" dec="85" name="Забор" />
         <item hex="57" dec="87" name="Адский камень" />
         <item hex="59" dec="89" name="Светокамень" />
+        <item hex="5C" dec="92" name="Торт (блок)" />
         <item hex="5F" dec="95" name="Невидимый бедрок" />
         <item hex="60" dec="96" name="Люк" />
         <item hex="62" dec="98" id="0" name="Каменная кладка" />
@@ -200,6 +201,10 @@
         <item hex="141" dec="321" name="Картина" />
         <item hex="143" dec="323" name="Табличка" />
         <item hex="144" dec="324" name="Деревянная дверь" />
+        <item hex="145" dec="325" name="Ведро" />
+        <item hex="145" dec="325" id="8" name="Ведро воды" />
+        <item hex="145" dec="325" id="10" name="Ведро лавы" />
+        <item hex="149" dec="329" name="Седло" />
         <item hex="14A" dec="330" name="Железная дверь" />
         <item hex="14C" dec="332" name="Снежокь" />
         <item hex="14E" dec="334" name="Кожа" />
@@ -231,6 +236,7 @@
         <item hex="15F" dec="351" id="15" name="Костная мука" />
         <item hex="160" dec="352" name="Кость" />
         <item hex="161" dec="353" name="Сахар" />
+        <item hex="162" dec="354" name="Торт" />
         <item hex="163" dec="355" name="Кровать" />
         <item hex="167" dec="359" name="Ножницы" />
         <item hex="168" dec="360" name="Арбуз (ломтик)" />
@@ -239,6 +245,10 @@
         <item hex="16C" dec="364" name="Стейк" />
         <item hex="16D" dec="365" name="Сырая курица" />
         <item hex="16E" dec="366" name="Жареная курица" />
+        <item hex="17F" dec="383" id="10" name="Призвать существо - Курица" />
+        <item hex="17F" dec="383" id="11" name="Призвать существо - Корова" />
+        <item hex="17F" dec="383" id="12" name="Призвать существо - Свинья" />
+        <item hex="17F" dec="383" id="13" name="Призвать существо - Овца" />
         <item hex="195" dec="405" name="Адские кирпичи" />
         <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Камера" />

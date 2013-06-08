@@ -44,6 +44,7 @@ public class PocketInvEditorActivity extends ListActivity
 	@Override
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
+		loadContentView();
 		ListView lv = getListView();
 		lv.setTextFilterEnabled(true);
 
@@ -58,6 +59,9 @@ public class PocketInvEditorActivity extends ListActivity
 			loadMaterials();
 		}
 
+	}
+
+	protected void loadContentView() {
 	}
 
 	@Override

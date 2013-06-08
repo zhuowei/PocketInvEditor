@@ -202,6 +202,7 @@
         <item hex="143" dec="323" name="Sign" />
         <item hex="144" dec="324" name="Wooden Door" />
         <item hex="145" dec="325" name="Bucket" />
+        <item hex="145" dec="325" id="1" name="Milk Bucket" />
         <item hex="145" dec="325" id="8" name="Water Bucket" />
         <item hex="145" dec="325" id="10" name="Lava Bucket" />
         <item hex="149" dec="329" name="Saddle" />

@@ -147,7 +147,9 @@ public final class NBTConverter {
 				player.setSpawnY(((IntTag) tag).getValue());
 			} else if (name.equals("SpawnZ")) {
 				player.setSpawnZ(((IntTag) tag).getValue());
-			}
+			} else {
+				System.out.println("Unhandled player tag: " + name);
+			} 
 		}
 		return player;
 	}

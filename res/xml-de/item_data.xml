@@ -204,6 +204,7 @@
         <item hex="143" dec="323" name="Schild" />
         <item hex="144" dec="324" name="Holztür" />
         <item hex="145" dec="325" name="Eimer" />
+        <item hex="145" dec="325" id="1" name="Milcheimer" />
         <item hex="145" dec="325" id="8" name="Wassereimer" />
         <item hex="145" dec="325" id="10" name="Lavaeimer" />
         <item hex="149" dec="329" name="Sattel" />

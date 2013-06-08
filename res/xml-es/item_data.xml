@@ -203,6 +203,7 @@
         <item hex="143" dec="323" name="Cartel" />
         <item hex="144" dec="324" name="Puerta de Madera" />
         <item hex="145" dec="325" name="Balde" />
+        <item hex="145" dec="325" id="1" name="Balde de Leche" />
         <item hex="145" dec="325" id="8" name="Balde de Agua" />
         <item hex="145" dec="325" id="10" name="Balde de Lava" />
         <item hex="149" dec="329" name="Montura" />

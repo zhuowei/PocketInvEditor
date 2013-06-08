@@ -37,11 +37,11 @@ public class EntityStore<T extends Entity> {
 			entity.setPitch(rotationTags.get(1).getValue());
 		} else if (name.equals("OnGround")) {
 			entity.setOnGround(((ByteTag) tag).getValue() > 0 ? true : false);
-		}/* else if (name.equals("id")) { Uncomment for debug output when reading unknown tags
+		} else if (name.equals("id")) { //Uncomment for debug output when reading unknown tags
 			//nothing - handled.
 		} else {
 			System.err.println("Unknown tag " + name + " for entity " + entity.toString());
-		}*/
+		}
 	}
 
 	@SuppressWarnings("unchecked")

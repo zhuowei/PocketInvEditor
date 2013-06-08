@@ -201,6 +201,7 @@
     <item typeId="323" icon="items,2,10"/>
     <item typeId="324" icon="items,2,11"/>
     <item typeId="325" icon="items,4,10"/>
+    <item typeId="325" damage="1" icon="items,4,13"/>
     <item typeId="325" damage="8" icon="items,4,11"/>
     <item typeId="325" damage="10" icon="items,4,12"/>
     <item typeId="329" icon="items,6,8"/>

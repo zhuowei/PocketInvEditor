@@ -203,6 +203,7 @@
         <item hex="143" dec="323" name="告示牌" />
         <item hex="144" dec="324" name="木门" />
         <item hex="145" dec="325" name="桶" />
+        <item hex="145" dec="325" id="1" name="牛奶桶" />
         <item hex="145" dec="325" id="8" name="水桶" />
         <item hex="145" dec="325" id="10" name="岩浆桶" />
         <item hex="149" dec="329" name="鞍" />

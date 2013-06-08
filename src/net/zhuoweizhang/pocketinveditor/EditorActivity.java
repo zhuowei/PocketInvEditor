@@ -117,12 +117,12 @@ public class EditorActivity extends Activity {
                         }
                 });
 
-                promoButton = (Button) findViewById(R.id.main_promo_button);
+                /*promoButton = (Button) findViewById(R.id.main_promo_button);
                 promoButton.setOnClickListener(new View.OnClickListener() {
                         public void onClick(View v) {
                                 launchPromo();
                         }
-                });
+                });*/
 
 		worldFolder = new File(this.getIntent().getStringExtra("world"));
 		loadLevel();

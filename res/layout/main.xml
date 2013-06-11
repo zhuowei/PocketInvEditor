@@ -51,7 +51,8 @@
         android:text="@string/backup"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:enabled="false"/>
+        android:enabled="false"
+        android:visibility="gone"/>
 
     <Button
        android:id="@+id/main_world_info"

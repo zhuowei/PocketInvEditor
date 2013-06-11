@@ -142,6 +142,8 @@
     <string name="terrain_hollow_cuboid">Hollow cuboid</string>
     <string name="terrain_hollow_pyramid">Hollow pyramid</string>
     <string name="terrain_solid_pyramid">Solid pyramid</string>
+    <string name="terrain_fix_holes">Fix terrain holes in Multiplayer</string>
+    <string name="terrain_fix_holes_description">This will mark your entire world as modified to force Minecraft PE to send the whole level when a player connects. This may help if you are experiencing problems where connecting players cannot see a portion of your world. This only needs to be done once per level.</string>
     <string name="file_exists">A file with this name already exists</string>
     <string name="terrain_width">Width (X):</string>
     <string name="terrain_height">Height (Y):</string>

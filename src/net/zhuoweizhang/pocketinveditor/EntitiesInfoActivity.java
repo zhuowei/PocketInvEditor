@@ -162,7 +162,7 @@ public class EntitiesInfoActivity extends Activity implements View.OnClickListen
 		int toEntityId = toType.getId();
 		for (int i = 0; i < entities.size(); ++i) {
 			Entity e = entities.get(i);
-			if (e.getEntityType() == type) {
+			if (type == null || e.getEntityType() == type) {
 				Entity newE = null;
 				try {
 					newE = toEntityClass.newInstance();

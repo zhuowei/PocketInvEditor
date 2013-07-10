@@ -83,6 +83,7 @@
     <string name="entities_breed_all_animals">Breed All</string>
     <string name="entities_unbreed_all_animals">Unbreed All</string>
     <string name="entities_remove_all_entities">Remove all entities</string>
+    <string name="entity_any">Any entity type</string>
     <string name="noworldsfound_title">Y U NO WORLDS?!</string>
     <string name="noworldsfound_text">PocketInvEditor was unable to find any Minecraft PE worlds on this device.\n
     This program is designed to edit worlds created by the full version of Minecraft Pocket Edition by Mojang.</string>
@@ -144,6 +145,7 @@
     <string name="terrain_solid_pyramid">Solid pyramid</string>
     <string name="terrain_fix_holes">Fix terrain holes in Multiplayer</string>
     <string name="terrain_fix_holes_description">This will mark your entire world as modified to force Minecraft PE to send the whole level when a player connects. This may help if you are experiencing problems where connecting players cannot see a portion of your world. This only needs to be done once per level.</string>
+    <string name="terrain_generate_map">Generate map of area</string>
     <string name="file_exists">A file with this name already exists</string>
     <string name="terrain_width">Width (X):</string>
     <string name="terrain_height">Height (Y):</string>
@@ -176,7 +178,7 @@
     This program contains a modified version of item-data.xml from TexasGamer\'s itemid plugin.\n
     This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
     The item icons used in this program are created by Mojang. </string>
-    <string name="about_pro_library_credits">This program uses the aFileChooser library by Paul Burke. For licensing information, check the Minecraft Forums thread.</string>
+    <string name="about_pro_library_credits">This program uses the aFileChooser library by Paul Burke and block colour data from MCEdit. For licensing information, check the Minecraft Forums thread.</string>
     <string name="about_thankscommunity">This application was made possible by the work of many talented translators, testers, and programmers. Thank you.\nView the Minecraft Forums thread for a list of contributors.</string>
     <string name="about_go_to_forums">Open Minecraft Forums thread for PocketInvEditor</string>
     <string name="add_empty_slot">Add Empty Slot</string>

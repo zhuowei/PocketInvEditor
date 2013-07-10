@@ -2,9 +2,9 @@ package net.zhuoweizhang.pocketinveditor.material;
 
 public final class MaterialKey {
 
-	public final short typeId;
+	public short typeId;
 
-	public final short damage;
+	public short damage;
 
 	/**
 	 * @param damage the damage/data value of the material. -1 is a pseudo-value that tells any replacement routines to match all data values.
@@ -12,6 +12,10 @@ public final class MaterialKey {
 	public MaterialKey(short typeId, short damage) {
 		this.typeId = typeId;
 		this.damage = damage;
+	}
+
+	public MaterialKey(MaterialKey other) {
+		this(other.typeId, other.damage);
 	}
 
 	@Override

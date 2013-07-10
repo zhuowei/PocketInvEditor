@@ -16,10 +16,14 @@ public class Chunk {
 	public static final int LENGTH = 16;
 
 	public static final class Key {
-		private final int x, z;
+		private int x, z;
 		public Key(int x, int z) {
 			this.x = x;
 			this.z = z;
+		}
+
+		public Key(Key other) {
+			this(other.x, other.z);
 		}
 
 		public int getX() {
@@ -28,6 +32,14 @@ public class Chunk {
 
 		public int getZ() {
 			return z;
+		}
+
+		public void setX(int x) {
+			this.x = x;
+		}
+
+		public void setZ(int z) {
+			this.z = z;
 		}
 
 		public boolean equals(Object other) {
@@ -168,6 +180,15 @@ public class Chunk {
 	/** Does this chunk need saving next time the ChunkManager issues a save? */
 	public void setNeedsSaving(boolean save) {
 		this.needsSaving = save;
+	}
+
+	public int getHighestBlockYAt(int x, int z) {
+		for (int y = 127; y >= 0; --y) {
+			if (getBlockTypeId(x, y, z) != 0) {
+				return y;
+			}
+		}
+		return 0;
 	}
 
 	private static int getOffset(int x, int y, int z) {

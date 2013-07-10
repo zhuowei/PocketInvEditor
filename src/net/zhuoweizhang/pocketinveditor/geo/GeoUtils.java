@@ -11,13 +11,16 @@ public final class GeoUtils {
 
 	public static Map<MaterialKey, MaterialCount> countBlocks(AreaBlockAccess mgr, CuboidRegion region) {
 		Map<MaterialKey, MaterialCount> counts = new HashMap<MaterialKey, MaterialCount>();
+		MaterialKey key = new MaterialKey((short) 0, (short) 0);
 		for (int x = region.x; x < region.x + region.width; ++x) {
 			for (int z = region.z; z < region.z + region.length; ++z) {
 				for (int y = region.y; y < region.y + region.height; ++y) {
-					MaterialKey key = new MaterialKey((short) mgr.getBlockTypeId(x, y, z), (short) mgr.getBlockData(x, y, z));
+					key.typeId = (short) mgr.getBlockTypeId(x, y, z);
+					key.damage = (short) mgr.getBlockData(x, y, z); 
 					MaterialCount oldCount = counts.get(key);
 					if (oldCount == null) {
-						counts.put(key, new MaterialCount(key, 1));
+						MaterialKey permKey = new MaterialKey(key);
+						counts.put(permKey, new MaterialCount(permKey, 1));
 					} else {
 						oldCount.count++;
 					}

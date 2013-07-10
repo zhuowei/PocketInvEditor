@@ -33,17 +33,18 @@ public class ChunkManager implements AreaChunkAccess {
 
 	public Chunk getChunk(int x, int z) {
 		if (lastKey != null && lastKey.getX() == x && lastKey.getZ() == z) return lastChunk;
-		return getChunk(new Chunk.Key(x, z));
-	}
-
-	public Chunk getChunk(Chunk.Key key) {
-		if (lastKey != null && lastKey.equals(key)) {
-			return lastChunk;
+		Chunk.Key key;
+		if (lastKey == null) {
+			key = new Chunk.Key(x, z);
+			lastKey = key;
+		} else {
+			key = lastKey;
+			key.setX(x);
+			key.setZ(z);
 		}
 		Chunk chunk = chunks.get(key);
 		if (chunk == null)
 			chunk = loadChunk(key);
-		lastKey = key;
 		lastChunk = chunk;
 		return chunk;
 	}
@@ -57,7 +58,7 @@ public class ChunkManager implements AreaChunkAccess {
 		} else {
 			System.err.println("WTF:" + key.getX() + ":" + key.getZ());
 		}
-		chunks.put(key, chunk);
+		chunks.put(new Chunk.Key(key), chunk);
 		return chunk;
 	}
 
@@ -88,6 +89,13 @@ public class ChunkManager implements AreaChunkAccess {
 			return;
 		}
 		getChunk(x >> 4, z >> 4).setBlockData(x & 15, y, z & 15, data);
+	}
+
+	public int getHighestBlockYAt(int x, int z) {
+		if (x >= WORLD_WIDTH || z >= WORLD_LENGTH || x < 0 || z < 0) {
+			return 0;
+		}
+		return getChunk(x >> 4, z >> 4).getHighestBlockYAt(x & 15, z & 15);
 	}
 
 	/** Saves all chunks that needs saving. 

@@ -20,7 +20,8 @@ public enum EntityType {
 	SNOWBALL(81, Snowball.class),
 	EGG(82, Egg.class),
 	PAINTING(83, Painting.class),
-	UNKNOWN(-1, null);
+	UNKNOWN(-1, null),
+	PLAYER(-2, Player.class);
 
 	private static Map<Integer, EntityType> idMap = new HashMap<Integer, EntityType>();
 

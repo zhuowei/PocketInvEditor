@@ -166,4 +166,29 @@ public final class GeoUtils {
 		return replacedCount;
 	}
 
+	public static int makeCylinder(AreaBlockAccess mgr, Vector3f center, int radius, int height, MaterialKey to, boolean hollow) {
+		int centerX = center.getBlockX();
+		int centerY = center.getBlockY();
+		int centerZ = center.getBlockZ();
+		int replacedCount = 0;
+
+		int radiusSquared = radius * radius;
+		int hollowRadiusSquared = (radius - 1) * (radius - 1);
+		
+		for (int x = -radius; x < radius; ++x) {
+			for (int z = -radius; z < radius; ++z) {
+				double distFromCenter = Math.pow(x, 2) + Math.pow(z, 2);
+				if (distFromCenter <= radiusSquared && (!hollow || distFromCenter >= hollowRadiusSquared)) {
+					for (int y = centerY; y < centerY + height; ++y) {
+						mgr.setBlockTypeId(centerX + x, y, centerZ + z, to.typeId);
+						mgr.setBlockData(centerX + x, y, centerZ + z, to.damage);
+						++replacedCount;
+					}
+				}
+			}
+		}
+		return replacedCount;
+
+	}
+
 }

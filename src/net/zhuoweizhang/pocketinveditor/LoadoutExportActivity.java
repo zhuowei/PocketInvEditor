@@ -3,6 +3,8 @@ package net.zhuoweizhang.pocketinveditor;
 import java.io.File;
 import java.io.FileOutputStream;
 
+import java.util.List;
+
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -16,6 +18,8 @@ import android.widget.Toast;
 
 import org.spout.nbt.*;
 import org.spout.nbt.stream.*;
+
+import net.zhuoweizhang.pocketinveditor.tileentity.ContainerTileEntity;
 
 import net.zhuoweizhang.pocketinveditor.io.nbt.NBTConverter;
 
@@ -47,8 +51,17 @@ public class LoadoutExportActivity extends Activity implements View.OnClickListe
 			name.setError("Loadout with same name exists");
 			return;
 		}
-		CompoundTag inventoryTag = NBTConverter.writeLoadout(EditorActivity.level.getPlayer().getInventory());
+		CompoundTag inventoryTag = NBTConverter.writeLoadout(getInventoryToExport());
 		new Thread(new ExportLoadoutTask(file, inventoryTag)).start();
+	}
+
+	public List<InventorySlot> getInventoryToExport() {
+		if (this.getIntent().getBooleanExtra("IsTileEntity", false)) {
+			int tileEntityIndex = this.getIntent().getIntExtra("Index", -1);
+			ContainerTileEntity container = (ContainerTileEntity) EditorActivity.level.getTileEntities().get(tileEntityIndex);
+			return container.getItems();
+		}
+		return EditorActivity.level.getPlayer().getInventory();
 	}
 
 	private class ExportLoadoutTask implements Runnable {

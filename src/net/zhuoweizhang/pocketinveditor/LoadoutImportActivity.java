@@ -30,6 +30,7 @@ import android.widget.Toast;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialLoader;
 import net.zhuoweizhang.pocketinveditor.io.xml.MaterialIconLoader;
 import net.zhuoweizhang.pocketinveditor.material.Material;
+import net.zhuoweizhang.pocketinveditor.tileentity.ContainerTileEntity;
 import static net.zhuoweizhang.pocketinveditor.LoadoutExportActivity.LOADOUT_EXTENSION;
 
 import org.spout.nbt.*;
@@ -98,6 +99,15 @@ public class LoadoutImportActivity extends ListActivity
 	}
 
 	protected void loadoutLoadedCallback(List<InventorySlot> slots) {
+		if (this.getIntent().getBooleanExtra("IsTileEntity", false)) {
+			tileEntityLoadoutLoadedCallback(slots);
+		} else {
+			playerLoadoutLoadedCallback(slots);
+		}
+		finish();
+	}
+
+	protected void playerLoadoutLoadedCallback(List<InventorySlot> slots) {
 		int mode = selectedImportMode;
 		if (mode == REPLACE_MODE) {
 			EditorActivity.level.getPlayer().setInventory(slots);
@@ -116,7 +126,31 @@ public class LoadoutImportActivity extends ListActivity
 			}
 		}
 		EditorActivity.save(this);
-		finish();
+
+	}
+
+	protected void tileEntityLoadoutLoadedCallback(List<InventorySlot> slots) {
+		//TODO: filter out the first 9 slots
+		int mode = selectedImportMode;
+		int tileEntityIndex = this.getIntent().getIntExtra("Index", -1);
+		ContainerTileEntity container = (ContainerTileEntity) EditorActivity.level.getTileEntities().get(tileEntityIndex);
+		if (mode == REPLACE_MODE) {
+			container.setItems(slots);
+		} else if (mode == COMBINE_MODE) {
+			/*List<InventorySlot> currentSlots = EditorActivity.level.getPlayer().getInventory();
+			compactSlots(currentSlots);
+			for (int i = 0; i < slots.size(); i++) {
+				InventorySlot s = slots.get(i);
+				ItemStack stack = s.getContents();
+				if (s.getSlot() < 9) continue;
+				boolean success = addStack(currentSlots, stack);
+				if (!success) {
+					Toast.makeText(this, R.string.loadout_import_too_many_items, Toast.LENGTH_LONG).show();
+					break;
+				}
+			}TODO*/
+		}
+		EntitiesInfoActivity.save(this);
 	}
 
 	public static void compactSlots(List<InventorySlot> slots) {

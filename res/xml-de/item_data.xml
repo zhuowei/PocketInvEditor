@@ -71,7 +71,9 @@
         <item hex="2C" dec="44" id="2" name="Stufe (Holz)" />
         <item hex="2C" dec="44" id="3" name="Stufe (Pflasterstein)" />
         <item hex="2C" dec="44" id="4" name="Stufe (Ziegelstein)" />
+        <item hex="2C" dec="44" id="5" name="Stufe (Steinziegel)" />
         <item hex="2C" dec="44" id="6" name="Stufe (Stein)" />
+        <item hex="2C" dec="44" id="7" name="Stufe (Quarz)" />
         <item hex="2D" dec="45" name="Ziegelstein" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="Bücherregal" />
@@ -123,6 +125,8 @@
         <item hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
         <item hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
         <item hex="9C" dec="156" name="Quarztreppe" />
+        <item hex="9D" dec="157" name="Doppelte Holzstufe" />
+        <item hex="9E" dec="158" name="Holzstufe" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="6C" dec="108" name="Ziegeltreppe" />
         <item hex="F6" dec="246" name="Leuchtendes Obsidian" />

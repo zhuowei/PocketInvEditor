@@ -68,7 +68,9 @@
         <item hex="2C" dec="44" id="2" name="반칸발판 (나무)" />
         <item hex="2C" dec="44" id="3" name="반칸발판 (조약돌)" />
         <item hex="2C" dec="44" id="4" name="반칸발판 (벽돌)" />
+        <item hex="2C" dec="44" id="5" name="석재 벽돌 반 블록" />
         <item hex="2C" dec="44" id="6" name="반칸발판 (돌)" />
+        <item hex="2C" dec="44" id="7" name="석영 반 블록" />
         <item hex="2D" dec="45" name="벽돌" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="책장" />
@@ -121,6 +123,8 @@
         <item hex="9B" dec="155" id="1" name="부드러운 석영" />
         <item hex="9B" dec="155" id="2" name="석영기둥" />
         <item hex="9C" dec="156" name="석영계단" />
+        <item hex="9D" dec="157" name="Wooden Double Slab" />
+        <item hex="9E" dec="158" name="참나무 반 블록" />
         <item hex="F5" dec="245" name="스톤커터" />
         <item hex="F6" dec="246" name="빛나는 옵시디언" />
         <item hex="F7" dec="247" name="지옥 반응기 핵" />

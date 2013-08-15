@@ -69,7 +69,9 @@
         <item hex="2C" dec="44" id="2" name="Полублок (деревянный)" />
         <item hex="2C" dec="44" id="3" name="Полублок (каменный)" />
         <item hex="2C" dec="44" id="4" name="Полублок (кирпич)" />
+        <item hex="2C" dec="44" id="5" name="Плита из каменных кирпичей" />
         <item hex="2C" dec="44" id="6" name="Полублок (обожженный камень)" />
+        <item hex="2C" dec="44" id="7" name="Кварцевая плита" />
         <item hex="2D" dec="45" name="Кирпичный блок" />
         <item hex="2E" dec="46" name="Динамит" />
         <item hex="2F" dec="47" name="Книжная полка" />
@@ -122,6 +124,8 @@
         <item hex="9B" dec="155" id="1" name="Резной блок кварца" />
         <item hex="9B" dec="155" id="2" name="Кварцевые колонны" />
         <item hex="9C" dec="156" name="Кварцевые ступеньки" />
+        <item hex="9D" dec="157" name="Wooden Double Slab" />
+        <item hex="9E" dec="158" name="Деревянная плита" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Светящийся обсидиан" />
         <item hex="F7" dec="247" name="Ядро реактора" />

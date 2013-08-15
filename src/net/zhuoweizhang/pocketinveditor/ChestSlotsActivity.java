@@ -6,6 +6,7 @@ import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
@@ -156,11 +157,15 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		menu.add(getResources().getString(R.string.add_empty_slot));
 		menu.add(getResources().getString(R.string.warp_to_tile_entity));
 		menu.add(getResources().getString(R.string.inventory_repair_all));
+		menu.add(getResources().getString(R.string.loadout_export));
+		menu.add(getResources().getString(R.string.loadout_import));
 		return true;
 	}
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
+		CharSequence title = item.getTitle();
+		Resources res = getResources();
 		if(item.getTitle().equals(getResources().getString(R.string.add_empty_slot))){
 			InventorySlot newSlot = addEmptySlot();
 			if (newSlot != null) {
@@ -172,6 +177,12 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 			return true;
 		} else if (item.getTitle().equals(getResources().getString(R.string.inventory_repair_all))) {
 			repairAllItems();
+		} else if (title.equals(res.getString(R.string.loadout_export))) {
+			openExportLoadoutActivity();
+			return true;
+		} else if (title.equals(res.getString(R.string.loadout_import))) {
+			openImportLoadoutActivity();
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -266,6 +277,20 @@ public final class ChestSlotsActivity extends ListActivity implements OnItemLong
 		}
 		inventoryListAdapter.notifyDataSetChanged();
 		EntitiesInfoActivity.save(this);
+	}
+
+	protected void openImportLoadoutActivity() {
+		Intent intent = new Intent(this, LoadoutImportActivity.class);
+		intent.putExtras(this.getIntent());
+		intent.putExtra("IsTileEntity", true);
+		startActivity(intent);
+	}
+
+	protected void openExportLoadoutActivity() {
+		Intent intent = new Intent(this, LoadoutExportActivity.class);
+		intent.putExtras(this.getIntent());
+		intent.putExtra("IsTileEntity", true);
+		startActivity(intent);
 	}
 
 }

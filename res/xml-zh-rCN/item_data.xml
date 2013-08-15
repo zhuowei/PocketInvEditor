@@ -61,16 +61,18 @@
         <item hex="2A" dec="42" name="铁块" />
         <item hex="2B" dec="43" id="0" name="双石台阶" />
         <item hex="2B" dec="43" id="1" name="双沙石台阶" />
-        <item hex="2B" dec="43" id="2" name="双木台阶" />
+        <item hex="2B" dec="43" id="2" name="双木台阶（老）" />
         <item hex="2B" dec="43" id="3" name="双圆石台阶" />
         <item hex="2B" dec="43" id="4" name="双砖台阶" />
         <item hex="2B" dec="43" id="6" name="双石台阶" />
         <item hex="2C" dec="44" id="0" name="石台阶" />
         <item hex="2C" dec="44" id="1" name="沙石台阶" />
-        <item hex="2C" dec="44" id="2" name="木台阶" />
+        <item hex="2C" dec="44" id="2" name="木台阶（老）" />
         <item hex="2C" dec="44" id="3" name="圆石台阶" />
         <item hex="2C" dec="44" id="4" name="砖台阶" />
+        <item hex="2C" dec="44" id="5" name="石砖台阶" />
         <item hex="2C" dec="44" id="6" name="石台阶" />
+        <item hex="2C" dec="44" id="7" name="石英台阶" />
         <item hex="2D" dec="45" name="砖块" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="书架" />
@@ -123,6 +125,8 @@
         <item hex="9B" dec="155" id="1" name="錾石英方块" />
         <item hex="9B" dec="155" id="2" name="柱石英方块" />
         <item hex="9C" dec="156" name="石英楼梯" />
+        <item hex="9D" dec="157" name="双木台阶" />
+        <item hex="9E" dec="158" name="木台阶" />
         <item hex="F5" dec="245" name="切石机" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />

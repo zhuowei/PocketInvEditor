@@ -70,7 +70,9 @@
         <item hex="2C" dec="44" id="2" name="Laje de Madeira" />
         <item hex="2C" dec="44" id="3" name="Laje de Pedregulho" />
         <item hex="2C" dec="44" id="4" name="Laje de Tijolo" />
+        <item hex="2C" dec="44" id="5" name="Laje de Tijolos de Pedra" />
         <item hex="2C" dec="44" id="6" name="Laje de Pedra" />
+        <item hex="2C" dec="44" id="7" name="Laje de Quartzo" />
         <item hex="2D" dec="45" name="Bloco de Tijolo" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="Estante de Livros" />
@@ -123,6 +125,8 @@
         <item hex="9B" dec="155" id="1" name="Bloco de Quartzo Talhado" />
         <item hex="9B" dec="155" id="2" name="Pilar de Quartzo" />
         <item hex="9C" dec="156" name="Escada de Quartzo" />
+        <item hex="9D" dec="157" name="Lajes de Madeira" />
+        <item hex="9E" dec="158" name="Laje de Madeira" />
         <item hex="F5" dec="245" name="Cortador de Pedra" />
         <item hex="F6" dec="246" name="Obsidiana Luminosa" />
         <item hex="F7" dec="247" name="Núcleo do Reator do Nether" />

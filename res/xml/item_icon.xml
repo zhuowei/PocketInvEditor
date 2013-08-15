@@ -63,10 +63,12 @@
     <item typeId="43" damage="4" icon="terrain,0,7"/>
     <item typeId="43" damage="6" icon="terrain,0,6"/>
     <item typeId="44" icon="guiblocks,2,1"/>
-    <item typeId="44" damage="1" icon="terrain,12,0"/>
+    <item typeId="44" damage="1" icon="guiblocks4,3,2"/>
     <item typeId="44" damage="2" icon="guiblocks,8,7"/>
     <item typeId="44" damage="3" icon="guiblocks,8,6"/>
     <item typeId="44" damage="4" icon="guiblocks,8,8"/>
+    <item typeId="44" damage="5" icon="guiblocks4,3,3"/>
+    <item typeId="44" damage="7" icon="guiblocks4,8,2"/>
     <item typeId="45" icon="guiblocks,1,4"/>
     <item typeId="46" icon="guiblocks,8,4"/>
     <item typeId="47" icon="guiblocks,4,2"/>
@@ -118,6 +120,8 @@
     <item typeId="155" damage="1" icon="guiblocks4,3,6"/>
     <item typeId="155" damage="2" icon="guiblocks4,3,5"/>
     <item typeId="156" icon="guiblocks4,2,7"/>
+    <item typeId="157" icon="terrain,0,4"/>
+    <item typeId="158" icon="guiblocks4,3,0"/>
     <item typeId="245" icon="guiblocks4,7,3"/>
     <item typeId="246" icon="terrain,13,10"/>
     <item typeId="247" icon="guiblocks3,6,4"/>

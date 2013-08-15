@@ -110,4 +110,8 @@ public class Player extends LivingEntity {
 		this.armorSlots = armorSlots;
 	}
 
+	public EntityType getEntityType() {
+		return EntityType.PLAYER;
+	}
+
 }

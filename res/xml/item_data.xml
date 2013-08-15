@@ -60,16 +60,18 @@
         <item hex="2A" dec="42" name="Iron Block" />
         <item hex="2B" dec="43" id="0" name="Double Slab (Stone)" />
         <item hex="2B" dec="43" id="1" name="Double Slab (Sandstone)" />
-        <item hex="2B" dec="43" id="2" name="Double Slab (Wood)" />
+        <item hex="2B" dec="43" id="2" name="Double Slab (Wood alternate)" />
         <item hex="2B" dec="43" id="3" name="Double Slab (Cobblestone)" />
         <item hex="2B" dec="43" id="4" name="Double Slab (Brick)" />
         <item hex="2B" dec="43" id="6" name="Double Slab (Stone)" />
         <item hex="2C" dec="44" id="0" name="Slab (Stone)" />
         <item hex="2C" dec="44" id="1" name="Slab (Sandstone)" />
-        <item hex="2C" dec="44" id="2" name="Slab (Wood)" />
+        <item hex="2C" dec="44" id="2" name="Slab (Wood alternate)" />
         <item hex="2C" dec="44" id="3" name="Slab (Cobblestone)" />
         <item hex="2C" dec="44" id="4" name="Slab (Brick)" />
+        <item hex="2C" dec="44" id="5" name="Slab (Stone Brick)" />
         <item hex="2C" dec="44" id="6" name="Slab (Stone)" />
+        <item hex="2C" dec="44" id="7" name="Slab (Quartz)" />
         <item hex="2D" dec="45" name="Brick Block" />
         <item hex="2E" dec="46" name="TNT" />
         <item hex="2F" dec="47" name="Bookshelf" />
@@ -122,6 +124,8 @@
         <item hex="9B" dec="155" id="1" name="Chiseled Quartz Block" />
         <item hex="9B" dec="155" id="2" name="Pillar Quartz Block" />
         <item hex="9C" dec="156" name="Quartz Stairs" />
+        <item hex="9D" dec="157" name="Wooden Double Slab" />
+        <item hex="9E" dec="158" name="Wooden Slab" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Glowing Obsidian" />
         <item hex="F7" dec="247" name="Nether Reactor Core" />

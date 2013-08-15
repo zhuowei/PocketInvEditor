@@ -70,7 +70,9 @@
         <item hex="2C" dec="44" id="2" name="Losa (Madera)" />
         <item hex="2C" dec="44" id="3" name="Losa (Piedra)" />
         <item hex="2C" dec="44" id="4" name="Losa (Ladrillo)" />
+        <item hex="2C" dec="44" id="5" name="Losa (Ladrillos de piedra)" />
         <item hex="2C" dec="44" id="6" name="Losa (Piedra)" />
+        <item hex="2C" dec="44" id="7" name="Losa (Cuarzo)" />
         <item hex="2D" dec="45" name="Bloque de Ladrillo" />
         <item hex="2E" dec="46" name="Dinamita" />
         <item hex="2F" dec="47" name="Libreria" />
@@ -123,6 +125,8 @@
         <item hex="9B" dec="155" id="1" name="Bloque de Cuarzo Cincelado" />
         <item hex="9B" dec="155" id="2" name="Pilar de Cuarzo" />
         <item hex="9C" dec="156" name="Escaleras de Cuarzo" />
+        <item hex="9D" dec="157" name="Doble losa de madera" />
+        <item hex="9E" dec="158" name="Losa de madera" />
         <item hex="F5" dec="245" name="Cortador de Piedra" />
         <item hex="F6" dec="246" name="Obsidiana Brillante" />
         <item hex="F7" dec="247" name="Reactor Nuclear del Nether" />

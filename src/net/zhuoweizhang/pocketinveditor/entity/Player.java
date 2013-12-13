@@ -14,6 +14,7 @@ public class Player extends LivingEntity {
 	private short sleepTimer = 0;
 	private boolean sleeping = false;
 	private List<ItemStack> armorSlots;
+	private PlayerAbilities abilities = new PlayerAbilities();
 
 	public List<InventorySlot> getInventory() {
 		return inventory;
@@ -108,6 +109,14 @@ public class Player extends LivingEntity {
 
 	public void setArmor(List<ItemStack> armorSlots) {
 		this.armorSlots = armorSlots;
+	}
+
+	public PlayerAbilities getAbilities() {
+		return this.abilities;
+	}
+
+	public void setAbilities(PlayerAbilities abilities) {
+		this.abilities = abilities;
 	}
 
 	public EntityType getEntityType() {

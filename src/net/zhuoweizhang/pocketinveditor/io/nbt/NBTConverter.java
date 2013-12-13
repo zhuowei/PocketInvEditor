@@ -147,6 +147,8 @@ public final class NBTConverter {
 				player.setSpawnY(((IntTag) tag).getValue());
 			} else if (name.equals("SpawnZ")) {
 				player.setSpawnZ(((IntTag) tag).getValue());
+			} else if (name.equals("abilities")) {
+				readAbilities((CompoundTag) tag, player.getAbilities());
 			} else {
 				System.out.println("Unhandled player tag: " + name);
 			} 
@@ -190,6 +192,7 @@ public final class NBTConverter {
 		tags.add(new IntTag("SpawnX", player.getSpawnX()));
 		tags.add(new IntTag("SpawnY", player.getSpawnY()));
 		tags.add(new IntTag("SpawnZ", player.getSpawnZ()));
+		tags.add(writeAbilities(player.getAbilities(), "abilities"));
 
 		/* all level.dat tags are sorted for some reason */
 
@@ -248,6 +251,12 @@ public final class NBTConverter {
 				level.setStorageVersion(((IntTag) tag).getValue());
 			} else if (name.equals("Time")) {
 				level.setTime(((LongTag) tag).getValue());
+			} else if (name.equals("dayCycleStopTime")) {
+				level.setDayCycleStopTime(((LongTag) tag).getValue());
+			} else if (name.equals("spawnMobs")) {
+				level.setSpawnMobs(((ByteTag) tag).getValue() != 0);
+			} else {
+				System.out.println("Unhandled level tag: " + name + ":" + tag);
 			}
 		}
 		return level;
@@ -268,6 +277,8 @@ public final class NBTConverter {
 		tags.add(new IntTag("SpawnZ", level.getSpawnZ()));
 		tags.add(new IntTag("StorageVersion", level.getStorageVersion()));
 		tags.add(new LongTag("Time", level.getTime()));
+		tags.add(new LongTag("dayCycleStopTime", level.getDayCycleStopTime()));
+		tags.add(new ByteTag("spawnMobs", level.getSpawnMobs() ? (byte) 1: (byte) 0));
 		return new CompoundTag("", tags);
 	}
 
@@ -477,6 +488,38 @@ public final class NBTConverter {
 		System.err.println("Why is this blank?!");
 		return null;
 
+	}
+
+	public static void readAbilities(CompoundTag tag, PlayerAbilities abilities) {
+		List<Tag> tags = tag.getValue();
+		for (Tag t: tags) {
+			String n = t.getName();
+			if (!(t instanceof ByteTag)) {
+				System.out.println("Unsupported tag in readAbilities: " + n);
+				continue;
+			}
+			boolean value = ((ByteTag) t).getValue() != 0;
+			if (n.equals("flying")) {
+				abilities.flying = value;
+			} else if (n.equals("instabuild")) {
+				abilities.instabuild = value;
+			} else if (n.equals("invulnerable")) {
+				abilities.invulnerable = value;
+			} else if (n.equals("mayfly")) {
+				abilities.mayFly = value;
+			} else {
+				System.out.println("Unsupported tag in readAbilities: " + n);
+			}
+		}
+	}
+
+	public static CompoundTag writeAbilities(PlayerAbilities abilities, String name) {
+		List<Tag> values = new ArrayList<Tag>(4);
+		values.add(new ByteTag("flying", abilities.flying? (byte) 1: (byte) 0));
+		values.add(new ByteTag("instabuild", abilities.instabuild? (byte) 1: (byte) 0));
+		values.add(new ByteTag("invulnerable", abilities.invulnerable? (byte) 1: (byte) 0));
+		values.add(new ByteTag("mayfly", abilities.mayFly? (byte) 1: (byte) 0));
+		return new CompoundTag(name, values);
 	}
 
 }

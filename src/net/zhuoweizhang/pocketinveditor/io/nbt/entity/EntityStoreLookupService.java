@@ -32,5 +32,6 @@ public class EntityStoreLookupService {
 		addStore(81, new ProjectileEntityStore<Snowball>());
 		addStore(82, new ProjectileEntityStore<Egg>());
 		addStore(83, new PaintingEntityStore<Painting>());
+		addStore(84, new MinecartEntityStore<Minecart>());
 	}
 }

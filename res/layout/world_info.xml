@@ -130,6 +130,41 @@
 
     </LinearLayout>
 
+    <CheckBox android:id="@+id/world_info_may_fly"
+        android:text="@string/world_info_may_fly"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox android:id="@+id/world_info_flying"
+        android:text="@string/world_info_flying"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox android:id="@+id/world_info_invulnerable"
+        android:text="@string/world_info_invulnerable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox android:id="@+id/world_info_insta_build"
+        android:text="@string/world_info_insta_build"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView android:text="@string/world_info_day_cycle_stop_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <EditText android:id="@+id/world_info_day_cycle_stop_time_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:numeric="signed"/>
+
+    <CheckBox android:id="@+id/world_info_spawn_mobs"
+        android:text="@string/world_info_spawn_mobs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+
     <TextView android:text="@string/world_info_sideways_mode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

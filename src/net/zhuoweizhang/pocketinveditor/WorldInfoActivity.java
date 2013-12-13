@@ -9,11 +9,13 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import net.zhuoweizhang.pocketinveditor.entity.Player;
+import net.zhuoweizhang.pocketinveditor.entity.PlayerAbilities;
 import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
 public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener {
@@ -54,6 +56,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 	private TextView worldFolderNameText;
 
+	private CheckBox flyingBox, mayFlyBox, invulnerableBox, instaBuildBox;
+	private TextView dayCycleStopTimeText;
+	private CheckBox spawnMobsBox;
+
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.world_info);
@@ -90,6 +96,21 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		movePlayerButton = (Button) findViewById(R.id.world_info_move_player);
 		movePlayerButton.setOnClickListener(this);
 
+		flyingBox = (CheckBox) findViewById(R.id.world_info_flying);
+		flyingBox.setOnClickListener(this);
+		invulnerableBox = (CheckBox) findViewById(R.id.world_info_invulnerable);
+		invulnerableBox.setOnClickListener(this);
+		instaBuildBox = (CheckBox) findViewById(R.id.world_info_insta_build);
+		instaBuildBox.setOnClickListener(this);
+		mayFlyBox = (CheckBox) findViewById(R.id.world_info_may_fly);
+		mayFlyBox.setOnClickListener(this);
+
+		dayCycleStopTimeText = (TextView) findViewById(R.id.world_info_day_cycle_stop_time_text);
+		dayCycleStopTimeText.setOnFocusChangeListener(this);
+
+		spawnMobsBox = (CheckBox) findViewById(R.id.world_info_spawn_mobs);
+		spawnMobsBox.setOnClickListener(this);
+
 		//if (EditorActivity.level != null) {
 		//	onLevelDataLoad();
 		//} else {
@@ -110,6 +131,9 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		updatePlayerHealthText();
 		worldNameText.setText(EditorActivity.level.getLevelName());
 		worldFolderNameText.setText(EditorActivity.worldFolder.getName());
+		updatePlayerAbilitiesCheckBoxes();
+		dayCycleStopTimeText.setText(Long.toString(EditorActivity.level.getDayCycleStopTime()));
+		spawnMobsBox.setChecked(EditorActivity.level.getSpawnMobs());
 	}
 
 	public void updateTimeText() {
@@ -179,6 +203,14 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
                 EditorActivity.save(this);
         }
 
+	private void updatePlayerAbilitiesCheckBoxes() {
+		PlayerAbilities abilities = EditorActivity.level.getPlayer().getAbilities();
+		flyingBox.setChecked(abilities.flying);
+		invulnerableBox.setChecked(abilities.invulnerable);
+		instaBuildBox.setChecked(abilities.instabuild);
+		mayFlyBox.setChecked(abilities.mayFly);
+	}
+
 
 	public void onClick(View v) {
 		if (v == gameModeChangeButton) {
@@ -204,6 +236,25 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			playerSideways(false);
 		} else if (v == movePlayerButton) {
 			showDialog(DIALOG_MOVE_PLAYER);
+		} else if (v == flyingBox) {
+			Player player = EditorActivity.level.getPlayer();
+			player.getAbilities().flying = flyingBox.isChecked();
+			EditorActivity.save(this);
+		} else if (v == invulnerableBox) {
+			Player player = EditorActivity.level.getPlayer();
+			player.getAbilities().invulnerable = invulnerableBox.isChecked();
+			EditorActivity.save(this);
+		} else if (v == instaBuildBox) {
+			Player player = EditorActivity.level.getPlayer();
+			player.getAbilities().instabuild = instaBuildBox.isChecked();
+			EditorActivity.save(this);
+		} else if (v == mayFlyBox) {
+			Player player = EditorActivity.level.getPlayer();
+			player.getAbilities().mayFly = mayFlyBox.isChecked();
+			EditorActivity.save(this);
+		} else if (v == spawnMobsBox) {
+			EditorActivity.level.setSpawnMobs(instaBuildBox.isChecked());
+			EditorActivity.save(this);
 		}
 	}
 
@@ -295,6 +346,10 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 			if (!hasFocus) {
 				checkWorldFolderNameAfterChange();
 			}
+		} else if (v == dayCycleStopTimeText) {
+			if (!hasFocus) {
+				checkStopTimeInputAfterChange();
+			}
 		}
 	}
 
@@ -304,6 +359,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		checkHealthInputAfterChange();
 		checkWorldNameAfterChange();
 		checkWorldFolderNameAfterChange();
+		checkStopTimeInputAfterChange();
 	}
 
 	public void checkTimeInputAfterChange() {
@@ -358,6 +414,20 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 				Toast.makeText(this, R.string.saved, Toast.LENGTH_SHORT).show();
 				EditorActivity.worldFolder = newLoc;
 			}
+		}
+	}
+
+	public void checkStopTimeInputAfterChange() {
+		long newTime = 0;
+		try {
+			newTime = Long.parseLong(dayCycleStopTimeText.getText().toString());
+			dayCycleStopTimeText.setError(null);
+			if (newTime != EditorActivity.level.getDayCycleStopTime()) {
+				EditorActivity.level.setDayCycleStopTime(newTime);
+				EditorActivity.save(this);
+			}
+		} catch (NumberFormatException e) {
+			dayCycleStopTimeText.setError(this.getResources().getText(R.string.invalid_number));
 		}
 	}
 }

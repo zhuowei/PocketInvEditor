@@ -20,6 +20,7 @@ public enum EntityType {
 	SNOWBALL(81, Snowball.class),
 	EGG(82, Egg.class),
 	PAINTING(83, Painting.class),
+	MINECART(84, Minecart.class),
 	UNKNOWN(-1, null),
 	PLAYER(-2, Player.class);
 

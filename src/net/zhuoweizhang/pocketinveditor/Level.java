@@ -28,6 +28,10 @@ public class Level {
 
 	private long time;
 
+	private long dayCycleStopTime = -1;
+
+	private boolean spawnMobs = true;
+
 	private List<Entity> entities;
 
 	private List<TileEntity> tileEntities;
@@ -126,6 +130,22 @@ public class Level {
 
 	public void setTime(long time) {
 		this.time = time;
+	}
+
+	public long getDayCycleStopTime() {
+		return dayCycleStopTime;
+	}
+
+	public void setDayCycleStopTime(long dayCycleStopTime) {
+		this.dayCycleStopTime = dayCycleStopTime;
+	}
+
+	public boolean getSpawnMobs() {
+		return spawnMobs;
+	}
+
+	public void setSpawnMobs(boolean spawnMobs) {
+		this.spawnMobs = spawnMobs;
 	}
 
 	public List<Entity> getEntities() {

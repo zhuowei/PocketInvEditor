@@ -62,6 +62,7 @@
     <string name="entity_thrownegg">Thrown egg</string>
     <string name="entity_painting">Painting</string>
     <string name="entity_fallingblock">Falling block</string>
+    <string name="entity_minecart">Minecart</string>
     <string name="entity_unknown">Unknown entity type</string>
     <string name="entities_info">View entities info</string>
     <string name="entities_edit">Edit entities</string>
@@ -163,6 +164,13 @@
     <string name="armor_edit">Edit armor</string>
     <string name="armor_view">View armor</string>
     <string name="armor_get_pro_to_edit">Upgrade to PocketInvEditor Pro to edit armor</string>
+    <string name="world_info_may_fly">Allow flying</string>
+    <string name="world_info_flying">Currently flying</string>
+    <string name="world_info_may_build">Allow placing of blocks</string>
+    <string name="world_info_insta_build">Instantly break blocks</string>
+    <string name="world_info_invulnerable">Invulnerable mode</string>
+    <string name="world_info_day_cycle_stop_time">Lock day cycle to time (-1 to unlock)</string>
+    <string name="world_info_spawn_mobs">Allow mob spawning</string>
     <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

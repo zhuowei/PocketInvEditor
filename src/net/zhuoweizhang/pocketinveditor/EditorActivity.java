@@ -157,7 +157,7 @@ public class EditorActivity extends Activity {
 		worldLastPlayedView.setText(this.getResources().getText(R.string.lastplayed) + ": " + 
 			DateFormat.getInstance().format(new Date(level.getLastPlayed() * 1000)));
 		worldSeedView.setText(Long.toString(level.getRandomSeed()));
-		startInventoryEditorButton.setEnabled(level.getGameType() != 1);
+		startInventoryEditorButton.setEnabled(true);// changed in 0.8.0
 		startBackupButton.setEnabled(true);
 		startWorldInfoButton.setEnabled(true);
 		entitiesInfoButton.setEnabled(true);

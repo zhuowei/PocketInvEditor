@@ -39,7 +39,7 @@ public class TileEntityStoreLookupService {
 
 	static {
 		addStore("Furnace", new FurnaceTileEntityStore<FurnaceTileEntity>(), FurnaceTileEntity.class);
-		addStore("Chest", new ContainerTileEntityStore<ContainerTileEntity>(), ContainerTileEntity.class);
+		addStore("Chest", new ChestTileEntityStore<ChestTileEntity>(), ChestTileEntity.class);
 		addStore("NetherReactor", new NetherReactorTileEntityStore<NetherReactorTileEntity>(), NetherReactorTileEntity.class);
 		addStore("Sign", new SignTileEntityStore<SignTileEntity>(), SignTileEntity.class);
 	}

@@ -29,7 +29,7 @@ public class TileEntityStore<T extends TileEntity> {
 		} else if (tag.getName().equals("id")) {
 			entity.setId(((StringTag) tag).getValue());
 		} else {
-			System.out.println("Unhandled tag " + tag.getName() + " for tile entity " + this);
+			System.out.println("Unhandled tag " + tag.getName() + ":" + tag.toString() + " for tile entity " + this);
 		}
 	}
 

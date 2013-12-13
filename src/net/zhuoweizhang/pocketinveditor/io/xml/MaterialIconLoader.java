@@ -116,6 +116,7 @@ public final class MaterialIconLoader implements Runnable {
 							sourceBitmap = itemsBitmap;
 						} else if (additionalBitmaps.containsKey(iconSource)) {
 							sourceBitmap = additionalBitmaps.get(iconSource);
+							cellWidthX = cellWidthY = 16;
 						} else {
 							System.err.println("iconSource - invalid icon source: " + iconParams);
 							continue;

@@ -295,7 +295,9 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 						EditorActivity.level.setGameType(item);
 						gameModeText.setText(EditorActivity.level.getGameType() == 1 ? 
 							R.string.gamemode_creative : R.string.gamemode_survival);
+						EditorActivity.level.getPlayer().getAbilities().initForGameType(item);
 						EditorActivity.save(WorldInfoActivity.this);
+						updatePlayerAbilitiesCheckBoxes();
 						dialog.dismiss();
 					}
 			}).create();

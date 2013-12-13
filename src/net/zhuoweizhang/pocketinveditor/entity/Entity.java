@@ -22,6 +22,8 @@ public class Entity {
 
 	private int typeId = 0;
 
+	private Entity riding = null;
+
 	public Vector3f getLocation() {
 		return location;
 	}
@@ -92,6 +94,14 @@ public class Entity {
 
 	public void setEntityTypeId(int typeId) {
 		this.typeId = typeId;
+	}
+
+	public Entity getRiding() {
+		return riding;
+	}
+
+	public void setRiding(Entity riding) {
+		this.riding = riding;
 	}
 
 	public EntityType getEntityType() {

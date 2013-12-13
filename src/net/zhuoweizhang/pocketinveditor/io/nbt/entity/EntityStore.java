@@ -31,6 +31,8 @@ public class EntityStore<T extends Entity> {
 			entity.setFireTicks(((ShortTag) tag).getValue());
 		} else if (name.equals("FallDistance")) {
 			entity.setFallDistance(((FloatTag) tag).getValue());
+		} else if (name.equals("Riding")) {
+			entity.setRiding(NBTConverter.readSingleEntity((CompoundTag) tag));
 		} else if (name.equals("Rotation")) {
 			List<FloatTag> rotationTags = ((ListTag<FloatTag>) tag).getValue();
 			entity.setYaw(rotationTags.get(0).getValue());
@@ -40,7 +42,7 @@ public class EntityStore<T extends Entity> {
 		} else if (name.equals("id")) { //Uncomment for debug output when reading unknown tags
 			//nothing - handled.
 		} else {
-			System.err.println("Unknown tag " + name + " for entity " + entity.toString());
+			System.err.println("Unknown tag " + name + " for entity " + entity.getClass().getSimpleName() + " : " + tag);
 		}
 	}
 
@@ -53,6 +55,9 @@ public class EntityStore<T extends Entity> {
 		tags.add(new ShortTag("Fire", entity.getFireTicks()));
 		tags.add(NBTConverter.writeVector(entity.getVelocity(), "Motion"));
 		tags.add(NBTConverter.writeVector(entity.getLocation(), "Pos"));
+		if (entity.getRiding() != null) {
+			tags.add(NBTConverter.writeEntity(entity.getRiding(), "Riding"));
+		}
 		List<FloatTag> rotationTags = new ArrayList<FloatTag>(2);
 		rotationTags.add(new FloatTag("", entity.getYaw()));
 		rotationTags.add(new FloatTag("", entity.getPitch()));

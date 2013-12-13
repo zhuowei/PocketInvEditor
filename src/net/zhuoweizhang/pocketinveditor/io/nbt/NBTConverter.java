@@ -149,6 +149,8 @@ public final class NBTConverter {
 				player.setSpawnZ(((IntTag) tag).getValue());
 			} else if (name.equals("abilities")) {
 				readAbilities((CompoundTag) tag, player.getAbilities());
+			} else if (name.equals("Riding")) {
+				player.setRiding(readSingleEntity((CompoundTag) tag));
 			} else {
 				System.out.println("Unhandled player tag: " + name);
 			} 
@@ -193,6 +195,9 @@ public final class NBTConverter {
 		tags.add(new IntTag("SpawnY", player.getSpawnY()));
 		tags.add(new IntTag("SpawnZ", player.getSpawnZ()));
 		tags.add(writeAbilities(player.getAbilities(), "abilities"));
+		if (player.getRiding() != null) {
+			tags.add(writeEntity(player.getRiding(), "Riding"));
+		}
 
 		/* all level.dat tags are sorted for some reason */
 
@@ -375,6 +380,10 @@ public final class NBTConverter {
 	}
 
 	public static CompoundTag writeEntity(Entity entity) {
+		return writeEntity(entity, "");
+	}
+
+	public static CompoundTag writeEntity(Entity entity, String tagName) {
 		int typeId = entity.getEntityTypeId();
 		EntityStore store = EntityStoreLookupService.idMap.get(typeId);
 		if (store == null) {
@@ -391,7 +400,7 @@ public final class NBTConverter {
 				return a.getName().equals(b.getName());
 			}
 		});
-		return new CompoundTag("", tags);
+		return new CompoundTag(tagName, tags);
 	}
 
 	public static ItemStack readItemStack(CompoundTag compoundTag) {
@@ -520,6 +529,17 @@ public final class NBTConverter {
 		values.add(new ByteTag("invulnerable", abilities.invulnerable? (byte) 1: (byte) 0));
 		values.add(new ByteTag("mayfly", abilities.mayFly? (byte) 1: (byte) 0));
 		return new CompoundTag(name, values);
+	}
+
+	public static Entity readSingleEntity(CompoundTag entityTag) {
+		for (Tag t: entityTag.getValue()) {
+			String name = t.getName();
+			if (name.equals("id")) {
+				Entity entity = readEntity(((IntTag) t).getValue(), entityTag);
+				return entity;
+			}
+		}
+		return null;
 	}
 
 }

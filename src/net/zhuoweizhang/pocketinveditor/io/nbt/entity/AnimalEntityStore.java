@@ -15,6 +15,8 @@ public class AnimalEntityStore<T extends Animal> extends LivingEntityStore<T> {
 	public void loadTag(T entity, Tag tag) {
 		if (tag.getName().equals("Age")) {
 			entity.setAge(((IntTag) tag).getValue());
+		} else if (tag.getName().equals("InLove")) {
+			entity.setInLove(((IntTag) tag).getValue());
 		} else {
 			super.loadTag(entity, tag);
 		}
@@ -24,6 +26,7 @@ public class AnimalEntityStore<T extends Animal> extends LivingEntityStore<T> {
 	public List<Tag> save(T entity) {
 		List<Tag> tags = super.save(entity);
 		tags.add(new IntTag("Age", entity.getAge()));
+		tags.add(new IntTag("InLove", entity.getInLove()));
 		return tags;
 	}
 }

@@ -31,6 +31,7 @@ public class EntityTypeLocalization {
 		namesMap.put(EntityType.SNOWBALL, R.string.entity_snowball);
 		namesMap.put(EntityType.EGG, R.string.entity_thrownegg);
 		namesMap.put(EntityType.PAINTING, R.string.entity_painting);
+		namesMap.put(EntityType.MINECART, R.string.entity_minecart);
 		namesMap.put(EntityType.UNKNOWN, R.string.entity_unknown);
 	}
 

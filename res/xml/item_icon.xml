@@ -25,6 +25,7 @@
     <item typeId="17" damage="2" icon="guiblocks,1,2"/>
     <item typeId="18" icon="guiblocks,3,7"/>
     <item typeId="18" damage="1" icon="guiblocks2,4,2"/>
+    <item typeId="19" icon="terrain-atlas,2,24"/>
     <item typeId="20" icon="guiblocks,3,6"/>
     <item typeId="21" icon="guiblocks2,5,9"/>
     <item typeId="22" icon="guiblocks2,4,7"/>
@@ -32,8 +33,10 @@
     <item typeId="24" damage="1" icon="guiblocks4,1,2"/>
     <item typeId="24" damage="2" icon="guiblocks4,1,3"/>
     <item typeId="26" icon="terrain,8,6"/>
+    <item typeId="27" icon="terrain-atlas,5,0"/>
     <item typeId="30" icon="terrain,0,11"/>
     <item typeId="31" icon="terrain,3,7"/>
+    <item typeId="32" icon="terrain-atlas,2,9"/>
     <item typeId="35" icon="guiblocks,5,5"/>
     <item typeId="35" damage="1" icon="guiblocks,7,1"/>
     <item typeId="35" damage="2" icon="guiblocks,6,9"/>
@@ -88,6 +91,7 @@
     <item typeId="63" icon="items,2,10"/>
     <item typeId="64" icon="terrain,6,1"/>
     <item typeId="65" icon="guiblocks,0,5"/>
+    <item typeId="66" icon="terrain-atlas,4,29"/>
     <item typeId="67" icon="guiblocks,2,0"/>
     <item typeId="68" icon="items,2,10"/>
     <item typeId="71" icon="terrain,5,2"/>
@@ -100,28 +104,43 @@
     <item typeId="82" icon="guiblocks,8,0"/>
     <item typeId="83" icon="guiblocks,4,8"/>
     <item typeId="85" icon="guiblocks,0,8"/>
+    <item typeId="86" icon="terrain-atlas,4,7"/>
     <item typeId="87" icon="guiblocks4,2,0"/>
     <item typeId="89" icon="guiblocks3,6,5"/>
+    <item typeId="91" icon="terrain-atlas,4,10"/>
     <item typeId="92" icon="terrain,7,9"/>
     <item typeId="96" icon="guiblocks2,0,0"/>
     <item typeId="98" icon="guiblocks2,6,1"/>
     <item typeId="98" damage="1" icon="guiblocks4,0,2"/>
     <item typeId="98" damage="2" icon="guiblocks4,0,3"/>
+    <item typeId="101" icon="terrain-atlas,3,27"/>
     <item typeId="102" icon="terrain,3,1"/>
     <item typeId="103" icon="guiblocks3,6,0"/>
+    <item typeId="104" icon="terrain-atlas,4,25"/>
     <item typeId="105" icon="terrain,6,15"/>
     <item typeId="107" icon="guiblocks,0,9"/>
     <item typeId="108" icon="guiblocks,9,4"/>
     <item typeId="109" icon="guiblocks4,2,5"/>
     <item typeId="112" icon="guiblocks4,1,9"/>
     <item typeId="114" icon="guiblocks4,2,6"/>
+    <item typeId="126" icon="terrain-atlas,5,19"/>
     <item typeId="128" icon="guiblocks4,2,4"/>
+    <item typeId="134" icon="terrain-atlas,0,23"/>
+    <item typeId="135" icon="terrain-atlas,0,24"/>
+    <item typeId="136" icon="terrain-atlas,0,25"/>
+    <item typeId="139" icon="terrain-atlas,0,5"/>
+    <item typeId="141" icon="terrain-atlas,3,30"/>
+    <item typeId="142" icon="terrain-atlas,3,30"/>
     <item typeId="155" icon="guiblocks4,3,4"/>
     <item typeId="155" damage="1" icon="guiblocks4,3,6"/>
     <item typeId="155" damage="2" icon="guiblocks4,3,5"/>
     <item typeId="156" icon="guiblocks4,2,7"/>
     <item typeId="157" icon="terrain,0,4"/>
     <item typeId="158" icon="guiblocks4,3,0"/>
+    <item typeId="170" icon="terrain-atlas,6,11"/>
+    <item typeId="171" icon="terrain-atlas,7,24"/>
+    <item typeId="173" icon="terrain-atlas,1,19"/>
+    <item typeId="244" icon="terrain-atlas,3,30"/>
     <item typeId="245" icon="guiblocks4,7,3"/>
     <item typeId="246" icon="terrain,13,10"/>
     <item typeId="247" icon="guiblocks3,6,4"/>
@@ -208,8 +227,10 @@
     <item typeId="325" damage="1" icon="items,4,13"/>
     <item typeId="325" damage="8" icon="items,4,11"/>
     <item typeId="325" damage="10" icon="items,4,12"/>
+    <item typeId="328" icon="items-opaque,8,10"/>
     <item typeId="329" icon="items,6,8"/>
     <item typeId="330" icon="items,2,12"/>
+    <item typeId="331" icon="items-opaque,11,4"/>
     <item typeId="332" icon="items,0,14"/>
     <item typeId="334" icon="items,6,7"/>
     <item typeId="336" icon="items,1,6"/>
@@ -244,6 +265,7 @@
     <item typeId="355" icon="items,2,13"/>
     <item typeId="359" icon="items,5,13"/>
     <item typeId="360" icon="items,6,13"/>
+    <item typeId="361" icon="items-opaque,11,11"/>
     <item typeId="362" icon="items,3,14"/>
     <item typeId="363" icon="items,6,9"/>
     <item typeId="364" icon="items,6,10"/>
@@ -253,7 +275,14 @@
     <item typeId="383" damage="11" icon="items,14,1"/>
     <item typeId="383" damage="12" icon="items,14,2"/>
     <item typeId="383" damage="13" icon="items,14,3"/>
+    <item typeId="391" icon="items-opaque,2,7"/>
+    <item typeId="392" icon="items-opaque,9,12"/>
+    <item typeId="393" icon="items-opaque,9,13"/>
+    <item typeId="400" icon="items-opaque,10,4"/>
     <item typeId="405" icon="items,9,5"/>
     <item typeId="406" icon="items,10,5"/>
     <item typeId="456" icon="items,15,2"/>
+    <item typeId="457" icon="items-opaque,2,10"/>
+    <item typeId="458" icon="items-opaque,11,13"/>
+    <item typeId="459" icon="items-opaque,8,13"/>
 </items>

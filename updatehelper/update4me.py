@@ -33,7 +33,7 @@ def readMCCSV(name):
     with open(name, "r") as myfile:
         for l in myfile:
             fields = l.strip().split(",")
-            mylist.append((int(fields[0]), fields[1]))
+            mylist.append((int(fields[0]), fields[1], fields[2]))
     return mylist
 
 def readXML(name):

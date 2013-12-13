@@ -27,6 +27,7 @@
         <item hex="12" dec="18" id="0" name="Листья (яблоня)" />
         <item hex="12" dec="18" id="1" name="Листья (ель)" />
         <item hex="12" dec="18" id="2" name="Листья (береза)" />
+        <item hex="13" dec="19" name="Губка" />
         <item hex="14" dec="20" name="Стекло (блок)" />
         <item hex="15" dec="21" name="Лазуритовая руда" />
         <item hex="16" dec="22" name="Блок лазурита" />
@@ -34,8 +35,10 @@
         <item hex="18" dec="24" id="1" name="Резной песчаник" />
         <item hex="18" dec="24" id="2" name="Гладкий песчаник" />
         <item hex="1A" dec="26" name="Кровать (блок)" />
+        <item hex="1B" dec="27" name="Энергорельсы" />
         <item hex="1E" dec="30" name="Паутина" />
         <item hex="1F" dec="31" name="Мертвый саженец" />
+        <item hex="20" dec="32" name="Мертвый куст" />
         <item hex="23" dec="35" id="0" name="Белый вул" />
         <item hex="23" dec="35" id="1" name="Оранжевый вул" />
         <item hex="23" dec="35" id="2" name="Пурпурный вул" />
@@ -91,6 +94,7 @@
         <item hex="3F" dec="63" name="Табличка(на ножке)" />
         <item hex="40" dec="64" name="Деревянная дверь (блок)" />
         <item hex="41" dec="65" name="Лестница" />
+        <item hex="42" dec="66" name="Рельсы" />
         <item hex="43" dec="67" name="Каменная лестница" />        
         <item hex="44" dec="68" name="Табличка(настенная)" />
         <item hex="47" dec="71" name="Железная дверь (блок)" />
@@ -103,29 +107,44 @@
         <item hex="52" dec="82" name="Глиняный блок" />
         <item hex="53" dec="83" name="Сахарный тростник" />
         <item hex="55" dec="85" name="Забор" />
+        <item hex="56" dec="86" name="Тыква" />
         <item hex="57" dec="87" name="Адский камень" />
         <item hex="59" dec="89" name="Светокамень" />
+        <item hex="5B" dec="91" name="Светильник Джека" />
         <item hex="5C" dec="92" name="Торт (блок)" />
         <item hex="5F" dec="95" name="Невидимый бедрок" />
         <item hex="60" dec="96" name="Люк" />
         <item hex="62" dec="98" id="0" name="Каменная кладка" />
         <item hex="62" dec="98" id="1" name="Замшелые каменные кирпичи" />
         <item hex="62" dec="98" id="2" name="Потресканные каменные кирпичи" />
+        <item hex="65" dec="101" name="Iron Bars" />
         <item hex="66" dec="102" name="Стекло" />
         <item hex="67" dec="103" name="Арбуз" />
+        <item hex="68" dec="104" name="Pumpkin Stem" />
         <item hex="69" dec="105" name="Саженец арбуза" />
         <item hex="6B" dec="107" name="Ворота" />
         <item hex="6C" dec="108" name="Кирпичная лестница" />
         <item hex="6D" dec="109" name="Каменные ступеньки" />
         <item hex="70" dec="112" name="Адские кирпичи" />
         <item hex="72" dec="114" name="Адские ступеньки" />
+        <item hex="7E" dec="126" name="Торт" />
         <item hex="80" dec="128" name="Ступеньки из песчаника" />
+        <item hex="86" dec="134" name="Сосновые ступеньки" />
+        <item hex="87" dec="135" name="Березовые ступеньки" />
+        <item hex="88" dec="136" name="Ступеньки из тропической древесины" />
+        <item hex="8B" dec="139" name="Cobblestone Wall" />
+        <item hex="8D" dec="141" name="Морковь" />
+        <item hex="8E" dec="142" name="Картофель" />
         <item hex="9B" dec="155" id="0" name="Блок кварца" />
         <item hex="9B" dec="155" id="1" name="Резной блок кварца" />
         <item hex="9B" dec="155" id="2" name="Кварцевые колонны" />
         <item hex="9C" dec="156" name="Кварцевые ступеньки" />
         <item hex="9D" dec="157" name="Wooden Double Slab" />
         <item hex="9E" dec="158" name="Деревянная плита" />
+        <item hex="AA" dec="170" name="Сноп сена" />
+        <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AD" dec="173" name="Угольный блок" />
+        <item hex="F4" dec="244" name="Beetroot" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Светящийся обсидиан" />
         <item hex="F7" dec="247" name="Ядро реактора" />
@@ -209,8 +228,10 @@
         <item hex="145" dec="325" id="1" name="Ведро Молоко" />
         <item hex="145" dec="325" id="8" name="Ведро воды" />
         <item hex="145" dec="325" id="10" name="Ведро лавы" />
+        <item hex="148" dec="328" name="Вагонетка" />
         <item hex="149" dec="329" name="Седло" />
         <item hex="14A" dec="330" name="Железная дверь" />
+        <item hex="14B" dec="331" name="Красная пыль" />
         <item hex="14C" dec="332" name="Снежокь" />
         <item hex="14E" dec="334" name="Кожа" />
         <item hex="150" dec="336" name="Кирпич" />
@@ -245,6 +266,7 @@
         <item hex="163" dec="355" name="Кровать" />
         <item hex="167" dec="359" name="Ножницы" />
         <item hex="168" dec="360" name="Арбуз (ломтик)" />
+        <item hex="169" dec="361" name="Pumpkin Seeds" />
         <item hex="16A" dec="362" name="Семена арбуза" />
         <item hex="16B" dec="363" name="Сырая говядина" />
         <item hex="16C" dec="364" name="Стейк" />
@@ -254,8 +276,15 @@
         <item hex="17F" dec="383" id="11" name="Призвать существо - Корова" />
         <item hex="17F" dec="383" id="12" name="Призвать существо - Свинья" />
         <item hex="17F" dec="383" id="13" name="Призвать существо - Овца" />
+        <item hex="187" dec="391" name="Морковь" />
+        <item hex="188" dec="392" name="Potato" />
+        <item hex="189" dec="393" name="Печёный картофель" />
+        <item hex="190" dec="400" name="Тыквенный пирог" />
         <item hex="195" dec="405" name="Адские кирпичи" />
         <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Камера" />
+        <item hex="1C9" dec="457" name="Beetroot" />
+        <item hex="1CA" dec="458" name="Beetroots seeds" />
+        <item hex="1CB" dec="459" name="Beetroot Soup" />
     </items>
 </data>

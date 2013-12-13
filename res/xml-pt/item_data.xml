@@ -28,6 +28,7 @@
         <item hex="12" dec="18" id="0" name="Folhas de Carvalho" />
         <item hex="12" dec="18" id="1" name="Folhas de Pinheiro" />
         <item hex="12" dec="18" id="2" name="Folhas de Eucalipto" />
+        <item hex="13" dec="19" name="Esponja" />
         <item hex="14" dec="20" name="Vidro" />
         <item hex="15" dec="21" name="Minério de Lapis Lazuli" />
         <item hex="16" dec="22" name="Lapis Lazuli Block" />
@@ -35,8 +36,10 @@
         <item hex="18" dec="24" id="1" name="Arenito Talhado" />
         <item hex="18" dec="24" id="2" name="Arenito Liso" />
         <item hex="1A" dec="26" name="Cama (Bloco)" />
+        <item hex="1B" dec="27" name="Trilho Elétrico" />
         <item hex="1E" dec="30" name="Teia de Aranha" />
         <item hex="1F" dec="31" name="Arbusto Morto (Grama alta Retexturada)" />
+        <item hex="20" dec="32" name="Arbusto Morto" />
         <item hex="23" dec="35" id="0" name="Lã Branca" />
         <item hex="23" dec="35" id="1" name="Lã Laranja" />
         <item hex="23" dec="35" id="2" name="Lã Magenta" />
@@ -92,6 +95,7 @@
         <item hex="3F" dec="63" name="Placa" />
         <item hex="40" dec="64" name="Porta de Madeira (Bloco)" />
         <item hex="41" dec="65" name="Escada" />
+        <item hex="42" dec="66" name="Trilho" />
         <item hex="43" dec="67" name="Escada de Pedra" />
         <item hex="44" dec="68" name="Placa na Parede" />
         <item hex="47" dec="71" name="Porta de Madeira (Bloco)" />
@@ -104,29 +108,44 @@
         <item hex="52" dec="82" name="Bloco de Argila" />
         <item hex="53" dec="83" name="Cana de açúcar" />
         <item hex="55" dec="85" name="Cerca" />
+        <item hex="56" dec="86" name="Abóbora" />
         <item hex="57" dec="87" name="Rocha do Nether" />
         <item hex="59" dec="89" name="Pedra luminosa" />
+        <item hex="5B" dec="91" name="Abóbora de Halloween" />
         <item hex="5C" dec="92" name="Bolo (Bloco)" />
         <item hex="5F" dec="95" name="Bedrock Invisível" />
         <item hex="60" dec="96" name="Alçapão" />
         <item hex="62" dec="98" id="0" name="Tijolo de Pedra" />
         <item hex="62" dec="98" id="1" name="Tijolo de Pedra com Musgo" />
         <item hex="62" dec="98" id="2" name="Tijolo de Pedra Rachado" />
+        <item hex="65" dec="101" name="Iron Bars" />
         <item hex="66" dec="102" name="Painel de Vidro"/>
         <item hex="67" dec="103" name="Melancia"/>
+        <item hex="68" dec="104" name="Pumpkin Stem" />
         <item hex="69" dec="105" name="Haste de Melancia"/>
         <item hex="6B" dec="107" name="Portão"/>
         <item hex="6C" dec="108" name="Escadas de Tijolo" />
         <item hex="6D" dec="109" name="Escada de Tijolo de Pedra" />
         <item hex="70" dec="112" name="Tijolo do Nether (Bloco)" />
         <item hex="72" dec="114" name="Escada de Tijolo do Nether" />
+        <item hex="7E" dec="126" name="Bolo" />
         <item hex="80" dec="128" name="Escada de Arenito" />
+        <item hex="86" dec="134" name="Escadas de Pinheiro" />
+        <item hex="87" dec="135" name="Escadas de Eucalipto" />
+        <item hex="88" dec="136" name="Escadas de Madeira da Selva" />
+        <item hex="8B" dec="139" name="Cobblestone Wall" />
+        <item hex="8D" dec="141" name="Cenouras" />
+        <item hex="8E" dec="142" name="Batatas" />
         <item hex="9B" dec="155" id="0" name="Bloco de Quartzo" />
         <item hex="9B" dec="155" id="1" name="Bloco de Quartzo Talhado" />
         <item hex="9B" dec="155" id="2" name="Pilar de Quartzo" />
         <item hex="9C" dec="156" name="Escada de Quartzo" />
         <item hex="9D" dec="157" name="Lajes de Madeira" />
         <item hex="9E" dec="158" name="Laje de Madeira" />
+        <item hex="AA" dec="170" name="Fardo de Feno" />
+        <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AD" dec="173" name="Bloco de Carvão" />
+        <item hex="F4" dec="244" name="Beetroot" />
         <item hex="F5" dec="245" name="Cortador de Pedra" />
         <item hex="F6" dec="246" name="Obsidiana Luminosa" />
         <item hex="F7" dec="247" name="Núcleo do Reator do Nether" />
@@ -210,8 +229,10 @@
         <item hex="145" dec="325" id="1" name="Balde de Leite" />
         <item hex="145" dec="325" id="8" name="Balde de Água" />
         <item hex="145" dec="325" id="10" name="Balde de Lava" />
+        <item hex="148" dec="328" name="Carrinho" />
         <item hex="149" dec="329" name="Sela" />
         <item hex="14A" dec="330" name="Porta de Ferro" />
+        <item hex="14B" dec="331" name="Redstone" />
         <item hex="14C" dec="332" name="Bola de Neve" />
         <item hex="14E" dec="334" name="Couro" />
         <item hex="150" dec="336" name="Tijolo de Argila" />
@@ -246,6 +267,7 @@
         <item hex="163" dec="355" name="Cama" />
         <item hex="167" dec="359" name="Tesoura" />
         <item hex="168" dec="360" name="Melancia (Fatia)" />
+        <item hex="169" dec="361" name="Pumpkin Seeds" />
         <item hex="16A" dec="362" name="Semente de Melancia" />
         <item hex="16B" dec="363" name="Bife Cru" />
         <item hex="16C" dec="364" name="Filé" />
@@ -255,8 +277,15 @@
         <item hex="17F" dec="383" id="11" name="Invocar Vaca" />
         <item hex="17F" dec="383" id="12" name="Invocar Porco" />
         <item hex="17F" dec="383" id="13" name="Invocar Ovelha" />
+        <item hex="187" dec="391" name="Cenoura" />
+        <item hex="188" dec="392" name="Potato" />
+        <item hex="189" dec="393" name="Batata Assada" />
+        <item hex="190" dec="400" name="Torta de Abóbora" />
         <item hex="195" dec="405" name="Tijolo do Nether" />
         <item hex="196" dec="406" name="Nether Quartz" />
         <item hex="1C8" dec="456" name="Camera" />
+        <item hex="1C9" dec="457" name="Beetroot" />
+        <item hex="1CA" dec="458" name="Beetroots seeds" />
+        <item hex="1CB" dec="459" name="Beetroot Soup" />
     </items>
 </data>

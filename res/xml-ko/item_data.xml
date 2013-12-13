@@ -26,6 +26,7 @@
         <item hex="12" dec="18" id="0" name="참나무 나뭇잎" />
         <item hex="12" dec="18" id="1" name="전나무 나뭇잎" />
         <item hex="12" dec="18" id="2" name="자작나무 나뭇잎" />
+        <item hex="13" dec="19" name="스펀지" />
         <item hex="14" dec="20" name="유리" />
         <item hex="15" dec="21" name="청금석 원석" />
         <item hex="16" dec="22" name="청금석 블럭" />
@@ -33,8 +34,10 @@
         <item hex="18" dec="24" id="1" name="부드러운 사암" />
         <item hex="18" dec="24" id="2" name="부드러운 사암" />
         <item hex="1A" dec="26" name="침대" />
+        <item hex="1B" dec="27" name="파워 레일" />
         <item hex="1E" dec="30" name="거미줄" />
         <item hex="1F" dec="31" name="덤불" />
+        <item hex="20" dec="32" name="마른 덤불" />
         <item hex="23" dec="35" id="0" name="양모" />
         <item hex="23" dec="35" id="1" name="주황색 양모" />
         <item hex="23" dec="35" id="2" name="자홍색 양모" />
@@ -90,6 +93,7 @@
         <item hex="3E" dec="62" name="타고있는 화로" />
         <item hex="40" dec="64" name="나무 문" />
         <item hex="41" dec="65" name="사다리" />
+        <item hex="42" dec="66" name="레일" />
         <item hex="43" dec="67" name="조약돌 계단" />
         <item hex="44" dec="68" name="표지판 (Wall Sign Block)" />
         <item hex="47" dec="71" name="철 문" />
@@ -102,29 +106,44 @@
         <item hex="52" dec="82" name="점토블럭" />
         <item hex="53" dec="83" name="사탕수수" />
         <item hex="55" dec="85" name="울타리" />
+        <item hex="56" dec="86" name="호박" />
         <item hex="57" dec="87" name="네더랙" />
         <item hex="59" dec="89" name="발광석" />
+        <item hex="5B" dec="91" name="잭 오 랜턴" />
         <item hex="5C" dec="92" name="케이크 (Block)" />
         <item hex="5F" dec="95" name="보이지않는 배드락" />
         <item hex="60" dec="96" name="다락문" />
         <item hex="62" dec="98" id="0" name="석재 벽돌" />
         <item hex="62" dec="98" id="1" name="이끼 낀 석재 벽돌" />
         <item hex="62" dec="98" id="2" name="금 간 석재 벽돌" />
+        <item hex="65" dec="101" name="Iron Bars" />
         <item hex="66" dec="102" name="유리판" />
         <item hex="67" dec="103" name="수박" />
+        <item hex="68" dec="104" name="Pumpkin Stem" />
         <item hex="69" dec="105" name="수박 (줄기)" />
         <item hex="6B" dec="107" name="울타리 문" />
         <item hex="6C" dec="108" name="벽돌 계단" />
         <item hex="6D" dec="109" name="석재 벽돌 계단" />
         <item hex="70" dec="112" name="네더 벽돌" />
         <item hex="72" dec="114" name="네더 벽돌 계단" />
+        <item hex="7E" dec="126" name="케이크" />
         <item hex="80" dec="128" name="사암 계단" />
+        <item hex="86" dec="134" name="가문비나무 계단" />
+        <item hex="87" dec="135" name="자작나무 계단" />
+        <item hex="88" dec="136" name="정글 나무 계단" />
+        <item hex="8B" dec="139" name="Cobblestone Wall" />
+        <item hex="8D" dec="141" name="당근" />
+        <item hex="8E" dec="142" name="감자" />
         <item hex="9B" dec="155" id="0" name="석영 블럭" />
         <item hex="9B" dec="155" id="1" name="부드러운 석영" />
         <item hex="9B" dec="155" id="2" name="석영기둥" />
         <item hex="9C" dec="156" name="석영계단" />
         <item hex="9D" dec="157" name="Wooden Double Slab" />
         <item hex="9E" dec="158" name="참나무 반 블록" />
+        <item hex="AA" dec="170" name="건초 더미" />
+        <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AD" dec="173" name="석탄 블록" />
+        <item hex="F4" dec="244" name="Beetroot" />
         <item hex="F5" dec="245" name="스톤커터" />
         <item hex="F6" dec="246" name="빛나는 옵시디언" />
         <item hex="F7" dec="247" name="지옥 반응기 핵" />
@@ -208,8 +227,10 @@
         <item hex="145" dec="325" id="1" name="우유 양동이" />
         <item hex="145" dec="325" id="8" name="물 양동이" />
         <item hex="145" dec="325" id="10" name="용암 양동이" />
+        <item hex="148" dec="328" name="마인카트" />
         <item hex="149" dec="329" name="안장" />
         <item hex="14A" dec="330" name="철문" />
+        <item hex="14B" dec="331" name="레드스톤" />
         <item hex="14C" dec="332" name="눈덩이" />
         <item hex="14E" dec="334" name="가죽" />
         <item hex="150" dec="336" name="점토벽돌" />
@@ -244,6 +265,7 @@
         <item hex="163" dec="355" name="침대" />
         <item hex="167" dec="359" name="가위" />
         <item hex="168" dec="360" name="수박" />
+        <item hex="169" dec="361" name="Pumpkin Seeds" />
         <item hex="16A" dec="362" name="수박씨" />
         <item hex="16B" dec="363" name="익히지 않은 소고기" />
         <item hex="16C" dec="364" name="스테이크" />
@@ -253,8 +275,15 @@
         <item hex="17F" dec="383" id="11" name="스폰 소" />
         <item hex="17F" dec="383" id="12" name="스폰 돼지" />
         <item hex="17F" dec="383" id="13" name="스폰 양" />
+        <item hex="187" dec="391" name="당근" />
+        <item hex="188" dec="392" name="Potato" />
+        <item hex="189" dec="393" name="구운 감자" />
+        <item hex="190" dec="400" name="호박 파이" />
         <item hex="195" dec="405" name="네더 벽돌" />
         <item hex="196" dec="406" name="지옥 석영" />
         <item hex="1C8" dec="456" name="카메라" />
+        <item hex="1C9" dec="457" name="Beetroot" />
+        <item hex="1CA" dec="458" name="Beetroots seeds" />
+        <item hex="1CB" dec="459" name="Beetroot Soup" />
     </items>
 </data>

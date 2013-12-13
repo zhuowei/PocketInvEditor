@@ -28,6 +28,7 @@
         <item hex="12" dec="18" id="0" name="Hojas" />
         <item hex="12" dec="18" id="1" name="Hojas de Secoya" />
         <item hex="12" dec="18" id="2" name="Hojas de Abedul" />
+        <item hex="13" dec="19" name="Esponja" />
         <item hex="14" dec="20" name="Vidrio" />
         <item hex="15" dec="21" name="Mineral de Lapis Lazuli" />
         <item hex="16" dec="22" name="Bloque de Lapis Lazuli" />
@@ -35,8 +36,10 @@
         <item hex="18" dec="24" id="1" name="Arenisca Cincelada" />
         <item hex="18" dec="24" id="2" name="Arenisca Lisa" />
         <item hex="1A" dec="26" name="Cama (Bloque)" />
+        <item hex="1B" dec="27" name="Rail con corriente" />
         <item hex="1E" dec="30" name="Telaraña" />
         <item hex="1F" dec="31" name="Arbusto Seco (Hierba Alta Re-Diseñada)" />
+        <item hex="20" dec="32" name="Arbusto Seco" />
         <item hex="23" dec="35" id="0" name="Lana Blanca" />
         <item hex="23" dec="35" id="1" name="Lana Naranja" />
         <item hex="23" dec="35" id="2" name="Lana Magenta" />
@@ -92,6 +95,7 @@
         <item hex="3F" dec="63" name="Cartel" />
         <item hex="40" dec="64" name="Puerta de Madera (Bloque)" />
         <item hex="41" dec="65" name="Escalera" />
+        <item hex="42" dec="66" name="Riel" />
         <item hex="43" dec="67" name="Escaleras de Piedra" />
         <item hex="44" dec="68" name="Cartel" />
         <item hex="47" dec="71" name="Puerta de Hierro (Bloque)" />
@@ -104,29 +108,44 @@
         <item hex="52" dec="82" name="Bloque de Arcilla" />
         <item hex="53" dec="83" name="Caña de Azucar" />
         <item hex="55" dec="85" name="Valla" />
+        <item hex="56" dec="86" name="Calabaza" />
         <item hex="57" dec="87" name="Netherrack" />
         <item hex="59" dec="89" name="Glowstone" />
+        <item hex="5B" dec="91" name="Calabaza con linterna" />
         <item hex="5C" dec="92" name="Torta (Bloque)" />
         <item hex="5F" dec="95" name="Invisible bedrock" />
         <item hex="60" dec="96" name="Trampa" />
         <item hex="62" dec="98" id="0" name="Ladrillo de Piedra" />
         <item hex="62" dec="98" id="1" name="Ladrillo de Piedra Musgoso" />
         <item hex="62" dec="98" id="2" name="Ladrillo de Piedra Quebrado" />
+        <item hex="65" dec="101" name="Iron Bars" />
         <item hex="66" dec="102" name="Cristal"/>
         <item hex="67" dec="103" name="Sandía"/>
+        <item hex="68" dec="104" name="Pumpkin Stem" />
         <item hex="69" dec="105" name="Tallo de Sandia"/>
         <item hex="6B" dec="107" name="Puerta de valla"/>
         <item hex="6C" dec="108" name="Escaleras de Ladrillo" />
         <item hex="6D" dec="109" name="Escaleras de Ladrillo de Piedra" />
         <item hex="70" dec="112" name="Ladrillo del Nether (bloque)" />
         <item hex="72" dec="114" name="Escaleras de Ladrillo del Nether" />
+        <item hex="7E" dec="126" name="Pastel" />
         <item hex="80" dec="128" name="Escaleras de Arenisca" />
+        <item hex="86" dec="134" name="Escaleras de Madera de Abeto" />
+        <item hex="87" dec="135" name="Escaleras de Madera de Abedul" />
+        <item hex="88" dec="136" name="Escaleras de Madera de Selva" />
+        <item hex="8B" dec="139" name="Cobblestone Wall" />
+        <item hex="8D" dec="141" name="Zanahorias" />
+        <item hex="8E" dec="142" name="Papas" />
         <item hex="9B" dec="155" id="0" name="Bloque de Cuarzo" />
         <item hex="9B" dec="155" id="1" name="Bloque de Cuarzo Cincelado" />
         <item hex="9B" dec="155" id="2" name="Pilar de Cuarzo" />
         <item hex="9C" dec="156" name="Escaleras de Cuarzo" />
         <item hex="9D" dec="157" name="Doble losa de madera" />
         <item hex="9E" dec="158" name="Losa de madera" />
+        <item hex="AA" dec="170" name="Bala de heno" />
+        <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AD" dec="173" name="Bloque de Carbón" />
+        <item hex="F4" dec="244" name="Beetroot" />
         <item hex="F5" dec="245" name="Cortador de Piedra" />
         <item hex="F6" dec="246" name="Obsidiana Brillante" />
         <item hex="F7" dec="247" name="Reactor Nuclear del Nether" />
@@ -210,8 +229,10 @@
         <item hex="145" dec="325" id="1" name="Balde de Leche" />
         <item hex="145" dec="325" id="8" name="Balde de Agua" />
         <item hex="145" dec="325" id="10" name="Balde de Lava" />
+        <item hex="148" dec="328" name="Vagón" />
         <item hex="149" dec="329" name="Montura" />
         <item hex="14A" dec="330" name="Puerta de Hierro" />
+        <item hex="14B" dec="331" name="Piedra Roja" />
         <item hex="14C" dec="332" name="Bola de Nieve" />
         <item hex="14E" dec="334" name="Cuero" />
         <item hex="150" dec="336" name="Ladrillo de Arcilla" />
@@ -246,6 +267,7 @@
         <item hex="163" dec="355" name="Cama" />
         <item hex="167" dec="359" name="Pinzas" />
         <item hex="168" dec="360" name="Sandia (Rebanada)" />
+        <item hex="169" dec="361" name="Pumpkin Seeds" />
         <item hex="16A" dec="362" name="Semillas de Sandia" />
         <item hex="16B" dec="363" name="Carne Cruda" />
         <item hex="16C" dec="364" name="Filete" />
@@ -255,8 +277,15 @@
         <item hex="17F" dec="383" id="11" name="Generar Vaca" />
         <item hex="17F" dec="383" id="12" name="Generar Cerdo" />
         <item hex="17F" dec="383" id="13" name="Generar Oveja" />
+        <item hex="187" dec="391" name="Zanahoria" />
+        <item hex="188" dec="392" name="Potato" />
+        <item hex="189" dec="393" name="Papa Horneada" />
+        <item hex="190" dec="400" name="Pie de Calabaza" />
         <item hex="195" dec="405" name="Ladrillo del Nether" />
         <item hex="196" dec="406" name="Cuarzo del Nether" />
         <item hex="1C8" dec="456" name="Cámara" />
+        <item hex="1C9" dec="457" name="Beetroot" />
+        <item hex="1CA" dec="458" name="Beetroots seeds" />
+        <item hex="1CB" dec="459" name="Beetroot Soup" />
     </items>
 </data>

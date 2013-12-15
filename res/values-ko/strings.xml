@@ -62,6 +62,7 @@
     <string name="entity_thrownegg">던져진 알</string>
     <string name="entity_painting">그림</string>
     <string name="entity_fallingblock">떨어지는 블럭</string>
+    <string name="entity_minecart">마인카트</string>
     <string name="entity_unknown">알 수 없는 엔티티</string>
     <string name="entities_info">엔티티 정보 보기</string>
     <string name="entities_edit">엔티티 수정</string>
@@ -157,7 +158,15 @@ Minecraft PE 정식판이 설치되어있는지, 또한 월드가 생성되어 �
     <string name="armor_edit">갑옷 수정</string>
     <string name="armor_view">갑옷 보기</string>
     <string name="armor_get_pro_to_edit">PocketInvEditor Pro로업그레이드 하시면 갑옷을 수정하실 수 있습니다.</string>
+    <string name="world_info_may_fly">비행을 활성화 하기</string>
+    <string name="world_info_flying">비행 허용중</string>
+    <string name="world_info_may_build">블록의 배치를 활성화 하기</string>
+    <string name="world_info_insta_build">즉시 블록 깨기</string>
+    <string name="world_info_invulnerable">무적모드 활성화 하기</string>
+    <string name="world_info_day_cycle_stop_time">시간의 흐름을 막습니다.(잠금을 해재하려면 -1)</string>
+    <string name="world_info_spawn_mobs">몹 스폰을 활성화 하기</string>
     <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
+    4차 번역 : KMCPE(hjchokj) / hjchokj@naver.com [WiX Studio, MCPEKOREA]\n
     3차 번역 : 꽁치사마(Koongchi, Koongchi123) / koongchi123@naver.com [SimpleDream Dev, http://koongchi123.blog.me]\n
     2차 번역 : 제조일자(Jejo, win4263) / win4362@naver.com [MCPEKOREA]\n
     1차 번역 : ChaosLand(woo8586) / woo8586@naver.com [AD TEAM, http://chaosland.tistory.com]\n\n

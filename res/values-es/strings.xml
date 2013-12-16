@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.11" encoding="utf-8"?>
 <resources>
     <string name="app_name">PocketInvEditor</string>
     <string name="select_world">Seleccionar el Mundo</string>
@@ -36,7 +36,7 @@
     <string name="world_info_half_hearts">Medios Corazones:</string>
     <string name="world_info_set_to_full_health">Rellenar la vida</string>
     <string name="world_info_set_to_infinite_health">Vida Infinita</string>
-    <string name="world_info_folder">Folder: </string>
+    <string name="world_info_folder">Carpeta: </string>
     <string name="folder_exists">El folder ya existe; elije un nuevo nombre</string>
     <string name="folder_rename_failed">Fallo al renombrar el folder</string>
     <string name="slot_fillslot">Llenar espacio</string>
@@ -70,6 +70,7 @@
     <string name="entities_spawn_drops">Objetos que Sueltan</string>
     <string name="entities_remove_entities">Eliminar Mobs</string>
     <string name="entities_cow_tipping">Matar Vacas </string>
+    <string name="entities_cow_tipping">Cow tipping</string>
     <string name="entities_mob_tipping">Mob tipping</string>
     <string name="entities_mob_type">Mob: </string>
     <string name="entities_entity_type">Tipo: </string>
@@ -82,22 +83,25 @@
     <string name="entities_age_all_animals">Edad de todos los animales</string>
     <string name="entities_breed_all_animals">Criar a todos</string>
     <string name="entities_unbreed_all_animals">Des-criar a todos</string>
+    <string name="entities_remove_all_entities">Elimiar todos los mobs</string>
+    <string name="entity_any">Cualquier tipo de mob</string>
     <string name="noworldsfound_title">Y LOS MUNDOS?!</string>
-    <string name="noworldsfound_text">PocketInvEditor no encontró ningún mundo de Minecraft PE.\n
+    <string name="noworldsfound_text">PocketInvEditor no encontró ningún mundo de Minecraft PE en este dispositivo.\n
     Este programa edita mundos de la versión completa de Minecraft Pocket Edition por Mojang.</string>
     <string name="get_pro">Obtén Ya PocketInvEditor Pro!</string>
     <string name="get_pro_to_spawn_mobs">Actualiza a Pro para aparecer mobs.</string>
-    <string name="main_view_tileentities">View tile entities</string>
-    <string name="main_edit_tileentities">Edit tile entities</string>
+    <string name="nothingtoseehere_activate">* Alejate de la tablet y respira *</string>
+    <string name="main_view_tileentities">Ver las entidades</string>
+    <string name="main_edit_tileentities">Editar las entidades</string>
     <string name="warp_to_tile_entity">Warp to tile entity</string>
-    <string name="edit_sign">Edit sign</string>
+    <string name="edit_sign">Editar cartel</string>
     <string name="reactor_is_initialized">Iniciando</string>
     <string name="reactor_has_finished">Finalizado</string>
     <string name="reactor_progress">Progreso</string>
     <string name="reactor_overtime">Modo de tiempo extra</string>
     <string name="get_pro_to_edit_containers">Actualizate a PocketInvEditor Pro para editar los baules.</string>
     <string name="get_pro_to_edit_signs">Actualizate a PocketInvEditor Pro para editar el texto de las señales.</string>
-    <string name="get_pro_to_adjust_reactor">Upgrade to PocketInvEditor Pro to adjust Nether Reactors.</string>
+    <string name="get_pro_to_adjust_reactor">Actualizate a PocketInvEditor Pro para ajustar los Reactores del Nether.</string>
     <string name="main_edit_terrain">Editar terreno</string>
     <string name="terrain_editing">Editando terreno. Esto puede tomar un tiempo.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
@@ -140,6 +144,11 @@
     <string name="terrain_hollow_cuboid">Hueco Cubico</string>
     <string name="terrain_hollow_pyramid">Hueco Piramide</string>
     <string name="terrain_solid_pyramid">Piramide Solida</string>
+    <string name="terrain_cylinder">Cilindro</string>
+    <string name="terrain_hollow">Agujero</string>
+    <string name="terrain_fix_holes">Arreglar los agujeros del terreno en Multijugador</string>
+    <string name="terrain_fix_holes_description">Esto hara que tu mundo se envie con las modificaciones que has hecho al otro jugador cuando se conecte a tu mundo. Esto te puede ayudar si tienes el problema en que los otros jugadores de tu mundo no puede ver una parte de tu mundo. Esto sólo debe hacerse una vez por mundo.</string>
+    <string name="terrain_generate_map">Generar un mapa del area</string>
     <string name="file_exists">Un archivo con este nombre ya exciste</string>
     <string name="terrain_width">Ancho (X):</string>
     <string name="terrain_height">Altura (Y):</string>
@@ -155,6 +164,13 @@
     <string name="armor_edit">Editar armadura</string>
     <string name="armor_view">Ver armadura</string>
     <string name="armor_get_pro_to_edit">Actualizate a PocketInvEditor Pro para editar la armadura</string>
+    <string name="world_info_may_fly">Permitir volar</string>
+    <string name="world_info_flying">Actualmente vuelan</string>
+    <string name="world_info_may_build">Permitir colocar bloques</string>
+    <string name="world_info_insta_build">Romper bloques instantaneamente</string>
+    <string name="world_info_invulnerable">Modo invulnerable</string>
+    <string name="world_info_day_cycle_stop_time">Bloquear el ciclo del tiempo (-1 para desbloquerar)</string>
+    <string name="world_info_spawn_mobs">Permitir la aparicion de mobs</string>
     <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
     Este programa es un software gratis: lo puedes redistribuir o modificar
     bajo los términos de la GNU General Public License publicada por
@@ -162,20 +178,27 @@
     (es tu opción) cualquier otra versión.\n
 
     Este programa se distribuye con la esperanza de que sea útil,
-   pero SIN NINGUNA GARANTÍA.  Consulte
+   pero SIN NINGUNA GARANTÍA.  Consulte
     GNU General Public License para más detalles.\n
     </string>
+    <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. Prohibida su distribucion sin permiso.</string>
     <string name="about_librarycredits">Esta aplicación utiliza SimpleNBT, biblioteca desarrolada
     por el equipo de SpoutDev.\n
-    Esta aplicación contiene una versión modificada de item-data.xml de TexasGamer\'s.\n
+    Esta aplicación contiene una versión modificada del archivo item-data.xml de TexasGamer\'s.\n
     Este programa incorpora una versión de UniversalOfGaming\'s Infinite Health mod. \n
     Los iconos de los objetos usados en este programa son creados por ©Mojang. </string>
-    <string name="about_pro_library_credits">Este programa utiliza aFileChooser libreria por Paul Burke. Para información de la licencia, mira los foros de Minecraft. Traducción al Español (By: DJEspia) V.1.3</string>
+    <string name="about_pro_library_credits">Este programa utiliza aFileChooser libreria por Paul Burke. Para información de la licencia, mira los foros de Minecraft. Traducción al Español (By: DJEspia)</string>
     <string name="about_thankscommunity">Esta aplicación ha sido posible gracias al trabajo de muchos traductores, probadores y programadores. Gracias.\nMira los foros de Minecraft para ver una lista de los colaboradores.</string>
     <string name="about_go_to_forums">Abrir los foros de Minecraft hilo de PocketInvEditor</string>
     <string name="add_empty_slot">Añadir Espacio Vacio</string>
-    <string name="unlicensed_dialog_title">Arr! Eres un pirata, grumete!!</string>
+    <string name="inventory_repair_all">Reparar todo</string>
+    <string name="unlicensed_dialog_title">Arr! Eres un pirata!!</string>
     <string name="unlicensed_dialog_body">Esta aplicación es illegal. Comprala de Google Play.</string>
     <string name="buy_button">Comprar</string>
     <string name="quit_button">Salir</string>
+    <string name="mcpelauncher_promo">Prueba MCPELauncher, la nueva generacion de launcher para Minecraft PE!</string>
+    <string name="mcpelauncher_promo_button_caption">Obtener en Google Play</string>
+    <!-- Anti-piracy messages go here -->
+    <!-- Translation to Spanish by: DjEspia  -->
+    <string name="shame_on_you"></string>
 </resources>

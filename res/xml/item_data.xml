@@ -82,6 +82,7 @@
         <item hex="31" dec="49" name="Obsidian" />
         <item hex="32" dec="50" name="Torch" />
         <item hex="33" dec="51" name="Fire" />
+        <item hex="34" dec="52" name="Monster Spawner" />
         <item hex="35" dec="53" name="Wooden Stairs" />
         <item hex="36" dec="54" name="Chest" />
         <item hex="38" dec="56" name="Diamond Ore" />
@@ -114,21 +115,37 @@
         <item hex="5C" dec="92" name="Cake block" />
         <item hex="5F" dec="95" name="Invisible bedrock" />
         <item hex="60" dec="96" name="Trapdoor" />
+        <item hex="61" dec="97" id="0" name="Stone Monster Egg" />
+        <item hex="61" dec="97" id="1" name="Cobblestone Monster Egg" />
+        <item hex="61" dec="97" id="2" name="Stone Brick Monster Egg" />
+        <item hex="61" dec="97" id="3" name="Mossy Stone Brick Monster Egg" />
+        <item hex="61" dec="97" id="4" name="Cracked Stone Monster Egg" />
+        <item hex="61" dec="97" id="5" name="Chiseled Stone Monster Egg" />
         <item hex="62" dec="98" id="0" name="Stone Bricks" />
         <item hex="62" dec="98" id="1" name="Stone Bricks (mossy)" />
         <item hex="62" dec="98" id="2" name="Stone Bricks (cracked)" />
+        <item hex="63" dec="99" name="Huge Brown Mushroom" />
+        <item hex="64" dec="100" name="Huge Red Mushroom" />
         <item hex="65" dec="101" name="Iron Bars" />
         <item hex="66" dec="102" name="Glass Pane"/>
         <item hex="67" dec="103" name="Melon"/>
         <item hex="68" dec="104" name="Pumpkin Stem" />
         <item hex="69" dec="105" name="Melon Stem"/>
+        <item hex="6A" dec="106" name="Vines" />
         <item hex="6B" dec="107" name="Fence Gate"/>
         <item hex="6C" dec="108" name="Brick Stairs" />
         <item hex="6D" dec="109" name="Stone Brick Stairs" />
+        <item hex="6E" dec="110" name="Mycelium" />
+        <item hex="6F" dec="111" name="Lily Pad"/>
         <item hex="70" dec="112" name="Nether Brick (block)" />
         <item hex="72" dec="114" name="Nether Brick Stairs" />
+        <item hex="78" dec="120" name="End Portal Frame" />
+        <item hex="79" dec="121" name="End Stone" />
         <item hex="7E" dec="126" name="Cake" />
+        <item hex="7F" dec="127" name="Cocoa" />
         <item hex="80" dec="128" name="Sandstone Stairs" />
+        <item hex="81" dec="129" name="Emerald Ore" />
+        <item hex="85" dec="133" name="Block of Emerald" />
         <item hex="86" dec="134" name="Spruce Stairs" />
         <item hex="87" dec="135" name="Birch Stairs" />
         <item hex="88" dec="136" name="Jungle Stairs" />
@@ -141,9 +158,20 @@
         <item hex="9C" dec="156" name="Quartz Stairs" />
         <item hex="9D" dec="157" name="Wooden Double Slab" />
         <item hex="9E" dec="158" name="Wooden Slab" />
+        <item hex="9F" dec="159" name="Stained Clay" />
+        <item hex="A1" dec="161" id="0" name="Acacia Leaves" />
+        <item hex="A1" dec="161" id="1" name="Dark Oak Leaves" />
+        <item hex="A2" dec="162" id="0" name="Acacia Wood" />
+        <item hex="A2" dec="162" id="1" name="Dark Oak Wood" />
+        <item hex="A3" dec="163" name="Acacia Wood Stairs" />
+        <item hex="A4" dec="164" name="Dark Oak Wood Stairs" />
         <item hex="AA" dec="170" name="Hay Bale" />
         <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AC" dec="172" name="Hardened Clay" />
         <item hex="AD" dec="173" name="Block of Coal" />
+        <item hex="AE" dec="174" name="Packed Ice" />
+        <item hex="AF" dec="175" name="Large Flower" />
+        <item hex="F3" dec="243" name="Block 243" />
         <item hex="F4" dec="244" name="Beetroot" />
         <item hex="F5" dec="245" name="Stone Cutter" />
         <item hex="F6" dec="246" name="Glowing Obsidian" />
@@ -264,6 +292,7 @@
         <item hex="161" dec="353" name="Sugar" />
         <item hex="162" dec="354" name="Cake" />
         <item hex="163" dec="355" name="Bed" />
+        <item hex="165" dec="357" name="Cookie" />
         <item hex="167" dec="359" name="Shears" />
         <item hex="168" dec="360" name="Melon (slice)" />
         <item hex="169" dec="361" name="Pumpkin Seeds" />
@@ -276,6 +305,7 @@
         <item hex="17F" dec="383" id="11" name="Spawn Cow" />
         <item hex="17F" dec="383" id="12" name="Spawn Pig" />
         <item hex="17F" dec="383" id="13" name="Spawn Sheep" />
+        <item hex="184" dec="388" name="Emerald" />
         <item hex="187" dec="391" name="Carrot" />
         <item hex="188" dec="392" name="Potato" />
         <item hex="189" dec="393" name="Baked Potato" />

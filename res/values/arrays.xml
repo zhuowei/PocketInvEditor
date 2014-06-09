@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="world_info_generators">
+        <item>@string/world_info_generator_old</item>
+        <item>@string/world_info_generator_infinite</item>
+        <item>@string/world_info_generator_flat</item>
+    </string-array>
+</resources>

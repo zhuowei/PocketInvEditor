@@ -18,7 +18,7 @@ import net.zhuoweizhang.pocketinveditor.Level;
 import net.zhuoweizhang.pocketinveditor.io.nbt.NBTConverter;
 
 public final class LevelDataConverter {
-	public static final byte[] header = {0x03, 0x00, 0x00, 0x00};
+	public static final byte[] header = {0x04, 0x00, 0x00, 0x00};
 
 	public static Level read(File file) throws IOException {
 		FileInputStream fis = new FileInputStream(file);

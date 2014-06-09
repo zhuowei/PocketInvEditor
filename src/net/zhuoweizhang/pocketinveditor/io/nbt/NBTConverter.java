@@ -260,6 +260,10 @@ public final class NBTConverter {
 				level.setDayCycleStopTime(((LongTag) tag).getValue());
 			} else if (name.equals("spawnMobs")) {
 				level.setSpawnMobs(((ByteTag) tag).getValue() != 0);
+			} else if (name.equals("Dimension")) {
+				level.setDimension(((IntTag) tag).getValue());
+			} else if (name.equals("Generator")) {
+				level.setGenerator(((IntTag) tag).getValue());
 			} else {
 				System.out.println("Unhandled level tag: " + name + ":" + tag);
 			}

@@ -164,6 +164,10 @@ public class EditorActivity extends Activity {
 		viewTileEntitiesButton.setEnabled(true);
 		editTerrainButton.setEnabled(true);
 		copySeedButton.setEnabled(true);
+		// Disabled, pending updates for 0.9.0
+		entitiesInfoButton.setVisibility(View.GONE);
+		editTerrainButton.setVisibility(View.GONE);
+		viewTileEntitiesButton.setVisibility(View.GONE);
 	}
 
 	protected void startInventoryEditor() {

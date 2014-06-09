@@ -184,5 +184,17 @@
 
     </LinearLayout>
 
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView android:text="@string/world_info_generator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Spinner android:id="@+id/world_info_generator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/world_info_generators"/>
+    </LinearLayout>
+
 </LinearLayout>
 </ScrollView>

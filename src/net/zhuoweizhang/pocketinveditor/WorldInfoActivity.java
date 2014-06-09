@@ -8,9 +8,11 @@ import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +20,8 @@ import net.zhuoweizhang.pocketinveditor.entity.Player;
 import net.zhuoweizhang.pocketinveditor.entity.PlayerAbilities;
 import net.zhuoweizhang.pocketinveditor.util.Vector3f;
 
-public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener {
+public final class WorldInfoActivity extends Activity implements View.OnClickListener, View.OnFocusChangeListener, LevelDataLoadListener,
+	AdapterView.OnItemSelectedListener {
 
 	public static final int DAY_LENGTH = 19200; //16 minutes
 
@@ -59,6 +62,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 	private CheckBox flyingBox, mayFlyBox, invulnerableBox, instaBuildBox;
 	private TextView dayCycleStopTimeText;
 	private CheckBox spawnMobsBox;
+	private Spinner generatorSpinner;
 
 	public void onCreate(Bundle savedInstanceState)	{
 		super.onCreate(savedInstanceState);
@@ -110,6 +114,8 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 
 		spawnMobsBox = (CheckBox) findViewById(R.id.world_info_spawn_mobs);
 		spawnMobsBox.setOnClickListener(this);
+		generatorSpinner = (Spinner) findViewById(R.id.world_info_generator);
+		generatorSpinner.setOnItemSelectedListener(this);
 
 		//if (EditorActivity.level != null) {
 		//	onLevelDataLoad();
@@ -134,6 +140,7 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		updatePlayerAbilitiesCheckBoxes();
 		dayCycleStopTimeText.setText(Long.toString(EditorActivity.level.getDayCycleStopTime()));
 		spawnMobsBox.setChecked(EditorActivity.level.getSpawnMobs());
+		generatorSpinner.setSelection(EditorActivity.level.getGenerator());
 	}
 
 	public void updateTimeText() {
@@ -431,5 +438,15 @@ public final class WorldInfoActivity extends Activity implements View.OnClickLis
 		} catch (NumberFormatException e) {
 			dayCycleStopTimeText.setError(this.getResources().getText(R.string.invalid_number));
 		}
+	}
+
+	public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+		if (parent == generatorSpinner) {
+			EditorActivity.level.setGenerator(position);
+			EditorActivity.save(this);
+		}
+	}
+
+	public void onNothingSelected(AdapterView<?> parent) {
 	}
 }

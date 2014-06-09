@@ -32,6 +32,10 @@ public class Level {
 
 	private boolean spawnMobs = true;
 
+	private int dimension = 0;
+
+	private int generator = 0;
+
 	private List<Entity> entities;
 
 	private List<TileEntity> tileEntities;
@@ -162,5 +166,21 @@ public class Level {
 
 	public void setTileEntities(List<TileEntity> tileEntities) {
 		this.tileEntities = tileEntities;
+	}
+
+	public int getDimension() {
+		return this.dimension;
+	}
+
+	public void setDimension(int dimension) {
+		this.dimension = dimension;
+	}
+
+	public int getGenerator() {
+		return this.generator;
+	}
+
+	public void setGenerator(int generator) {
+		this.generator = generator;
 	}
 }

@@ -171,6 +171,10 @@
     <string name="world_info_invulnerable">Invulnerable mode</string>
     <string name="world_info_day_cycle_stop_time">Lock day cycle to time (-1 to unlock)</string>
     <string name="world_info_spawn_mobs">Allow mob spawning</string>
+    <string name="world_info_generator">Generator</string>
+    <string name="world_info_generator_old">Old</string>
+    <string name="world_info_generator_infinite">Infinite</string>
+    <string name="world_info_generator_flat">Flat</string>
     <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

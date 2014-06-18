@@ -46,7 +46,7 @@
     <string name="world_info_warp_to_spawn">Trasladarse al Punto de Aparición Inicial</string>
     <string name="world_info_sideways_mode">Activar el error del jugador de lado: </string>
     <string name="world_info_move_player">Mover Jugador</string>
-    <string name="entity_item">Objeto que Suelta</string>
+    <string name="entity_item">Objeto Soltado</string>
     <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Pollo</string>
     <string name="entity_cow">Vaca</string>
@@ -56,7 +56,7 @@
     <string name="entity_skeleton">Esqueleto</string>
     <string name="entity_spider">Araña</string>
     <string name="entity_pigzombie">Cerdo Zombie</string>
-    <string name="entity_primedtnt">Primed TNT</string>
+    <string name="entity_primedtnt">TNT Encendida</string>
     <string name="entity_arrow">Flecha</string>
     <string name="entity_snowball">Bola de nieve</string>
     <string name="entity_thrownegg">Huevo</string>
@@ -76,7 +76,7 @@
     <string name="entities_babyfy_mobs">Hacer a los animales pequeños</string>
     <string name="entities_replace_entities">Remplazar mobs</string>
     <string name="entities_replace_with">Remplazar con: </string>
-    <string name="apocowlypse">Deshaparecer mobs</string>
+    <string name="apocowlypse">Desaparecer mobs</string>
     <string name="entities_angle">Angulo: </string>
     <string name="entities_dye_all_sheep">Teñir todas las ovejas</string>
     <string name="entities_age_all_animals">Edad de todos los animales</string>
@@ -92,15 +92,15 @@
     <string name="nothingtoseehere_activate">* Alejate de la tablet y respira *</string>
     <string name="main_view_tileentities">Ver las entidades</string>
     <string name="main_edit_tileentities">Editar las entidades</string>
-    <string name="warp_to_tile_entity">Warp to tile entity</string>
-    <string name="edit_sign">Editar cartel</string>
+    <string name="warp_to_tile_entity">Teletransportar a la entidad.</string>
+    <string name="edit_sign">Editar signo</string>
     <string name="reactor_is_initialized">Iniciando</string>
     <string name="reactor_has_finished">Finalizado</string>
     <string name="reactor_progress">Progreso</string>
     <string name="reactor_overtime">Modo de tiempo extra</string>
-    <string name="get_pro_to_edit_containers">Actualizate a PocketInvEditor Pro para editar los baules.</string>
-    <string name="get_pro_to_edit_signs">Actualizate a PocketInvEditor Pro para editar el texto de las señales.</string>
-    <string name="get_pro_to_adjust_reactor">Actualizate a PocketInvEditor Pro para ajustar los Reactores del Nether.</string>
+    <string name="get_pro_to_edit_containers">Actualizate a PocketInvEditor Pro para editar los cofres.</string>
+    <string name="get_pro_to_edit_signs">Actualizate a PocketInvEditor Pro para editar el texto de los signos.</string>
+    <string name="get_pro_to_adjust_reactor">Actualizate a PocketInvEditor Pro para editar los Reactores Nucleares del Nether.</string>
     <string name="main_edit_terrain">Editar terreno</string>
     <string name="terrain_editing">Editando terreno. Esto puede tomar un tiempo.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
@@ -136,8 +136,8 @@
     <string name="terrain_radius">Radio:</string>
     <string name="terrain_hollow_sphere">Esfera hueca</string>
     <string name="terrain_solid_sphere">Esfera solida</string>
-    <string name="terrain_hollow_dome">Cupula hueca</string>
-    <string name="terrain_solid_dome">Cupula solida</string>
+    <string name="terrain_hollow_dome">Cúpula hueca</string>
+    <string name="terrain_solid_dome">Cúpula solida</string>
     <string name="terrain_coords_to_player_head">Cabeza</string>
     <string name="terrain_coords_to_player_feet">Pies</string>
     <string name="terrain_hollow_cuboid">Hueco Cubico</string>
@@ -188,7 +188,7 @@
     Los iconos de los objetos usados en este programa son creados por ©Mojang. </string>
     <string name="about_pro_library_credits">Este programa utiliza aFileChooser libreria por Paul Burke. Para información de la licencia, mira los foros de Minecraft. Traducción al Español (By: DJEspia)</string>
     <string name="about_thankscommunity">Esta aplicación ha sido posible gracias al trabajo de muchos traductores, probadores y programadores. Gracias.\nMira los foros de Minecraft para ver una lista de los colaboradores.</string>
-    <string name="about_go_to_forums">Abrir los foros de Minecraft hilo de PocketInvEditor</string>
+    <string name="about_go_to_forums">Abrir el tema de PocketInvEditor en los foros de Minecraft.</string>
     <string name="add_empty_slot">Añadir Espacio Vacio</string>
     <string name="inventory_repair_all">Reparar todo</string>
     <string name="unlicensed_dialog_title">Arr! Eres un pirata!!</string>
@@ -198,6 +198,6 @@
     <string name="mcpelauncher_promo">Prueba MCPELauncher, la nueva generacion de launcher para Minecraft PE!</string>
     <string name="mcpelauncher_promo_button_caption">Obtener en Google Play</string>
     <!-- Anti-piracy messages go here -->
-    <!-- Translation to Spanish by: DjEspia  -->
+    <!-- Translation to Spanish by: JoePaleto  -->
     <string name="shame_on_you"></string>
 </resources>

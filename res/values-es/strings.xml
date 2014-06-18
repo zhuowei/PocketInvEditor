@@ -15,10 +15,10 @@
     <string name="seed">Semilla:</string>
     <string name="copy_seed">Copiar semilla</string>
     <string name="saved">Guardar</string>
-    <string name="savefailed">Fallo al Guardar.</string>
+    <string name="savefailed">Falló al Guardar.</string>
     <string name="backup">Crear Respaldo</string>
     <string name="backupcreated">Respaldo Creado: </string>
-    <string name="backupfailed">Fallo al Respaldar.</string>
+    <string name="backupfailed">Falló al Respaldar.</string>
     <string name="backup_start">Empezando el Respaldo. Puede tardar un momento.</string>
     <string name="about_about">Información</string>
     <string name="change">Cambiar</string>
@@ -28,17 +28,17 @@
     <string name="main_edit_world_info">Editar Información del mundo</string>
     <string name="item_filter_hint">Buscar...</string>
     <string name="world_info_time">Tiempo: </string>
-    <string name="world_info_spawn_to_player">Mover punto de aparición a la localización del jugador</string>
+    <string name="world_info_spawn_to_player">Cambiar punto de aparición a la localización del jugador</string>
     <string name="invalid_number">Valor Inválido</string>
     <string name="world_info_time_set_morning">Hacer de mañana</string>
     <string name="world_info_time_set_night">Hacer de noche</string>
     <string name="world_info_player_location">Localización del jugador:</string>
-    <string name="world_info_half_hearts">Medios Corazones:</string>
+    <string name="world_info_half_hearts">Mitades de Corazones:</string>
     <string name="world_info_set_to_full_health">Rellenar la vida</string>
     <string name="world_info_set_to_infinite_health">Vida Infinita</string>
     <string name="world_info_folder">Carpeta: </string>
     <string name="folder_exists">El folder ya existe; elije un nuevo nombre</string>
-    <string name="folder_rename_failed">Fallo al renombrar el folder</string>
+    <string name="folder_rename_failed">Falló al renombrar el folder</string>
     <string name="slot_fillslot">Llenar espacio</string>
     <string name="slot_maxcountslot">Llenar al Máximo (255) </string>
     <string name="slot_duplicate">Duplicar</string>
@@ -46,8 +46,8 @@
     <string name="world_info_warp_to_spawn">Trasladarse al Punto de Aparición Inicial</string>
     <string name="world_info_sideways_mode">Activar el error del jugador de lado: </string>
     <string name="world_info_move_player">Mover Jugador</string>
-    <string name="entity_item">Objeto que Suelta</string>
-    <string name="entity_zombie">Zombie</string>
+    <string name="entity_item">Objeto Soltado</string>
+    <string name="entity_zombie">Zombi</string>
     <string name="entity_chicken">Pollo</string>
     <string name="entity_cow">Vaca</string>
     <string name="entity_pig">Cerdo</string>
@@ -55,14 +55,14 @@
     <string name="entity_creeper">Creeper</string>
     <string name="entity_skeleton">Esqueleto</string>
     <string name="entity_spider">Araña</string>
-    <string name="entity_pigzombie">Cerdo Zombie</string>
-    <string name="entity_primedtnt">Primed TNT</string>
+    <string name="entity_pigzombie">Hombrecerdo Zombi</string>
+    <string name="entity_primedtnt">TNT Encendida</string>
     <string name="entity_arrow">Flecha</string>
     <string name="entity_snowball">Bola de nieve</string>
     <string name="entity_thrownegg">Huevo</string>
     <string name="entity_painting">Pintura</string>
-    <string name="entity_fallingblock">Caida de Bloques</string>
-    <string name="entity_unknown">Tipo de mob desconocido</string>
+    <string name="entity_fallingblock">Caída de Bloques</string>
+    <string name="entity_unknown">Mob Desconocido</string>
     <string name="entities_info">Ver Información de los mobs</string>
     <string name="entities_edit">Editar mobs</string>
     <string name="entities_none">No se encontraron mobs.</string>
@@ -70,17 +70,17 @@
     <string name="entities_spawn_drops">Objetos que Sueltan</string>
     <string name="entities_remove_entities">Eliminar Mobs</string>
     <string name="entities_cow_tipping">Matar Vacas </string>
-    <string name="entities_mob_tipping">Mob tipping</string>
+    <string name="entities_mob_tipping">Matar Mobs</string>
     <string name="entities_mob_type">Mob: </string>
     <string name="entities_entity_type">Tipo: </string>
     <string name="entities_babyfy_mobs">Hacer a los animales pequeños</string>
-    <string name="entities_replace_entities">Remplazar mobs</string>
-    <string name="entities_replace_with">Remplazar con: </string>
-    <string name="apocowlypse">Deshaparecer mobs</string>
-    <string name="entities_angle">Angulo: </string>
+    <string name="entities_replace_entities">Reemplazar mobs</string>
+    <string name="entities_replace_with">Reemplazar con: </string>
+    <string name="apocowlypse">Apocalipsis Vacuno</string>
+    <string name="entities_angle">Ángulo: </string>
     <string name="entities_dye_all_sheep">Teñir todas las ovejas</string>
     <string name="entities_age_all_animals">Edad de todos los animales</string>
-    <string name="entities_breed_all_animals">Criar a todos</string>
+    <string name="entities_breed_all_animals">Criar a todos los animales</string>
     <string name="entities_unbreed_all_animals">Des-criar a todos</string>
     <string name="entities_remove_all_entities">Elimiar todos los mobs</string>
     <string name="entity_any">Cualquier tipo de mob</string>
@@ -89,38 +89,38 @@
     Este programa edita mundos de la versión completa de Minecraft Pocket Edition por Mojang.</string>
     <string name="get_pro">Obtén Ya PocketInvEditor Pro!</string>
     <string name="get_pro_to_spawn_mobs">Actualiza a Pro para aparecer mobs.</string>
-    <string name="nothingtoseehere_activate">* Alejate de la tablet y respira *</string>
+    <string name="nothingtoseehere_activate">* Alejate del dispositivo y respira *</string>
     <string name="main_view_tileentities">Ver las entidades</string>
     <string name="main_edit_tileentities">Editar las entidades</string>
-    <string name="warp_to_tile_entity">Warp to tile entity</string>
+    <string name="warp_to_tile_entity">Teletransportar a la Entidad</string>
     <string name="edit_sign">Editar cartel</string>
-    <string name="reactor_is_initialized">Iniciando</string>
-    <string name="reactor_has_finished">Finalizado</string>
+    <string name="reactor_is_initialized">Ha Iniciando</string>
+    <string name="reactor_has_finished">Ha Finalizado</string>
     <string name="reactor_progress">Progreso</string>
     <string name="reactor_overtime">Modo de tiempo extra</string>
-    <string name="get_pro_to_edit_containers">Actualizate a PocketInvEditor Pro para editar los baules.</string>
-    <string name="get_pro_to_edit_signs">Actualizate a PocketInvEditor Pro para editar el texto de las señales.</string>
-    <string name="get_pro_to_adjust_reactor">Actualizate a PocketInvEditor Pro para ajustar los Reactores del Nether.</string>
+    <string name="get_pro_to_edit_containers">Actualizate a PocketInvEditor Pro para editar los cofres.</string>
+    <string name="get_pro_to_edit_signs">Actualizate a PocketInvEditor Pro para editar el texto de los carteles.</string>
+    <string name="get_pro_to_adjust_reactor">Actualizate a PocketInvEditor Pro para modificar los Reactores del Nether.</string>
     <string name="main_edit_terrain">Editar terreno</string>
     <string name="terrain_editing">Editando terreno. Esto puede tomar un tiempo.</string>
     <string name="terrain_burnbabyburn">@string/apocowlypse</string>
     <string name="terrain_replaceblocks">Remplazar bloques</string>
     <string name="terrain_setblocks">Establecer bloques</string>
-    <string name="terrain_region_shift">Cambiar región</string>
-    <string name="terrain_region_expand">Expandir región</string>
+    <string name="terrain_region_shift">Cambiar terreno</string>
+    <string name="terrain_region_expand">Expandir terreno</string>
     <string name="terrain_analyze">Analizar</string>
-    <string name="terrain_autoselect">Auto-seleccionar region</string>
+    <string name="terrain_autoselect">Auto-seleccionar terreno</string>
     <string name="terrain_autoselect_choose_marker_block">Elija el tipo de bloque marcador</string>
-    <string name="terrain_autoselect_not_found">Imposible Auto-seleccionar : menos de 2 bloques marcadores encontrados</string>
+    <string name="terrain_autoselect_not_found">Imposible Auto-seleccionar: menos de 2 bloques marcadores encontrados</string>
     <string name="terrain_select_whole_world">Seleccionar mundo entero</string>
     <string name="terrain_block_counts">Cantidad de Bloques</string>
     <string name="terrain_coords_to_player">Usar las coordenadas del jugador</string>
     <string name="terrain_number_blocks_changed"> bloques cambiados.</string>
-    <string name="terrain_busy">Excaneando el territorio...</string>
+    <string name="terrain_busy">Leyendo el terreno...</string>
     <string name="terrain_experimental">Esta funcion es experimental. Se pueden encontrar errores en areas editadas. Crea un respaldo antes de usarla.</string>
     <string name="terrain_for_help">Para ayuda, revisa los foros de Minecraft.</string>
-    <string name="terrain_region_out_of_world">Esta zona es más grande que el mundo. Te gustaria reducirla automaticamente?</string>
-    <string name="terrain_unable_to_shrink_region">No se puede encoger la región.</string>
+    <string name="terrain_region_out_of_world">Esta zona es más grande que el mundo. ¿Te gustaria reducirla automaticamente?</string>
+    <string name="terrain_unable_to_shrink_region">No se puede encoger el terreno.</string>
     <string name="block_type">Tipo de bloque:</string>
     <string name="terrain_clipboard">Portapapeles: </string>
     <string name="terrain_copy">Copiar</string>
@@ -130,14 +130,14 @@
     <string name="terrain_schematic_import">Importar al portapapeles</string>
     <string name="terrain_schematic_exported">Portapapeles exportado al esquema</string>
     <string name="terrain_schematic_imported">Esquema importado al portapapeles</string>
-    <string name="terrain_schematic_export_fail">Fallo al exportar al portapapeles</string>
-    <string name="terrain_schematic_import_fail">Fallo al importar al portapapeles</string>
+    <string name="terrain_schematic_export_fail">Falló al exportar al portapapeles</string>
+    <string name="terrain_schematic_import_fail">Falló al importar al portapapeles</string>
     <string name="terrain_schematic_input_name">Nombre del esquema:</string>
     <string name="terrain_radius">Radio:</string>
     <string name="terrain_hollow_sphere">Esfera hueca</string>
-    <string name="terrain_solid_sphere">Esfera solida</string>
-    <string name="terrain_hollow_dome">Cupula hueca</string>
-    <string name="terrain_solid_dome">Cupula solida</string>
+    <string name="terrain_solid_sphere">Esfera sólida</string>
+    <string name="terrain_hollow_dome">Cúpula hueca</string>
+    <string name="terrain_solid_dome">Cúpula solida</string>
     <string name="terrain_coords_to_player_head">Cabeza</string>
     <string name="terrain_coords_to_player_feet">Pies</string>
     <string name="terrain_hollow_cuboid">Hueco Cubico</string>
@@ -148,28 +148,28 @@
     <string name="terrain_fix_holes">Arreglar los agujeros del terreno en Multijugador</string>
     <string name="terrain_fix_holes_description">Esto hara que tu mundo se envie con las modificaciones que has hecho al otro jugador cuando se conecte a tu mundo. Esto te puede ayudar si tienes el problema en que los otros jugadores de tu mundo no puede ver una parte de tu mundo. Esto sólo debe hacerse una vez por mundo.</string>
     <string name="terrain_generate_map">Generar un mapa del area</string>
-    <string name="file_exists">Un archivo con este nombre ya exciste</string>
-    <string name="terrain_width">Ancho (X):</string>
+    <string name="file_exists">Un archivo con este nombre ya existe</string>
+    <string name="terrain_width">Anchura (X):</string>
     <string name="terrain_height">Altura (Y):</string>
     <string name="terrain_length">Longitud (Z):</string>
-    <string name="loadout_export">Exportar loadout</string>
-    <string name="loadout_import">Importar loadout</string>
+    <string name="loadout_export">Exportar carga</string>
+    <string name="loadout_import">Importar carga</string>
     <string name="loadout_import_replace">Volver a colocar el inventario</string>
     <string name="loadout_import_combine">Combinar con el inventario actual</string>
     <string name="loadout_import_too_many_items">Algunos articulos no caben en tu inventario.</string>
     <string name="clear_inventory">Limpiar inventario</string>
-    <string name="clear_inventory_are_you_sure">Estas seguro de querer limpiar tu inventario?</string>
+    <string name="clear_inventory_are_you_sure">¿Estas seguro de querer limpiar tu inventario?</string>
     <string name="clear_inventory_clear">Limpiar</string>
     <string name="armor_edit">Editar armadura</string>
     <string name="armor_view">Ver armadura</string>
     <string name="armor_get_pro_to_edit">Actualizate a PocketInvEditor Pro para editar la armadura</string>
     <string name="world_info_may_fly">Permitir volar</string>
-    <string name="world_info_flying">Actualmente vuelan</string>
+    <string name="world_info_flying">Actualmente volando</string>
     <string name="world_info_may_build">Permitir colocar bloques</string>
     <string name="world_info_insta_build">Romper bloques instantaneamente</string>
     <string name="world_info_invulnerable">Modo invulnerable</string>
-    <string name="world_info_day_cycle_stop_time">Bloquear el ciclo del tiempo (-1 para desbloquerar)</string>
-    <string name="world_info_spawn_mobs">Permitir la aparicion de mobs</string>
+    <string name="world_info_day_cycle_stop_time">Bloquear el ciclo del tiempo (-1 para desbloquear)</string>
+    <string name="world_info_spawn_mobs">Permitir que los mobs aparezcan</string>
     <string name="about_copyright">Copyright (C) 2012-2013 Zhuowei Zhang\n\n
     Este programa es un software gratis: lo puedes redistribuir o modificar
     bajo los términos de la GNU General Public License publicada por
@@ -181,7 +181,7 @@
     GNU General Public License para más detalles.\n
     </string>
     <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. Prohibida su distribucion sin permiso.</string>
-    <string name="about_librarycredits">Esta aplicación utiliza SimpleNBT, biblioteca desarrolada
+    <string name="about_librarycredits">Esta aplicación utiliza SimpleNBT, biblioteca desarrollada
     por el equipo de SpoutDev.\n
     Esta aplicación contiene una versión modificada del archivo item-data.xml de TexasGamer\'s.\n
     Este programa incorpora una versión de UniversalOfGaming\'s Infinite Health mod. \n
@@ -191,13 +191,13 @@
     <string name="about_go_to_forums">Abrir los foros de Minecraft hilo de PocketInvEditor</string>
     <string name="add_empty_slot">Añadir Espacio Vacio</string>
     <string name="inventory_repair_all">Reparar todo</string>
-    <string name="unlicensed_dialog_title">Arr! Eres un pirata!!</string>
-    <string name="unlicensed_dialog_body">Esta aplicación es illegal. Comprala de Google Play.</string>
+    <string name="unlicensed_dialog_title">¡Arr! ¡¡Eres un pirata!!</string>
+    <string name="unlicensed_dialog_body">Esta aplicación es ilegal. Compralá de Google Play.</string>
     <string name="buy_button">Comprar</string>
     <string name="quit_button">Salir</string>
-    <string name="mcpelauncher_promo">Prueba MCPELauncher, la nueva generacion de launcher para Minecraft PE!</string>
+    <string name="mcpelauncher_promo">Prueba BlockLauncher, ¡la nueva generacion de modificaciones para Minecraft PE!</string>
     <string name="mcpelauncher_promo_button_caption">Obtener en Google Play</string>
     <!-- Anti-piracy messages go here -->
-    <!-- Translation to Spanish by: DjEspia  -->
+    <!-- Translated to Spanish by: JoePaleto  -->
     <string name="shame_on_you"></string>
 </resources>

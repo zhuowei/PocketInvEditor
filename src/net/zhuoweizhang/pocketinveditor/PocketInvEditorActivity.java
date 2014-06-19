@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class PocketInvEditorActivity extends ListActivity
 {
 
 	private static final int DIALOG_NO_WORLDS_FOUND = 200;
+	private static final int DIALOG_NEEDS_BETA = 202;
 
 	private FindWorldsThread findWorldsThread;
 
@@ -51,6 +53,10 @@ public class PocketInvEditorActivity extends ListActivity
 		lv.setOnItemClickListener(new OnItemClickListener() {
 			public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 				File worldFile = worlds.get(position).folder;
+				if (new File(worldFile, "db").exists()) {
+					showDialog(DIALOG_NEEDS_BETA);
+					return;
+				}
 				openWorld(worldFile);
 			}
 		});
@@ -124,6 +130,8 @@ public class PocketInvEditorActivity extends ListActivity
 		switch (dialogId) {
 			case DIALOG_NO_WORLDS_FOUND:
 				return createNoWorldsFoundDialog();
+			case DIALOG_NEEDS_BETA:
+				return createNeedsBetaDialog();
 			default:
 				return super.onCreateDialog(dialogId);
 		}
@@ -132,6 +140,20 @@ public class PocketInvEditorActivity extends ListActivity
 	protected AlertDialog createNoWorldsFoundDialog() {
 		return new AlertDialog.Builder(this).setTitle(R.string.noworldsfound_title).
 			setMessage(R.string.noworldsfound_text).create();
+	}
+
+	protected AlertDialog createNeedsBetaDialog() {
+		return new AlertDialog.Builder(this).setTitle(R.string.world_list_needs_beta_title).
+			setMessage(R.string.world_list_needs_beta_message).
+			setPositiveButton(R.string.world_list_needs_beta_learn_more, new DialogInterface.OnClickListener() {
+				public void onClick(DialogInterface dialogI, int button) {
+					Intent intent = new Intent(Intent.ACTION_VIEW);
+					intent.setData(Uri.parse(AboutAppActivity.FORUMS_PAGE_URL));
+					startActivity(intent);
+				}
+			}).
+			setNegativeButton(android.R.string.cancel, null).
+			create();
 	}
 
 	private final class FindWorldsThread implements Runnable {

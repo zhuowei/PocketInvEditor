@@ -143,9 +143,9 @@
         <item hex="9D" dec="157" name="双木台阶" />
         <item hex="9E" dec="158" name="木台阶" />
         <item hex="AA" dec="170" name="干草块" />
-        <item hex="AB" dec="171" name="Carpet" />
+        <item hex="AB" dec="171" name="地毯" />
         <item hex="AD" dec="173" name="煤炭块" />
-        <item hex="F4" dec="244" name="Beetroot" />
+        <item hex="F4" dec="244" name="甜菜" />
         <item hex="F5" dec="245" name="切石机" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />
@@ -267,7 +267,7 @@
         <item hex="163" dec="355" name="床" />
         <item hex="167" dec="359" name="剪刀" />
         <item hex="168" dec="360" name="西瓜片" />
-        <item hex="169" dec="361" name="Pumpkin Seeds" />
+        <item hex="169" dec="361" name="南瓜种子" />
         <item hex="16A" dec="362" name="西瓜种子" />
         <item hex="16B" dec="363" name="生牛肉" />
         <item hex="16C" dec="364" name="牛排" />
@@ -278,14 +278,14 @@
         <item hex="17F" dec="383" id="12" name="生成猪" />
         <item hex="17F" dec="383" id="13" name="生成羊" />
         <item hex="187" dec="391" name="胡萝卜" />
-        <item hex="188" dec="392" name="Potato" />
+        <item hex="188" dec="392" name="马铃薯" />
         <item hex="189" dec="393" name="烤马铃薯" />
         <item hex="190" dec="400" name="南瓜派" />
         <item hex="195" dec="405" name="地狱砖" />
         <item hex="196" dec="406" name="地狱石英" />
         <item hex="1C8" dec="456" name="照相机" />
-        <item hex="1C9" dec="457" name="Beetroot" />
-        <item hex="1CA" dec="458" name="Beetroots seeds" />
-        <item hex="1CB" dec="459" name="Beetroot Soup" />
+        <item hex="1C9" dec="457" name="甜菜" />
+        <item hex="1CA" dec="458" name="甜菜种子" />
+        <item hex="1CB" dec="459" name="甜菜汤" />
     </items>
 </data>

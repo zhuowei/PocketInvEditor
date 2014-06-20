@@ -145,7 +145,7 @@
         <item hex="AA" dec="170" name="干草块" />
         <item hex="AB" dec="171" name="Carpet" />
         <item hex="AD" dec="173" name="煤炭块" />
-        <item hex="F4" dec="244" name="Beetroot" />
+        <item hex="F4" dec="244" name="甜菜" />
         <item hex="F5" dec="245" name="切石机" />
         <item hex="F6" dec="246" name="发光的黑曜石" />
         <item hex="F7" dec="247" name="下界反应核" />
@@ -284,8 +284,8 @@
         <item hex="195" dec="405" name="地狱砖" />
         <item hex="196" dec="406" name="地狱石英" />
         <item hex="1C8" dec="456" name="照相机" />
-        <item hex="1C9" dec="457" name="Beetroot" />
-        <item hex="1CA" dec="458" name="Beetroots seeds" />
-        <item hex="1CB" dec="459" name="Beetroot Soup" />
+        <item hex="1C9" dec="457" name="甜菜" />
+        <item hex="1CA" dec="458" name="甜菜种子" />
+        <item hex="1CB" dec="459" name="甜菜汤" />
     </items>
 </data>

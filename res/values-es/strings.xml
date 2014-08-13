@@ -15,10 +15,10 @@
     <string name="seed">Semilla:</string>
     <string name="copy_seed">Copiar semilla</string>
     <string name="saved">Guardar</string>
-    <string name="savefailed">Fallo al Guardar.</string>
+    <string name="savefailed">Falló al Guardar.</string>
     <string name="backup">Crear Respaldo</string>
     <string name="backupcreated">Respaldo Creado: </string>
-    <string name="backupfailed">Fallo al Respaldar.</string>
+    <string name="backupfailed">Falló al Respaldar.</string>
     <string name="backup_start">Empezando el Respaldo. Puede tardar un momento.</string>
     <string name="about_about">Información</string>
     <string name="change">Cambiar</string>
@@ -38,7 +38,7 @@
     <string name="world_info_set_to_infinite_health">Vida Infinita</string>
     <string name="world_info_folder">Carpeta: </string>
     <string name="folder_exists">El folder ya existe; elije un nuevo nombre</string>
-    <string name="folder_rename_failed">Fallo al renombrar el folder</string>
+    <string name="folder_rename_failed">Falló al renombrar el folder.</string>
     <string name="slot_fillslot">Llenar espacio</string>
     <string name="slot_maxcountslot">Llenar al Máximo (255) </string>
     <string name="slot_duplicate">Duplicar</string>
@@ -46,7 +46,7 @@
     <string name="world_info_warp_to_spawn">Trasladarse al Punto de Aparición Inicial</string>
     <string name="world_info_sideways_mode">Activar el error del jugador de lado: </string>
     <string name="world_info_move_player">Mover Jugador</string>
-    <string name="entity_item">Objeto que Suelta</string>
+    <string name="entity_item">Objeto Soltado</string>
     <string name="entity_zombie">Zombie</string>
     <string name="entity_chicken">Pollo</string>
     <string name="entity_cow">Vaca</string>
@@ -56,12 +56,12 @@
     <string name="entity_skeleton">Esqueleto</string>
     <string name="entity_spider">Araña</string>
     <string name="entity_pigzombie">Cerdo Zombie</string>
-    <string name="entity_primedtnt">Primed TNT</string>
+    <string name="entity_primedtnt">TNT Encendida</string>
     <string name="entity_arrow">Flecha</string>
-    <string name="entity_snowball">Bola de nieve</string>
+    <string name="entity_snowball">Bola de Nieve</string>
     <string name="entity_thrownegg">Huevo</string>
     <string name="entity_painting">Pintura</string>
-    <string name="entity_fallingblock">Caida de Bloques</string>
+    <string name="entity_fallingblock">Bloque Cayendo</string>
     <string name="entity_unknown">Tipo de mob desconocido</string>
     <string name="entities_info">Ver Información de los mobs</string>
     <string name="entities_edit">Editar mobs</string>
@@ -84,12 +84,12 @@
     <string name="entities_unbreed_all_animals">Des-criar a todos</string>
     <string name="entities_remove_all_entities">Elimiar todos los mobs</string>
     <string name="entity_any">Cualquier tipo de mob</string>
-    <string name="noworldsfound_title">Y LOS MUNDOS?!</string>
+    <string name="noworldsfound_title">¡¿Y LOS MUNDOS?!</string>
     <string name="noworldsfound_text">PocketInvEditor no encontró ningún mundo de Minecraft PE en este dispositivo.\n
     Este programa edita mundos de la versión completa de Minecraft Pocket Edition por Mojang.</string>
     <string name="get_pro">Obtén Ya PocketInvEditor Pro!</string>
     <string name="get_pro_to_spawn_mobs">Actualiza a Pro para aparecer mobs.</string>
-    <string name="nothingtoseehere_activate">* Alejate de la tablet y respira *</string>
+    <string name="nothingtoseehere_activate">* Alejate del dispositivo y respira *</string>
     <string name="main_view_tileentities">Ver las entidades</string>
     <string name="main_edit_tileentities">Editar las entidades</string>
     <string name="warp_to_tile_entity">Warp to tile entity</string>
@@ -177,7 +177,7 @@
     (es tu opción) cualquier otra versión.\n
 
     Este programa se distribuye con la esperanza de que sea útil,
-   pero SIN NINGUNA GARANTÍA.  Consulte
+   pero SIN NINGUNA GARANTÍA. Consulte la
     GNU General Public License para más detalles.\n
     </string>
     <string name="about_copyright_pro">Copyright (C) 2012-2013 Zhuowei Zhang. Prohibida su distribucion sin permiso.</string>
@@ -186,9 +186,9 @@
     Esta aplicación contiene una versión modificada del archivo item-data.xml de TexasGamer\'s.\n
     Este programa incorpora una versión de UniversalOfGaming\'s Infinite Health mod. \n
     Los iconos de los objetos usados en este programa son creados por ©Mojang. </string>
-    <string name="about_pro_library_credits">Este programa utiliza aFileChooser libreria por Paul Burke. Para información de la licencia, mira los foros de Minecraft. Traducción al Español (By: DJEspia)</string>
+    <string name="about_pro_library_credits">Este programa utiliza aFileChooser libreria por Paul Burke. Para información de la licencia, mira los foros de Minecraft. Traducción al Español por José Vázquez</string>
     <string name="about_thankscommunity">Esta aplicación ha sido posible gracias al trabajo de muchos traductores, probadores y programadores. Gracias.\nMira los foros de Minecraft para ver una lista de los colaboradores.</string>
-    <string name="about_go_to_forums">Abrir los foros de Minecraft hilo de PocketInvEditor</string>
+    <string name="about_go_to_forums">Abrir el tema de PocketInvEditor en los foros el de Minecraft</string>
     <string name="add_empty_slot">Añadir Espacio Vacio</string>
     <string name="inventory_repair_all">Reparar todo</string>
     <string name="unlicensed_dialog_title">Arr! Eres un pirata!!</string>
@@ -198,6 +198,6 @@
     <string name="mcpelauncher_promo">Prueba MCPELauncher, la nueva generacion de launcher para Minecraft PE!</string>
     <string name="mcpelauncher_promo_button_caption">Obtener en Google Play</string>
     <!-- Anti-piracy messages go here -->
-    <!-- Translation to Spanish by: DjEspia  -->
+    <!-- Translation to Spanish by: jose-vm  -->
     <string name="shame_on_you"></string>
 </resources>

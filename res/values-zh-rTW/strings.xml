@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Memo: Chinese Traditional translation by edwinyoo44-->
     <string name="app_name">PocketInvEditor</string>
     <string name="select_world">選擇世界</string>
     <string name="inventory">物品欄</string>
@@ -86,8 +87,9 @@
     <string name="entities_remove_all_entities">刪除所有實體</string>
     <string name="entity_any">任何實體類型</string>
     <string name="noworldsfound_title">無法找到世界</string>
-    <string name="noworldsfound_text">PocketInvEditor無法找到該裝置上的Minecraft PE 世界\n
-	你必須需從 Mojang 開發的 Minecraft PE 創造世界</string>
+    <string name="noworldsfound_text">PocketInvEditor無法找到該裝置上的Minecraft PE (完整版) 世界\n
+	你必須需從 Mojang 開發的 Minecraft PE (完整版) 創造世界</string>
+		<!--I added (full version) in the first sentence-->
     <string name="get_pro">購買 PocketInvEditor Pro</string>
     <string name="get_pro_to_spawn_mobs">升級到 PocketInvEditor Pro 來編輯生物</string>
     <string name="nothingtoseehere_activate">* I move away from the tablet to breathe in *</string>
@@ -171,7 +173,7 @@
     <string name="world_info_invulnerable">無敵模式</string>
     <string name="world_info_day_cycle_stop_time">鎖定一天的時間（-１為解鎖）</string>
     <string name="world_info_spawn_mobs">Allow mob spawning</string>
-    <string name="world_info_generator">Generator</string>
+    <string name="world_info_generator">世界版本</string>
     <string name="world_info_generator_old">舊版</string>
     <string name="world_info_generator_infinite">無限</string>
     <string name="world_info_generator_flat">平地</string>
@@ -193,7 +195,7 @@
     This program incorporates a version of UniversalOfGaming\'s Infinite Health mod. \n
     The item icons used in this program are created by Mojang. </string>
     <string name="about_pro_library_credits">This program uses the aFileChooser library by Paul Burke and block colour data from MCEdit. For licensing information, check the Minecraft Forums thread.</string>
-    <string name="about_thankscommunity">此應用程式是由許多有才華的翻譯人員、測試人員和程式開發員的工作，謝謝!!/n.請到到 Minecraft 官方論壇查看貢獻者列表 /n.本由ヾ夜の曲_edwinyoo44翻譯</string>
+    <string name="about_thankscommunity">此應用程式是由許多有才華的翻譯人員、測試人員和程式開發員的工作，謝謝!!/n請到到 Minecraft 官方論壇查看貢獻者列表 /n</string>
     <string name="about_go_to_forums">開啟在 Minecraft 論壇-PocketInvEditor</string>
     <string name="add_empty_slot">新增物品</string>
     <string name="inventory_repair_all">修復全部</string>

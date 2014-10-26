@@ -4,7 +4,7 @@
     <string name="select_world">Выбрать мир</string>
     <string name="inventory">Инвентарь</string>
     <string name="select_slot">Выбрать слот</string>
-    <string name="item_id">ID предмета :</string>
+    <string name="item_id">ID предмета:</string>
     <string name="item_damage">Урон:</string>
     <string name="item_count">Количество:</string>
     <string name="item_id_browse">Обзор ...</string>
@@ -80,8 +80,8 @@
     <string name="entities_angle">Угол обзора:</string>
     <string name="entities_dye_all_sheep">Покрасить всех овец</string>
     <string name="entities_age_all_animals">Сделать животных взрослыми</string>
-    <string name="entities_breed_all_animals">Breed All</string>
-    <string name="entities_unbreed_all_animals">Unbreed All</string>
+    <string name="entities_breed_all_animals">Поставить режим разведения на всех</string>
+    <string name="entities_unbreed_all_animals">Отменить режим разведения на всех</string>
     <string name="noworldsfound_title">У вас нету миров?!</string>
     <string name="noworldsfound_text">"PocketInvEditor не смог найти миры Minecraft PE на этом устройстве.
 Эта программа предназначена для редактирования миров, созданных полной версией Minecraft Pocket Edition от Mojang."</string>
@@ -109,7 +109,7 @@
     <string name="terrain_analyze">Анализировать</string>
     <string name="terrain_autoselect">Авто-выбор области</string>
     <string name="terrain_autoselect_choose_marker_block">Выберите тип маркера блока</string>
-    <string name="terrain_autoselect_not_found">Не удается автовыбрать: менее 2 типов маркеров блоков найдено</string>
+    <string name="terrain_autoselect_not_found">Не удается автовыбрать: найдено менее 2 типов маркеров блоков</string>
     <string name="terrain_select_whole_world">Выбрать весь мир</string>
     <string name="terrain_block_counts">Количество блоков</string>
     <string name="terrain_coords_to_player">Кординаты игрока</string>
@@ -121,14 +121,14 @@
     <string name="terrain_unable_to_shrink_region">Не удалось сжать регион.</string>
     <string name="block_type">Тип блока:</string>
     <string name="terrain_clipboard">Буфер обмена: </string>
-    <string name="terrain_copy">Copy</string>
-    <string name="terrain_paste">Paste</string>
-    <string name="terrain_paste_without_air">Paste(без воздуха)</string>
+    <string name="terrain_copy">Копировать</string>
+    <string name="terrain_paste">Вставить</string>
+    <string name="terrain_paste_without_air">Вставить (без воздуха)</string>
     <string name="terrain_schematic_export">Экспорт буфера</string>
     <string name="terrain_schematic_import">Импорт буфера</string>
     <string name="terrain_schematic_exported">Буфер обмена экспортируется</string>
     <string name="terrain_schematic_imported">Импортирование в буфер обмена</string>
-    <string name="terrain_schematic_export_fail">Не удалось экспортировать из буфер обмена</string>
+    <string name="terrain_schematic_export_fail">Не удалось экспортировать из буфера обмена</string>
     <string name="terrain_schematic_import_fail">Не удалось импортировать в буфер обмена</string>
     <string name="terrain_schematic_input_name">Имя схемы:</string>
     <string name="terrain_radius">Радиус:</string>
@@ -164,7 +164,7 @@
     Откройте тему программы на Minecraft Forum для просмотра списка участников."</string>
     <string name="about_go_to_forums">Ветка PIE на Minecraft Forum</string>
     <string name="add_empty_slot">Добавить новый слот</string>
-    <string name="unlicensed_dialog_title">Уоу! Да ты пират, приятель!</string>
+    <string name="unlicensed_dialog_title">Вау! Да ты пират, приятель!</string>
     <string name="unlicensed_dialog_body">Это приложение не лицензионно. Пожалуйста, приобретите его в Google Play.</string>
     <string name="buy_button">Купить приложение</string>
     <string name="quit_button">Выход</string>

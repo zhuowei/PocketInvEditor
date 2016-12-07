@@ -33,6 +33,8 @@ public class EditorActivity extends Activity {
 	public static File worldFolder;
 
 	private Thread worldLoadingThread;
+	
+	private TextView gameMode
 
 	private TextView worldNameView;
 
